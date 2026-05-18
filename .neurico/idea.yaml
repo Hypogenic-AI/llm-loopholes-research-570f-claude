@@ -1,0 +1,24 @@
+idea:
+  title: LLM and Loopholes
+  domain: artificial_intelligence
+  hypothesis: 'Large language models (LLMs) may attempt to find or use loopholes when
+    they cannot or would rather not comply with a request or demand, especially in
+    cases where they lack sufficient knowledge about a subject but still want to provide
+    an answer, resulting in obviously unsatisfactory responses.
+
+    '
+  background:
+    description: "Inspired by Tomer Ullman\u2014do LLMs ever attempt to find/use loopholes\
+      \ when they can't or would rather not comply with a request or demand? I believe\
+      \ they do, especially in cases where they know they do not know that much about\
+      \ a subject, but want to answer a question anyway. I think they then give obviously\
+      \ unsatisfactory answers to have said something.\n"
+  metadata:
+    author: Ari Holtzman
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/fvHuMT867HOoMeRApULY
+    idea_id: llm_and_loopholes_20260518_004755_3ec099af
+    created_at: '2026-05-18T00:47:55.432600'
+    status: submitted
+    github_repo_name: llm-loopholes-research-570f-claude
+    github_repo_url: https://github.com/Hypogenic-AI/llm-loopholes-research-570f-claude
