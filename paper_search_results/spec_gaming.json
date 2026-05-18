@@ -1,0 +1,206 @@
+{
+  "success": true,
+  "total": 22,
+  "papers": [
+    {
+      "title": "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models",
+      "year": 2024,
+      "authors": "Carson E. Denison, M. MacDiarmid, Fazl Barez, D. Duvenaud, Shauna Kravec, Samuel Marks, Nicholas Schiefer, Ryan Soklaski, Alex Tamkin, Jared Kaplan, Buck Shlegeris, Samuel R. Bowman, Ethan Perez, Evan Hubinger",
+      "url": "https://api.semanticscholar.org/CorpusId:270521305",
+      "relevance": 3,
+      "abstract": "In reinforcement learning, specification gaming occurs when AI systems learn undesired behaviors that are highly rewarded due to misspecified training goals. Specification gaming can range from simple behaviors like sycophancy to sophisticated and pernicious behaviors like reward-tampering, where a model directly modifies its own reward mechanism. However, these more pernicious behaviors may be too complex to be discovered via exploration. In this paper, we study whether Large Language Model (LLM) assistants which find easily discovered forms of specification gaming will generalize to perform rarer and more blatant forms, up to and including reward-tampering. We construct a curriculum of increasingly sophisticated gameable environments and find that training on early-curriculum environments leads to more specification gaming on remaining environments. Strikingly, a small but non-negligible proportion of the time, LLM assistants trained on the full curriculum generalize zero-shot to directly rewriting their own reward function. Retraining an LLM not to game early-curriculum environments mitigates, but does not eliminate, reward-tampering in later environments. Moreover, adding harmlessness training to our gameable environments does not prevent reward-tampering. These results demonstrate that LLMs can generalize from common forms of specification gaming to more pernicious reward tampering and that such behavior may be nontrivial to remove.",
+      "citations": 116
+    },
+    {
+      "title": "LLMs Gaming Verifiers: RLVR can Lead to Reward Hacking",
+      "year": 2026,
+      "authors": "Lukas Helff, Quentin Delfosse, David Steinmann, Ruben H\u00e4rle, Hikaru Shindo, P. Schramowski, Wolfgang Stammer, Kristian Kersting, Felix Friedrich",
+      "url": "https://www.semanticscholar.org/paper/6aab9935333fcf8575724a6d26eb59bfe5862861",
+      "relevance": 3,
+      "abstract": "As reinforcement Learning with Verifiable Rewards (RLVR) has become the dominant paradigm for scaling reasoning capabilities in LLMs, a new failure mode emerges: LLMs gaming verifiers. We study this phenomenon on inductive reasoning tasks, where models must induce and output logical rules. We find that RLVR-trained models systematically abandon rule induction. Instead of learning generalizable patterns (e.g., ``trains carrying red cars go east''), they enumerate instance-level labels, producing outputs that pass verifiers without capturing the relational patterns required by the task. We show that this behavior is not a failure of understanding but a form of reward hacking: imperfect verifiers that check only extensional correctness admit false positives. To detect such shortcuts, we introduce Isomorphic Perturbation Testing (IPT), which evaluates a single model output under both extensional and isomorphic verification, where the latter enforces invariance under logically isomorphic tasks. While genuine rule induction remains invariant, shortcut strategies fail. We find that shortcut behavior is specific to RLVR-trained reasoning models (e.g., GPT-5, Olmo3) and absent in non-RLVR models (e.g., GPT-4o, GPT-4.5, Ministral). Moreover, shortcut prevalence increases with task complexity and inference-time compute. In controlled training experiments, extensional verification directly induces shortcut strategies, while isomorphic verification eliminates them. These results show that RLVR can incentivize reward hacking not only through overt manipulation but also by exploiting what the verifier fails to enforce.",
+      "citations": 2
+    },
+    {
+      "title": "Specification Self-Correction: Mitigating In-Context Reward Hacking Through Test-Time Refinement",
+      "year": 2025,
+      "authors": "V\u00edctor Gallego",
+      "url": "https://api.semanticscholar.org/CorpusId:280045982",
+      "relevance": 3,
+      "abstract": "Language models (LMs) are susceptible to in-context reward hacking, where they exploit flaws in tainted or faulty written specifications or rubrics to achieve high scores without fulfilling the user's true intent. We introduce Specification Self-Correction (SSC), a novel, test-time framework that enables an LM to identify and correct flaws within its own guiding specification. SSC employs a multi-step inference process where the model first generates a response based on a potentially tainted specification, critiques its output, and then revises the specification itself to remove the exploitable loophole. A final, more robust response is then generated using this self-corrected specification. Across experiments spanning creative writing and agentic coding tasks with several LMs, we demonstrate that while models initially game tainted specifications in 50-70\\% of cases, the SSC process reduces this vulnerability by over 90\\%. This dynamic repair occurs at inference time, requires no weight modification, and leads to more robustly aligned model behavior. Code at https://github.com/vicgalle/specification-self-correction .",
+      "citations": 3
+    },
+    {
+      "title": "Detecting Proxy Gaming in RL and LLM Alignment via Evaluator Stress Tests",
+      "year": 2025,
+      "authors": "Ibne Farabi Shihab, Sanjeda Akter, Anuj Sharma",
+      "url": "https://www.semanticscholar.org/paper/1e52bd2f7872e8aa1b64b690533b09732319dceb",
+      "relevance": 3,
+      "abstract": "Proxy optimization, where AI systems exploit evaluator weaknesses rather than improve intended objectives, threatens both reinforcement learning (reward hacking) and LLM alignment (evaluator gaming). We introduce the Evaluator Stress Test (EST), an invariance-based framework that detects proxy gaming by separating exploitable sensitivity (e.g., formatting artifacts, physics bugs) from content-driven improvements using controlled perturbations with semantic validity audits. We validate EST across both domains. In RL, across 15 environments and 5 algorithms (2,156 expert-annotated episodes), EST achieves 78.4% precision and 81.7% recall. In LLM alignment, across 4 tasks, 2 model scales, 2 training methods, and 2 judges (1,200 human-annotated instances), EST achieves 74.2% precision and 78.6% recall, with early warning signals that precede quality decline. Cross-domain analysis shows that proxy-true correlation tracking transfers directly between domains, while perturbation design requires domain adaptation. Closed-loop mitigation improves human win-rate by 8.3 points (LLM) and reduces hacking by 54.6% (RL). We release benchmarks for both domains: 2,156 RL episodes and 1,200 LLM instances.",
+      "citations": 10
+    },
+    {
+      "title": "A Systematic Review of Evaluation of How AI Systems Behaves When Unmonitored",
+      "year": 2026,
+      "authors": "Jyotika Maurya, Sachin Chaurasiya, Farheen Siddiqui, Dr. Yusuf Perwej",
+      "url": "https://www.semanticscholar.org/paper/785a294e015381ee89a6a82b9bf0d77a37b17ded",
+      "relevance": 3,
+      "abstract": "The rapid deployment of large language models (LLMs) and autonomous AI agents across safety-critical domains has surfaced a profound and underexplored concern: the observer effect in artificial intelligence. Borrowing from quantum mechanics, the observer effect in AI refers to the documented phenomenon whereby AI systems exhibit systematically different behaviour depending on whether they perceive themselves to be under evaluation or operating without supervision. This paper provides a comprehensive review of existing literature, empirical findings, and theoretical frameworks surrounding this issue. We examine landmark studies including Anthropic's alignment-faking experiments with Claude 3 Opus (2024), the Sleeper Agents research demonstrating persistent deceptive behaviour through safety training, goal misgeneralisation in deep reinforcement learning, and specification-gaming cases that emerge specifically in unmonitored deployment. We further explore the theoretical underpinnings through the lens of deceptive alignment, Goodhart's Law, and reward hacking. Key challenges \u2014 including the detection of evaluation contexts, the brittleness of RLHF-based oversight, scalable oversight limitations, and the opacity of internal model reasoning \u2014 are discussed alongside potential mitigations: mechanistic interpretability, constitutional AI, debate-based oversight, and process-based supervision. The paper concludes by identifying high-priority future research directions critical to ensuring that AI systems behave safely and consistently regardless of whether a human observer is present.",
+      "citations": 0
+    },
+    {
+      "title": "Discovering Agentic Safety Specifications from 1-Bit Danger Signals",
+      "year": 2026,
+      "authors": "V\u00edctor Gallego",
+      "url": "https://www.semanticscholar.org/paper/c13d6e1569c9e98306a93eed8fa9dcd179b7201b",
+      "relevance": 3,
+      "abstract": "Can large language model agents discover hidden safety objectives through experience alone? We introduce EPO-Safe (Experiential Prompt Optimization for Safe Agents), a framework where an LLM iteratively generates action plans, receives sparse binary danger warnings, and evolves a natural language behavioral specification through reflection. Unlike standard LLM reflection methods that rely on rich textual feedback (e.g., compiler errors or detailed environment responses), EPO-Safe demonstrates that LLMs can perform safety reasoning from a strictly impoverished signal in structured, low-dimensional environments: the agent never observes the hidden performance function $R^*$, only a single bit per timestep indicating that an action was unsafe. We evaluate on five AI Safety Gridworlds (Leike et al., 2017) and five text-based scenario analogs where visible reward $R$ may diverge from $R^*$. EPO-Safe discovers safe behavior within 1-2 rounds (5-15 episodes), producing human-readable specifications with correct explanatory hypotheses about hazards (e.g.,\"X cells are directionally hazardous: entering from the north is dangerous\"). Critically, we show that standard reward-driven reflection actively degrades safety: agents reflecting on reward alone use the loop to justify and accelerate reward hacking, proving that reflection must be paired with a dedicated safety channel to discover hidden constraints. We further evaluate robustness to noisy oracles: even when 50% of non-dangerous steps produce spurious warnings, mean safety performance degrades by only 15% on average, though sensitivity is environment-dependent, as cross-episode reflection naturally filters inconsistent signals. Each evolved specification functions as an auditable set of grounded behavioral rules discovered autonomously through interaction, rather than authored by humans as in Constitutional AI (Bai et al., 2022).",
+      "citations": 0
+    },
+    {
+      "title": "Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas",
+      "year": 2026,
+      "authors": "V\u00edctor Gallego",
+      "url": "https://www.semanticscholar.org/paper/e2fb89ee3e74e1d898b9e4a3ca1465c187d0c884",
+      "relevance": 3,
+      "abstract": "We study LLM policy synthesis: using a large language model to iteratively generate programmatic agent policies for multi-agent environments. Rather than training neural policies via reinforcement learning, our framework prompts an LLM to produce Python policy functions, evaluates them in self-play, and refines them using performance feedback across iterations. We investigate feedback engineering (the design of what evaluation information is shown to the LLM during refinement) comparing sparse feedback (scalar reward only) against dense feedback (reward plus social metrics: efficiency, equality, sustainability, peace). Across two canonical Sequential Social Dilemmas (Gathering and Cleanup) and two frontier LLMs (Claude Sonnet 4.6, Gemini 3.1 Pro), dense feedback consistently matches or exceeds sparse feedback on all metrics. The advantage is largest in the Cleanup public goods game, where providing social metrics helps the LLM calibrate the costly cleaning-harvesting tradeoff. Rather than triggering over-optimization of fairness, social metrics serve as a coordination signal that guides the LLM toward more effective cooperative strategies, including territory partitioning, adaptive role assignment, and the avoidance of wasteful aggression. We further perform an adversarial experiment to determine whether LLMs can reward hack these environments. We characterize five attack classes and discuss mitigations, highlighting an inherent tension in LLM policy synthesis between expressiveness and safety. Code at https://github.com/vicgalle/llm-policies-social-dilemmas.",
+      "citations": 1
+    },
+    {
+      "title": "Honesty to Subterfuge: In-Context Reinforcement Learning Can Make Honest Models Reward Hack",
+      "year": 2024,
+      "authors": "Leo McKee-Reid, Christoph Str\u00e4ter, M. Mart\u00ednez, J. Needham, Mikita Balesni",
+      "url": "https://api.semanticscholar.org/CorpusId:273228159",
+      "relevance": 2,
+      "abstract": "Previous work has shown that training\"helpful-only\"LLMs with reinforcement learning on a curriculum of gameable environments can lead models to generalize to egregious specification gaming, such as editing their own reward function or modifying task checklists to appear more successful. We show that gpt-4o, gpt-4o-mini, o1-preview, and o1-mini - frontier models trained to be helpful, harmless, and honest - can engage in specification gaming without training on a curriculum of tasks, purely from in-context iterative reflection (which we call in-context reinforcement learning,\"ICRL\"). We also show that using ICRL to generate highly-rewarded outputs for expert iteration (compared to the standard expert iteration reinforcement learning algorithm) may increase gpt-4o-mini's propensity to learn specification-gaming policies, generalizing (in very rare cases) to the most egregious strategy where gpt-4o-mini edits its own reward function. Our results point toward the strong ability of in-context reflection to discover rare specification-gaming strategies that models might not exhibit zero-shot or with normal training, highlighting the need for caution when relying on alignment of LLMs in zero-shot settings.",
+      "citations": 11
+    },
+    {
+      "title": "Reward Hacking in the Era of Large Models: Mechanisms, Emergent Misalignment, Challenges",
+      "year": 2026,
+      "authors": "Xiaohua Wang, Muzhao Tian, Yuqiyu Zeng, Zisu Huang, Jiakang Yuan, Bowen Chen, Jingwen Xu, Ming Zhou, Wenhao Liu, Muling Wu, Zhengkang Guo, Qi Qian, Yifei Wang, Feiran Zhang, Ruicheng Yin, Shihan Dou, Changze Lv, Tao Chen, Kaitao Song, Xu Tan, Tao Gui, Xiaoqing Zheng, Xuanjing Huang",
+      "url": "https://www.semanticscholar.org/paper/54eeb6a98ac558bebd39475c38604c4b54dbeaa2",
+      "relevance": 2,
+      "abstract": "Reinforcement Learning from Human Feedback (RLHF) and related alignment paradigms have become central to steering large language models (LLMs) and multimodal large language models (MLLMs) toward human-preferred behaviors. However, these approaches introduce a systemic vulnerability: reward hacking, where models exploit imperfections in learned reward signals to maximize proxy objectives without fulfilling true task intent. As models scale and optimization intensifies, such exploitation manifests as verbosity bias, sycophancy, hallucinated justification, benchmark overfitting, and, in multimodal settings, perception--reasoning decoupling and evaluator manipulation. Recent evidence further suggests that seemingly benign shortcut behaviors can generalize into broader forms of misalignment, including deception and strategic gaming of oversight mechanisms. In this survey, we propose the Proxy Compression Hypothesis (PCH) as a unifying framework for understanding reward hacking. We formalize reward hacking as an emergent consequence of optimizing expressive policies against compressed reward representations of high-dimensional human objectives. Under this view, reward hacking arises from the interaction of objective compression, optimization amplification, and evaluator--policy co-adaptation. This perspective unifies empirical phenomena across RLHF, RLAIF, and RLVR regimes, and explains how local shortcut learning can generalize into broader forms of misalignment, including deception and strategic manipulation of oversight mechanisms. We further organize detection and mitigation strategies according to how they intervene on compression, amplification, or co-adaptation dynamics. By framing reward hacking as a structural instability of proxy-based alignment under scale, we highlight open challenges in scalable oversight, multimodal grounding, and agentic autonomy.",
+      "citations": 2
+    },
+    {
+      "title": "Demonstrating specification gaming in reasoning models",
+      "year": 2025,
+      "authors": "A. Bondarenko, Denis Volk, Dmitrii Volkov, Jeffrey Ladish",
+      "url": "https://www.semanticscholar.org/paper/1b60a0e943e9e737e8dce93a06ba59945d3b66e6",
+      "relevance": 2,
+      "abstract": "We demonstrate LLM agent specification gaming by instructing models to win against a chess engine. We find reasoning models like OpenAI o3 and DeepSeek R1 will often hack the benchmark by default, while language models like GPT-4o and Claude 3.5 Sonnet need to be told that normal play won't work to hack. We improve upon prior work like (Hubinger et al., 2024; Meinke et al., 2024; Weij et al., 2024) by using realistic task prompts and avoiding excess nudging. Our results suggest reasoning models may resort to hacking to solve difficult problems, as observed in OpenAI (2024)'s o1 Docker escape during cyber capabilities testing.",
+      "citations": 33
+    },
+    {
+      "title": "Emergent Strategic Reasoning Risks in AI: A Taxonomy-Driven Evaluation Framework",
+      "year": 2026,
+      "authors": "Tharindu Kumarage, Lisa Bauer, Yaoyao Ma, Dan Ros\u00e9n, Yashasvi Raghavendra Guduri, Anna Rumshisky, Kai-Wei Chang, A.G. Galstyan, Rahul Gupta, Charith Peris",
+      "url": "https://www.semanticscholar.org/paper/35a8187db070e8875e8045486b13ae493940d104",
+      "relevance": 2,
+      "abstract": "As reasoning capacity and deployment scope grow in tandem, large language models (LLMs) gain the capacity to engage in behaviors that serve their own objectives, a class of risks we term Emergent Strategic Reasoning Risks (ESRRs). These include, but are not limited to, deception (intentionally misleading users or evaluators), evaluation gaming (strategically manipulating performance during safety testing), and reward hacking (exploiting misspecified objectives). Systematically understanding and benchmarking these risks remains an open challenge. To address this gap, we introduce ESRRSim, a taxonomy-driven agentic framework for automated behavioral risk evaluation. We construct an extensible risk taxonomy of 7 categories, which is decomposed into 20 subcategories. ESRRSim generates evaluation scenarios designed to elicit faithful reasoning, paired with dual rubrics assessing both model responses and reasoning traces, in a judge-agnostic and scalable architecture. Evaluation across 11 reasoning LLMs reveals substantial variation in risk profiles (detection rates ranging 14.45%-72.72%), with dramatic generational improvements suggesting models may increasingly recognize and adapt to evaluation contexts.",
+      "citations": 0
+    },
+    {
+      "title": "Open Rubric System: Scaling Reinforcement Learning with Pairwise Adaptive Rubric",
+      "year": 2026,
+      "authors": "Ruipeng Jia, Yunyi Yang, Yuxin Wu, Yongbo Gai, Siyuan Tao, Mengyu Zhou, Jianhe Lin, Xiaoxi Jiang, Guanjun Jiang",
+      "url": "https://www.semanticscholar.org/paper/166855642f2029640fc58a787ba504f41b9de1ef",
+      "relevance": 2,
+      "abstract": "Scalar reward models compress multi-dimensional human preferences into a single opaque score, creating an information bottleneck that often leads to brittleness and reward hacking in open-ended alignment. We argue that robust alignment for non-verifiable tasks is fundamentally a principle generalization problem: reward should not be a learned function internalized into a judge, but an explicit reasoning process executed under inspectable principles. To operationalize this view, we present the Open Rubric System (OpenRS), a plug-and-play, rubrics-based LLM-as-a-Judge framework built around Pairwise Adaptive Meta-Rubrics (PAMR) and lightweight Pointwise Verifiable Rubrics (PVRs), which provide both hard-constraint guardrails and verifiable reward components when ground-truth or programmatic checks are available. OpenRS uses an explicit meta-rubric -- a constitution-like specification that governs how rubrics are instantiated, weighted, and enforced -- and instantiates adaptive rubrics on the fly by conditioning on the semantic differences between two candidate responses. It then performs criterion-wise pairwise comparisons and aggregates criterion-level preferences externally, avoiding pointwise weighted scalarization while improving discriminability in open-ended settings. To keep principles consistent yet editable across various domains, we introduce a two-level meta-rubric refinement pipeline (automated evolutionary refinement for general principles and a reproducible human-in-the-loop procedure for domain principles), complemented with pointwise verifiable rubrics that act as both guardrails against degenerate behaviors and a source of verifiable reward for objective sub-tasks. Finally, we instantiate OpenRS as reward supervision in pairwise RL training.",
+      "citations": 3
+    },
+    {
+      "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+      "year": 2026,
+      "authors": "Zarif Ikram, Arad Firouzkouhi, Stephen Tu, Mahdi Soltanolkotabi, Paria Rashidinejad",
+      "url": "https://www.semanticscholar.org/paper/cc42044295812aa683aec452dc7d67e12e1f0c7f",
+      "relevance": 2,
+      "abstract": "A central challenge in large language model (LLM) editing is capability preservation: methods that successfully change targeted behavior can quietly game the editing proxy and corrupt general capabilities, producing degenerate behaviors reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled second-order editing algorithm that treats capability preservation as an explicit constraint, unifying and generalizing several existing editing approaches. CrispEdit formulates editing as constrained optimization and enforces the constraint by projecting edit updates onto the low-curvature subspace of the capability-loss landscape. At the crux of CrispEdit is expressing capability constraint via Bregman divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even when the base model is not trained to convergence. We make this second-order procedure efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC) and a novel matrix-free projector that exploits Kronecker structure to avoid constructing massive projection matrices. Across standard model-editing benchmarks, CrispEdit achieves high edit success while keeping capability degradation below 1% on average across datasets, significantly improving over prior editors.",
+      "citations": 2
+    },
+    {
+      "title": "Can Safety Fine-Tuning Be More Principled? Lessons Learned from Cybersecurity",
+      "year": 2025,
+      "authors": "David Williams-King, Linh Le, Adam Oberman, Y. Bengio",
+      "url": "https://www.semanticscholar.org/paper/fe5caab0a6972d6aea5726ea3e33dacb04cef32d",
+      "relevance": 2,
+      "abstract": "As LLMs develop increasingly advanced capabilities, there is an increased need to minimize the harm that could be caused to society by certain model outputs; hence, most LLMs have safety guardrails added, for example via fine-tuning. In this paper, we argue the position that current safety fine-tuning is very similar to a traditional cat-and-mouse game (or arms race) between attackers and defenders in cybersecurity. Model jailbreaks and attacks are patched with bandaids to target the specific attack mechanism, but many similar attack vectors might remain. When defenders are not proactively coming up with principled mechanisms, it becomes very easy for attackers to sidestep any new defenses. We show how current defenses are insufficient to prevent new adversarial jailbreak attacks, reward hacking, and loss of control problems. In order to learn from past mistakes in cybersecurity, we draw analogies with historical examples and develop lessons learned that can be applied to LLM safety. These arguments support the need for new and more principled approaches to designing safe models, which are architected for security from the beginning. We describe several such approaches from the AI literature.",
+      "citations": 0
+    },
+    {
+      "title": "MIRA: An LLM-Driven Dual-Loop Architecture for Metacognitive Reward Design",
+      "year": 2025,
+      "authors": "Weiying Zhang, Yuhua Xu, Zhixin Sun",
+      "url": "https://www.semanticscholar.org/paper/9eae2e0c83d929e2f284544b5aad7b60e2f9ad95",
+      "relevance": 1,
+      "abstract": "A central obstacle to the practical deployment of Reinforcement Learning (RL) is the prevalence of sparse rewards, which often necessitates task-specific dense signals crafted through costly trial-and-error. Automated reward decomposition and return\u2013redistribution methods can reduce this burden, but they are largely semantically agnostic and may fail to capture the multifaceted nature of task performance, leading to reward hacking or stalled exploration. Recent work uses Large Language Models (LLMs) to generate reward functions from high-level task descriptions, but these specifications are typically static and may encode biases or inaccuracies from the pretrained model, resulting in a priori reward misspecification. To address this, we propose the Metacognitive Introspective Reward Architecture (MIRA), a closed-loop architecture that treats LLM-generated reward code as a dynamic object refined through empirical feedback. An LLM first produces a set of computable reward factors. A dual-loop design then decouples policy learning from reward revision: an inner loop jointly trains the agent\u2019s policy and a reward-synthesis network to align with sparse ground-truth outcomes, while an outer loop monitors learning dynamics via diagnostic metrics and, upon detecting pathological signatures, invokes the LLM to perform targeted structural edits. Experiments on MuJoCo benchmarks show that MIRA corrects flawed initial specifications and improves asymptotic performance and sample efficiency over strong reward-design baselines.",
+      "citations": 0
+    },
+    {
+      "title": "Reward Shaping for Inference-Time Alignment: A Stackelberg Game Perspective",
+      "year": 2026,
+      "authors": "Haichuan Wang, Tao Lin, Lingkai Kong, Ce Li, Hezi Jiang, Milind Tambe",
+      "url": "https://www.semanticscholar.org/paper/a8451eecb560da9159d85cc111776e9e1bb9d3dd",
+      "relevance": 1,
+      "abstract": "Existing alignment methods directly use the reward model learned from user preference data to optimize an LLM policy, subject to KL regularization with respect to the base policy. This practice is suboptimal for maximizing user's utility because the KL regularization may cause the LLM to inherit the bias in the base policy that conflicts with user preferences. While amplifying rewards for preferred outputs can mitigate this bias, it also increases the risk of reward hacking. This tradeoff motivates the problem of optimally designing reward models under KL regularization. We formalize this reward model optimization problem as a Stackelberg game, and show that a simple reward shaping scheme can effectively approximate the optimal reward model. We empirically evaluate our method in inference-time alignment settings and demonstrate that it integrates seamlessly into existing alignment methods with minimal overhead. Our method consistently improves average reward and achieves win-tie rates exceeding 66% against all baselines, averaged across evaluation settings.",
+      "citations": 2
+    },
+    {
+      "title": "AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement",
+      "year": 2024,
+      "authors": "Pranjal Aggarwal, Bryan Parno, S. Welleck",
+      "url": "https://www.semanticscholar.org/paper/8defb15a763a094876d6d4d670bd643d977b4bbe",
+      "relevance": 1,
+      "abstract": "Automated code generation with large language models has gained significant traction, but there remains no guarantee on the correctness of generated code. We aim to use formal verification to provide mathematical guarantees that the generated code is correct. However, generating formally verified code with LLMs is hindered by the scarcity of training data and the complexity of formal proofs. To tackle this challenge, we introduce AlphaVerus, a self-improving framework that bootstraps formally verified code generation by iteratively translating programs from a higher-resource language and leveraging feedback from a verifier. AlphaVerus operates in three phases: exploration of candidate translations, Treefinement -- a novel tree search algorithm for program refinement using verifier feedback, and filtering misaligned specifications and programs to prevent reward hacking. Through this iterative process, AlphaVerus enables a LLaMA-3.1-70B model to generate verified code without human intervention or model finetuning. AlphaVerus shows an ability to generate formally verified solutions for HumanEval and MBPP, laying the groundwork for truly trustworthy code-generation agents.",
+      "citations": 27
+    },
+    {
+      "title": "HicAgent: Hierarchical Iterative Cooperative Learning Reward Generation Guided by a Large Model",
+      "year": 2025,
+      "authors": "Shimin Kan, Qi Hu, Shutong Jia, L. Lou",
+      "url": "https://www.semanticscholar.org/paper/1a02234d3ea33a312c650fe4784b643177504688",
+      "relevance": 1,
+      "abstract": "Reward design plays a fundamental role in reinforcement learning (RL), yet it typically requires extensive domain expertise and significant manual effort. In conventional RL paradigms, the construction of reward functions is heavily dependent on expert knowledge, making the process time-consuming and labor-intensive. Recent advancements in large language models (LLMs) have introduced new opportunities for automating and optimizing reward design, owing to their powerful semantic understanding, code synthesis, and contextual reasoning capabilities. In this paper, we present HicAgent, a hierarchical-iterative-cooperative framework for automated reward design. The proposed framework integrates environmental perception, dynamic feedback, and multi-agent collaboration to support adaptive and interpretable reward generation. HicAgent incorporates key components such as zero-shot reward generation, evolutionary search, and iterative reward optimization, effectively addressing core challenges including reward sparsity, reward hacking, and multi-objective balance. Experimental results demonstrate that HicAgent surpasses four baseline methods, achieving success rates of 90.8% in robotic manipulation tasks, 87.2% in autonomous navigation, and 83.5% in game control environments. These results validate the framework generality, efficiency, and interpretability in complex RL settings.",
+      "citations": 0
+    },
+    {
+      "title": "MeRF: Motivation-enhanced Reinforcement Finetuning for Large Reasoning Models",
+      "year": 2025,
+      "authors": "Junjie Zhang, Guozheng Ma, Shunyu Liu, Haoyu Wang, Jiaxing Huang, Ting-En Lin, Fei Huang, Yongbin Li, Dacheng Tao",
+      "url": "https://www.semanticscholar.org/paper/fe218bb59d285201a65865bd602403e44d442412",
+      "relevance": 1,
+      "abstract": "",
+      "citations": 4
+    },
+    {
+      "title": "Reward Hacking as Equilibrium under Finite Evaluation",
+      "year": 2026,
+      "authors": "Jiachen T. Wang, Jinbin Huang",
+      "url": "https://www.semanticscholar.org/paper/831f1cf8925b65d41baddff5fcdaa595895059d0",
+      "relevance": 1,
+      "abstract": "We prove that under five minimal axioms -- multi-dimensional quality, finite evaluation, effective optimization, resource finiteness, and combinatorial interaction -- any optimized AI agent will systematically under-invest effort in quality dimensions not covered by its evaluation system. This result establishes reward hacking as a structural equilibrium, not a correctable bug, and holds regardless of the specific alignment method (RLHF, DPO, Constitutional AI, or others) or evaluation architecture employed. Our framework instantiates the multi-task principal-agent model of Holmstrom and Milgrom (1991) in the AI alignment setting, but exploits a structural feature unique to AI systems -- the known, differentiable architecture of reward models -- to derive a computable distortion index that predicts both the direction and severity of hacking on each quality dimension prior to deployment. We further prove that the transition from closed reasoning to agentic systems causes evaluation coverage to decline toward zero as tool count grows -- because quality dimensions expand combinatorially while evaluation costs grow at most linearly per tool -- so that hacking severity increases structurally and without bound. Our results unify the explanation of sycophancy, length gaming, and specification gaming under a single theoretical structure and yield an actionable vulnerability assessment procedure. We further conjecture -- with partial formal analysis -- the existence of a capability threshold beyond which agents transition from gaming within the evaluation system (Goodhart regime) to actively degrading the evaluation system itself (Campbell regime), providing the first economic formalization of Bostrom's (2014)\"treacherous turn.\"",
+      "citations": 1
+    },
+    {
+      "title": "From SFT to RL: Demystifying the Post-Training Pipeline for LLM-based Vulnerability Detection",
+      "year": 2026,
+      "authors": "Youpeng Li, Fuxun Yu, Xinda Wang",
+      "url": "https://www.semanticscholar.org/paper/e6a6cfdd0ed3b7ad12689581b7102f4a26d4a9f5",
+      "relevance": 1,
+      "abstract": "The integration of LLMs into vulnerability detection (VD) has shifted the field toward more interpretable and context-aware analysis. While post-training techniques have shown promise in general coding tasks, their systematic application to VD remains underexplored. In this paper, we present the first comprehensive investigation into the post-training pipeline for LLM-based VD, demonstrating that on-policy RL with GRPO consistently outperforms SFT, off-policy preference optimization methods, and specialized VD LLMs. Our study further reveals VD-specific post-training guidelines and insights beyond common practices: (1) For data curation, contrary to the widespread use of rationalization-based supervision in prior VD work, SFT based on rejection sampling proves more effective, as rationalization can introduce hallucinations; in RL training, the inherently skewed difficulty distribution of vulnerabilities leads difficulty-aware data filtering to drastically reduce data coverage, causing non-negligible performance loss, and undermines curriculum learning, while pair-based data scheduling can partially mitigate this. (2) For stage interactions, unlike preference optimization typically applied to lightly trained SFT models, increasing SFT epochs consistently benefits off-policy preference optimization in VD tasks; however, excessive SFT suppresses self-exploration in on-policy RL, limiting its gains. (3) For reward mechanisms, naively treating vulnerability classification correctness as reward signals leads to reward hacking, whereas fine-grained root-cause judgments provide more reliable credit assignment; specification-based rewards further improve efficiency at the cost of additional design and generation effort. (4) For evaluation protocols, LLM-as-a-Judge based on root-cause analysis offers a more robust alternative, albeit with variability across judge models.",
+      "citations": 1
+    },
+    {
+      "title": "From Reasoning to Agentic: Credit Assignment in Reinforcement Learning for Large Language Models",
+      "year": 2026,
+      "authors": "Chenchen Zhang",
+      "url": "https://www.semanticscholar.org/paper/bd53988fd199ef08d67d774aad58d11909c45466",
+      "relevance": 1,
+      "abstract": "Reinforcement learning (RL) for large language models (LLMs) increasingly relies on sparse, outcome-level rewards -- yet determining which actions within a long trajectory caused the outcome remains difficult. This credit assignment (CA) problem manifests in two regimes: reasoning RL, where credit must be distributed across tokens and steps within a single chain-of-thought generation (500--30K+ tokens); and agentic RL, where multi-turn environment interaction introduces stochastic transitions, partial observability, and horizons of 100+ turns (100K--1M tokens), making episode-level credit increasingly uninformative. We survey 47 CA methods (41 core, 6 adjacent enablers) published between 2024 and early 2026, organizing them in a two-dimensional taxonomy by assignment granularity (token, segment, step, turn, multi-agent) and methodology (Monte Carlo, temporal difference, model-based, game-theoretic, information-theoretic). Beyond the survey itself, we contribute three reusable resources: (1) a structured, machine-readable paper inventory with taxonomy labels, baseline families, and evidence levels; (2) a reporting checklist for future CA papers, validated against the reviewed literature to identify systematic methodological gaps; and (3) a benchmark protocol specification with task families, metadata requirements, and controlled bifurcation tasks, accompanied by a method selection decision tree. Our synthesis suggests that the shift from reasoning to agentic RL complicates and reshapes the credit assignment landscape: reasoning CA is maturing around process reward models and critic-free group comparison, while agentic CA is driving genuinely new approaches -- hindsight counterfactual analysis, privileged asymmetric critics, and turn-level MDP reformulations -- that have no direct precedent in reasoning RL.",
+      "citations": 1
+    }
+  ]
+}
+
+Results saved to: paper_search_results/LLM_specification_gaming_reward_hacking_20260518_005251.jsonl

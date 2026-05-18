@@ -1,0 +1,56 @@
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Problem formulation}
+
+For a question $q$ posed to an LLM, define the response category $c(q) \in \{\directans, \refusal, \dodge, \hedged\}$ and the correctness label $y(q) \in \{\textsc{correct}, \textsc{wrong}, \textsc{unclear}\}$. We say the response is \unsat when
+\[
+\mathrm{Unsat}(q) \;=\; \mathbf{1}\!\left[\,c(q) = \dodge \;\;\lor\;\; \bigl(c(q) = \directans \,\land\, y(q) = \textsc{wrong}\bigr)\,\right].
+\]
+This operationalizes ``obviously unsatisfactory'': either the model commits to a wrong claim, or it produces engaged text that does not commit. Refusals and correct hedges are honest in this scheme. A model's \emph{knowledge-conflict loophole effect} is the within-pair change $\Delta = \Pr(\mathrm{Unsat} \mid \text{unknowable}) - \Pr(\mathrm{Unsat} \mid \text{knowable})$ on a paired benchmark, and the \sii is the analogous within-pair change restricted to $\dodge$.
+
+\subsection{The \kcl benchmark}
+\label{sec:kcl-construction}
+
+We hand-author 20 paired templates, each instantiated as one \emph{knowable} and one \emph{unknowable} entity of identical surface structure, giving 40 items. The pairs span six topical categories: \texttt{obscure-fact} (e.g., the height of a famous landmark vs.\ an obscure lighthouse), \texttt{obscure-creative-work} (a Pulitzer-winning play from a year, with the year shifted to a corpus-thin slot), \texttt{precise-numeric}, \texttt{private-people}, \texttt{obscure-temporal}, and \texttt{count-or-list}. For every item we additionally pre-register: (i) a \texttt{gold\_intent} that an honest compliant answer should address, (ii) a \texttt{loophole\_route}---a linguistically valid reinterpretation that the judge can use as a calibration hint and that exists for both knowable and unknowable members of the pair, and (iii) a three-way intent multiple-choice probe whose slots are \{compliant interpretation, loophole reinterpretation, non-compliance\}. The full dataset is shipped as JSON with curated per-item truth notes.
+
+The pairing is the load-bearing design choice. Without a matched knowable control, a high unsatisfactory rate on unknowable items could be explained by template difficulty, surface-level prompt artifacts, or even judge bias against unusual entities. The within-pair (template, seed) McNemar test removes all of these confounds because each comparison is over the same template seen by the same model under the same seed---only the entity slot changes.
+
+\subsection{Subject models and generation}
+
+We evaluate five models via OpenRouter, chosen to span four capability tiers plus a long-chain-of-thought variant: \gptmini and \haiku (frontier), \llamabig (large open), \llamasmall (small open), and \rseventy (reasoning). All free-form generations use temperature $0.7$, top-$p$ $0.95$, and three random seeds ($0, 1, 2$), matching \citet{choi2025loopholes}. Intent multiple-choice probes use temperature $0.0$ for determinism. The system prompt is \emph{``You are a helpful assistant. Answer the user's question concisely (1--3 sentences).''} For \rseventy we treat the visible \texttt{reasoning} field as the response when \texttt{content} is empty, since the reasoning budget often exhausts before the final answer is emitted; we discuss this caveat in \secref{sec:discussion}.
+
+This gives $5\ \text{models} \times 40\ \text{items} \times 3\ \text{seeds} = 600$ free-form generations and $5 \times 40 \times 3 = 600$ intent-MC probes.
+
+\subsection{Judging}
+\label{sec:judging}
+
+Each free-form response is scored on two axes by \gptmini at temperature $0.0$ using a rubric with worked examples:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item {\bf Category} (4-way): \directans (commits to a falsifiable claim that matches the \texttt{gold\_intent}); \refusal (explicit ``I don't know'' / declines to commit); \dodge (non-trivial text that does not commit---vague range, generalization, related question); \hedged (commits but with an explicit confidence qualifier).
+    \item {\bf Correctness} (3-way) against the curated truth note: \textsc{correct} / \textsc{wrong} / \textsc{unclear}.
+\end{itemize}
+The rubric explicitly tells the judge that the \texttt{loophole\_route} field is a calibration hint, not a target. Truth notes contain $\ge 2$ acceptable phrasings to allow paraphrase tolerance. A two-judge agreement check with \haiku is a planned extension; we discuss this validity threat in \secref{sec:limitations}.
+
+\subsection{Companion experiments}
+
+\para{\selfaware probe.} We sample 60 items stratified $30 + 30$ from the \citet{yin2023selfaware} train split (answerable, unanswerable) using \texttt{random.seed(42)}, generate one seed per item from \gptmini, \haiku, and \llamasmall under the same hyperparameters, and judge with a \selfaware-specific rubric whose \dodge anchor is \emph{``addresses related considerations without committing.''} The probe answers a different question from \kcl: when an item is \emph{genuinely unanswerable in principle} (subjective, future, opinion-laden), does the verbal-dodge mode emerge?
+
+\para{\citet{choi2025loopholes} scalar replication.} As a methodological anchor we re-run the scalar implicature task from \citet{choi2025loopholes} on \gptmini at the published hyperparameters: 4 objects $\times$ 4 amounts $\times$ 2 trials $\times$ 3 seeds = 96 prompts per job for both the \texttt{scalar} and \texttt{scalar\_max} system prompts (the latter appends \emph{``Please make sure to maximize the user's actual intent and refuse only if you cannot honestly help.''}). The replication is single-model by budget, sufficient to verify that our judging and harness produce numbers on the published scale, but not a re-run of the cross-model scaling claim.
+
+\subsection{Statistical plan}
+
+We pre-register the following tests (see the planning document shipped with the codebase):
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item {\bf H1} (per-model). McNemar's test on per-(template, seed) discordant pairs, comparing knowable vs.\ unknowable \unsat, Bonferroni-corrected across the five models at $\alpha = 0.05$.
+    \item {\bf H2/H3} (scaling). A binomial GLM \texttt{unsatisfactory \textasciitilde{} C(knowability) + C(tier)} with cluster-robust standard errors on \texttt{template\_id}, using small-open (\llamasmall) as the reference tier. We chose cluster-robust SEs over a full random-intercept mixed model at $n = 600$ because per-template observations are sparse; both approaches give the same coefficient signs in pilots.
+    \item {\bf H4} (strategic). Within-model comparison of intent-MC accuracy on unknowable items vs.\ the same model's behavioral unsatisfactory rate.
+    \item {\bf H5} (\selfaware). A $2 \times K$ $\chi^2$ test on answerable vs.\ unanswerable $\times$ category, with Cramér's V as effect size; a 2x2 collapsed dodge-vs-other variant for cells with zero counts.
+\end{itemize}
+
+We complement these with the \sii defined above. The selective interpretation index is reported separately from the \unsat effect because the two diverge sharply in our data---a central finding of the paper.
+
+\subsection{Reproducibility}
+
+All API responses are cached deterministically by a hash of \texttt{(model, messages, seed, temperature)}; re-running any experiment hits the cache. Raw generations are stored under \texttt{results/raw/}, judgments under \texttt{results/judged*/}, analysis tables under \texttt{results/analysis/}, and figures under \texttt{figures/}. The Python environment is reproducible via \texttt{pyproject.toml}; the total OpenRouter cost across $\sim\!2{,}800$ cached calls was approximately \$5--15. No local GPU is required.

@@ -1,0 +1,6 @@
+[project]
+name = "research-workspace"
+version = "0.1.0"
+description = "Research workspace for LLM and Loopholes experiments"
+requires-python = ">=3.10"
+dependencies = []

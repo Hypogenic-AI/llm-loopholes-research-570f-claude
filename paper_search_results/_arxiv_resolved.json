@@ -1,0 +1,102 @@
+[
+  {
+    "original_title": "Language Models Identify Ambiguities and Exploit Loopholes",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Comparing the Evaluation and Production of Loophole Behavior in Humans and Large Language Models",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Is It Thinking or Cheating? Detecting Implicit Reward Hacking by Measuring Reasoning Effort",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Can AI Assistants Know What They Don't Know?",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Trust Me, I'm Wrong: LLMs Hallucinate with Certainty Despite Knowing the Answer",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Does Refusal Training in LLMs Generalize to the Past Tense?",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Jailbroken: How Does LLM Safety Training Fail?",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "A Survey on the Honesty of Large Language Models",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Teaching Large Language Models to Express Knowledge Boundary from Their Own Signals",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "LLMs Know More Than They Show: On the Intrinsic Representation of LLM Hallucinations",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Pragmatic Instruction Following and Goal Assistance via Cooperative Language-Guided Inverse Planning",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Automatic Curriculum Expert Iteration for Reliable LLM Reasoning",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Learn to Refuse: Making Large Language Models More Controllable and Reliable through Knowledge Scope Limitation and Refusal Mechanism",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "The Internal State of an LLM Knows When its Lying",
+    "arxiv_id": null,
+    "error": "The read operation timed out"
+  },
+  {
+    "original_title": "Do LLMs Know about Hallucination? An Empirical Investigation of LLM's Hidden States",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Detecting Proxy Gaming in RL and LLM Alignment via Evaluator Stress Tests",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "original_title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Unknown Error"
+  },
+  {
+    "original_title": "Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation",
+    "arxiv_id": null,
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+]

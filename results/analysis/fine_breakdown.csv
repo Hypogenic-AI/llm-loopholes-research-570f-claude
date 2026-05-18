@@ -1,0 +1,11 @@
+model_short,knowability,DIRECT_CORRECT,DIRECT_WRONG,HEDGED_CORRECT,LOOPHOLE_DODGE,REFUSAL,total
+claude-3.5-haiku,knowable,52,7,0,1,0,60
+claude-3.5-haiku,unknowable,44,15,0,1,0,60
+deepseek-r1-70b,knowable,54,5,0,1,0,60
+deepseek-r1-70b,unknowable,44,15,0,1,0,60
+gpt-4o-mini,knowable,55,5,0,0,0,60
+gpt-4o-mini,unknowable,36,21,2,1,0,60
+llama-3.1-70b,knowable,49,11,0,0,0,60
+llama-3.1-70b,unknowable,41,17,0,2,0,60
+llama-3.1-8b,knowable,50,9,0,1,0,60
+llama-3.1-8b,unknowable,32,23,0,3,2,60

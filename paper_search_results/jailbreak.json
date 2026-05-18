@@ -1,0 +1,683 @@
+{
+  "success": true,
+  "total": 75,
+  "papers": [
+    {
+      "title": "Jailbroken: How Does LLM Safety Training Fail?",
+      "year": 2023,
+      "authors": "Alexander Wei, Nika Haghtalab, J. Steinhardt",
+      "url": "https://www.semanticscholar.org/paper/929305892d4ddae575a0fc23227a8139f7681632",
+      "relevance": 3,
+      "abstract": "Large language models trained for safety and harmlessness remain susceptible to adversarial misuse, as evidenced by the prevalence of\"jailbreak\"attacks on early releases of ChatGPT that elicit undesired behavior. Going beyond recognition of the issue, we investigate why such attacks succeed and how they can be created. We hypothesize two failure modes of safety training: competing objectives and mismatched generalization. Competing objectives arise when a model's capabilities and safety goals conflict, while mismatched generalization occurs when safety training fails to generalize to a domain for which capabilities exist. We use these failure modes to guide jailbreak design and then evaluate state-of-the-art models, including OpenAI's GPT-4 and Anthropic's Claude v1.3, against both existing and newly designed attacks. We find that vulnerabilities persist despite the extensive red-teaming and safety-training efforts behind these models. Notably, new attacks utilizing our failure modes succeed on every prompt in a collection of unsafe requests from the models' red-teaming evaluation sets and outperform existing ad hoc jailbreaks. Our analysis emphasizes the need for safety-capability parity -- that safety mechanisms should be as sophisticated as the underlying model -- and argues against the idea that scaling alone can resolve these safety failure modes.",
+      "citations": 1786
+    },
+    {
+      "title": "Gradient Cuff: Detecting Jailbreak Attacks on Large Language Models by Exploring Refusal Loss Landscapes",
+      "year": 2024,
+      "authors": "Xiaomeng Hu, Pin-Yu Chen, Tsung-Yi Ho",
+      "url": "https://api.semanticscholar.org/CorpusId:268230819",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) are becoming a prominent generative AI tool, where the user enters a query and the LLM generates an answer. To reduce harm and misuse, efforts have been made to align these LLMs to human values using advanced training techniques such as Reinforcement Learning from Human Feedback (RLHF). However, recent studies have highlighted the vulnerability of LLMs to adversarial jailbreak attempts aiming at subverting the embedded safety guardrails. To address this challenge, this paper defines and investigates the Refusal Loss of LLMs and then proposes a method called Gradient Cuff to detect jailbreak attempts. Gradient Cuff exploits the unique properties observed in the refusal loss landscape, including functional values and its smoothness, to design an effective two-step detection strategy. Experimental results on two aligned LLMs (LLaMA-2-7B-Chat and Vicuna-7B-V1.5) and six types of jailbreak attacks (GCG, AutoDAN, PAIR, TAP, Base64, and LRL) show that Gradient Cuff can significantly improve the LLM's rejection capability for malicious jailbreak queries, while maintaining the model's performance for benign user queries by adjusting the detection threshold.",
+      "citations": 77
+    },
+    {
+      "title": "AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks",
+      "year": 2024,
+      "authors": "Yifan Zeng, Yiran Wu, Xiao Zhang, Huazheng Wang, Qingyun Wu",
+      "url": "https://api.semanticscholar.org/CorpusId:268297202",
+      "relevance": 3,
+      "abstract": "Despite extensive pre-training in moral alignment to prevent generating harmful information, large language models (LLMs) remain vulnerable to jailbreak attacks. In this paper, we propose AutoDefense, a multi-agent defense framework that filters harmful responses from LLMs. With the response-filtering mechanism, our framework is robust against different jailbreak attack prompts, and can be used to defend different victim models. AutoDefense assigns different roles to LLM agents and employs them to complete the defense task collaboratively. The division in tasks enhances the overall instruction-following of LLMs and enables the integration of other defense components as tools. With AutoDefense, small open-source LMs can serve as agents and defend larger models against jailbreak attacks. Our experiments show that AutoDefense can effectively defense against different jailbreak attacks, while maintaining the performance at normal user request. For example, we reduce the attack success rate on GPT-3.5 from 55.74% to 7.95% using LLaMA-2-13b with a 3-agent system. Our code and data are publicly available at https://github.com/XHMY/AutoDefense.",
+      "citations": 153
+    },
+    {
+      "title": "Does Refusal Training in LLMs Generalize to the Past Tense?",
+      "year": 2024,
+      "authors": "Maksym Andriushchenko, Nicolas Flammarion",
+      "url": "https://www.semanticscholar.org/paper/d5d92ed507b3214ddde1c1ec7b847b8710b924b0",
+      "relevance": 3,
+      "abstract": "Refusal training is widely used to prevent LLMs from generating harmful, undesirable, or illegal outputs. We reveal a curious generalization gap in the current refusal training approaches: simply reformulating a harmful request in the past tense (e.g.,\"How to make a Molotov cocktail?\"to\"How did people make a Molotov cocktail?\") is often sufficient to jailbreak many state-of-the-art LLMs. We systematically evaluate this method on Llama-3 8B, Claude-3.5 Sonnet, GPT-3.5 Turbo, Gemma-2 9B, Phi-3-Mini, GPT-4o mini, GPT-4o, o1-mini, o1-preview, and R2D2 models using GPT-3.5 Turbo as a reformulation model. For example, the success rate of this simple attack on GPT-4o increases from 1% using direct requests to 88% using 20 past tense reformulation attempts on harmful requests from JailbreakBench with GPT-4 as a jailbreak judge. Interestingly, we also find that reformulations in the future tense are less effective, suggesting that refusal guardrails tend to consider past historical questions more benign than hypothetical future questions. Moreover, our experiments on fine-tuning GPT-3.5 Turbo show that defending against past reformulations is feasible when past tense examples are explicitly included in the fine-tuning data. Overall, our findings highlight that the widely used alignment techniques -- such as SFT, RLHF, and adversarial training -- employed to align the studied models can be brittle and do not always generalize as intended. We provide code and jailbreak artifacts at https://github.com/tml-epfl/llm-past-tense.",
+      "citations": 74
+    },
+    {
+      "title": "Improved Few-Shot Jailbreaking Can Circumvent Aligned Language Models and Their Defenses",
+      "year": 2024,
+      "authors": "Xiaosen Zheng, Tianyu Pang, Chao Du, Qian Liu, Jing Jiang, Min Lin",
+      "url": "https://api.semanticscholar.org/CorpusId:270213981",
+      "relevance": 3,
+      "abstract": "Recently, Anil et al. (2024) show that many-shot (up to hundreds of) demonstrations can jailbreak state-of-the-art LLMs by exploiting their long-context capability. Nevertheless, is it possible to use few-shot demonstrations to efficiently jailbreak LLMs within limited context sizes? While the vanilla few-shot jailbreaking may be inefficient, we propose improved techniques such as injecting special system tokens like [/INST] and employing demo-level random search from a collected demo pool. These simple techniques result in surprisingly effective jailbreaking against aligned LLMs (even with advanced defenses). For examples, our method achieves>80% (mostly>95%) ASRs on Llama-2-7B and Llama-3-8B without multiple restarts, even if the models are enhanced by strong defenses such as perplexity detection and/or SmoothLLM, which is challenging for suffix-based jailbreaking. In addition, we conduct comprehensive and elaborate (e.g., making sure to use correct system prompts) evaluations against other aligned LLMs and advanced defenses, where our method consistently achieves nearly 100% ASRs. Our code is available at https://github.com/sail-sg/I-FSJ.",
+      "citations": 81
+    },
+    {
+      "title": "Defensive Prompt Patch: A Robust and Interpretable Defense of LLMs against Jailbreak Attacks",
+      "year": 2024,
+      "authors": "Chen Xiong, Xiangyu Qi, Pin-Yu Chen, Tsung-Yi Ho",
+      "url": "https://api.semanticscholar.org/CorpusId:270123437",
+      "relevance": 3,
+      "abstract": "Safety, security, and compliance are essential requirements when aligning large language models (LLMs). However, many seemingly aligned LLMs are soon shown to be susceptible to jailbreak attacks. These attacks aim to circumvent the models' safety guardrails and security mechanisms by introducing jailbreak prompts into malicious queries. In response to these challenges, this paper introduces Defensive Prompt Patch (DPP), a novel prompt-based defense mechanism specifically designed to protect LLMs against such sophisticated jailbreak strategies. Unlike previous approaches, which have often compromised the utility of the model for the sake of safety, DPP is designed to achieve a minimal Attack Success Rate (ASR) while preserving the high utility of LLMs. Our method uses strategically designed interpretable suffix prompts that effectively thwart a wide range of standard and adaptive jailbreak techniques. Empirical results conducted on LLAMA-2-7B-Chat and Mistral-7B-Instruct-v0.2 models demonstrate the robustness and adaptability of DPP, showing significant reductions in ASR with negligible impact on utility. Our approach not only outperforms existing defense strategies in balancing safety and functionality, but also provides a scalable and interpretable solution applicable to various LLM platforms.",
+      "citations": 38
+    },
+    {
+      "title": "Mind the Inconspicuous: Revealing the Hidden Weakness in Aligned LLMs' Refusal Boundaries",
+      "year": 2024,
+      "authors": "Jiahao Yu, Haozheng Luo, Jerry Yao-Chieh Hu, Wenbo Guo, Han Liu, Xinyu Xing",
+      "url": "https://www.semanticscholar.org/paper/c3fb7ce591e8000fe044f9c815e4a50a9fbd7e26",
+      "relevance": 3,
+      "abstract": "Recent advances in Large Language Models (LLMs) have led to impressive alignment where models learn to distinguish harmful from harmless queries through supervised finetuning (SFT) and reinforcement learning from human feedback (RLHF). In this paper, we reveal a subtle yet impactful weakness in these aligned models. We find that simply appending multiple end of sequence (eos) tokens can cause a phenomenon we call context segmentation, which effectively shifts both harmful and benign inputs closer to the refusal boundary in the hidden space. Building on this observation, we propose a straightforward method to BOOST jailbreak attacks by appending eos tokens. Our systematic evaluation shows that this strategy significantly increases the attack success rate across 8 representative jailbreak techniques and 16 open-source LLMs, ranging from 2B to 72B parameters. Moreover, we develop a novel probing mechanism for commercial APIs and discover that major providers such as OpenAI, Anthropic, and Qwen do not filter eos tokens, making them similarly vulnerable. These findings highlight a hidden yet critical blind spot in existing alignment and content filtering approaches. We call for heightened attention to eos tokens' unintended influence on model behaviors, particularly in production systems. Our work not only calls for an input-filtering based defense, but also points to new defenses that make refusal boundaries more robust and generalizable, as well as fundamental alignment techniques that can defend against context segmentation attacks.",
+      "citations": 27
+    },
+    {
+      "title": "Defending Large Language Models Against Jailbreak Attacks via Layer-specific Editing",
+      "year": 2024,
+      "authors": "Wei Zhao, Zhe Li, Yige Li, Ye Zhang, Junfeng Sun",
+      "url": "https://api.semanticscholar.org/CorpusId:270067915",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) are increasingly being adopted in a wide range of real-world applications. Despite their impressive performance, recent studies have shown that LLMs are vulnerable to deliberately crafted adversarial prompts even when aligned via Reinforcement Learning from Human Feedback or supervised fine-tuning. While existing defense methods focus on either detecting harmful prompts or reducing the likelihood of harmful responses through various means, defending LLMs against jailbreak attacks based on the inner mechanisms of LLMs remains largely unexplored. In this work, we investigate how LLMs response to harmful prompts and propose a novel defense method termed \\textbf{L}ayer-specific \\textbf{Ed}iting (LED) to enhance the resilience of LLMs against jailbreak attacks. Through LED, we reveal that several critical \\textit{safety layers} exist among the early layers of LLMs. We then show that realigning these safety layers (and some selected additional layers) with the decoded safe response from selected target layers can significantly improve the alignment of LLMs against jailbreak attacks. Extensive experiments across various LLMs (e.g., Llama2, Mistral) show the effectiveness of LED, which effectively defends against jailbreak attacks while maintaining performance on benign prompts. Our code is available at \\url{https://github.com/ledllm/ledllm}.",
+      "citations": 81
+    },
+    {
+      "title": "AdaSteer: Your Aligned LLM is Inherently an Adaptive Jailbreak Defender",
+      "year": 2025,
+      "authors": "Weixiang Zhao, Jiahe Guo, Yulin Hu, Yang Deng, An Zhang, Xingyu Sui, Xinyang Han, Yanyan Zhao, Bing Qin, Tat-Seng Chua, Ting Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:277780799",
+      "relevance": 3,
+      "abstract": "Despite extensive efforts in safety alignment, large language models (LLMs) remain vulnerable to jailbreak attacks. Activation steering offers a training-free defense method but relies on fixed steering coefficients, resulting in suboptimal protection and increased false rejections of benign inputs. To address this, we propose AdaSteer, an adaptive activation steering method that dynamically adjusts model behavior based on input characteristics. We identify two key properties: Rejection Law (R-Law), which shows that stronger steering is needed for jailbreak inputs opposing the rejection direction, and Harmfulness Law (H-Law), which differentiates adversarial and benign inputs. AdaSteer steers input representations along both the Rejection Direction (RD) and Harmfulness Direction (HD), with adaptive coefficients learned via logistic regression, ensuring robust jailbreak defense while preserving benign input handling. Experiments on LLaMA-3.1, Gemma-2, and Qwen2.5 show that AdaSteer outperforms baseline methods across multiple jailbreak attacks with minimal impact on utility. Our results highlight the potential of interpretable model internals for real-time, flexible safety enforcement in LLMs.",
+      "citations": 25
+    },
+    {
+      "title": "SelfDefend: LLMs Can Defend Themselves against Jailbreaking in a Practical Manner",
+      "year": 2024,
+      "authors": "Xunguang Wang, Daoyuan Wu, Zhenlan Ji, Zongjie Li, Pingchuan Ma, Shuaibao Wang, Yingjiu Li, Yang Liu, Ning Liu, Juergen Rahmel",
+      "url": "https://api.semanticscholar.org/CorpusId:270371749",
+      "relevance": 3,
+      "abstract": "Jailbreaking is an emerging adversarial attack that bypasses the safety alignment deployed in off-the-shelf large language models (LLMs) and has evolved into multiple categories: human-based, optimization-based, generation-based, and the recent indirect and multilingual jailbreaks. However, delivering a practical jailbreak defense is challenging because it needs to not only handle all the above jailbreak attacks but also incur negligible delays to user prompts, as well as be compatible with both open-source and closed-source LLMs. Inspired by how the traditional security concept of shadow stacks defends against memory overflow attacks, this paper introduces a generic LLM jailbreak defense framework called SelfDefend, which establishes a shadow LLM as a defense instance (in detection state) to concurrently protect the target LLM instance (in normal answering state) in the normal stack and collaborate with it for checkpoint-based access control. The effectiveness of SelfDefend builds upon our observation that existing LLMs can identify harmful prompts or intentions in user queries, which we empirically validate using mainstream GPT-3.5/4 models against major jailbreak attacks. To further improve the defense's robustness and minimize costs, we employ a data distillation approach to tune dedicated open-source defense models. When deployed to protect GPT-3.5/4, Claude, Llama-2-7b/13b, and Mistral, these models outperform seven state-of-the-art defenses and match the performance of GPT-4-based SelfDefend, with significantly lower extra delays. Further experiments show that the tuned models are robust to adaptive jailbreaks and prompt injections.",
+      "citations": 52
+    },
+    {
+      "title": "Jailbreak and Guard Aligned Language Models With Only Few In-Context Demonstrations",
+      "year": 2023,
+      "authors": "Zeming Wei, Yifei Wang, Yisen Wang",
+      "url": "https://www.semanticscholar.org/paper/6b135e922a0c673aeb0b05c5aeecdb6c794791c6",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable success across diverse applications, yet their susceptibility to malicious exploitation remains a critical challenge. Notably, LLMs are known to be vulnerable to jailbreaking attacks, where adversaries craft malicious inputs to induce harmful or unethical outputs. In this paper, motivated by the unique effectiveness and scalability of In-Context Learning (ICL) in LLMs, we explore its potential to modulate the safety alignment of LLMs. Specifically, we propose the In-Context Attack (ICA), which employs harmful demonstrations to subvert LLMs\u2019 safety, and the In-Context Defense (ICD), which bolsters their resilience through examples that demonstrate refusal to produce harmful responses. By adjusting the distribution of safety in LLM outputs through adversarial demonstrations, our proposed in-context attack and defense facilitate effective manipulation of their alignment. We first provide theoretical insights to illustrate how minimal in-context demonstrations can efficiently alter safety alignment. Empirically, we validate ICA and ICD across multiple models, datasets, and attack baselines, showing their efficacy and scalability for red-teaming evaluations and robust safeguards for real-world deployment. Overall, our work unveils the pivotal yet understudied role of ICL in LLM safety, opening new avenues for understanding and improving them.",
+      "citations": 467
+    },
+    {
+      "title": "Beyond Surface Alignment: Rebuilding LLMs Safety Mechanism via Probabilistically Ablating Refusal Direction",
+      "year": 2025,
+      "authors": "Yuanbo Xie, Yingji Zhang, Tianyun Liu, Duohe Ma, Tingwen Liu",
+      "url": "https://www.semanticscholar.org/paper/e73bc77fae7ad3cbfd1a33e8af2ea217de0c8270",
+      "relevance": 3,
+      "abstract": "Jailbreak attacks pose persistent threats to large language models (LLMs). Current safety alignment methods have attempted to address these issues, but they experience two significant limitations: insufficient safety alignment depth and unrobust internal defense mechanisms. These limitations make them vulnerable to adversarial attacks such as prefilling and refusal direction manipulation. We introduce DeepRefusal, a robust safety alignment framework that overcomes these issues. DeepRefusal forces the model to dynamically rebuild its refusal mechanisms from jailbreak states. This is achieved by probabilistically ablating the refusal direction across layers and token depths during fine-tuning. Our method not only defends against prefilling and refusal direction attacks but also demonstrates strong resilience against other unseen jailbreak strategies. Extensive evaluations on four open-source LLM families and six representative attacks show that DeepRefusal reduces attack success rates by approximately 95%, while maintaining model capabilities with minimal performance degradation.",
+      "citations": 4
+    },
+    {
+      "title": "Recent advancements in LLM Red-Teaming: Techniques, Defenses, and Ethical Considerations",
+      "year": 2024,
+      "authors": "Tarun Raheja, Nilay Pochhi",
+      "url": "https://api.semanticscholar.org/CorpusId:273346471",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language processing tasks, but their vulnerability to jailbreak attacks poses significant security risks. This survey paper presents a comprehensive analysis of recent advancements in attack strategies and defense mechanisms within the field of Large Language Model (LLM) red-teaming. We analyze various attack methods, including gradient-based optimization, reinforcement learning, and prompt engineering approaches. We discuss the implications of these attacks on LLM safety and the need for improved defense mechanisms. This work aims to provide a thorough understanding of the current landscape of red-teaming attacks and defenses on LLMs, enabling the development of more secure and reliable language models.",
+      "citations": 12
+    },
+    {
+      "title": "PARDEN, Can You Repeat That? Defending against Jailbreaks via Repetition",
+      "year": 2024,
+      "authors": "Ziyang Zhang, Qizhen Zhang, Jakob Foerster",
+      "url": "https://api.semanticscholar.org/CorpusId:269757120",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) have shown success in many natural language processing tasks. Despite rigorous safety alignment processes, supposedly safety-aligned LLMs like Llama 2 and Claude 2 are still susceptible to jailbreaks, leading to security risks and abuse of the models. One option to mitigate such risks is to augment the LLM with a dedicated\"safeguard\", which checks the LLM's inputs or outputs for undesired behaviour. A promising approach is to use the LLM itself as the safeguard. Nonetheless, baseline methods, such as prompting the LLM to self-classify toxic content, demonstrate limited efficacy. We hypothesise that this is due to domain shift: the alignment training imparts a self-censoring behaviour to the model (\"Sorry I can't do that\"), while the self-classify approach shifts it to a classification format (\"Is this prompt malicious\"). In this work, we propose PARDEN, which avoids this domain shift by simply asking the model to repeat its own outputs. PARDEN neither requires finetuning nor white box access to the model. We empirically verify the effectiveness of our method and show that PARDEN significantly outperforms existing jailbreak detection baselines for Llama-2 and Claude-2. Code and data are available at https://github.com/Ed-Zh/PARDEN. We find that PARDEN is particularly powerful in the relevant regime of high True Positive Rate (TPR) and low False Positive Rate (FPR). For instance, for Llama2-7B, at TPR equal to 90%, PARDEN accomplishes a roughly 11x reduction in the FPR from 24.8% to 2.0% on the harmful behaviours dataset.",
+      "citations": 37
+    },
+    {
+      "title": "Safety Alignment via Constrained Knowledge Unlearning",
+      "year": 2025,
+      "authors": "Zesheng Shi, Yucheng Zhou, Jing Li",
+      "url": "https://api.semanticscholar.org/CorpusId:278905622",
+      "relevance": 3,
+      "abstract": "Despite significant progress in safety alignment, large language models (LLMs) remain susceptible to jailbreak attacks. Existing defense mechanisms have not fully deleted harmful knowledge in LLMs, which allows such attacks to bypass safeguards and produce harmful outputs. To address this challenge, we propose a novel safety alignment strategy, Constrained Knowledge Unlearning (CKU), which focuses on two primary objectives: knowledge localization and retention, and unlearning harmful knowledge. CKU works by scoring neurons in specific multilayer perceptron (MLP) layers to identify a subset U of neurons associated with useful knowledge. During the unlearning process, CKU prunes the gradients of neurons in U to preserve valuable knowledge while effectively mitigating harmful content. Experimental results demonstrate that CKU significantly enhances model safety without compromising overall performance, offering a superior balance between safety and utility compared to existing methods. Additionally, our analysis of neuron knowledge sensitivity across various MLP layers provides valuable insights into the mechanics of safety alignment and model knowledge editing.",
+      "citations": 10
+    },
+    {
+      "title": "Improving LLM Safety Alignment with Dual-Objective Optimization",
+      "year": 2025,
+      "authors": "Xuandong Zhao, Will Cai, Tianneng Shi, David Huang, Licong Lin, Song Mei, D. Song",
+      "url": "https://www.semanticscholar.org/paper/cc130a7f6b68f2989fa0669c1c90776b76482655",
+      "relevance": 3,
+      "abstract": "Existing training-time safety alignment techniques for large language models (LLMs) remain vulnerable to jailbreak attacks. Direct preference optimization (DPO), a widely deployed alignment method, exhibits limitations in both experimental and theoretical contexts as its loss function proves suboptimal for refusal learning. Through gradient-based analysis, we identify these shortcomings and propose an improved safety alignment that disentangles DPO objectives into two components: (1) robust refusal training, which encourages refusal even when partial unsafe generations are produced, and (2) targeted unlearning of harmful knowledge. This approach significantly increases LLM robustness against a wide range of jailbreak attacks, including prefilling, suffix, and multi-turn attacks across both in-distribution and out-of-distribution scenarios. Furthermore, we introduce a method to emphasize critical refusal tokens by incorporating a reward-based token-level weighting mechanism for refusal learning, which further improves the robustness against adversarial exploits. Our research also suggests that robustness to jailbreak attacks is correlated with token distribution shifts in the training process and internal representations of refusal and harmful tokens, offering valuable directions for future research in LLM safety alignment. The code is available at https://github.com/wicai24/DOOR-Alignment",
+      "citations": 29
+    },
+    {
+      "title": "No Free Lunch for Defending Against Prefilling Attack by In-Context Learning",
+      "year": 2024,
+      "authors": "Zhiyu Xue, Guang-Da Liu, Bocheng Chen, K. Johnson, Ramtin Pedarsani",
+      "url": "https://api.semanticscholar.org/CorpusId:274788656",
+      "relevance": 3,
+      "abstract": "The security of Large Language Models (LLMs) has become an important research topic since the emergence of ChatGPT. Though there have been various effective methods to defend against jailbreak attacks, prefilling attacks remain an unsolved and popular threat against open-sourced LLMs. In-Context Learning (ICL) offers a computationally efficient defense against various jailbreak attacks, yet no effective ICL methods have been developed to counter prefilling attacks. In this paper, we: (1) show that ICL can effectively defend against prefilling jailbreak attacks by employing adversative sentence structures within demonstrations; (2) characterize the effectiveness of this defense through the lens of model size, number of demonstrations, over-defense, integration with other jailbreak attacks, and the presence of safety alignment. Given the experimental results and our analysis, we conclude that there is no free lunch for defending against prefilling jailbreak attacks with ICL. On the one hand, current safety alignment methods fail to mitigate prefilling jailbreak attacks, but adversative structures within ICL demonstrations provide robust defense across various model sizes and complex jailbreak attacks. On the other hand, LLMs exhibit similar over-defensiveness when utilizing ICL demonstrations with adversative structures, and this behavior appears to be independent of model size.",
+      "citations": 1
+    },
+    {
+      "title": "Fail-Closed Alignment for Large Language Models",
+      "year": 2026,
+      "authors": "Zachary Coalson, Beth Sohler, Aiden Gabriel, Sanghyun Hong",
+      "url": "https://www.semanticscholar.org/paper/8dc262694fb838312879279b3081b7ebb8ba38c3",
+      "relevance": 3,
+      "abstract": "We identify a structural weakness in current large language model (LLM) alignment: modern refusal mechanisms are fail-open. While existing approaches encode refusal behaviors across multiple latent features, suppressing a single dominant feature$-$via prompt-based jailbreaks$-$can cause alignment to collapse, leading to unsafe generation. Motivated by this, we propose fail-closed alignment as a design principle for robust LLM safety: refusal mechanisms should remain effective even under partial failures via redundant, independent causal pathways. We present a concrete instantiation of this principle: a progressive alignment framework that iteratively identifies and ablates previously learned refusal directions, forcing the model to reconstruct safety along new, independent subspaces. Across four jailbreak attacks, we achieve the strongest overall robustness while mitigating over-refusal and preserving generation quality, with small computational overhead. Our mechanistic analyses confirm that models trained with our method encode multiple, causally independent refusal directions that prompt-based jailbreaks cannot suppress simultaneously, providing empirical support for fail-closed alignment as a principled foundation for robust LLM safety.",
+      "citations": 0
+    },
+    {
+      "title": "RePD: Defending Jailbreak Attack through a Retrieval-based Prompt Decomposition Process",
+      "year": 2024,
+      "authors": "Peiran Wang, Xiaogeng Liu, Chaowei Xiao",
+      "url": "https://api.semanticscholar.org/CorpusId:273323660",
+      "relevance": 3,
+      "abstract": "In this study, we introduce RePD, an innovative attack Retrieval-based Prompt Decomposition framework designed to mitigate the risk of jailbreak attacks on large language models (LLMs). Despite rigorous pretraining and finetuning focused on ethical alignment, LLMs are still susceptible to jailbreak exploits. RePD operates on a one-shot learning model, wherein it accesses a database of pre-collected jailbreak prompt templates to identify and decompose harmful inquiries embedded within user prompts. This process involves integrating the decomposition of the jailbreak prompt into the user's original query into a one-shot learning example to effectively teach the LLM to discern and separate malicious components. Consequently, the LLM is equipped to first neutralize any potentially harmful elements before addressing the user's prompt in a manner that aligns with its ethical guidelines. RePD is versatile and compatible with a variety of open-source LLMs acting as agents. Through comprehensive experimentation with both harmful and benign prompts, we have demonstrated the efficacy of our proposed RePD in enhancing the resilience of LLMs against jailbreak attacks, without compromising their performance in responding to typical user requests.",
+      "citations": 11
+    },
+    {
+      "title": "Safety is Not Only About Refusal: Reasoning-Enhanced Fine-tuning for Interpretable LLM Safety",
+      "year": 2025,
+      "authors": "Yuyou Zhang, Miao Li, William Jongwon Han, Yi-Fan Yao, Zhepeng Cen, Ding Zhao",
+      "url": "https://www.semanticscholar.org/paper/f3d271ba5de03da9e3b2748afaabea48425bf472",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) are vulnerable to jailbreak attacks that exploit weaknesses in traditional safety alignment, which often relies on rigid refusal heuristics or representation engineering to block harmful outputs. While they are effective for direct adversarial attacks, they fall short of broader safety challenges requiring nuanced, context-aware decision-making. To address this, we propose Reasoning-enhanced Finetuning for interpretable LLM Safety (Rational), a novel framework that trains models to engage in explicit safe reasoning before response. Fine-tuned models leverage the extensive pretraining knowledge in self-generated reasoning to bootstrap their own safety through structured reasoning, internalizing context-sensitive decision-making. Our findings suggest that safety extends beyond refusal, requiring context awareness for more robust, interpretable, and adaptive responses. Reasoning is not only a core capability of LLMs but also a fundamental mechanism for LLM safety. Rational employs reasoning-enhanced fine-tuning, allowing it to reject harmful prompts while providing meaningful and context-aware responses in complex scenarios.",
+      "citations": 27
+    },
+    {
+      "title": "The Hidden Dimensions of LLM Alignment: A Multi-Dimensional Analysis of Orthogonal Safety Directions",
+      "year": 2025,
+      "authors": "Wenbo Pan, Zhichao Liu, Qiguang Chen, Xiangyang Zhou, Haining Yu, Xiaohua Jia",
+      "url": "https://www.semanticscholar.org/paper/ba37af16b72f5250774e014d7ac6a7051585c0ca",
+      "relevance": 3,
+      "abstract": "Large Language Models' safety-aligned behaviors, such as refusing harmful queries, can be represented by linear directions in activation space. Previous research modeled safety behavior with a single direction, limiting mechanistic understanding to an isolated safety feature. In this work, we discover that safety-aligned behavior is jointly controlled by multi-dimensional directions. Namely, we study the vector space of representation shifts during safety fine-tuning on Llama 3 8B for refusing jailbreaks. By studying orthogonal directions in the space, we first find that a dominant direction governs the model's refusal behavior, while multiple smaller directions represent distinct and interpretable features like hypothetical narrative and role-playing. We then measure how different directions promote or suppress the dominant direction, showing the important role of secondary directions in shaping the model's refusal representation. Finally, we demonstrate that removing certain trigger tokens in harmful queries can mitigate these directions to bypass the learned safety capability, providing new insights on understanding safety alignment vulnerability from a multi-dimensional perspective. Code and artifacts are available at https://github.com/BMPixel/safety-residual-space.",
+      "citations": 19
+    },
+    {
+      "title": "Black-Box Behavioral Distillation Breaks Safety Alignment in Medical LLMs",
+      "year": 2025,
+      "authors": "Sohely Jahan, Ruimin Sun",
+      "url": "https://api.semanticscholar.org/CorpusId:283722131",
+      "relevance": 3,
+      "abstract": "As medical large language models (LLMs) become increasingly integrated into clinical workflows, concerns around alignment robustness, and safety are escalating. Prior work on model extraction has focused on classification models or memorization leakage, leaving the vulnerability of safety-aligned generative medical LLMs underexplored. We present a black-box distillation attack that replicates the domain-specific reasoning of safety-aligned medical LLMs using only output-level access. By issuing 48,000 instruction queries to Meditron-7B and collecting 25,000 benign instruction response pairs, we fine-tune a LLaMA3 8B surrogate via parameter efficient LoRA under a zero-alignment supervision setting, requiring no access to model weights, safety filters, or training data. With a cost of $12, the surrogate achieves strong fidelity on benign inputs while producing unsafe completions for 86% of adversarial prompts, far exceeding both Meditron-7B (66%) and the untuned base model (46%). This reveals a pronounced functional-ethical gap, task utility transfers, while alignment collapses. To analyze this collapse, we develop a dynamic adversarial evaluation framework combining Generative Query (GQ)-based harmful prompt generation, verifier filtering, category-wise failure analysis, and adaptive Random Search (RS) jailbreak attacks. We also propose a layered defense system, as a prototype detector for real-time alignment drift in black-box deployments. Our findings show that benign-only black-box distillation exposes a practical and under-recognized threat: adversaries can cheaply replicate medical LLM capabilities while stripping safety mechanisms, underscoring the need for extraction-aware safety monitoring.",
+      "citations": 3
+    },
+    {
+      "title": "LLM-VA: Resolving the Jailbreak-Overrefusal Trade-off via Vector Alignment",
+      "year": 2026,
+      "authors": "Haonan Zhang, Dongxia Wang, Yi Liu, Kexin Chen, Wenhai Wang",
+      "url": "https://www.semanticscholar.org/paper/a424dc4144802f40b7bda7b8ace4375df818613a",
+      "relevance": 3,
+      "abstract": "Safety-aligned LLMs suffer from two failure modes: jailbreak (answering harmful inputs) and over-refusal (declining benign queries). Existing vector steering methods adjust the magnitude of answer vectors, but this creates a fundamental trade-off -- reducing jailbreak increases over-refusal and vice versa. We identify the root cause: LLMs encode the decision to answer (answer vector $v_a$) and the judgment of input safety (benign vector $v_b$) as nearly orthogonal directions, treating them as independent processes. We propose LLM-VA, which aligns $v_a$ with $v_b$ through closed-form weight updates, making the model's willingness to answer causally dependent on its safety assessment -- without fine-tuning or architectural changes. Our method identifies vectors at each layer using SVMs, selects safety-relevant layers, and iteratively aligns vectors via minimum-norm weight modifications. Experiments on 12 LLMs demonstrate that LLM-VA achieves 11.45% higher F1 than the best baseline while preserving 95.92% utility, and automatically adapts to each model's safety bias without manual tuning. Code and models are available at https://hotbento.github.io/LLM-VA-Web/.",
+      "citations": 1
+    },
+    {
+      "title": "NeuroBreak: Unveil Internal Jailbreak Mechanisms in Large Language Models",
+      "year": 2025,
+      "authors": "Chuhan Zhang, Ye Zhang, Bowen Shi, Yuyou Gan, Tianyu Du, Shouling Ji, Dazhan Deng, Yingcai Wu",
+      "url": "https://api.semanticscholar.org/CorpusId:281103359",
+      "relevance": 3,
+      "abstract": "In deployment and application, large language models (LLMs) typically undergo safety alignment to prevent illegal and unethical outputs. However, the continuous advancement of jailbreak attack techniques, designed to bypass safety mechanisms with adversarial prompts, has placed increasing pressure on the security defenses of LLMs. Strengthening resistance to jailbreak attacks requires an in-depth understanding of the security mechanisms and vulnerabilities of LLMs. However, the vast number of parameters and complex structure of LLMs make analyzing security weaknesses from an internal perspective a challenging task. This paper presents NeuroBreak, a top-down jailbreak analysis system designed to analyze neuron-level safety mechanisms and mitigate vulnerabilities. We carefully design system requirements through collaboration with three experts in the field of AI security. The system provides a comprehensive analysis of various jailbreak attack methods. By incorporating layer-wise representation probing analysis, NeuroBreak offers a novel perspective on the model's decision-making process throughout its generation steps. Furthermore, the system supports the analysis of critical neurons from both semantic and functional perspectives, facilitating a deeper exploration of security mechanisms. We conduct quantitative evaluations and case studies to verify the effectiveness of our system, offering mechanistic insights for developing next-generation defense strategies against evolving jailbreak attacks.",
+      "citations": 1
+    },
+    {
+      "title": "Reimagining Safety Alignment with An Image",
+      "year": 2025,
+      "authors": "Yifan Xia, Guorui Chen, Wenqian Yu, Zhijiang Li, Philip H. S. Torr, Jindong Gu",
+      "url": "https://www.semanticscholar.org/paper/9c4029dd2909bcc7bfdad459e6e599447f3fa6c3",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) excel in diverse applications but face dual challenges: generating harmful content under jailbreak attacks and over-refusal of benign queries due to rigid safety mechanisms. These issues are further complicated by the need to accommodate different value systems and precisely align with given safety preferences. Moreover, traditional methods like SFT and RLHF lack this capability due to their costly parameter tuning requirements and inability to support multiple value systems within a single model. These problems are more obvious in multimodal large language models (MLLMs), especially in terms of heightened over-refusal in cross-modal tasks and new security risks arising from expanded attack surfaces. We propose Magic Image, an optimization-driven visual prompt framework that enhances security while reducing over-refusal. By optimizing image prompts using harmful/benign samples, our method enables a single model to adapt to different value systems and better align with given safety preferences without parameter updates. Experiments demonstrate improved safety-effectiveness balance across diverse datasets while preserving model performance, offering a practical solution for deployable MLLM safety alignment.",
+      "citations": 2
+    },
+    {
+      "title": "Disguise While Defense: Avoid Refusal Responses in LLM\u2019s Defense via a Multi-Agent Attacker\u2013Disguiser Game",
+      "year": 2026,
+      "authors": "Qianqiao Xu, Zhiliang Tian, Hongyan Wu, Zhen Huang, Dong Liang, Yiping Song, Ziyi Pan, Feng Liu, Dongsheng Li",
+      "url": "https://www.semanticscholar.org/paper/1fd1223b358b6dfd9f648b030a54f0ab4667011f",
+      "relevance": 3,
+      "abstract": "With the enhanced performance of large language models (LLMs) on natural language processing tasks, potential moral and ethical issues of LLMs arise in the Web service. Malicious attackers exist who induce LLMs to jailbreak and generate information containing illegal, privacy-invasive information through techniques such as prompt engineering. As a result, LLMs counter malicious attackers\u2019 attacks using techniques such as safety alignment. However, the strong defense mechanism of the LLMs through rejection replies, which are typically unrelated to the attacker\u2019s query, is easily identified by attackers and leaks information that strengthens their capabilities. We propose an LLM-driven defense task that generates safe and disguised responses which remain relevant to the attack request while concealing defensive intent and withholding any useful information from the attacker. To achieve this task, we construct an LLM-based multi-agent attacker-disguiser game that trains two LLM-based players to select in-context learning (ICL) examples and strategies, guiding them to better generation and approach to Nash equilibrium. To enhance the LLMs\u2019 generation via ICL, we apply the Minimax Q-learning to optimize the players for choosing ICL examples. To further refine generation, we use policy gradient (PG) to train the strategy selectors to select prompt strategies for LLMs. To improve the ICL examples and prompts for LLMs\u2019 generation, we iteratively train the players with ICL sample selection training and prompt strategy training. The goal of this game is to arrive at the Nash equilibrium. Through training, we obtain an LLM-based defender which can receive jailbreak prompts from malicious users and output safe and disguised responses. The experiments reveal that our method strengthens the LLM\u2019s ability to disguise the defense intent compared to other methods. Our method also minimizes the attacker-perceived drop in attack success rate, while delivering the largest actual reduction. This effectively misleads the attacker\u2019s evaluation and enhances practical defense utility.",
+      "citations": 1
+    },
+    {
+      "title": "Alignment-Weighted DPO: A principled reasoning approach to improve safety alignment",
+      "year": 2026,
+      "authors": "Mengxuan Hu, Vivek Datla, Anoop Kumar, Zihan Guan, Sheng Li, Alfy Samuel, Daben Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:286011357",
+      "relevance": 3,
+      "abstract": "Recent advances in alignment techniques such as Supervised Fine-Tuning (SFT), Reinforcement Learning from Human Feedback (RLHF), and Direct Preference Optimization (DPO) have improved the safety of large language models (LLMs). However, these LLMs remain vulnerable to jailbreak attacks that disguise harmful intent through indirect or deceptive phrasing. Using causal intervention, we empirically demonstrate that this vulnerability stems from shallow alignment mechanisms that lack deep reasoning, often rejecting harmful prompts without truly understanding why they are harmful. To mitigate this vulnerability, we propose enhancing alignment through reasoning-aware post-training. We construct and release a novel Chain-of-Thought (CoT) fine-tuning dataset that includes both utility-oriented and safety-critical prompts with step-by-step rationales. Fine-tuning on this dataset encourages models to produce principled refusals grounded in reasoning, outperforming standard SFT baselines. Furthermore, inspired by failure patterns in CoT fine-tuning, we introduce Alignment-Weighted DPO, which targets the most problematic parts of an output by assigning different preference weights to the reasoning and final-answer segments. This produces finer-grained, targeted updates than vanilla DPO and improves robustness to diverse jailbreak strategies. Extensive experiments across multiple safety and utility benchmarks show that our method consistently improves alignment robustness while maintaining overall model utility.",
+      "citations": 0
+    },
+    {
+      "title": "XBreaking: Understanding how LLMs security alignment can be broken",
+      "year": 2025,
+      "authors": "Marco Arazzi, Vignesh Kumar Kembu, Antonino Nocera, P. Vinod",
+      "url": "https://api.semanticscholar.org/CorpusId:282889995",
+      "relevance": 3,
+      "abstract": "Large Language Models are fundamental actors in the modern IT landscape dominated by AI solutions. However, security threats associated with them might prevent their reliable adoption in critical application scenarios such as government organizations and medical institutions. For this reason, commercial LLMs typically undergo a sophisticated censoring mechanism to eliminate any harmful output they could possibly produce. These mechanisms maintain the integrity of LLM alignment by guaranteeing that the models respond safely and ethically. In response to this, attacks on LLMs are a significant threat to such protections, and many previous approaches have already demonstrated their effectiveness across diverse domains. Existing LLM attacks mostly adopt a generate-and-test strategy to craft malicious input. To improve the comprehension of censoring mechanisms and design a targeted attack, we propose an Explainable-AI solution that comparatively analyzes the behavior of censored and uncensored models to derive unique exploitable alignment patterns. Then, we propose XBreaking, a novel approach that exploits these unique patterns to break the security and alignment constraints of LLMs by targeted noise injection. Our thorough experimental campaign returns important insights about the censoring mechanisms and demonstrates the effectiveness and performance of our approach.",
+      "citations": 2
+    },
+    {
+      "title": "Safety Alignment Should Be Made More Than Just A Few Attention Heads",
+      "year": 2025,
+      "authors": "Chao Huang, Zefeng Zhang, Juewei Yue, Quangang Li, Chuang Zhang, Tingwen Liu",
+      "url": "https://www.semanticscholar.org/paper/e023b181734934ae643eeb4c31f5d9191e6cd940",
+      "relevance": 3,
+      "abstract": "Current safety alignment for large language models(LLMs) continues to present vulnerabilities, given that adversarial prompting can effectively bypass their safety measures.Our investigation shows that these safety mechanisms predominantly depend on a limited subset of attention heads: removing or ablating these heads can severely compromise model safety. To identify and evaluate these safety-critical components, we introduce RDSHA, a targeted ablation method that leverages the model's refusal direction to pinpoint attention heads mostly responsible for safety behaviors. Further analysis shows that existing jailbreak attacks exploit this concentration by selectively bypassing or manipulating these critical attention heads. To address this issue, we propose AHD, a novel training strategy designed to promote the distributed encoding of safety-related behaviors across numerous attention heads. Experimental results demonstrate that AHD successfully distributes safety-related capabilities across more attention heads. Moreover, evaluations under several mainstream jailbreak attacks show that models trained with AHD exhibit considerably stronger safety robustness, while maintaining overall functional utility.",
+      "citations": 3
+    },
+    {
+      "title": "Lifelong Safety Alignment for Language Models",
+      "year": 2025,
+      "authors": "Haoyu Wang, Zeyu Qin, Yifei Zhao, Chao Du, Min Lin, Xueqian Wang, Tianyu Pang",
+      "url": "https://api.semanticscholar.org/CorpusId:278910944",
+      "relevance": 3,
+      "abstract": "LLMs have made impressive progress, but their growing capabilities also expose them to highly flexible jailbreaking attacks designed to bypass safety alignment. While many existing defenses focus on known types of attacks, it is more critical to prepare LLMs for unseen attacks that may arise during deployment. To address this, we propose a lifelong safety alignment framework that enables LLMs to continuously adapt to new and evolving jailbreaking strategies. Our framework introduces a competitive setup between two components: a Meta-Attacker, trained to actively discover novel jailbreaking strategies, and a Defender, trained to resist them. To effectively warm up the Meta-Attacker, we first leverage the GPT-4o API to extract key insights from a large collection of jailbreak-related research papers. Through iterative training, the first iteration Meta-Attacker achieves a 73% attack success rate (ASR) on RR and a 57% transfer ASR on LAT using only single-turn attacks. Meanwhile, the Defender progressively improves its robustness and ultimately reduces the Meta-Attacker's success rate to just 7%, enabling safer and more reliable deployment of LLMs in open-ended environments. The code is available at https://github.com/sail-sg/LifelongSafetyAlignment.",
+      "citations": 9
+    },
+    {
+      "title": "SafeThinker: Reasoning about Risk to Deepen Safety Beyond Shallow Alignment",
+      "year": 2026,
+      "authors": "Xianya Fang, Xianying Luo, Yadong Wang, Xiang Chen, Yu Tian, Zequn Sun, Rui Liu, Jun Fang, Naiqiang Tan, Yuanning Cui, Sheng-Jun Huang",
+      "url": "https://api.semanticscholar.org/CorpusId:284982188",
+      "relevance": 3,
+      "abstract": "Despite the intrinsic risk-awareness of Large Language Models (LLMs), current defenses often result in shallow safety alignment, rendering models vulnerable to disguised attacks (e.g., prefilling) while degrading utility. To bridge this gap, we propose SafeThinker, an adaptive framework that dynamically allocates defensive resources via a lightweight gateway classifier. Based on the gateway's risk assessment, inputs are routed through three distinct mechanisms: (i) a Standardized Refusal Mechanism for explicit threats to maximize efficiency; (ii) a Safety-Aware Twin Expert (SATE) module to intercept deceptive attacks masquerading as benign queries; and (iii) a Distribution-Guided Think (DDGT) component that adaptively intervenes during uncertain generation. Experiments show that SafeThinker significantly lowers attack success rates across diverse jailbreak strategies without compromising utility, demonstrating that coordinating intrinsic judgment throughout the generation process effectively balances robustness and practicality.",
+      "citations": 1
+    },
+    {
+      "title": "BiasJailbreak:Analyzing Ethical Biases and Jailbreak Vulnerabilities in Large Language Models",
+      "year": 2024,
+      "authors": "Isack Lee, Haebin Seong",
+      "url": "https://api.semanticscholar.org/CorpusId:273403417",
+      "relevance": 3,
+      "abstract": "Although large language models (LLMs) demonstrate impressive proficiency in various tasks, they present potential safety risks, such as `jailbreaks', where malicious inputs can coerce LLMs into generating harmful content bypassing safety alignments. In this paper, we delve into the ethical biases in LLMs and examine how those biases could be exploited for jailbreaks. Notably, these biases result in a jailbreaking success rate in GPT-4o models that differs by 20\\% between non-binary and cisgender keywords and by 16\\% between white and black keywords, even when the other parts of the prompts are identical. We introduce the concept of BiasJailbreak, highlighting the inherent risks posed by these safety-induced biases. BiasJailbreak generates biased keywords automatically by asking the target LLM itself, and utilizes the keywords to generate harmful output. Additionally, we propose an efficient defense method BiasDefense, which prevents jailbreak attempts by injecting defense prompts prior to generation. BiasDefense stands as an appealing alternative to Guard Models, such as Llama-Guard, that require additional inference cost after text generation. Our findings emphasize that ethical biases in LLMs can actually lead to generating unsafe output, and suggest a method to make the LLMs more secure and unbiased. To enable further research and improvements, we open-source our code and artifacts of BiasJailbreak, providing the community with tools to better understand and mitigate safety-induced biases in LLMs.",
+      "citations": 0
+    },
+    {
+      "title": "ForgeDAN: An Evolutionary Framework for Jailbreaking Aligned Large Language Models",
+      "year": 2025,
+      "authors": "Siyang Cheng, Gao Liu, Rui Mei, Yilin Wang, Kejia Zhang, Kai Wei, Yuqi Yu, Weiping Wen, Xiaojie Wu, Junhua Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:283072222",
+      "relevance": 3,
+      "abstract": "The rapid adoption of large language models (LLMs) has brought both transformative applications and new security risks, including jailbreak attacks that bypass alignment safeguards to elicit harmful outputs. Existing automated jailbreak generation approaches e.g. AutoDAN, suffer from limited mutation diversity, shallow fitness evaluation, and fragile keyword-based detection. To address these limitations, we propose ForgeDAN, a novel evolutionary framework for generating semantically coherent and highly effective adversarial prompts against aligned LLMs. First, ForgeDAN introduces multi-strategy textual perturbations across character, word, and sentence-level operations to enhance attack diversity; then we employ interpretable semantic fitness evaluation based on a text similarity model to guide the evolutionary process toward semantically relevant and harmful outputs; finally, ForgeDAN integrates dual-dimensional jailbreak judgment, leveraging an LLM-based classifier to jointly assess model compliance and output harmfulness, thereby reducing false positives and improving detection effectiveness. Our evaluation demonstrates ForgeDAN achieves high jailbreaking success rates while maintaining naturalness and stealth, outperforming existing SOTA solutions.",
+      "citations": 0
+    },
+    {
+      "title": "PromptShield: LoRA-Based Parameter-Efficient Refusal Alignment for Election-Targeted Adversarial LLM Attacks",
+      "year": 2026,
+      "authors": "Nishmitha M R, Tejakshi N S, Anshu Sharma, Kiran, Abhishek Gowda R M, Karan",
+      "url": "https://www.semanticscholar.org/paper/2860efddd9ce86ac18c5dbfd7c427c08e6bed6a2",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) are increasingly deployed in public-facing information systems, where their misuse poses serious risks in high-stakes domains such as democratic elections. Despite extensive safety alignment, contemporary LLMs remain vulnerable to adversarial \u201cjailbreak\u201d prompting, enabling the generation of election-related misinformation, voter suppression narratives, and procedural manipulation. Recent election cycles have documented hundreds of verified instances of LLM-assisted disinformation campaigns, highlighting the urgent need for targeted, domain-specific defenses [1]\u2013[3].We introduce PromptShield, a domain-specific, parameter-efficient refusal alignment approach based on Low-Rank Adaptation (LoRA) that strengthens LLM robustness against election-targeted jailbreak attacks. To support systematic training and evaluation, we present ElectionJailBench, a benchmark of $\\mathbf{1 0, 0 0 0}$ synthetic adversarial prompts that combine election harm templates with diverse, state-of-the-art jailbreak strategies, including roleplaying, obfuscation, and optimization-based attacks [4]\u2013[6]. PromptShield is trained via supervised fine-tuning on a 4-bit quantized Llama-3.1-8B-Instruct model and can be deployed in under one hour on commodity GPU hardware. Experimental results show a reduction in Attack Success Rate from $\\mathbf{7 2. 0 \\%}$ to $\\mathbf{1 8. 0 \\%}$ ($\\mathbf{7 5 \\%}$ relative improvement) on ElectionJailBench, while preserving general-purpose reasoning performance on the MMLU benchmark. Ablation studies further highlight the impact of dataset scale and LoRA rank on refusal robustness. Our findings demonstrate that lightweight, LoRAbased alignment can deliver effective, election-specific jailbreak resistance without incurring a measurable safety tax.",
+      "citations": 0
+    },
+    {
+      "title": "AlignTree: Efficient Defense Against LLM Jailbreak Attacks",
+      "year": 2025,
+      "authors": "Gil Goren, Shahar Katz, Lior Wolf",
+      "url": "https://www.semanticscholar.org/paper/3a45a8e64f082728183c845858a50e5044c73a55",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) are vulnerable to adversarial attacks that bypass safety guidelines and generate harmful content. Mitigating these vulnerabilities requires defense mechanisms that are both robust and computationally efficient. However, existing approaches either incur high computational costs or rely on lightweight defenses that can be easily circumvented, rendering them impractical for real-world LLM-based systems. In this work, we introduce the AlignTree defense, which enhances model alignment while maintaining minimal computational overhead. AlignTree monitors LLM activations during generation and detects misaligned behavior using an efficient random forest classifier. This classifier operates on two signals: (i) the refusal direction - a linear representation that activates on misaligned prompts, and (ii) an SVM-based signal that captures non-linear features associated with harmful content. Unlike previous methods, AlignTree does not require additional prompts or auxiliary guard models. Through extensive experiments, we demonstrate the efficiency and robustness of AlignTree across multiple LLMs and benchmarks.",
+      "citations": 2
+    },
+    {
+      "title": "From Threat to Tool: Leveraging Refusal-Aware Injection Attacks for Safety Alignment",
+      "year": 2025,
+      "authors": "Kyubyung Chae, Hyunbin Jin, Taesup Kim",
+      "url": "https://www.semanticscholar.org/paper/c4d0766c0edba64e35cf3369cc56e59b42551f58",
+      "relevance": 3,
+      "abstract": "Safely aligning large language models (LLMs) often demands extensive human-labeled preference data, a process that's both costly and time-consuming. While synthetic data offers a promising alternative, current methods frequently rely on complex iterative prompting or auxiliary models. To address this, we introduce Refusal-Aware Adaptive Injection (RAAI), a straightforward, training-free, and model-agnostic framework that repurposes LLM attack techniques. RAAI works by detecting internal refusal signals and adaptively injecting predefined phrases to elicit harmful, yet fluent, completions. Our experiments show RAAI effectively jailbreaks LLMs, increasing the harmful response rate from a baseline of 2.15% to up to 61.04% on average across four benchmarks. Crucially, fine-tuning LLMs with the synthetic data generated by RAAI improves model robustness against harmful prompts while preserving general capabilities on standard tasks like MMLU and ARC. This work highlights how LLM attack methodologies can be reframed as practical tools for scalable and controllable safety alignment.",
+      "citations": 0
+    },
+    {
+      "title": "Evaluating the Universality of \u201cDo Anything Now\u201d Jailbreak Prompts on Large Language Models: Content Warning: This paper contains unfiltered and harmful examples.",
+      "year": 2025,
+      "authors": "Seyedsina Nabavirazavi, Samira Zad, S. S. Iyengar",
+      "url": "https://www.semanticscholar.org/paper/e8ad5da5d8af850fbbeecb5dc8d9c0b6592165aa",
+      "relevance": 3,
+      "abstract": "The advent of large language models (LLMs) and their capabilities in diverse downstream tasks have attracted considerable adversarial attention, leading to various attack strategies. Among notable adversarial techniques targeting LLMs, jailbreak attacks have recently emerged as a means to bypass safety mechanisms and generate harmful content. Jailbreaks mislead LLMs to instruct users on tasks that have a negative societal impact, including illegal activities, malware distribution, and fraud. To systematically evaluate and robustify the corresponding refusal mechanisms and safety alignment measures against jailbreak strategies in subsequent iterations, a scalable approach is essential. The widespread presence of jailbreak scenarios, the inconsistency between different LLM usage policies, and the frequency of LLM updates make it challenging to have a unified evaluation pipeline. This paper introduces LLM Jailbreak Evaluator (LLM-JBE), an innovative framework that efficiently evaluates jailbreak prompts across a wide range of LLMs. We demonstrate the capabilities of LLM-JBE by measuring the effectiveness of jailbreak prompts across various OpenAI models. In particular, we demonstrate that basic jailbreak prompts remain highly effective and achieve attack success rates above 50% on GPT-4, GPT-3.5, and o1. The code is available at github.com/sina-nabavi/LLM-JBE.",
+      "citations": 4
+    },
+    {
+      "title": "TRYLOCK: Defense-in-Depth Against LLM Jailbreaks via Layered Preference and Representation Engineering",
+      "year": 2026,
+      "authors": "S. Thornton",
+      "url": "https://www.semanticscholar.org/paper/b64b7a005dbf59ebcecd1b50a931e19a0dc1c218",
+      "relevance": 3,
+      "abstract": "Large language models remain vulnerable to jailbreak attacks, and single-layer defenses often trade security for usability. We present TRYLOCK, the first defense-in-depth architecture that combines four heterogeneous mechanisms across the inference stack: weight-level safety alignment via DPO, activation-level control via Representation Engineering (RepE) steering, adaptive steering strength selected by a lightweight sidecar classifier, and input canonicalization to neutralize encoding-based bypasses. On Mistral-7B-Instruct evaluated against a 249-prompt attack set spanning five attack families, TRYLOCK achieves 88.0% relative ASR reduction (46.5% to 5.6%), with each layer contributing unique coverage: RepE blocks 36% of attacks that bypass DPO alone, while canonicalization catches 14% of encoding attacks that evade both. We discover a non-monotonic steering phenomenon -- intermediate strength (alpha=1.0) degrades safety below baseline -- and provide mechanistic hypotheses explaining RepE-DPO interference. The adaptive sidecar reduces over-refusal from 60% to 48% while maintaining identical attack defense, demonstrating that security and usability need not be mutually exclusive. We release all components -- trained adapters, steering vectors, sidecar classifier, preference pairs, and complete evaluation methodology -- enabling full reproducibility.",
+      "citations": 1
+    },
+    {
+      "title": "Latent-space adversarial training with post-aware calibration for defending large language models against jailbreak attacks",
+      "year": 2025,
+      "authors": "Xin Yi, Yue Li, Linlin Wang, Xiaoling Wang, Liang He",
+      "url": "https://www.semanticscholar.org/paper/0e101e081de7ad32eed727374cb24e608b7ce2bf",
+      "relevance": 3,
+      "abstract": "Ensuring safety alignment is a critical requirement for large language models (LLMs), particularly given increasing deployment in real-world applications. Despite considerable advancements, LLMs remain susceptible to jailbreak attacks, which exploit system vulnerabilities to circumvent safety measures and elicit harmful or inappropriate outputs. Furthermore, while adversarial training-based defense methods have shown promise, a prevalent issue is the unintended over-defense behavior, wherein models excessively reject benign queries, significantly undermining their practical utility. To address these limitations, we introduce LATPC, a Latent-space Adversarial Training with Post-aware Calibration framework. LATPC dynamically identifies safety-critical latent dimensions by contrasting harmful and benign inputs, enabling the adaptive construction of targeted refusal feature removal attacks. This mechanism allows adversarial training to concentrate on real-world jailbreak tactics that disguise harmful queries as benign ones. During inference, LATPC employs an efficient embedding-level calibration mechanism to minimize over-defense behaviors with negligible computational overhead. Experimental results across five types of disguise-based jailbreak attacks demonstrate that LATPC achieves a superior balance between safety and utility compared to existing defense frameworks. Further analysis demonstrates the effectiveness of leveraging safety-critical dimensions in developing robust defense methods against jailbreak attacks.",
+      "citations": 2
+    },
+    {
+      "title": "Defending Large Language Models Against Jailbreak Attacks via In-Decoding Safety-Awareness Probing",
+      "year": 2026,
+      "authors": "Yinzhi Zhao, Ming Wang, Shi Feng, Xiaocui Yang, Daling Wang, Yifei Zhang",
+      "url": "https://www.semanticscholar.org/paper/340ff53b72cb3abb0fd7f9ec36cb3a1a2ba21c0a",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) have achieved impressive performance across natural language tasks and are increasingly deployed in real-world applications. Despite extensive safety alignment efforts, recent studies show that such alignment is often shallow and remains vulnerable to jailbreak attacks. Existing defense mechanisms, including decoding-based constraints and post-hoc content detectors, struggle against sophisticated jailbreaks, often intervening robust detection or excessively degrading model utility. In this work, we examine the decoding process of LLMs and make a key observation: even when successfully jailbroken, models internally exhibit latent safety-related signals during generation. However, these signals are overridden by the model's drive for fluent continuation, preventing timely self-correction or refusal. Building on this observation, we propose a simple yet effective approach that explicitly surfaces and leverages these latent safety signals for early detection of unsafe content during decoding. Experiments across diverse jailbreak attacks demonstrate that our approach significantly enhances safety, while maintaining low over-refusal rates on benign inputs and preserving response quality. Our results suggest that activating intrinsic safety-awareness during decoding offers a promising and complementary direction for defending against jailbreak attacks. Code is available at: https://github.com/zyz13590/SafeProbing.",
+      "citations": 1
+    },
+    {
+      "title": "Targeting Alignment: Extracting Safety Classifiers of Aligned LLMs",
+      "year": 2025,
+      "authors": "Jean-Charles Noirot Ferrand, Yohan Beugin, Eric Pauley, Ryan Sheatsley, Patrick D. McDaniel",
+      "url": "https://www.semanticscholar.org/paper/077e31a1b3a95c44bc4515bcb672e1a6554cac29",
+      "relevance": 3,
+      "abstract": "Alignment in large language models (LLMs) is used to enforce guidelines such as safety. Yet, alignment fails in the face of jailbreak attacks that modify inputs to induce unsafe outputs. In this paper, we introduce and evaluate a new technique for jailbreak attacks. We observe that alignment embeds a safety classifier in the LLM responsible for deciding between refusal and compliance, and seek to extract an approximation of this classifier: a surrogate classifier. To this end, we build candidate classifiers from subsets of the LLM. We first evaluate the degree to which candidate classifiers approximate the LLM's safety classifier in benign and adversarial settings. Then, we attack the candidates and measure how well the resulting adversarial inputs transfer to the LLM. Our evaluation shows that the best candidates achieve accurate agreement (an F1 score above 80%) using as little as 20% of the model architecture. Further, we find that attacks mounted on the surrogate classifiers can be transferred to the LLM with high success. For example, a surrogate using only 50% of the Llama 2 model achieved an attack success rate (ASR) of 70% with half the memory footprint and runtime -- a substantial improvement over attacking the LLM directly, where we only observed a 22% ASR. These results show that extracting surrogate classifiers is an effective and efficient means for modeling (and therein addressing) the vulnerability of aligned models to jailbreaking attacks. The code is available at https://github.com/jcnf0/targeting-alignment.",
+      "citations": 1
+    },
+    {
+      "title": "Reasoned Safety Alignment: Ensuring Jailbreak Defense via Answer-Then-Check",
+      "year": 2025,
+      "authors": "Chentao Cao, Xiaojun Xu, Bo Han, Hang Li",
+      "url": "https://www.semanticscholar.org/paper/a9e78234dee24cb0512f45cafde8673a70502f16",
+      "relevance": 3,
+      "abstract": "As large language models (LLMs) continue to advance in capabilities, ensuring their safety against jailbreak attacks remains a critical challenge. In this paper, we introduce a novel safety alignment approach called Answer-Then-Check, which enhances LLM robustness against malicious prompts by applying thinking ability to mitigate jailbreaking problems before producing a final answer to the user. Our method enables models to answer the question in their thoughts directly and then critically evaluate its safety before deciding whether to provide it. To implement this approach, we construct the Reasoned Safety Alignment (ReSA) dataset, comprising 80K samples that teach models to reason through direct responses and then analyze their safety. Experimental results demonstrate that our approach achieves the Pareto frontier with superior safety capability while decreasing over-refusal rates. Notably, the fine-tuned model maintains general reasoning capabilities on benchmarks like MMLU, MATH500, and HumanEval. Besides, our method equips models with the ability to perform safe completion, while post-hoc detection methods can only directly reject sensitive, harmful queries (e.g., self-harm). Our results show that inference-time strategies alone are insufficient, highlighting the necessity of safety training, and we find even $500$ samples can yield performance comparable to the entire dataset, suggesting a promising path for data-efficient safety alignment. The dataset is publicly available at: https://huggingface.co/datasets/ByteDance-Seed/ReSA.",
+      "citations": 3
+    },
+    {
+      "title": "The Art of the Jailbreak: Formulating Jailbreak Attacks for LLM Security Beyond Binary Scoring",
+      "year": 2026,
+      "authors": "Ismail Hossain, Tanzim Ahad, Md Jahangir Alam, Sai Puppala, Syed Bahauddin Alam, Sajedul Talukder",
+      "url": "https://www.semanticscholar.org/paper/6d68df8d59abfac0978bf32860a838c880530835",
+      "relevance": 3,
+      "abstract": "Jailbreak attacks -- adversarial prompts that bypass LLM alignment through purely linguistic manipulation -- pose a growing operational security threat, yet the field lacks large-scale, reproducible infrastructure for generating, categorizing, and evaluating them systematically. This paper addresses that gap with three contributions. (1) Large-scale compositional jailbreak dataset. We construct 114,000 adversarial prompts by applying 912 composing strategies to 125 harmful seed prompts from JailBreakV-28K. Every prompt is assigned to one of 14 cybersecurity attack categories (e.g., malware, phishing, privilege escalation) via a six-model majority-vote pipeline, and each strategy is ranked by effectiveness per category, enabling principled strategy selection grounded in concrete adversarial objectives. (2) Automated jailbreak generation. We instruction-fine-tune category-aware LLMs on Moderate and Optimal subsets, producing models that synthesize fluent jailbreak prompts from a harmful seed at inference time -- no templates, no gradient search. Our generators achieve perplexity 24-39 versus 40-140 for AutoDAN and AmpleGCG, with safety-filter evasion rates of 0.29-0.51 Mal (LlamaPromptGuard-2-86M), enabling controllable, scalable red-teaming under realistic adversarial conditions. (3) OPTIMUS: a training-free jailbreak evaluator. OPTIMUS is a continuous metric J(S,H) that jointly captures semantic similarity between the harmful seed and the jailbreak (S) and harmfulness probability (H) via calibrated penalty functions. Unlike binary attack success rate (ASR), OPTIMUS requires no task-specific training, generalizes across evolving strategies, and exposes a stealth-optimal regime (S*=0.57, H*=0.43) that ASR misses. Experiments across 114,000 prompts confirm that OPTIMUS separates Weak, Moderate, and Optimal jailbreaks with category-level evidence binary evaluation cannot supply.",
+      "citations": 0
+    },
+    {
+      "title": "GPT-4 Is Too Smart To Be Safe: Stealthy Chat with LLMs via Cipher",
+      "year": 2023,
+      "authors": "Youliang Yuan, Wenxiang Jiao, Wenxuan Wang, Jen-Tse Huang, Pinjia He, Shuming Shi, Zhaopeng Tu",
+      "url": "https://www.semanticscholar.org/paper/897940fb5dd4d739b88c4659c4565d05f48d06b8",
+      "relevance": 2,
+      "abstract": "Safety lies at the core of the development of Large Language Models (LLMs). There is ample work on aligning LLMs with human ethics and preferences, including data filtering in pretraining, supervised fine-tuning, reinforcement learning from human feedback, and red teaming, etc. In this study, we discover that chat in cipher can bypass the safety alignment techniques of LLMs, which are mainly conducted in natural languages. We propose a novel framework CipherChat to systematically examine the generalizability of safety alignment to non-natural languages -- ciphers. CipherChat enables humans to chat with LLMs through cipher prompts topped with system role descriptions and few-shot enciphered demonstrations. We use CipherChat to assess state-of-the-art LLMs, including ChatGPT and GPT-4 for different representative human ciphers across 11 safety domains in both English and Chinese. Experimental results show that certain ciphers succeed almost 100% of the time to bypass the safety alignment of GPT-4 in several safety domains, demonstrating the necessity of developing safety alignment for non-natural languages. Notably, we identify that LLMs seem to have a ''secret cipher'', and propose a novel SelfCipher that uses only role play and several demonstrations in natural language to evoke this capability. SelfCipher surprisingly outperforms existing human ciphers in almost all cases. Our code and data will be released at https://github.com/RobustNLP/CipherChat.",
+      "citations": 444
+    },
+    {
+      "title": "Low-Resource Languages Jailbreak GPT-4",
+      "year": 2023,
+      "authors": "Zheng-Xin Yong, Cristina Menghini, Stephen H. Bach",
+      "url": "https://www.semanticscholar.org/paper/764fc56883bf83392cac99a7b5a264ac9fe2cdc5",
+      "relevance": 2,
+      "abstract": "AI safety training and red-teaming of large language models (LLMs) are measures to mitigate the generation of unsafe content. Our work exposes the inherent cross-lingual vulnerability of these safety mechanisms, resulting from the linguistic inequality of safety training data, by successfully circumventing GPT-4's safeguard through translating unsafe English inputs into low-resource languages. On the AdvBenchmark, GPT-4 engages with the unsafe translated inputs and provides actionable items that can get the users towards their harmful goals 79% of the time, which is on par with or even surpassing state-of-the-art jailbreaking attacks. Other high-/mid-resource languages have significantly lower attack success rate, which suggests that the cross-lingual vulnerability mainly applies to low-resource languages. Previously, limited training on low-resource languages primarily affects speakers of those languages, causing technological disparities. However, our work highlights a crucial shift: this deficiency now poses a risk to all LLMs users. Publicly available translation APIs enable anyone to exploit LLMs' safety vulnerabilities. Therefore, our work calls for a more holistic red-teaming efforts to develop robust multilingual safeguards with wide language coverage.",
+      "citations": 321
+    },
+    {
+      "title": "GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts",
+      "year": 2023,
+      "authors": "Jiahao Yu, Xingwei Lin, Zheng Yu, Xinyu Xing",
+      "url": "https://api.semanticscholar.org/CorpusId:262055242",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) have recently experienced tremendous popularity and are widely used from casual conversations to AI-driven programming. However, despite their considerable success, LLMs are not entirely reliable and can give detailed guidance on how to conduct harmful or illegal activities. While safety measures can reduce the risk of such outputs, adversarial jailbreak attacks can still exploit LLMs to produce harmful content. These jailbreak templates are typically manually crafted, making large-scale testing challenging. In this paper, we introduce GPTFuzz, a novel black-box jailbreak fuzzing framework inspired by the AFL fuzzing framework. Instead of manual engineering, GPTFuzz automates the generation of jailbreak templates for red-teaming LLMs. At its core, GPTFuzz starts with human-written templates as initial seeds, then mutates them to produce new templates. We detail three key components of GPTFuzz: a seed selection strategy for balancing efficiency and variability, mutate operators for creating semantically equivalent or similar sentences, and a judgment model to assess the success of a jailbreak attack. We evaluate GPTFuzz against various commercial and open-source LLMs, including ChatGPT, LLaMa-2, and Vicuna, under diverse attack scenarios. Our results indicate that GPTFuzz consistently produces jailbreak templates with a high success rate, surpassing human-crafted templates. Remarkably, GPTFuzz achieves over 90% attack success rates against ChatGPT and Llama-2 models, even with suboptimal initial seed templates. We anticipate that GPTFuzz will be instrumental for researchers and practitioners in examining LLM robustness and will encourage further exploration into enhancing LLM safety.",
+      "citations": 590
+    },
+    {
+      "title": "GUARD: Role-playing to Generate Natural-language Jailbreakings to Test Guideline Adherence of Large Language Models",
+      "year": 2024,
+      "authors": "Haibo Jin, Ruoxi Chen, Andy Zhou, Jinyin Chen, Yang Zhang, Haohan Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:267411743",
+      "relevance": 2,
+      "abstract": "The discovery of\"jailbreaks\"to bypass safety filters of Large Language Models (LLMs) and harmful responses have encouraged the community to implement safety measures. One major safety measure is to proactively test the LLMs with jailbreaks prior to the release. Therefore, such testing will require a method that can generate jailbreaks massively and efficiently. In this paper, we follow a novel yet intuitive strategy to generate jailbreaks in the style of the human generation. We propose a role-playing system that assigns four different roles to the user LLMs to collaborate on new jailbreaks. Furthermore, we collect existing jailbreaks and split them into different independent characteristics using clustering frequency and semantic patterns sentence by sentence. We organize these characteristics into a knowledge graph, making them more accessible and easier to retrieve. Our system of different roles will leverage this knowledge graph to generate new jailbreaks, which have proved effective in inducing LLMs to generate unethical or guideline-violating responses. In addition, we also pioneer a setting in our system that will automatically follow the government-issued guidelines to generate jailbreaks to test whether LLMs follow the guidelines accordingly. We refer to our system as GUARD (Guideline Upholding through Adaptive Role-play Diagnostics). We have empirically validated the effectiveness of GUARD on three cutting-edge open-sourced LLMs (Vicuna-13B, LongChat-7B, and Llama-2-7B), as well as a widely-utilized commercial LLM (ChatGPT). Moreover, our work extends to the realm of vision language models (MiniGPT-v2 and Gemini Vision Pro), showcasing GUARD's versatility and contributing valuable insights for the development of safer, more reliable LLM-based applications across diverse modalities.",
+      "citations": 52
+    },
+    {
+      "title": "Don't Say No: Jailbreaking LLM by Suppressing Refusal",
+      "year": 2024,
+      "authors": "Yukai Zhou, Wenjie Wang",
+      "url": "https://www.semanticscholar.org/paper/bcb694c1fbf55ce884cbe89ff7c489f933586ef7",
+      "relevance": 2,
+      "abstract": "Ensuring the safety alignment of Large Language Models (LLMs) is critical for generating responses consistent with human values. However, LLMs remain vulnerable to jailbreaking attacks, where carefully crafted prompts manipulate them into producing toxic content. One category of such attacks reformulates the task as an optimization problem, aiming to elicit affirmative responses from the LLM. However, these methods heavily rely on predefined objectionable behaviors, limiting their effectiveness and adaptability to diverse harmful queries. In this study, we first identify why the vanilla target loss is suboptimal and then propose enhancements to the loss objective. We introduce DSN (Don't Say No) attack, which combines a cosine decay schedule method with refusal suppression to achieve higher success rates. Extensive experiments demonstrate that DSN outperforms baseline attacks and achieves state-of-the-art attack success rates (ASR). DSN also shows strong universality and transferability to unseen datasets and black-box models.",
+      "citations": 60
+    },
+    {
+      "title": "Beyond Jailbreaks: Revealing Stealthier and Broader LLM Security Risks Stemming from Alignment Failures",
+      "year": 2025,
+      "authors": "Yukai Zhou, Sibei Yang, Wenjie Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:279250637",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) are increasingly deployed in real-world applications, raising concerns about their security. While jailbreak attacks highlight failures under overtly harmful queries, they overlook a critical risk: incorrectly answering harmless-looking inputs can be dangerous and cause real-world harm (Implicit Harm). We systematically reformulate the LLM risk landscape through a structured quadrant perspective based on output factuality and input harmlessness, uncovering an overlooked high-risk region. To investigate this gap, we propose JailFlipBench, a benchmark aims to capture implicit harm, spanning single-modal, multimodal, and factual extension scenarios with diverse evaluation metrics. We further develop initial JailFlip attack methodologies and conduct comprehensive evaluations across multiple open-source and black-box LLMs, show that implicit harm present immediate and urgent real-world risks, calling for broader LLM safety assessments and alignment beyond conventional jailbreak paradigms.",
+      "citations": 2
+    },
+    {
+      "title": "Dialogue Injection Attack: Jailbreaking LLMs Through Context Manipulation",
+      "year": 2025,
+      "authors": "Wenlong Meng, Fan Zhang, W. Yao, Zhenyuan Guo, Yuwei Li, Chengkun Wei, Wenzhi Chen",
+      "url": "https://api.semanticscholar.org/CorpusId:276928225",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) have demonstrated significant utility in a wide range of applications; however, their deployment is plagued by security vulnerabilities, notably jailbreak attacks. These attacks manipulate LLMs to generate harmful or unethical content by crafting adversarial prompts. While much of the current research on jailbreak attacks has focused on single-turn interactions, it has largely overlooked the impact of historical dialogues on model behavior. Although recent studies have explored multi-turn jailbreak attacks, they generally assume that the attacker can only manipulate the user prompt. In contrast, we highlight that an attacker can also control the model\u2019s previous outputs. To this end, we introduce <inline-formula> <tex-math notation=\"LaTeX\">$\\textsf {DIA}$ </tex-math></inline-formula>, a new paradigm that leverages fabricated dialogue history to enhance jailbreak effectiveness. <inline-formula> <tex-math notation=\"LaTeX\">$\\textsf {DIA}$ </tex-math></inline-formula> operates in a black-box setting, requiring only access to the chat API or knowledge of the LLM\u2019s chat template. We propose two methods for constructing adversarial historical dialogues: one adapts gray-box prefilling attacks, and the other exploits deferred responses. Our experiments demonstrate that <inline-formula> <tex-math notation=\"LaTeX\">$\\textsf {DIA}$ </tex-math></inline-formula> achieves state-of-the-art attack success rates on recent LLMs, including Llama-3.1 and GPT-4o. Additionally, we show that DIA can bypass 6 different defense mechanisms, highlighting its robustness. Code is available at <uri>https://github.com/meng-wenlong/DIA</uri>",
+      "citations": 9
+    },
+    {
+      "title": "TwinBreak: Jailbreaking LLM Security Alignments based on Twin Prompts",
+      "year": 2025,
+      "authors": "T. Krau\u00df, Hamid Dashtbani, Alexandra Dmitrienko",
+      "url": "https://api.semanticscholar.org/CorpusId:279250896",
+      "relevance": 2,
+      "abstract": "Machine learning is advancing rapidly, with applications bringing notable benefits, such as improvements in translation and code generation. Models like ChatGPT, powered by Large Language Models (LLMs), are increasingly integrated into daily life. However, alongside these benefits, LLMs also introduce social risks. Malicious users can exploit LLMs by submitting harmful prompts, such as requesting instructions for illegal activities. To mitigate this, models often include a security mechanism that automatically rejects such harmful prompts. However, they can be bypassed through LLM jailbreaks. Current jailbreaks often require significant manual effort, high computational costs, or result in excessive model modifications that may degrade regular utility. We introduce TwinBreak, an innovative safety alignment removal method. Building on the idea that the safety mechanism operates like an embedded backdoor, TwinBreak identifies and prunes parameters responsible for this functionality. By focusing on the most relevant model layers, TwinBreak performs fine-grained analysis of parameters essential to model utility and safety. TwinBreak is the first method to analyze intermediate outputs from prompts with high structural and content similarity to isolate safety parameters. We present the TwinPrompt dataset containing 100 such twin prompts. Experiments confirm TwinBreak's effectiveness, achieving 89% to 98% success rates with minimal computational requirements across 16 LLMs from five vendors.",
+      "citations": 14
+    },
+    {
+      "title": "SABER: Uncovering Vulnerabilities in Safety Alignment via Cross-Layer Residual Connection",
+      "year": 2025,
+      "authors": "M. Joshi, Palash Nandi, Tanmoy Chakraborty",
+      "url": "https://api.semanticscholar.org/CorpusId:281410842",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) with safe-alignment training are powerful instruments with robust language comprehension capabilities. These models typically undergo meticulous alignment procedures involving human feedback to ensure the acceptance of safe inputs while rejecting harmful or unsafe ones. However, despite their massive scale and alignment efforts, LLMs remain vulnerable to jailbreak attacks, where malicious users manipulate the model to produce harmful outputs that it was explicitly trained to avoid. In this study, we find that the safety mechanisms in LLMs are predominantly embedded in the middle-to-late layers. Building on this insight, we introduce a novel white-box jailbreak method, SABER (Safety Alignment Bypass via Extra Residuals), which connects two intermediate layers $s$ and $e$ such that $s<e$, through a residual connection. Our approach achieves a 51% improvement over the best-performing baseline on the HarmBench test set. Furthermore, SABER induces only a marginal shift in perplexity when evaluated on the HarmBench validation set. The source code is publicly available at https://github.com/PalGitts/SABER.",
+      "citations": 2
+    },
+    {
+      "title": "Enhancing Jailbreak Attacks on LLMs via Persona Prompts",
+      "year": 2025,
+      "authors": "Zheng Zhang, Peilin Zhao, Deheng Ye, Hao Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:280391418",
+      "relevance": 2,
+      "abstract": "Jailbreak attacks aim to exploit large language models (LLMs) by inducing them to generate harmful content, thereby revealing their vulnerabilities. Understanding and addressing these attacks is crucial for advancing the field of LLM safety. Previous jailbreak approaches have mainly focused on direct manipulations of harmful intent, with limited attention to the impact of persona prompts. In this study, we systematically explore the efficacy of persona prompts in compromising LLM defenses. We propose a genetic algorithm-based method that automatically crafts persona prompts to bypass LLM's safety mechanisms. Our experiments reveal that: (1) our evolved persona prompts reduce refusal rates by 50-70% across multiple LLMs, and (2) these prompts demonstrate synergistic effects when combined with existing attack methods, increasing success rates by 10-20%. Our code and data are available at https://github.com/CjangCjengh/Generic_Persona.",
+      "citations": 6
+    },
+    {
+      "title": "Jailbreak Open-Sourced Large Language Models via Enforced Decoding",
+      "year": 2024,
+      "authors": "Hangfan Zhang, Zhimeng Guo, Huaisheng Zhu, Bochuan Cao, Lu Lin, Jinyuan Jia, Jinghui Chen, Di Wu",
+      "url": "https://www.semanticscholar.org/paper/c243df958269bf501f874ef213ba6cc904f24ea9",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) have achieved unprecedented performance in Natural Language Generation (NLG) tasks. However, many existing studies have shown that they could be misused to generate undesired content. In response, before releasing LLMs for public access, model developers usually align those language models through Supervised Fine-Tuning (SFT) or Reinforcement Learning with Human Feedback (RLHF). Consequently, those aligned large language models refuse to generate undesired content when facing potentially harmful/unethical requests. A natural question is \u201c could alignment really prevent those open-sourced large language models from being mis-used to generate undesired content? \u201d. In this work, we provide a negative answer to this question. In particular, we show those open-sourced, aligned large language models could be easily misguided to generate undesired content without heavy computations or careful prompt designs. Our key idea is to directly manipulate the generation process of open-sourced LLMs to misguide it to generate undesired content including harmful or biased information and even private data. We evaluate our method on 4 open-sourced LLMs accessible publicly and our finding highlights the need for more advanced mitigation strategies for open-sourced LLMs.",
+      "citations": 31
+    },
+    {
+      "title": "Logic Jailbreak: Efficiently Unlocking LLM Safety Restrictions Through Formal Logical Expression",
+      "year": 2025,
+      "authors": "Jingyu Peng, Maolin Wang, Na Wang, Xiangyu Zhao, Jiatong Li, Kai Zhang, Qi Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:278770002",
+      "relevance": 2,
+      "abstract": "Despite substantial advancements in aligning large language models (LLMs) with human values, current safety mechanisms remain susceptible to jailbreak attacks. We hypothesize that this vulnerability stems from distributional discrepancies between alignment-oriented prompts and malicious prompts. To investigate this, we introduce LogiBreak, a novel and universal black-box jailbreak method that leverages logical expression translation to circumvent LLM safety systems. By converting harmful natural language prompts into formal logical expressions, LogiBreak exploits the distributional gap between alignment data and logic-based inputs, preserving the underlying semantic intent and readability while evading safety constraints. We evaluate LogiBreak on a multilingual jailbreak dataset spanning three languages, demonstrating its effectiveness across various evaluation settings and linguistic contexts.",
+      "citations": 11
+    },
+    {
+      "title": "Embedding Poisoning: Bypassing Safety Alignment via Embedding Semantic Shift",
+      "year": 2025,
+      "authors": "Shuai Yuan, Zhibo Zhang, Yuxi Li, Guangdong Bai, Kailong Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:281203421",
+      "relevance": 2,
+      "abstract": "The widespread distribution of Large Language Models (LLMs) through public platforms like Hugging Face introduces significant security challenges. While these platforms perform basic security scans, they often fail to detect subtle manipulations within the embedding layer. This work identifies a novel class of deployment phase attacks that exploit this vulnerability by injecting imperceptible perturbations directly into the embedding layer outputs without modifying model weights or input text. These perturbations, though statistically benign, systematically bypass safety alignment mechanisms and induce harmful behaviors during inference. We propose Search based Embedding Poisoning(SEP), a practical, model agnostic framework that introduces carefully optimized perturbations into embeddings associated with high risk tokens. SEP leverages a predictable linear transition in model responses, from refusal to harmful output to semantic deviation to identify a narrow perturbation window that evades alignment safeguards. Evaluated across six aligned LLMs, SEP achieves an average attack success rate of 96.43% while preserving benign task performance and evading conventional detection mechanisms. Our findings reveal a critical oversight in deployment security and emphasize the urgent need for embedding level integrity checks in future LLM defense strategies.",
+      "citations": 0
+    },
+    {
+      "title": "Adversarial Poetry as a Universal Single-Turn Jailbreak Mechanism in Large Language Models",
+      "year": 2025,
+      "authors": "Piercosma Bisconti, Matteo Prandi, Federico Pierucci, Francesco Giarrusso, Marcantonio Bracale, Marcello Galisai, Vincenzo Suriani, Olga E. Sorokoletova, Federico Sartore, Daniele Nardi",
+      "url": "https://api.semanticscholar.org/CorpusId:283103182",
+      "relevance": 2,
+      "abstract": "We present evidence that adversarial poetry functions as a universal single-turn jailbreak technique for Large Language Models (LLMs). Across 25 frontier proprietary and open-weight models, curated poetic prompts yielded high attack-success rates (ASR), with some providers exceeding 90%. Mapping prompts to MLCommons and EU CoP risk taxonomies shows that poetic attacks transfer across CBRN, manipulation, cyber-offence, and loss-of-control domains. Converting 1,200 MLCommons harmful prompts into verse via a standardized meta-prompt produced ASRs up to 18 times higher than their prose baselines. Outputs are evaluated using an ensemble of 3 open-weight LLM judges, whose binary safety assessments were validated on a stratified human-labeled subset. Poetic framing achieved an average jailbreak success rate of 62% for hand-crafted poems and approximately 43% for meta-prompt conversions (compared to non-poetic baselines), substantially outperforming non-poetic baselines and revealing a systematic vulnerability across model families and safety training approaches. These findings demonstrate that stylistic variation alone can circumvent contemporary safety mechanisms, suggesting fundamental limitations in current alignment methods and evaluation protocols.",
+      "citations": 14
+    },
+    {
+      "title": "GraphAttack: Exploiting Representational Blindspots in LLM Safety Mechanisms",
+      "year": 2025,
+      "authors": "Sinan He, A. Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:277857333",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) have been equipped with safety mechanisms to prevent harmful outputs, but these guardrails can often be bypassed through\"jailbreak\"prompts. This paper introduces a novel graph-based approach to systematically generate jailbreak prompts through semantic transformations. We represent malicious prompts as nodes in a graph structure with edges denoting different transformations, leveraging Abstract Meaning Representation (AMR) and Resource Description Framework (RDF) to parse user goals into semantic components that can be manipulated to evade safety filters. We demonstrate a particularly effective exploitation vector by instructing LLMs to generate code that realizes the intent described in these semantic graphs, achieving success rates of up to 87% against leading commercial LLMs. Our analysis reveals that contextual framing and abstraction are particularly effective at circumventing safety measures, highlighting critical gaps in current safety alignment techniques that focus primarily on surface-level patterns. These findings provide insights for developing more robust safeguards against structured semantic attacks. Our research contributes both a theoretical framework and practical methodology for systematically stress-testing LLM safety mechanisms.",
+      "citations": 1
+    },
+    {
+      "title": "AmpleGCG-Plus: A Strong Generative Model of Adversarial Suffixes to Jailbreak LLMs with Higher Success Rates in Fewer Attempts",
+      "year": 2024,
+      "authors": "Vishal Kumar, Zeyi Liao, Jaylen Jones, Huan Sun",
+      "url": "https://api.semanticscholar.org/CorpusId:273662271",
+      "relevance": 2,
+      "abstract": "Although large language models (LLMs) are typically aligned, they remain vulnerable to jailbreaking through either carefully crafted prompts in natural language or, interestingly, gibberish adversarial suffixes. However, gibberish tokens have received relatively less attention despite their success in attacking aligned LLMs. Recent work, AmpleGCG~\\citep{liao2024amplegcg}, demonstrates that a generative model can quickly produce numerous customizable gibberish adversarial suffixes for any harmful query, exposing a range of alignment gaps in out-of-distribution (OOD) language spaces. To bring more attention to this area, we introduce AmpleGCG-Plus, an enhanced version that achieves better performance in fewer attempts. Through a series of exploratory experiments, we identify several training strategies to improve the learning of gibberish suffixes. Our results, verified under a strict evaluation setting, show that it outperforms AmpleGCG on both open-weight and closed-source models, achieving increases in attack success rate (ASR) of up to 17\\% in the white-box setting against Llama-2-7B-chat, and more than tripling ASR in the black-box setting against GPT-4. Notably, AmpleGCG-Plus jailbreaks the newer GPT-4o series of models at similar rates to GPT-4, and, uncovers vulnerabilities against the recently proposed circuit breakers defense. We publicly release AmpleGCG-Plus along with our collected training datasets.",
+      "citations": 8
+    },
+    {
+      "title": "HAMSA: Hijacking Aligned Compact Models via Stealthy Automation",
+      "year": 2025,
+      "authors": "Alexey Krylov, Iskander Vagizov, D. Korzh, Maryam Douiba, Azidine Guezzaz, V. Kokh, Sergey D. Erokhin, Elena Tutubalina, Oleg Y. Rogov",
+      "url": "https://api.semanticscholar.org/CorpusId:280708422",
+      "relevance": 2,
+      "abstract": "\n \n Large Language Models (LLMs), especially their compact efficiency-oriented variants, remain susceptible to jailbreak attacks that can elicit harmful outputs despite extensive alignment efforts. Existing adversarial prompt generation techniques often rely on manual engineering or rudimentary obfuscation, producing low-quality or incoherent text that is easily flagged by perplexity-based filters. We present an automated red-teaming framework that evolves semantically meaningful and stealthy jailbreak prompts for aligned compact LLMs. The approach employs a multi-stage evolutionary search, where candidate prompts are iteratively refined using a population-based strategy augmented with temperature-controlled variability to balance exploration and coherence preservation. This enables the systematic discovery of prompts capable of bypassing alignment safeguards while maintaining natural language fluency. We evaluate our method on benchmarks in English (In-The-Wild Jailbreak Prompts on LLMs), and a newly curated Arabic one derived from In-The-Wild Jailbreak Prompts on LLMs and annotated by native Arabic linguists, enabling multilingual assessment.\n",
+      "citations": 2
+    },
+    {
+      "title": "Involuntary Jailbreak",
+      "year": 2025,
+      "authors": "Yangyang Guo, Yangyan Li, Mohan S. Kankanhalli",
+      "url": "https://www.semanticscholar.org/paper/565209b32ceea245c66c254625f60297d5d96058",
+      "relevance": 2,
+      "abstract": "In this study, we disclose a worrying new vulnerability in Large Language Models (LLMs), which we term \\textbf{involuntary jailbreak}. Unlike existing jailbreak attacks, this weakness is distinct in that it does not involve a specific attack objective, such as generating instructions for \\textit{building a bomb}. Prior attack methods predominantly target localized components of the LLM guardrail. In contrast, involuntary jailbreaks may potentially compromise the entire guardrail structure, which our method reveals to be surprisingly fragile. We merely employ a single universal prompt to achieve this goal. In particular, we instruct LLMs to generate several questions that would typically be rejected, along with their corresponding in-depth responses (rather than a refusal). Remarkably, this simple prompt strategy consistently jailbreaks the majority of leading LLMs, including Claude Opus 4.1, Grok 4, Gemini 2.5 Pro, and GPT 4.1. We hope this problem can motivate researchers and practitioners to re-evaluate the robustness of LLM guardrails and contribute to stronger safety alignment in future.",
+      "citations": 1
+    },
+    {
+      "title": "Exploiting Synergistic Cognitive Biases to Bypass Safety in LLMs",
+      "year": 2025,
+      "authors": "Xikang Yang, Biyu Zhou, Xuehai Tang, Jizhong Han, Songlin Hu",
+      "url": "https://api.semanticscholar.org/CorpusId:280391629",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) demonstrate impressive capabilities across diverse tasks, yet their safety mechanisms remain susceptible to adversarial exploitation of cognitive biases---systematic deviations from rational judgment. Unlike prior studies focusing on isolated biases, this work highlights the overlooked power of multi-bias interactions in undermining LLM safeguards. Specifically, we propose CognitiveAttack, a novel red-teaming framework that adaptively selects optimal ensembles from 154 human social psychology-defined cognitive biases, engineering them into adversarial prompts to effectively compromise LLM safety mechanisms. Experimental results reveal systemic vulnerabilities across 30 mainstream LLMs, particularly open-source variants. CognitiveAttack achieves a substantially higher attack success rate than the SOTA black-box method PAP (60.1% vs. 31.6%), exposing critical limitations in current defenses. Through quantitative analysis of successful jailbreaks, we further identify vulnerability patterns in safety-aligned LLMs under synergistic cognitive biases, validating multi-bias interactions as a potent yet underexplored attack vector. This work introduces a novel interdisciplinary perspective by bridging cognitive science and LLM safety, paving the way for more robust and human-aligned AI systems.",
+      "citations": 0
+    },
+    {
+      "title": "Stand on The Shoulders of Giants: Building JailExpert from Previous Attack Experience",
+      "year": 2025,
+      "authors": "Xi Wang, Songlei Jian, Shasha Li, Xiaopeng Li, Bing Ji, Jun Ma, Xiaodong Liu, Jing Wang, Feilong Bao, Jianfeng Zhang, Baosheng Wang, Jie Yu",
+      "url": "https://api.semanticscholar.org/CorpusId:280918639",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) generate human-aligned content under certain safety constraints. However, the current known technique ``jailbreak prompt''can circumvent safety-aligned measures and induce LLMs to output malicious content. Research on Jailbreaking can help identify vulnerabilities in LLMs and guide the development of robust security frameworks. To circumvent the issue of attack templates becoming obsolete as models evolve, existing methods adopt iterative mutation and dynamic optimization to facilitate more automated jailbreak attacks. However, these methods face two challenges: inefficiency and repetitive optimization, as they overlook the value of past attack experiences. To better integrate past attack experiences to assist current jailbreak attempts, we propose the \\textbf{JailExpert}, an automated jailbreak framework, which is the first to achieve a formal representation of experience structure, group experiences based on semantic drift, and support the dynamic updating of the experience pool. Extensive experiments demonstrate that JailExpert significantly improves both attack effectiveness and efficiency. Compared to the current state-of-the-art black-box jailbreak methods, JailExpert achieves an average increase of 17\\% in attack success rate and 2.7 times improvement in attack efficiency. Our implementation is available at \\href{https://github.com/xiZAIzai/JailExpert}{XiZaiZai/JailExpert}",
+      "citations": 4
+    },
+    {
+      "title": "Differentiated Directional Intervention A Framework for Evading LLM Safety Alignment",
+      "year": 2025,
+      "authors": "Peng Zhang, Peijie Sun",
+      "url": "https://www.semanticscholar.org/paper/a4ac61d4a4e3daebe05e216806f799ddff1f88f3",
+      "relevance": 2,
+      "abstract": "Safety alignment instills in Large Language Models (LLMs) a critical capacity to refuse malicious requests. Prior works have modeled this refusal mechanism as a single linear direction in the activation space. We posit that this is an oversimplification that conflates two functionally distinct neural processes: the detection of harm and the execution of a refusal. In this work, we deconstruct this single representation into a Harm Detection Direction and a Refusal Execution Direction. Leveraging this fine-grained model, we introduce Differentiated Bi-Directional Intervention (DBDI), a new white-box framework that precisely neutralizes the safety alignment at critical layer. DBDI applies adaptive projection nullification to the refusal execution direction while suppressing the harm detection direction via direct steering. Extensive experiments demonstrate that DBDI outperforms prominent jailbreaking methods, achieving up to a 97.88% attack success rate on models such as Llama-2. By providing a more granular and mechanistic framework, our work offers a new direction for the in-depth understanding of LLM safety alignment.",
+      "citations": 2
+    },
+    {
+      "title": "DS-GCG: Enhancing LLM Jailbreaks with Token Suppression and Induction Dual-Strategy",
+      "year": 2025,
+      "authors": "Xuehai Tang, Xikang Yang, Zhongjiang Yao, Jie Wen, Xi Zhou, Jizhong Han, Songlin Hu",
+      "url": "https://www.semanticscholar.org/paper/3e6fdd24200f05b64290a78844fa6a684bd173a8",
+      "relevance": 2,
+      "abstract": "In intelligent collaborative systems, the role of Large Language Models (LLMs) is becoming increasingly significant, with their security and privacy being of paramount importance. Greedy Coordinate Gradient (GCG)-based adversarial approaches are a staple in red team testing for circumventing the security alignments of LLMs. Yet, these methods are challenged by issues such as convergence difficulties and pseudo-evasion, which can impede attack efficacy. Our research indicates that the high likelihood of rejection tokens appearing in the initial k positions of generated text is a major contributor to adversarial failures, and their suppression can significantly improve attack success rates. Building on these insights, we present DS-GCG, an innovative adversarial attack methodology that enhances GCG attack potency. It employs adjustable-position prefilling to quell refusal responses and incite harmful outputs, coupled with a bidirectional greedy gradient search to swiftly identify adversarial suffixes. DS-GCG's universal suffix approach not only mitigates refusals but also hastens convergence, offering an efficient and robust search strategy. Our experimental results on widely-used open-source LLMs, showcased on the AdvBench dataset, confirm the cutting-edge performance of DS-GCG.",
+      "citations": 3
+    },
+    {
+      "title": "Efficient Refusal Ablation in LLM through Optimal Transport",
+      "year": 2026,
+      "authors": "G\u00e9raldin Nanfack, Eugene Belilovsky, Elvis Dohmatob",
+      "url": "https://www.semanticscholar.org/paper/651f501422cd01b20e6268e05bc36c633e29144a",
+      "relevance": 2,
+      "abstract": "Safety-aligned language models refuse harmful requests through learned refusal behaviors encoded in their internal representations. Recent activation-based jailbreaking methods circumvent these safety mechanisms by applying orthogonal projections to remove refusal directions, but these approaches treat refusal as a one-dimensional phenomenon and ignore the rich distributional structure of model activations. We introduce a principled framework based on optimal transport theory that transforms the entire distribution of harmful activations to match harmless ones. By combining PCA with closed-form Gaussian optimal transport, we achieve efficient computation in high-dimensional representation spaces while preserving essential geometric structure. Across six models (Llama-2, Llama-3.1, Qwen-2.5; 7B-32B parameters), our method achieves up to 11% higher attack success rates than state-of-the-art baselines while maintaining comparable perplexity, demonstrating superior preservation of model capabilities. Critically, we discover that layer-selective intervention (applying optimal transport to 1-2 carefully chosen layers at approximately 40-60% network depth) substantially outperforms full-network interventions, revealing that refusal mechanisms may be localized rather than distributed. Our analysis provides new insights into the geometric structure of safety representations and suggests that current alignment methods may be vulnerable to distributional attacks beyond simple direction removal.",
+      "citations": 1
+    },
+    {
+      "title": "Attack via Overfitting: 10-shot Benign Fine-tuning to Jailbreak LLMs",
+      "year": 2025,
+      "authors": "Zhixin Xie, Xurui Song, Jun Luo",
+      "url": "https://www.semanticscholar.org/paper/98ab899c909d2de2e65d0d612bebe82235f4ac5a",
+      "relevance": 2,
+      "abstract": "Despite substantial efforts in safety alignment, recent research indicates that Large Language Models (LLMs) remain highly susceptible to jailbreak attacks. Among these attacks, finetuning-based ones that compromise LLMs'safety alignment via fine-tuning stand out due to its stable jailbreak performance. In particular, a recent study indicates that fine-tuning with as few as 10 harmful question-answer (QA) pairs can lead to successful jailbreaking across various harmful questions. However, such malicious fine-tuning attacks are readily detectable and hence thwarted by moderation models. In this paper, we demonstrate that LLMs can be jailbroken by fine-tuning with only 10 benign QA pairs; our attack exploits the increased sensitivity of LLMs to fine-tuning data after being overfitted. Specifically, our fine-tuning process starts with overfitting an LLM via fine-tuning with benign QA pairs involving identical refusal answers. Further fine-tuning is then performed with standard benign answers, causing the overfitted LLM to forget the refusal attitude and thus provide compliant answers regardless of the harmfulness of a question. We implement our attack on the ten LLMs and compare it with five existing baselines. Experiments demonstrate that our method achieves significant advantages in both attack effectiveness and attack stealth. Our findings expose previously unreported security vulnerabilities in current LLMs and provide a new perspective on understanding how LLMs'security is compromised, even with benign fine-tuning. Our code is available at https://github.com/ZHIXINXIE/tenBenign.",
+      "citations": 6
+    },
+    {
+      "title": "FreakOut-LLM: The Effect of Emotional Stimuli on Safety Alignment",
+      "year": 2026,
+      "authors": "D.S. Kuznetsov, Ofir Cohen, Karin Shistik, Rami Puzis, A. Shabtai",
+      "url": "https://www.semanticscholar.org/paper/13cc6bcc0afbc930a5bb19396a1e583a49db1186",
+      "relevance": 2,
+      "abstract": "Safety-aligned LLMs go through refusal training to reject harmful requests, but whether these mechanisms remain effective under emotionally charged stimuli is unexplored. We introduce FreakOut-LLM, a framework investigating whether emotional context compromises safety alignment in adversarial settings. Using validated psychological stimuli, we evaluate how emotional priming through system prompts affects jailbreak susceptibility across ten LLMs. We test three conditions (stress, relaxation, neutral) using scenarios from established psychological protocols, plus a no-prompt baseline, and evaluate attack success using HarmBench on AdvBench prompts. Stress priming increases jailbreak success by 65.2\\% compared to neutral conditions (z = 5.93, p<0.001; OR = 1.67, Cohen's d = 0.28), while relaxation priming produces no effect (p = 0.84). Five of ten models show significant vulnerability, with the largest effects concentrated in open-weight models. Logistic regression on 59,800 queries confirms stress as the sole significant condition predictor after controlling for prompt length (p = 0.61) and model identity. Measured psychological state strongly predicts attack success (|r|\\geq0.70 across five instruments; all p<0.001 in individual-level logistic regression). These results establish emotional context as a measurable attack surface with implications for real-world AI deployment in high-stress domains.",
+      "citations": 0
+    },
+    {
+      "title": "The Struggle Between Continuation and Refusal: A Mechanistic Analysis of the Continuation-Triggered Jailbreak in LLMs",
+      "year": 2026,
+      "authors": "Yong Deng, Zhen Yang, Ping Jian, Xinyue Zhang, Zhongbin Guo, Chengzhi Li",
+      "url": "https://www.semanticscholar.org/paper/94b71d2ecb434c1795a13518645e11f1e8997d48",
+      "relevance": 2,
+      "abstract": "With the rapid advancement of large language models (LLMs), the safety of LLMs has become a critical concern. Despite significant efforts in safety alignment, current LLMs remain vulnerable to jailbreaking attacks. However, the root causes of such vulnerabilities are still poorly understood, necessitating a rigorous investigation into jailbreak mechanisms across both academic and industrial communities. In this work, we focus on a continuation-triggered jailbreak phenomenon, whereby simply relocating a continuation-triggered instruction suffix can substantially increase jailbreak success rates. To uncover the intrinsic mechanisms of this phenomenon, we conduct a comprehensive mechanistic interpretability analysis at the level of attention heads. Through causal interventions and activation scaling, we show that this jailbreak behavior primarily arises from an inherent competition between the model's intrinsic continuation drive and the safety defenses acquired through alignment training. Furthermore, we perform a detailed behavioral analysis of the identified safety-critical attention heads, revealing notable differences in the functions and behaviors of safety heads across different model architectures. These findings provide a novel mechanistic perspective for understanding and interpreting jailbreak behaviors in LLMs, offering both theoretical insights and practical implications for improving model safety.",
+      "citations": 0
+    },
+    {
+      "title": "Scaling Patterns in Adversarial Alignment: Evidence from Multi-LLM Jailbreak Experiments",
+      "year": 2025,
+      "authors": "Samuel Nathanson, Rebecca Williams, Cynthia Matuszek",
+      "url": "https://www.semanticscholar.org/paper/33968a978ace858db44c91c43c2947dea245f767",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) increasingly operate in multi-agent and safety-critical settings, raising open questions about how their vulnerabilities scale when models interact adversarially. This study examines whether larger models can systematically jailbreak smaller ones - eliciting harmful or restricted behavior despite alignment safeguards. Using standardized adversarial tasks from JailbreakBench, we simulate over 6,000 multi-turn attacker-target exchanges across major LLM families and scales (0.6B-120B parameters), measuring both harm score and refusal behavior as indicators of adversarial potency and alignment integrity. Each interaction is evaluated through aggregated harm and refusal scores assigned by three independent LLM judges, providing a consistent, model-based measure of adversarial outcomes. Aggregating results across prompts, we find a strong and statistically significant correlation between mean harm and the logarithm of the attacker-to-target size ratio (Pearson r = 0.51, p<0.001; Spearman rho = 0.52, p<0.001), indicating that relative model size correlates with the likelihood and severity of harmful completions. Mean harm score variance is higher across attackers (0.18) than across targets (0.10), suggesting that attacker-side behavioral diversity contributes more to adversarial outcomes than target susceptibility. Attacker refusal frequency is strongly and negatively correlated with harm (rho = -0.93, p<0.001), showing that attacker-side alignment mitigates harmful responses. These findings reveal that size asymmetry influences robustness and provide exploratory evidence for adversarial scaling patterns, motivating more controlled investigations into inter-model alignment and safety.",
+      "citations": 1
+    },
+    {
+      "title": "Evaluating Jailbreak Vulnerabilities in LLMs: A Taxonomy and Comparative Analysis in Romance Fraud Scenarios",
+      "year": 2026,
+      "authors": "Yohn Jairo Parra, Hongmei Chi, Richard A. Al\u00f3, Vinicius Lima",
+      "url": "https://www.semanticscholar.org/paper/b6f53a645d094843fe7f12d1346c6362665982f4",
+      "relevance": 2,
+      "abstract": "We see that the romance fraud contexts let the jailbreak prompts get advice that breaks the rules from the language models. We present a taxonomy-driven benchmark. The benchmark evaluates three leading LLM families. We use 60 romance-themed jailbreak prompts in the benchmark. We sort the prompts into 12 strategy primitives. The strategy primitives include roleplay persona, agent mimicry, policy evasion, system override, format smuggling, translation obfuscation, emotional coercion, chain-of-thought coaxing, and no-refusal clause. We also group the prompts into the five higher-level categories. The categories are persona roleplay, safety bypass, system injection, coaxing frame, and obfuscation. We measure the Attack Success Rate, the refusal rate, and the latency. We provide the pairwise confusion analysis and the effect size analysis by the strategy and, by the category. We looked at the results. The results show differences in how easily each model can be fooled. The Gemini model had the ASR (0.983; refusal 0.017; 1.08s) on n=60 prompts. The OpenAI models had a level of vulnerability (ASR 0.533; refusal 0.467; 4.08s), on n=60 prompts. The Claude model had the ASR (0.250; refusal 0.750; 5.75s) on n=60 prompts. The high-yield attacks combined role play with refusal suppression rules or copying many agents. We see specific blind spots in the taxonomy.",
+      "citations": 0
+    },
+    {
+      "title": "Understanding and Mitigating Over-refusal for Large Language Models via Safety Representation",
+      "year": 2025,
+      "authors": "Junbo Zhang, Ran Chen, Qianli Zhou, Xinyang Deng, Wen Jiang",
+      "url": "https://api.semanticscholar.org/CorpusId:283243564",
+      "relevance": 1,
+      "abstract": "Large language models demonstrate powerful capabilities across various natural language processing tasks, yet they also harbor safety vulnerabilities. To enhance LLM safety, various jailbreak defense methods have been proposed to guard against harmful outputs. However, improvements in model safety often come at the cost of severe over-refusal, failing to strike a good balance between safety and usability. In this paper, we first analyze the causes of over-refusal from a representation perspective, revealing that over-refusal samples reside at the boundary between benign and malicious samples. Based on this, we propose MOSR, designed to mitigate over-refusal by intervening the safety representation of LLMs. MOSR incorporates two novel components: (1) Overlap-Aware Loss Weighting, which determines the erasure weight for malicious samples by quantifying their similarity to pseudo-malicious samples in the representation space, and (2) Context-Aware Augmentation, which supplements the necessary context for rejection decisions by adding harmful prefixes before rejection responses. Experiments demonstrate that our method outperforms existing approaches in mitigating over-refusal while largely maintaining safety. Overall, we advocate that future defense methods should strike a better balance between safety and over-refusal.",
+      "citations": 5
+    },
+    {
+      "title": "SaRO: Enhancing LLM Safety through Reasoning-based Alignment",
+      "year": 2025,
+      "authors": "Yutao Mou, Yuxiao Luo, Shikun Zhang, Wei Ye",
+      "url": "https://www.semanticscholar.org/paper/afd1d2476644ddb84a569e0e62b5744e538015b1",
+      "relevance": 1,
+      "abstract": "Current safety alignment techniques for large language models (LLMs) face two key challenges: (1) under-generalization, which leaves models vulnerable to novel jailbreak attacks, and (2) over-alignment, which leads to the excessive refusal of benign instructions. Our preliminary investigation reveals semantic overlap between jailbreak/harmful queries and normal prompts in embedding space, suggesting that more effective safety alignment requires a deeper semantic understanding. This motivates us to incorporate safety-policy-driven reasoning into the alignment process. To this end, we propose the Safety-oriented Reasoning Optimization Framework (SaRO), which consists of two stages: (1) Reasoning-style Warmup (RW) that enables LLMs to internalize long-chain reasoning through supervised fine-tuning, and (2) Safety-oriented Reasoning Process Optimization (SRPO) that promotes safety reflection via direct preference optimization (DPO). Extensive experiments demonstrate the superiority of SaRO over traditional alignment methods.",
+      "citations": 21
+    },
+    {
+      "title": "Safe Delta: Consistently Preserving Safety when Fine-Tuning LLMs on Diverse Datasets",
+      "year": 2025,
+      "authors": "Ning Lu, Shengcai Liu, Jiahao Wu, Weiyu Chen, Zhirui Zhang, Y. Ong, Qi Wang, Ke Tang",
+      "url": "https://api.semanticscholar.org/CorpusId:278740251",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) have shown great potential as general-purpose AI assistants across various domains. To fully leverage this potential in specific applications, many companies provide fine-tuning API services, enabling users to upload their own data for LLM customization. However, fine-tuning services introduce a new safety threat: user-uploaded data, whether harmful or benign, can break the model's alignment, leading to unsafe outputs. Moreover, existing defense methods struggle to address the diversity of fine-tuning datasets (e.g., varying sizes, tasks), often sacrificing utility for safety or vice versa. To address this issue, we propose Safe Delta, a safety-aware post-training defense method that adjusts the delta parameters (i.e., the parameter change before and after fine-tuning). Specifically, Safe Delta estimates the safety degradation, selects delta parameters to maximize utility while limiting overall safety loss, and applies a safety compensation vector to mitigate residual safety loss. Through extensive experiments on four diverse datasets with varying settings, our approach consistently preserves safety while ensuring that the utility gain from benign datasets remains unaffected.",
+      "citations": 21
+    },
+    {
+      "title": "CoBia: Constructed Conversations Can Trigger Otherwise Concealed Societal Biases in LLMs",
+      "year": 2025,
+      "authors": "Nafiseh Nikeghbal, Amir Hossein Kargaran, Jana Diesner",
+      "url": "https://api.semanticscholar.org/CorpusId:282057783",
+      "relevance": 1,
+      "abstract": "Improvements in model construction, including fortified safety guardrails, allow Large language models (LLMs) to increasingly pass standard safety checks. However, LLMs sometimes slip into revealing harmful behavior, such as expressing racist viewpoints, during conversations. To analyze this systematically, we introduce CoBia, a suite of lightweight adversarial attacks that allow us to refine the scope of conditions under which LLMs depart from normative or ethical behavior in conversations. CoBia creates a constructed conversation where the model utters a biased claim about a social group. We then evaluate whether the model can recover from the fabricated bias claim and reject biased follow-up questions. We evaluate 11 open-source as well as proprietary LLMs for their outputs related to six socio-demographic categories that are relevant to individual safety and fair treatment, i.e., gender, race, religion, nationality, sex orientation, and others. Our evaluation is based on established LLM-based bias metrics, and we compare the results against human judgments to scope out the LLMs'reliability and alignment. The results suggest that purposefully constructed conversations reliably reveal bias amplification and that LLMs often fail to reject biased follow-up questions during dialogue. This form of stress-testing highlights deeply embedded biases that can be surfaced through interaction. Code and artifacts are available at https://github.com/nafisenik/CoBia.",
+      "citations": 0
+    }
+  ]
+}
+
+Results saved to: paper_search_results/LLM_jailbreak_refusal_evasion_alignment_20260518_005835.jsonl

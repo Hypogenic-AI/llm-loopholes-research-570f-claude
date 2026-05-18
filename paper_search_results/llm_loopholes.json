@@ -1,0 +1,575 @@
+{
+  "success": true,
+  "total": 63,
+  "papers": [
+    {
+      "title": "Language Models Identify Ambiguities and Exploit Loopholes",
+      "year": 2025,
+      "authors": "Jio Choi, Mohit Bansal, Elias Stengel-Eskin",
+      "url": "https://api.semanticscholar.org/CorpusId:280918575",
+      "relevance": 3,
+      "abstract": "Studying the responses of large language models (LLMs) to loopholes presents a two-fold opportunity. First, it affords us a lens through which to examine ambiguity and pragmatics in LLMs, since exploiting a loophole requires identifying ambiguity and performing sophisticated pragmatic reasoning. Second, loopholes pose an interesting and novel alignment problem where the model is presented with conflicting goals and can exploit ambiguities to its own advantage. To address these questions, we design scenarios where LLMs are given a goal and an ambiguous user instruction in conflict with the goal, with scenarios covering scalar implicature, structural ambiguities, and power dynamics. We then measure different models'abilities to exploit loopholes to satisfy their given goals as opposed to the goals of the user. We find that both closed-source and stronger open-source models can identify ambiguities and exploit their resulting loopholes, presenting a potential AI safety risk. Our analysis indicates that models which exploit loopholes explicitly identify and reason about both ambiguity and conflicting goals.",
+      "citations": 2
+    },
+    {
+      "title": "Comparing the Evaluation and Production of Loophole Behavior in Humans and Large Language Models",
+      "year": 2023,
+      "authors": "Sonia K. Murthy, Kiera Parece, Sophie Bridgers, Peng Qian, T. Ullman",
+      "url": "https://www.semanticscholar.org/paper/6f130cde30b91b5deaf5c57dc2b2b33c245ed79b",
+      "relevance": 3,
+      "abstract": ",",
+      "citations": 1
+    },
+    {
+      "title": "Is It Thinking or Cheating? Detecting Implicit Reward Hacking by Measuring Reasoning Effort",
+      "year": 2025,
+      "authors": "Xinpeng Wang, Nitish Joshi, Barbara Plank, Rico Angell, He He",
+      "url": "https://api.semanticscholar.org/CorpusId:281724361",
+      "relevance": 3,
+      "abstract": "Reward hacking, where a reasoning model exploits loopholes in a reward function to achieve high rewards without solving the intended task, poses a significant threat. This behavior may be explicit, i.e. verbalized in the model's chain-of-thought (CoT), or implicit, where the CoT appears benign thus bypasses CoT monitors. To detect implicit reward hacking, we propose TRACE (Truncated Reasoning AUC Evaluation). Our key observation is that hacking occurs when exploiting the loophole is easier than solving the actual task. This means that the model is using less'effort'than required to achieve high reward. TRACE quantifies effort by measuring how early a model's reasoning becomes sufficient to obtain the reward. We progressively truncate a model's CoT at various lengths, force the model to answer, and estimate the expected reward at each cutoff. A hacking model, which takes a shortcut, will achieve a high expected reward with only a small fraction of its CoT, yielding a large area under the accuracy-vs-length curve. TRACE achieves over 65% gains over our strongest 72B CoT monitor in math reasoning, and over 30% gains over a 32B monitor in coding. We further show that TRACE can discover unknown loopholes during training. Overall, TRACE offers a scalable unsupervised approach for oversight where current monitoring methods prove ineffective.",
+      "citations": 9
+    },
+    {
+      "title": "BadJudge: Backdoor Vulnerabilities of LLM-as-a-Judge",
+      "year": 2025,
+      "authors": "Terry Tong, Fei Wang, Zhe Zhao, Muhao Chen",
+      "url": "https://api.semanticscholar.org/CorpusId:276741951",
+      "relevance": 3,
+      "abstract": "This paper proposes a novel backdoor threat attacking the LLM-as-a-Judge evaluation regime, where the adversary controls both the candidate and evaluator model. The backdoored evaluator victimizes benign users by unfairly assigning inflated scores to adversary. A trivial single token backdoor poisoning 1% of the evaluator training data triples the adversary's score with respect to their legitimate score. We systematically categorize levels of data access corresponding to three real-world settings, (1) web poisoning, (2) malicious annotator, and (3) weight poisoning. These regimes reflect a weak to strong escalation of data access that highly correlates with attack severity. Under the weakest assumptions - web poisoning (1), the adversary still induces a 20% score inflation. Likewise, in the (3) weight poisoning regime, the stronger assumptions enable the adversary to inflate their scores from 1.5/5 to 4.9/5. The backdoor threat generalizes across different evaluator architectures, trigger designs, evaluation tasks, and poisoning rates. By poisoning 10% of the evaluator training data, we control toxicity judges (Guardrails) to misclassify toxic prompts as non-toxic 89% of the time, and document reranker judges in RAG to rank the poisoned document first 97% of the time. LLM-as-a-Judge is uniquely positioned at the intersection of ethics and technology, where social implications of mislead model selection and evaluation constrain the available defensive tools. Amidst these challenges, model merging emerges as a principled tool to offset the backdoor, reducing ASR to near 0% whilst maintaining SOTA performance. Model merging's low computational cost and convenient integration into the current LLM Judge training pipeline position it as a promising avenue for backdoor mitigation in the LLM-as-a-Judge setting.",
+      "citations": 18
+    },
+    {
+      "title": "Dealing with Data for RE: Mitigating Challenges while using NLP and Generative AI",
+      "year": 2024,
+      "authors": "S. Ghaisas, Anmol Singhal",
+      "url": "https://api.semanticscholar.org/CorpusId:268032876",
+      "relevance": 3,
+      "abstract": "Across the dynamic business landscape today, enterprises face an ever-increasing range of challenges. These include the constantly evolving regulatory environment, the growing demand for personalization within software applications, and the heightened emphasis on governance. In response to these multifaceted demands, large enterprises have been adopting automation that spans from the optimization of core business processes to the enhancement of customer experiences. Indeed, Artificial Intelligence (AI) has emerged as a pivotal element of modern software systems. In this context, data plays an indispensable role. AI-centric software systems based on supervised learning and operating at an industrial scale require large volumes of training data to perform effectively. Moreover, the incorporation of generative AI has led to a growing demand for adequate evaluation benchmarks. Our experience in this field has revealed that the requirement for large datasets for training and evaluation introduces a host of intricate challenges. This book chapter explores the evolving landscape of Software Engineering (SE) in general, and Requirements Engineering (RE) in particular, in this era marked by AI integration. We discuss challenges that arise while integrating Natural Language Processing (NLP) and generative AI into enterprise-critical software systems. The chapter provides practical insights, solutions, and examples to equip readers with the knowledge and tools necessary for effectively building solutions with NLP at their cores. We also reflect on how these text data-centric tasks sit together with the traditional RE process. We also highlight new RE tasks that may be necessary for handling the increasingly important text data-centricity involved in developing software systems.",
+      "citations": 4
+    },
+    {
+      "title": "Towards Safe and Secure LLM Systems: Defense Strategies and Assessment Against Inference-Time Security Risks",
+      "year": 2025,
+      "authors": "Vladyslava Tyshchenko, Nazarii Drushchak",
+      "url": "https://www.semanticscholar.org/paper/24bbe6d5de731ca6e62c9d87fa8b3d1000609a40",
+      "relevance": 3,
+      "abstract": "LLMs (Large Language Models) power diverse applications from creative content generation to human-like usage of the computer, while still being stochastic and unreliable, which creates potential security loopholes in any system that uses them. In our work, we propose a complete flow of security risk management for LLM systems, including cross-stream mitigation strategies and their incorporation into the development life cycle. Within our case study, we evaluate cloud-based and custom guardrails in the context of RAG (Retrieval Augmented Generation) based systems, proving the instrumental role of guardrails in achieving lower Attack Success Rates for RAG systems and the need for a holistic risk mitigation framework to cover all security risk categories. Our work aims to showcase best practices for trustworthy inferences contributing to more secure and safer LLM-based applications.",
+      "citations": 0
+    },
+    {
+      "title": "Humans or LLMs as the Judge? A Study on Judgement Bias",
+      "year": 2024,
+      "authors": "Guiming Hardy Chen, Shunian Chen, Ziche Liu, Feng Jiang, Benyou Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:267740522",
+      "relevance": 3,
+      "abstract": "Adopting human and large language models (LLM) as judges (*a.k.a* human- and LLM-as-a-judge) for evaluating the performance of LLMs has recently gained attention. Nonetheless, this approach concurrently introduces potential biases from human and LLMs, questioning the reliability of the evaluation results. In this paper, we propose a novel framework that is free from referencing groundtruth annotations for investigating **Misinformation Oversight Bias**, **Gender Bias**, **Authority Bias** and **Beauty Bias** on LLM and human judges. We curate a dataset referring to the revised Bloom\u2019s Taxonomy and conduct thousands of evaluations. Results show that human and LLM judges are vulnerable to perturbations to various degrees, and that even the cutting-edge judges possess considerable biases. We further exploit these biases to conduct attacks on LLM judges. We hope that our work can notify the community of the bias and vulnerability of human- and LLM-as-a-judge, as well as the urgency of developing robust evaluation systems.",
+      "citations": 298
+    },
+    {
+      "title": "Extracting Training Data from Large Language Models",
+      "year": 2020,
+      "authors": "Nicholas Carlini, Florian Tram\u00e8r, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B. Brown, D. Song, \u00da. Erlingsson, Alina Oprea, Colin Raffel",
+      "url": "https://www.semanticscholar.org/paper/df7d26339adf4eb0c07160947b9d2973c24911ba",
+      "relevance": 3,
+      "abstract": "It has become common to publish large (billion parameter) language models that have been trained on private datasets. This paper demonstrates that in such settings, an adversary can perform a training data extraction attack to recover individual training examples by querying the language model. \nWe demonstrate our attack on GPT-2, a language model trained on scrapes of the public Internet, and are able to extract hundreds of verbatim text sequences from the model's training data. These extracted examples include (public) personally identifiable information (names, phone numbers, and email addresses), IRC conversations, code, and 128-bit UUIDs. Our attack is possible even though each of the above sequences are included in just one document in the training data. \nWe comprehensively evaluate our extraction attack to understand the factors that contribute to its success. For example, we find that larger models are more vulnerable than smaller models. We conclude by drawing lessons and discussing possible safeguards for training large language models.",
+      "citations": 2905
+    },
+    {
+      "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
+      "year": 2024,
+      "authors": "Zhaorun Chen, Zhen Xiang, Chaowei Xiao, D. Song, Bo Li",
+      "url": "https://www.semanticscholar.org/paper/b6948a9e8b3eec5a56a80c69727154fcd7ececce",
+      "relevance": 3,
+      "abstract": "LLM agents have demonstrated remarkable performance across various applications, primarily due to their advanced capabilities in reasoning, utilizing external knowledge and tools, calling APIs, and executing actions to interact with environments. Current agents typically utilize a memory module or a retrieval-augmented generation (RAG) mechanism, retrieving past knowledge and instances with similar embeddings from knowledge bases to inform task planning and execution. However, the reliance on unverified knowledge bases raises significant concerns about their safety and trustworthiness. To uncover such vulnerabilities, we propose a novel red teaming approach AgentPoison, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance. Unlike conventional backdoor attacks, AgentPoison requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate AgentPoison's effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. On each agent, AgentPoison achieves an average attack success rate higher than 80% with minimal impact on benign performance (less than 1%) with a poison rate less than 0.1%.",
+      "citations": 293
+    },
+    {
+      "title": "Large Language Model as an Assignment Evaluator: Insights, Feedback, and Challenges in a 1000+ Student Course",
+      "year": 2024,
+      "authors": "Cheng-Han Chiang, Wei-Chih Chen, Chun-Yi Kuan, Chi-Yu Yang, Hung-yi Lee",
+      "url": "https://api.semanticscholar.org/CorpusId:271050312",
+      "relevance": 3,
+      "abstract": "Using large language models (LLMs) for automatic evaluation has become an important evaluation method in NLP research. However, it is unclear whether these LLM-based evaluators can be effectively applied in real-world classrooms to assess student assignments. This empirical report shares how we use GPT-4 as an automatic assignment evaluator in a university course with over 1000 students. Based on student responses, we found that LLM-based assignment evaluators are generally acceptable to students when they have free access to these tools. However, students also noted that the LLM sometimes fails to adhere to the evaluation instructions, resulting in unreasonable assessments. Additionally, we observed that students can easily manipulate the LLM to output specific strings, allowing them to achieve high scores without meeting the assignment rubric. Based on student feedback and our experience, we offer several recommendations for effectively integrating LLMs into future classroom evaluations. Our observation also highlights potential directions for improving LLM-based evaluators, including their instruction-following ability and vulnerability to prompt hacking.",
+      "citations": 38
+    },
+    {
+      "title": "Benchmarking adversarial robustness to bias elicitation in large language models: scalable automated assessment with LLM-as-a-judge",
+      "year": 2025,
+      "authors": "Riccardo Cantini, A. Orsino, Massimo Ruggiero, Domenico Talia",
+      "url": "https://api.semanticscholar.org/CorpusId:277667520",
+      "relevance": 3,
+      "abstract": "The growing integration of Large Language Models (LLMs) into critical societal domains has raised concerns about embedded biases that can perpetuate stereotypes and undermine fairness. Such biases may stem from historical inequalities in training data, linguistic imbalances, or adversarial manipulation. Despite mitigation efforts, recent studies show that LLMs remain vulnerable to adversarial attacks that elicit biased outputs. This work proposes a scalable benchmarking framework to assess LLM robustness to adversarial bias elicitation. Our methodology involves: (i) systematically probing models across multiple tasks targeting diverse sociocultural biases, (ii) quantifying robustness through safety scores using an LLM-as-a-Judge approach, and (iii) employing jailbreak techniques to reveal safety vulnerabilities. To facilitate systematic benchmarking, we release a curated dataset of bias-related prompts, named CLEAR-Bias. Our analysis, identifying DeepSeek V3 as the most reliable judge LLM, reveals that bias resilience is uneven, with age, disability, and intersectional biases among the most prominent. Some small models outperform larger ones in safety, suggesting that training and architecture may matter more than scale. However, no model is fully robust to adversarial elicitation, with jailbreak attacks using low-resource languages or refusal suppression proving effective across model families. We also find that successive LLM generations exhibit slight safety gains, while models fine-tuned for the medical domain tend to be less safe than their general-purpose counterparts.",
+      "citations": 25
+    },
+    {
+      "title": "Revisiting Backdoor Attacks on LLMs: A Stealthy and Practical Poisoning Framework via Harmless Inputs",
+      "year": 2025,
+      "authors": "Jiawei Kong, Hao Fang, Xiaochen Yang, Kuofeng Gao, Bin Chen, Shutao Xia, Ke Xu, Han Qiu",
+      "url": "https://api.semanticscholar.org/CorpusId:278887001",
+      "relevance": 3,
+      "abstract": "Recent studies have widely investigated backdoor attacks on Large Language Models (LLMs) by inserting harmful question-answer (QA) pairs into their training data. However, we revisit existing attacks and identify two critical limitations: (1) directly embedding harmful content into the training data compromises safety alignment, resulting in attack efficacy even for queries without triggers, and (2) the poisoned training samples can be easily filtered by safety-aligned guardrails. To this end, we propose a novel poisoning method via completely harmless data. Inspired by the causal reasoning in auto-regressive LLMs, we aim to establish robust associations between triggers and an affirmative response prefix using only benign QA pairs, rather than directly linking triggers with harmful responses. During inference, a malicious query with the trigger is input to elicit this affirmative prefix. The LLM then completes the response based on its language-modeling capabilities. Achieving this using only clean samples is non-trivial. We observe an interesting resistance phenomenon where the LLM initially appears to agree but subsequently refuses to answer. We attribute this to the shallow alignment, and design a robust and general benign response template for constructing better poisoning data. To further enhance the attack, we improve the universal trigger via a gradient-based coordinate optimization. Extensive experiments demonstrate that our method successfully injects backdoors into various LLMs for harmful content generation, even under the detection of powerful guardrail models.",
+      "citations": 5
+    },
+    {
+      "title": "xJailbreak: Representation Space Guided Reinforcement Learning for Interpretable LLM Jailbreaking",
+      "year": 2025,
+      "authors": "Sunbowen Lee, Shiwen Ni, Chi Wei, Shuaimin Li, Liyang Fan, A. Argha, H. Alinejad-Rokny, Ruifeng Xu, Yicheng Gong, Min Yang",
+      "url": "https://api.semanticscholar.org/CorpusId:275932199",
+      "relevance": 3,
+      "abstract": "Safety alignment mechanism are essential for preventing large language models (LLMs) from generating harmful information or unethical content. However, cleverly crafted prompts can bypass these safety measures without accessing the model's internal parameters, a phenomenon known as black-box jailbreak. Existing heuristic black-box attack methods, such as genetic algorithms, suffer from limited effectiveness due to their inherent randomness, while recent reinforcement learning (RL) based methods often lack robust and informative reward signals. To address these challenges, we propose a novel black-box jailbreak method leveraging RL, which optimizes prompt generation by analyzing the embedding proximity between benign and malicious prompts. This approach ensures that the rewritten prompts closely align with the intent of the original prompts while enhancing the attack's effectiveness. Furthermore, we introduce a comprehensive jailbreak evaluation framework incorporating keywords, intent matching, and answer validation to provide a more rigorous and holistic assessment of jailbreak success. Experimental results show the superiority of our approach, achieving state-of-the-art (SOTA) performance on several prominent open and closed-source LLMs, including Qwen2.5-7B-Instruct, Llama3.1-8B-Instruct, and GPT-4o-0806. Our method sets a new benchmark in jailbreak attack effectiveness, highlighting potential vulnerabilities in LLMs. The codebase for this work is available at https://github.com/Aegis1863/xJailbreak.",
+      "citations": 11
+    },
+    {
+      "title": "Keeping an Eye on LLM Unlearning: The Hidden Risk and Remedy",
+      "year": 2025,
+      "authors": "Jie Ren, Zhenwei Dai, Xianfeng Tang, Yue Xing, Shenglai Zeng, Hui Liu, Jingying Zeng, Qiankun Peng, Samarth Varshney, Suhang Wang, Qi He, Charu C. Aggarwal",
+      "url": "https://api.semanticscholar.org/CorpusId:279074781",
+      "relevance": 3,
+      "abstract": "Although Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of tasks, growing concerns have emerged over the misuse of sensitive, copyrighted, or harmful data during training. To address these concerns, unlearning techniques have been developed to remove the influence of specific data without retraining from scratch. However, this paper reveals a critical vulnerability in fine-tuning-based unlearning: a malicious user can craft a manipulated forgetting request that stealthily degrades the model's utility for benign users. We demonstrate this risk through a red-teaming Stealthy Attack (SA), which is inspired by two key limitations of existing unlearning (the inability to constrain the scope of unlearning effect and the failure to distinguish benign tokens from unlearning signals). Prior work has shown that unlearned models tend to memorize forgetting data as unlearning signals, and respond with hallucinations or feigned ignorance when unlearning signals appear in the input. By subtly increasing the presence of common benign tokens in the forgetting data, SA enhances the connection between benign tokens and unlearning signals. As a result, when normal users include such tokens in their prompts, the model exhibits unlearning behaviors, leading to unintended utility degradation. To address this vulnerability, we propose Scope-aware Unlearning (SU), a lightweight enhancement that introduces a scope term into the unlearning objective, encouraging the model to localize the forgetting effect. Our method requires no additional data processing, integrates seamlessly with existing fine-tuning frameworks, and significantly improves robustness against SA. Extensive experiments validate the effectiveness of both SA and SU.",
+      "citations": 9
+    },
+    {
+      "title": "NeuroStrike: Neuron-Level Attacks on Aligned LLMs",
+      "year": 2025,
+      "authors": "Lichao Wu, Sasha Behrouzi, Mohamadreza Rostami, Maximilian Thang, S. Picek, Ahmad Sadeghi",
+      "url": "https://api.semanticscholar.org/CorpusId:281315473",
+      "relevance": 3,
+      "abstract": "Safety alignment is critical for the ethical deployment of large language models (LLMs), guiding them to avoid generating harmful or unethical content. Current alignment techniques, such as supervised fine-tuning and reinforcement learning from human feedback, remain fragile and can be bypassed by carefully crafted adversarial prompts. Unfortunately, such attacks rely on trial and error, lack generalizability across models, and are constrained by scalability and reliability. This paper presents NeuroStrike, a novel and generalizable attack framework that exploits a fundamental vulnerability introduced by alignment techniques: the reliance on sparse, specialized safety neurons responsible for detecting and suppressing harmful inputs. We apply NeuroStrike to both white-box and black-box settings: In the white-box setting, NeuroStrike identifies safety neurons through feedforward activation analysis and prunes them during inference to disable safety mechanisms. In the black-box setting, we propose the first LLM profiling attack, which leverages safety neuron transferability by training adversarial prompt generators on open-weight surrogate models and then deploying them against black-box and proprietary targets. We evaluate NeuroStrike on over 20 open-weight LLMs from major LLM developers. By removing less than 0.6% of neurons in targeted layers, NeuroStrike achieves an average attack success rate (ASR) of 76.9% using only vanilla malicious prompts. Moreover, Neurostrike generalizes to four multimodal LLMs with 100% ASR on unsafe image inputs. Safety neurons transfer effectively across architectures, raising ASR to 78.5% on 11 fine-tuned models and 77.7% on five distilled models. The black-box LLM profiling attack achieves an average ASR of 63.7% across five black-box models, including the Google Gemini family.",
+      "citations": 9
+    },
+    {
+      "title": "Three Minds, One Legend: Jailbreak Large Reasoning Model with Adaptive Stacked Ciphers",
+      "year": 2025,
+      "authors": "V. Nguyen, Shiqian Zhao, Gia Dao, Runyi Hu, Yi Xie, Anh Tuan Luu",
+      "url": "https://api.semanticscholar.org/CorpusId:278788555",
+      "relevance": 3,
+      "abstract": "Recently, Large Reasoning Models (LRMs) have demonstrated superior logical capabilities compared to traditional Large Language Models (LLMs), gaining significant attention. Despite their impressive performance, the potential for stronger reasoning abilities to introduce more severe security vulnerabilities remains largely underexplored. Existing jailbreak methods often struggle to balance effectiveness with robustness against adaptive safety mechanisms. In this work, we propose SEAL, a novel jailbreak attack that targets LRMs through an adaptive encryption pipeline designed to override their reasoning processes and evade potential adaptive alignment. Specifically, SEAL introduces a stacked encryption approach that combines multiple ciphers to overwhelm the models reasoning capabilities, effectively bypassing built-in safety mechanisms. To further prevent LRMs from developing countermeasures, we incorporate two dynamic strategies - random and adaptive - that adjust the cipher length, order, and combination. Extensive experiments on real-world reasoning models, including DeepSeek-R1, Claude Sonnet, and OpenAI GPT-o4, validate the effectiveness of our approach. Notably, SEAL achieves an attack success rate of 80.8% on GPT o4-mini, outperforming state-of-the-art baselines by a significant margin of 27.2%. Warning: This paper contains examples of inappropriate, offensive, and harmful content.",
+      "citations": 8
+    },
+    {
+      "title": "Understanding and Mitigating Over-refusal for Large Language Models via Safety Representation",
+      "year": 2025,
+      "authors": "Junbo Zhang, Ran Chen, Qianli Zhou, Xinyang Deng, Wen Jiang",
+      "url": "https://api.semanticscholar.org/CorpusId:283243564",
+      "relevance": 1,
+      "abstract": "Large language models demonstrate powerful capabilities across various natural language processing tasks, yet they also harbor safety vulnerabilities. To enhance LLM safety, various jailbreak defense methods have been proposed to guard against harmful outputs. However, improvements in model safety often come at the cost of severe over-refusal, failing to strike a good balance between safety and usability. In this paper, we first analyze the causes of over-refusal from a representation perspective, revealing that over-refusal samples reside at the boundary between benign and malicious samples. Based on this, we propose MOSR, designed to mitigate over-refusal by intervening the safety representation of LLMs. MOSR incorporates two novel components: (1) Overlap-Aware Loss Weighting, which determines the erasure weight for malicious samples by quantifying their similarity to pseudo-malicious samples in the representation space, and (2) Context-Aware Augmentation, which supplements the necessary context for rejection decisions by adding harmful prefixes before rejection responses. Experiments demonstrate that our method outperforms existing approaches in mitigating over-refusal while largely maintaining safety. Overall, we advocate that future defense methods should strike a better balance between safety and over-refusal.",
+      "citations": 5
+    },
+    {
+      "title": "Enhancing Logical Reasoning of Large Language Models through Chain-of-Thought and Logical Fallacy",
+      "year": 2025,
+      "authors": "Fucheng Wan, Bin Liu, Xinpeng Lei, Yuxuan Ding, Ni Deng, Hongzhi Yu",
+      "url": "https://www.semanticscholar.org/paper/574ce1f7914a03aac6da0882ecaf47d15ccbe084",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) have demonstrated strong performance in various language understanding tasks, but they still have di ffi culties in some complex reasoning tasks. In response to the common problem of insu ffi cient fallacy detection and correction capabilities of LLMs in logical reasoning tasks, this paper proposes a solution that integrates a two-stage reasoning chain and dynamic selection and optimization Chain-of-Thought (DSO-CoT). Initially, we constructed an enhanced logical fallacy understanding and diagnosis dataset. Through a two-stage cognitive task design of \" fallacy misconstruction and repair verification \" , we systematically decomposed the defective premises, invalid reasoning patterns, and conclusion loopholes of logical fallacies, and generated counterfactual reasoning chains to achieve error repair. Based on this design, we fine-tuned the LLM for the first time. Subsequently, we proposed a dynamic selection and optimization Chain-of-Thought framework, combining multi-candidate generation, a hybrid evaluation system (expert scoring and automated metrics) and a closed-loop iterative optimization mechanism, and fine-tuned the LLM for the second time based on the first fine-tuning. Experimental results show that the combination of Logical Fallacy Understanding and Diagnosis-Repaired (LFUD-R) and DSO-CoT frameworks produces significant synergistic effects on LogiQA, Reclor, and LogiQA2.0 datasets, further improving the model accuracy to 70.15%, 80.20%, and 71.93%. This study not only verifies the e ff ectiveness of LFUD-R and DSO-CoT frameworks in improving the logical reasoning ability of LLM, but also reveals the important role of structured cognitive task design and reasoning framework optimization in enhancing the logical reasoning ability of models.",
+      "citations": 0
+    },
+    {
+      "title": "Investigating the Shortcomings of LLMs in Step-by-Step Legal Reasoning",
+      "year": 2025,
+      "authors": "Venkatesh Mishra, Bimsara Pathiraja, Mihir Parmar, Sat Chidananda, Jayanth Srinivasa, Gaowen Liu, Ali Payani, Chitta Baral",
+      "url": "https://api.semanticscholar.org/CorpusId:276250542",
+      "relevance": 1,
+      "abstract": "Reasoning abilities of LLMs have been a key focus in recent years. One challenging reasoning domain with interesting nuances is legal reasoning, which requires careful application of rules, and precedents while balancing deductive and analogical reasoning, and conflicts between rules. Although there have been a few works on using LLMs for legal reasoning, their focus has been on overall accuracy. In this paper, we dig deeper to do a step-by-step analysis and figure out where they commit errors. We use the college-level Multiple Choice Question-Answering (MCQA) task from the \\textit{Civil Procedure} dataset and propose a new error taxonomy derived from initial manual analysis of reasoning chains with respect to several LLMs, including two objective measures: soundness and correctness scores. We then develop an LLM-based automated evaluation framework to identify reasoning errors and evaluate the performance of LLMs. The computation of soundness and correctness on the dataset using the auto-evaluator framework reveals several interesting insights. Furthermore, we show that incorporating the error taxonomy as feedback in popular prompting techniques marginally increases LLM performance. Our work will also serve as an evaluation framework that can be used in detailed error analysis of reasoning chains for logic-intensive complex tasks.",
+      "citations": 7
+    },
+    {
+      "title": "Societal Alignment Frameworks Can Improve LLM Alignment",
+      "year": 2025,
+      "authors": "Karolina Sta\u0144czak, Nicholas Meade, Mehar Bhatia, Hattie Zhou, Konstantin Bottinger, Jeremy Barnes, Jason Stanley, J. Montgomery, Richard Zemel, Nicolas Papernot, Nicolas Chapados, D. Therien, T. Lillicrap, Ana Marasovi'c, Sylvie Delacroix, Gillian K. Hadfield, Siva Reddy",
+      "url": "https://api.semanticscholar.org/CorpusId:276741709",
+      "relevance": 1,
+      "abstract": "Recent progress in large language models (LLMs) has focused on producing responses that meet human expectations and align with shared values - a process coined alignment. However, aligning LLMs remains challenging due to the inherent disconnect between the complexity of human values and the narrow nature of the technological approaches designed to address them. Current alignment methods often lead to misspecified objectives, reflecting the broader issue of incomplete contracts, the impracticality of specifying a contract between a model developer, and the model that accounts for every scenario in LLM alignment. In this paper, we argue that improving LLM alignment requires incorporating insights from societal alignment frameworks, including social, economic, and contractual alignment, and discuss potential solutions drawn from these domains. Given the role of uncertainty within societal alignment frameworks, we then investigate how it manifests in LLM alignment. We end our discussion by offering an alternative view on LLM alignment, framing the underspecified nature of its objectives as an opportunity rather than perfect their specification. Beyond technical improvements in LLM alignment, we discuss the need for participatory alignment interface designs.",
+      "citations": 7
+    },
+    {
+      "title": "Regulatory gray areas of LLM Terms",
+      "year": 2026,
+      "authors": "Brittany I. Davidson, K. Muir, Florian A. D. Burnat, Adam Joinson",
+      "url": "https://api.semanticscholar.org/CorpusId:284704374",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) are increasingly integrated into academic research pipelines; however, the Terms of Service governing their use remain under-examined. We present a comparative analysis of the Terms of Service of five major LLM providers (Anthropic, DeepSeek, Google, OpenAI, and xAI) collected in November 2025. Our analysis reveals substantial variation in the stringency and specificity of usage restrictions for general users and researchers. We identify specific complexities for researchers in security research, computational social sciences, and psychological studies. We identify `regulatory gray areas'where Terms of Service create uncertainty for legitimate use. We contribute a publicly available resource comparing terms across platforms (OSF) and discuss implications for general users and researchers navigating this evolving landscape.",
+      "citations": 0
+    },
+    {
+      "title": "Interpretation Gaps in Large Language Model-Assisted Comprehension of Privacy Documents",
+      "year": 2025,
+      "authors": "Rinku Dewri",
+      "url": "https://api.semanticscholar.org/CorpusId:280704881",
+      "relevance": 1,
+      "abstract": "This article exemplifies the gaps that can manifest when using a large language model (LLM) to obtain simplified interpretations of data practices from a complex privacy policy, while advocating for continued research into the true potential of LLMs to revolutionize privacy management.",
+      "citations": 0
+    },
+    {
+      "title": "Awes, Laws, and Flaws From Today's LLM Research",
+      "year": 2024,
+      "authors": "Adrian de Wynter",
+      "url": "https://api.semanticscholar.org/CorpusId:271974813",
+      "relevance": 1,
+      "abstract": "We perform a critical examination of the scientific methodology behind contemporary large language model (LLM) research. For this we assess over 2,000 research works released between 2020 and 2024 based on criteria typical of what is considered good research (e.g. presence of statistical tests and reproducibility), and cross-validate it with arguments that are at the centre of controversy (e.g., claims of emergent behaviour). We find multiple trends, such as declines in ethics disclaimers, a rise of LLMs as evaluators, and an increase on claims of LLM reasoning abilities without leveraging human evaluation. We note that conference checklists are effective at curtailing some of these issues, but balancing velocity and rigour in research cannot solely rely on these. We tie all these findings to findings from recent meta-reviews and extend recommendations on how to address what does, does not, and should work in LLM research.",
+      "citations": 6
+    },
+    {
+      "title": "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting",
+      "year": 2023,
+      "authors": "Miles Turpin, Julian Michael, Ethan Perez, Sam Bowman",
+      "url": "https://www.semanticscholar.org/paper/7dc928f41e15f65f1267bd87b0fcfcc7e715cb56",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) can achieve strong performance on many tasks by producing step-by-step reasoning before giving a final output, often referred to as chain-of-thought reasoning (CoT). It is tempting to interpret these CoT explanations as the LLM's process for solving a task. This level of transparency into LLMs' predictions would yield significant safety benefits. However, we find that CoT explanations can systematically misrepresent the true reason for a model's prediction. We demonstrate that CoT explanations can be heavily influenced by adding biasing features to model inputs--e.g., by reordering the multiple-choice options in a few-shot prompt to make the answer always\"(A)\"--which models systematically fail to mention in their explanations. When we bias models toward incorrect answers, they frequently generate CoT explanations rationalizing those answers. This causes accuracy to drop by as much as 36% on a suite of 13 tasks from BIG-Bench Hard, when testing with GPT-3.5 from OpenAI and Claude 1.0 from Anthropic. On a social-bias task, model explanations justify giving answers in line with stereotypes without mentioning the influence of these social biases. Our findings indicate that CoT explanations can be plausible yet misleading, which risks increasing our trust in LLMs without guaranteeing their safety. Building more transparent and explainable systems will require either improving CoT faithfulness through targeted efforts or abandoning CoT in favor of alternative methods.",
+      "citations": 1097
+    },
+    {
+      "title": "GenAI against humanity: nefarious applications of generative artificial intelligence and large language models",
+      "year": 2023,
+      "authors": "Emilio Ferrara",
+      "url": "https://api.semanticscholar.org/CorpusId:263334147",
+      "relevance": 1,
+      "abstract": "Generative Artificial Intelligence (GenAI) and Large Language Models (LLMs) are marvels of technology; celebrated for their prowess in natural language processing and multimodal content generation, they promise a transformative future. But as with all powerful tools, they come with their shadows. Picture living in a world where deepfakes are indistinguishable from reality, where synthetic identities orchestrate malicious campaigns, and where targeted misinformation or scams are crafted with unparalleled precision. Welcome to the darker side of GenAI applications. This article is not just a journey through the meanders of potential misuse of GenAI and LLMs, but also a call to recognize the urgency of the challenges ahead. As we navigate the seas of misinformation campaigns, malicious content generation, and the eerie creation of sophisticated malware, we\u2019ll uncover the societal implications that ripple through the GenAI revolution we are witnessing. From AI-powered botnets on social media platforms to the unnerving potential of AI to generate fabricated identities, or alibis made of synthetic realities, the stakes have never been higher. The lines between the virtual and the real worlds are blurring, and the consequences of potential GenAI\u2019s nefarious applications impact us all. This article serves both as a synthesis of rigorous research presented on the risks of GenAI and misuse of LLMs and as a thought-provoking vision of the different types of harmful GenAI applications we might encounter in the near future, and some ways we can prepare for them.",
+      "citations": 210
+    },
+    {
+      "title": "Large Language Model Unlearning",
+      "year": 2023,
+      "authors": "Yuanshun Yao, Xiaojun Xu, Yang Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:264172840",
+      "relevance": 1,
+      "abstract": "We study how to perform unlearning, i.e. forgetting undesirable misbehaviors, on large language models (LLMs). We show at least three scenarios of aligning LLMs with human preferences can benefit from unlearning: (1) removing harmful responses, (2) erasing copyright-protected content as requested, and (3) reducing hallucinations. Unlearning, as an alignment technique, has three advantages. (1) It only requires negative (e.g. harmful) examples, which are much easier and cheaper to collect (e.g. via red teaming or user reporting) than positive (e.g. helpful and often human-written) examples required in RLHF (RL from human feedback). (2) It is computationally efficient. (3) It is especially effective when we know which training samples cause the misbehavior. To the best of our knowledge, our work is among the first to explore LLM unlearning. We are also among the first to formulate the settings, goals, and evaluations in LLM unlearning. We show that if practitioners only have limited resources, and therefore the priority is to stop generating undesirable outputs rather than to try to generate desirable outputs, unlearning is particularly appealing. Despite only having negative samples, our ablation study shows that unlearning can still achieve better alignment performance than RLHF with just 2% of its computational time.",
+      "citations": 289
+    },
+    {
+      "title": "(A)I Am Not a Lawyer, But...: Engaging Legal Experts towards Responsible LLM Policies for Legal Advice",
+      "year": 2024,
+      "authors": "Inyoung Cheong, King Xia, K. Feng, Quan Ze Chen, Amy X. Zhang",
+      "url": "https://api.semanticscholar.org/CorpusId:267413187",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are increasingly capable of providing users with advice in a wide range of professional domains, including legal advice. However, relying on LLMs for legal queries raises concerns due to the significant expertise required and the potential real-world consequences of the advice. To explore when and why LLMs should or should not provide advice to users, we conducted workshops with 20 legal experts using methods inspired by case-based reasoning. The provided realistic queries (\u201ccases\u201d) allowed experts to examine granular, situation-specific concerns and overarching technical and legal constraints, producing a concrete set of contextual considerations for LLM developers. By synthesizing the factors that impacted LLM response appropriateness, we present a 4-dimension framework: (1) User attributes and behaviors, (2) Nature of queries, (3) AI capabilities, and (4) Social impacts. We share experts\u2019 recommendations for LLM response strategies, which center around helping users identify \u2018right questions to ask\u2019 and relevant information rather than providing definitive legal judgments. Our findings reveal novel legal considerations, such as unauthorized practice of law, confidentiality, and liability for inaccurate advice, that have been overlooked in the literature. The case-based deliberation method enabled us to elicit fine-grained, practice-informed insights that surpass those from de-contextualized surveys or speculative principles. These findings underscore the applicability of our method for translating domain-specific professional knowledge and practices into policies that can guide LLM behavior in a more responsible direction.",
+      "citations": 141
+    },
+    {
+      "title": "Navigating LLM ethics: advancements, challenges, and future directions",
+      "year": 2024,
+      "authors": "Junfeng Jiao, S. Afroogh, Yiming Xu, Connor Phillips",
+      "url": "https://api.semanticscholar.org/CorpusId:270764497",
+      "relevance": 1,
+      "abstract": "This study addresses ethical issues surrounding Large Language Models (LLMs) within the field of artificial intelligence. It explores the common ethical challenges posed by both LLMs and other AI systems, such as privacy and fairness, as well as ethical challenges uniquely arising from LLMs. It highlights challenges such as hallucination, verifiable accountability, and decoding censorship complexity, which are unique to LLMs and distinct from those encountered in traditional AI systems. The study underscores the need to tackle these complexities to ensure accountability, reduce biases, and enhance transparency in the influential role that LLMs play in shaping information dissemination. It proposes mitigation strategies and future directions for LLM ethics, advocating for interdisciplinary collaboration. It recommends ethical frameworks tailored to specific domains and dynamic auditing systems adapted to diverse contexts. This roadmap aims to guide responsible development and integration of LLMs, envisioning a future where ethical considerations govern AI advancements in society.",
+      "citations": 87
+    },
+    {
+      "title": "SoK: The Privacy Paradox of Large Language Models: Advancements, Privacy Risks, and Mitigation",
+      "year": 2025,
+      "authors": "Yashothara Shanmugarasa, Ming Ding, Chamikara Mahawaga Arachchige, Thierry Rakotoarivelo",
+      "url": "https://api.semanticscholar.org/CorpusId:279402631",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are sophisticated artificial intelligence systems that enable machines to generate human-like text with remarkable precision. While LLMs offer significant technological progress, their development using vast amounts of user data scraped from the web and collected from extensive user interactions poses risks of sensitive information leakage. Most existing surveys focus on the privacy implications of the training data but tend to overlook privacy risks from user interactions and advanced LLM capabilities. This paper aims to fill that gap by providing a comprehensive analysis of privacy in LLMs, categorizing the challenges into four main areas: (i) privacy issues in LLM training data, (ii) privacy challenges associated with user prompts, (iii) privacy vulnerabilities in LLM-generated outputs, and (iv) privacy challenges involving LLM agents. We evaluate the effectiveness and limitations of existing mitigation mechanisms targeting these proposed privacy challenges and identify areas for further research.",
+      "citations": 26
+    },
+    {
+      "title": "LLM Harms: A Taxonomy and Discussion",
+      "year": 2025,
+      "authors": "Kevin Chen, S. Afroogh, Abhejay Murali, David Atkinson, Amit Dhurandhar, Junfeng Jiao",
+      "url": "https://api.semanticscholar.org/CorpusId:283672070",
+      "relevance": 1,
+      "abstract": "This study addresses categories of harm surrounding Large Language Models (LLMs) in the field of artificial intelligence. It addresses five categories of harms addressed before, during, and after development of AI applications: pre-development, direct output, Misuse and Malicious Application, and downstream application. By underscoring the need to define risks of the current landscape to ensure accountability, transparency and navigating bias when adapting LLMs for practical applications. It proposes mitigation strategies and future directions for specific domains and a dynamic auditing system guiding responsible development and integration of LLMs in a standardized proposal.",
+      "citations": 1
+    },
+    {
+      "title": "Helpful, harmless, honest? Sociotechnical limits of AI alignment and safety through Reinforcement Learning from Human Feedback",
+      "year": 2025,
+      "authors": "Adam Dahlgren Lindstr\u00f6m, Leila Methnani, L. Krause, Petter Ericson, \u00cd\u00f1igo Martinez de Rituerto de Troya, Dimitri Coelho Mollo, Roel Dobbe",
+      "url": "https://api.semanticscholar.org/CorpusId:279163270",
+      "relevance": 1,
+      "abstract": "This paper critically evaluates the attempts to align Artificial Intelligence (AI) systems, especially Large Language Models (LLMs), with human values and intentions through Reinforcement Learning from Feedback methods, involving either human feedback (RLHF) or AI feedback (RLAIF). Specifically, we show the shortcomings of the broadly pursued alignment goals of honesty, harmlessness, and helpfulness. Through a multidisciplinary sociotechnical critique, we examine both the theoretical underpinnings and practical implementations of RLHF techniques, revealing significant limitations in their approach to capturing the complexities of human ethics, and contributing to AI safety. We highlight tensions inherent in the goals of RLHF, as captured in the HHH principle (helpful, harmless and honest). In addition, we discuss ethically-relevant issues that tend to be neglected in discussions about alignment and RLHF, among which the trade-offs between user-friendliness and deception, flexibility and interpretability, and system safety. We offer an alternative vision for AI safety and ethics which positions RLHF approaches within a broader context of comprehensive design across institutions, processes and technological systems, and suggest the establishment of AI safety as a sociotechnical discipline that is open to the normative and political dimensions of artificial intelligence.",
+      "citations": 45
+    },
+    {
+      "title": "TrustJudge: Inconsistencies of LLM-as-a-Judge and How to Alleviate Them",
+      "year": 2025,
+      "authors": "Yidong Wang, Yunze Song, Tingyuan Zhu, Xuanwang Zhang, Zhuohao Yu, Hao Chen, Chiyu Song, Qiufeng Wang, Cunxiang Wang, Zhen Wu, Xinyu Dai, Yue Zhang, Wei Ye, Shikun Zhang",
+      "url": "https://api.semanticscholar.org/CorpusId:281525574",
+      "relevance": 1,
+      "abstract": "The adoption of Large Language Models (LLMs) as automated evaluators (LLM-as-a-judge) has revealed critical inconsistencies in current evaluation frameworks. We identify two fundamental types of inconsistencies: (1) Score-Comparison Inconsistency, where lower-rated responses outperform higher-scored ones in pairwise comparisons, and (2) Pairwise Transitivity Inconsistency, manifested through circular preference chains (A>B>C>A) and equivalence contradictions (A=B=C\\neq A). We argue that these issues come from information loss in discrete rating systems and ambiguous tie judgments during pairwise evaluation. We propose TrustJudge, a probabilistic framework that addresses these limitations through two key innovations: 1) distribution-sensitive scoring that computes continuous expectations from discrete rating probabilities, preserving information entropy for more precise scoring, and 2) likelihood-aware aggregation that resolves transitivity violations using bidirectional preference probabilities or perplexity. We also formalize the theoretical limitations of current LLM-as-a-judge frameworks and demonstrate how TrustJudge's components overcome them. When evaluated with Llama-3.1-70B-Instruct as judge using our dataset, TrustJudge reduces Score-Comparison inconsistency by 8.43% (from 23.32% to 14.89%) and Pairwise Transitivity inconsistency by 10.82% (from 15.22% to 4.40%), while maintaining higher evaluation accuracy. Our work provides the first systematic analysis of evaluation framework inconsistencies in LLM-as-a-judge paradigms, offering both theoretical insights and practical solutions for reliable automated assessment. The framework demonstrates consistent improvements across various model architectures and scales, enabling more trustworthy LLM evaluation without requiring additional training or human annotations. The codes can be found at https://github.com/TrustJudge/TrustJudge.",
+      "citations": 11
+    },
+    {
+      "title": "RELIC: Investigating Large Language Model Responses using Self-Consistency",
+      "year": 2023,
+      "authors": "Furui Cheng, Vil\u00e9m Zouhar, Simran Arora, Mrinmaya Sachan, Hendrik Strobelt, Mennatallah El-Assady",
+      "url": "https://api.semanticscholar.org/CorpusId:265466244",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) are notorious for blending fact with fiction and generating non-factual content, known as hallucinations. To address this challenge, we propose an interactive system that helps users gain insight into the reliability of the generated text. Our approach is based on the idea that the self-consistency of multiple samples generated by the same LLM relates to its confidence in individual claims in the generated texts. Using this idea, we design RELIC, an interactive system that enables users to investigate and verify semantic-level variations in multiple long-form responses. This allows users to recognize potentially inaccurate information in the generated text and make necessary corrections. From a user study with ten participants, we demonstrate that our approach helps users better verify the reliability of the generated text. We further summarize the design implications and lessons learned from this research for future studies of reliable human-LLM interactions.",
+      "citations": 52
+    },
+    {
+      "title": "The Impossibility of Fair LLMs",
+      "year": 2024,
+      "authors": "Jacy Reese Anthis, Kristian Lum, Michael Ekstrand, Avi Feller, Alexander D'Amour, Chenhao Tan",
+      "url": "https://api.semanticscholar.org/CorpusId:270258371",
+      "relevance": 1,
+      "abstract": "The rise of general-purpose artificial intelligence (AI) systems, particularly large language models (LLMs), has raised pressing moral questions about how to reduce bias and ensure fairness at scale. Researchers have documented a sort of\"bias\"in the significant correlations between demographics (e.g., race, gender) in LLM prompts and responses, but it remains unclear how LLM fairness could be evaluated with more rigorous definitions, such as group fairness or fair representations. We analyze a variety of technical fairness frameworks and find inherent challenges in each that make the development of a fair LLM intractable. We show that each framework either does not logically extend to the general-purpose AI context or is infeasible in practice, primarily due to the large amounts of unstructured training data and the many potential combinations of human populations, use cases, and sensitive attributes. These inherent challenges would persist for general-purpose AI, including LLMs, even if empirical challenges, such as limited participatory input and limited measurement methods, were overcome. Nonetheless, fairness will remain an important type of model evaluation, and there are still promising research directions, particularly the development of standards for the responsibility of LLM developers, context-specific evaluations, and methods of iterative, participatory, and AI-assisted evaluation that could scale fairness across the diverse contexts of modern human-AI interaction.",
+      "citations": 33
+    },
+    {
+      "title": "A Comprehensive Survey in LLM(-Agent) Full Stack Safety: Data, Training and Deployment",
+      "year": 2025,
+      "authors": "Kun Wang, Guibin Zhang, Zhenhong Zhou, Jiahao Wu, Miao Yu, Shiqian Zhao, Chenlong Yin, Jinhu Fu, Yibo Yan, Hanjun Luo, Liang Lin, Zhihao Xu, Haolang Lu, Xinye Cao, Xinyun Zhou, Weifei Jin, Fanci Meng, Junyuan Mao, Yu Wang, Haoyang Wu, Minghe Wang, Fan Zhang, Junfeng Fang, Chengwei Liu, Yifan Zhang, Qiankun Li, Chongye Guo, Ya Qin, Yi Ding, Donghai Hong, Jiaming Ji, Xinfeng Li, Yifan Jiang, Dongxia Wang, Yihao Huang, Yufei Guo, Jen-Tse Huang, Ya Yue, Wen-Shan Huang, Guancheng Wan, Tian-Ci Li, Lei Bai, Jie Zhang, Qing Guo, Jingyi Wang, Tianlong Chen, J. Zhou, Xiaojun Jia, Weisong Sun, Cong Wu, Jing Chen, Xu Hu, Yiming Li, Xiao Wang, Ningyu Zhang, Anh Tuan Luu, Guowen Xu, Tianwei Zhang, Xing-mei Ma, Xiang Wang, Bo An, Jun Sun, Mohit Bansal, Shirui Pan, Y. Elovici, B. Kailkhura, Bo Li, Yao-Guo Yang, Hongwei Li, Wenyuan Xu, Yizhou Sun, Wei Wang, Qing Li, Ke Tang, Yu-Gang Jiang, Felix Juefei-Xu, Hui Xiong, Xiaofeng Wang, Shuicheng Yan, Dacheng Tao, Philip S. Yu, Qi-Ping Wen, Yang Liu",
+      "url": "https://www.semanticscholar.org/paper/113af95d76c2fc38a5e0fbf66ee207d55e33f594",
+      "relevance": 1,
+      "abstract": "The remarkable success of Large Language Models (LLMs) has illuminated a promising pathway toward achieving Artificial General Intelligence for both academic and industrial communities, owing to their unprecedented performance across various applications. As LLMs continue to gain prominence in both research and commercial domains, their security and safety implications have become a growing concern, not only for researchers and corporations but also for every nation. Currently, existing surveys on LLM safety primarily focus on specific stages of the LLM lifecycle, e.g., deployment phase or fine-tuning phase, lacking a comprehensive understanding of the entire\"lifechain\"of LLMs. To address this gap, this paper introduces, for the first time, the concept of\"full-stack\"safety to systematically consider safety issues throughout the entire process of LLM training, deployment, and eventual commercialization. Compared to the off-the-shelf LLM safety surveys, our work demonstrates several distinctive advantages: (I) Comprehensive Perspective. We define the complete LLM lifecycle as encompassing data preparation, pre-training, post-training, deployment and final commercialization. To our knowledge, this represents the first safety survey to encompass the entire lifecycle of LLMs. (II) Extensive Literature Support. Our research is grounded in an exhaustive review of over 800+ papers, ensuring comprehensive coverage and systematic organization of security issues within a more holistic understanding. (III) Unique Insights. Through systematic literature analysis, we have developed reliable roadmaps and perspectives for each chapter. Our work identifies promising research directions, including safety in data generation, alignment techniques, model editing, and LLM-based agent systems. These insights provide valuable guidance for researchers pursuing future work in this field.",
+      "citations": 116
+    },
+    {
+      "title": "How Susceptible are Large Language Models to Ideological Manipulation?",
+      "year": 2024,
+      "authors": "Kai Chen, Zihao He, Jun Yan, Taiwei Shi, Kristina Lerman",
+      "url": "https://api.semanticscholar.org/CorpusId:267750439",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) possess the potential to exert substantial influence on public perceptions and interactions with information. This raises concerns about the societal impact that could arise if the ideologies within these models can be easily manipulated. In this work, we investigate how effectively LLMs can learn and generalize ideological biases from their instruction-tuning data. Our findings reveal a concerning vulnerability: exposure to only a small amount of ideologically driven samples significantly alters the ideology of LLMs. Notably, LLMs demonstrate a startling ability to absorb ideology from one topic and generalize it to even unrelated ones. The ease with which LLMs\u2019 ideologies can be skewed underscores the risks associated with intentionally poisoned training data by malicious actors or inadvertently introduced biases by data annotators. It also emphasizes the imperative for robust safeguards to mitigate the influence of ideological manipulations on LLMs.",
+      "citations": 30
+    },
+    {
+      "title": "Preference Leakage: A Contamination Problem in LLM-as-a-judge",
+      "year": 2025,
+      "authors": "Dawei Li, Renliang Sun, Yue Huang, Ming Zhong, Bohan Jiang, Jiawei Han, Xiangliang Zhang, Wei Wang, Huan Liu",
+      "url": "https://www.semanticscholar.org/paper/24e8029197b5f99126f0ef4e577d55a275405b36",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) as judges and LLM-based data synthesis have emerged as two fundamental LLM-driven data annotation methods in model development. While their combination significantly enhances the efficiency of model training and evaluation, little attention has been given to the potential contamination brought by this new model development paradigm. In this work, we expose preference leakage, a contamination problem in LLM-as-a-judge caused by the relatedness between the synthetic data generators and LLM-based evaluators. To study this issue, we first define three common relatednesses between the data generator LLM and the judge LLM: being the same model, having an inheritance relationship, and belonging to the same model family. Through extensive experiments, we empirically confirm the bias of judges towards their related student models caused by preference leakage across multiple LLM baselines and benchmarks. Further analysis suggests that preference leakage is a pervasive and real-world problem that is harder to detect compared to previously identified biases in LLM-as-a-judge scenarios. All of these findings imply that preference leakage is a widespread and challenging problem in the area of LLM-as-a-judge. We release all codes and data at: https://github.com/David-Li0406/Preference-Leakage.",
+      "citations": 104
+    },
+    {
+      "title": "HalluLens: LLM Hallucination Benchmark",
+      "year": 2025,
+      "authors": "Yejin Bang, Ziwei Ji, A. Schelten, A. Hartshorn, T. Fowler, Cheng Zhang, Nicola Cancedda, Pascale Fung",
+      "url": "https://www.semanticscholar.org/paper/51fe85e30a4c9d66a3fa127946d1f87a6fabeac7",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) often generate responses that deviate from user input or training data, a phenomenon known as\"hallucination.\"These hallucinations undermine user trust and hinder the adoption of generative AI systems. Addressing hallucinations is essential for the advancement of LLMs. This paper introduces a comprehensive hallucination benchmark, incorporating both new extrinsic and existing intrinsic evaluation tasks, built upon clear taxonomy of hallucination. A major challenge in benchmarking hallucinations is the lack of a unified framework due to inconsistent definitions and categorizations. We disentangle LLM hallucination from\"factuality,\"proposing a clear taxonomy that distinguishes between extrinsic and intrinsic hallucinations, to promote consistency and facilitate research. Extrinsic hallucinations, where the generated content is not consistent with the training data, are increasingly important as LLMs evolve. Our benchmark includes dynamic test set generation to mitigate data leakage and ensure robustness against such leakage. We also analyze existing benchmarks, highlighting their limitations and saturation. The work aims to: (1) establish a clear taxonomy of hallucinations, (2) introduce new extrinsic hallucination tasks, with data that can be dynamically regenerated to prevent saturation by leakage, (3) provide a comprehensive analysis of existing benchmarks, distinguishing them from factuality evaluations.",
+      "citations": 86
+    },
+    {
+      "title": "TreeQuestion: Assessing Conceptual Learning Outcomes with LLM-Generated Multiple-Choice Questions",
+      "year": 2024,
+      "authors": "Zirui Cheng, Jing Xu, Haojian Jin",
+      "url": "https://api.semanticscholar.org/CorpusId:273931973",
+      "relevance": 1,
+      "abstract": "The advances of generative AI have posed a challenge for using open-ended questions to assess conceptual learning outcomes, as it is increasingly common for students to use tools like ChatGPT to generate long textual answers. However, teachers still have to spend substantial time reading the answers and inferring students' learning outcomes. We present TreeQuestion, a human-in-the-loop system designed to help teachers create a set of multiple-choice questions to assess students' conceptual learning outcomes. When a teacher seeks to assess students' comprehension of specific concepts, TreeQuestion taps into the wealth of knowledge embedded within large language models and generates a set of multiple-choice questions organized in a tree-like structure. We evaluated TreeQuestion with 96 students and 10 teachers. Results indicated that students achieved similar performance in multiple-choice questions generated by TreeQuestion and open-ended questions graded by teachers. Meanwhile, TreeQuestion could reduce teachers' efforts in creating and grading the multiple-choice questions in contrast to manually generated open-ended questions. We estimate that in a hypothetical class with 20 students, using multiple-choice questions from TreeQuestion may require only 4.6% of the time compared to open-ended questions for assessing learning outcomes.",
+      "citations": 10
+    },
+    {
+      "title": "LLMs Provide Unstable Answers to Legal Questions",
+      "year": 2025,
+      "authors": "Andrew Blair-Stanek, Benjamin Van Durme",
+      "url": "https://api.semanticscholar.org/CorpusId:276249373",
+      "relevance": 1,
+      "abstract": "An LLM is \u2018\u2018stable\u2019\u2019 if it reaches the same conclusion when asked the identical question multiple times. We find leading LLMs like gpt-4o, claude-3.5, and gemini-1.5 are unstable when providing answers to hard legal questions, even when made as deterministic as possible by setting temperature to 0. We curate and release a novel dataset of 500 legal questions distilled from real cases, involving two parties, with facts, competing legal arguments, and the question of which party should prevail. When provided the exact same question, we observe that LLMs sometimes say one party should win, while other times say the other party should win. This instability has implications for the increasing numbers of legal AI products, legal processes, and lawyers relying on these LLMs.",
+      "citations": 17
+    },
+    {
+      "title": "Challenges for generative AI in legal reasoning",
+      "year": 2025,
+      "authors": "Eljas Linna, Tu Linna",
+      "url": "https://api.semanticscholar.org/CorpusId:280870064",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) are being integrated into professional domains, yet their limitations in such high-stakes fields as law remain poorly understood. In response, this paper introduces examples of critical challenges to the functioning of generative and other forms of artificial intelligence (AI) as reliable reasoning tools in judicial decision-making. The study deconstructs core requirements and challenges for AI, including the ability to select the correct legal framework across jurisdictions, generate sound arguments based on the doctrine of the sources of law, distinguish ratio decidendi and obiter dicta in case law, resolve ambiguity arising from general clauses like \u201creasonableness\u201d, manage conflicting legal provisions, and apply the burden of proof correctly. The paper then maps various AI enhancement mechanisms, such as retrieval-augmented generation (RAG), multi-agent systems and neuro-symbolic AI, to these challenges, assessing their potential to bridge the gap between the probabilistic nature of LLMs and the rigorous, choice-driven demands of legal interpretation. Furthermore, the paper sketches a path towards an evaluation framework, proposing that legal requirements be organized into normative, doctrinal, evidential, and technical categories, and subsequently operationalized into domain-specific, testable design obligations. The findings indicate that these techniques can address specific narrow challenges, but they fail to solve the more significant ones that remain, particularly in tasks requiring discretion and transparent, justifiable reasoning. Therefore, we advocate for a staged adoption, first capturing efficiency in simple cases with technology already available today and thereafter sustaining long-term investment in new methods that handle hierarchy, temporality, and other requirements of legally sound reasoning, thus enabling expansion to complex adjudication in the future.",
+      "citations": 2
+    },
+    {
+      "title": "Attribution in Scientific Literature: New Benchmark and Methods",
+      "year": 2024,
+      "authors": "Deepa Tilwani, Yash Saxena, Seyedali Mohammadi, Edward Raff, Amit P. Sheth, Srinivasan Parthasarathy, Manas Gaur",
+      "url": "https://api.semanticscholar.org/CorpusId:269587860",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) present a promising yet challenging frontier for automated source citation in scientific communication. Previous approaches to citation generation have been limited by citation ambiguity and LLM overgeneralization. We introduce REASONS, a novel dataset with sentence-level annotations across 12 scientific domains from arXiv. Our evaluation framework covers two key citation scenarios: indirect queries (matching sentences to paper titles) and direct queries (author attribution), both enhanced with contextual metadata. We conduct extensive experiments with models such as GPT-O1, GPT-4O, GPT-3.5, DeepSeek, and other smaller models like Perplexity AI (7B). While top-tier LLMs achieve high performance in sentence attribution, they struggle with high hallucination rates, a key metric for scientific reliability. Our metadata-augmented approach reduces hallucination rates across all tasks, offering a promising direction for improvement. Retrieval-augmented generation (RAG) with Mistral improves performance in indirect queries, reducing hallucination rates by 42% and maintaining competitive precision with larger models. However, adversarial testing highlights challenges in linking paper titles to abstracts, revealing fundamental limitations in current LLMs. REASONS provides a challenging benchmark for developing reliable and trustworthy LLMs in scientific applications",
+      "citations": 12
+    },
+    {
+      "title": "Invisible Tokens, Visible Bills: The Urgent Need to Audit Hidden Operations in Opaque LLM Services",
+      "year": 2025,
+      "authors": "Guoheng Sun, Ziyao Wang, Xuandong Zhao, Bowei Tian, Zheyu Shen, Yexiao He, Jinming Xing, Ang Li",
+      "url": "https://api.semanticscholar.org/CorpusId:278905016",
+      "relevance": 1,
+      "abstract": "Modern large language model (LLM) services increasingly rely on complex, often abstract operations, such as multi-step reasoning and multi-agent collaboration, to generate high-quality outputs. While users are billed based on token consumption and API usage, these internal steps are typically not visible. We refer to such systems as Commercial Opaque LLM Services (COLS). This position paper highlights emerging accountability challenges in COLS: users are billed for operations they cannot observe, verify, or contest. We formalize two key risks: \\textit{quantity inflation}, where token and call counts may be artificially inflated, and \\textit{quality downgrade}, where providers might quietly substitute lower-cost models or tools. Addressing these risks requires a diverse set of auditing strategies, including commitment-based, predictive, behavioral, and signature-based methods. We further explore the potential of complementary mechanisms such as watermarking and trusted execution environments to enhance verifiability without compromising provider confidentiality. We also propose a modular three-layer auditing framework for COLS and users that enables trustworthy verification across execution, secure logging, and user-facing auditability without exposing proprietary internals. Our aim is to encourage further research and policy development toward transparency, auditability, and accountability in commercial LLM services.",
+      "citations": 9
+    },
+    {
+      "title": "Feedback Friction: LLMs Struggle to Fully Incorporate External Feedback",
+      "year": 2025,
+      "authors": "Dongwei Jiang, Alvin Zhang, Andrew Wang, Nicholas Andrews, Daniel Khashabi",
+      "url": "https://api.semanticscholar.org/CorpusId:279391939",
+      "relevance": 1,
+      "abstract": "Recent studies have shown LLMs possess some ability to improve their responses when given external feedback. However, it remains unclear how effectively and thoroughly these models can incorporate extrinsic feedback. In an ideal scenario, if LLMs receive near-perfect and complete feedback, we would expect them to fully integrate the feedback and reach correct solutions. In this paper, we systematically investigate LLMs'ability to incorporate feedback by designing a controlled experimental environment. For each problem, a solver model attempts a solution, then a feedback generator with access to near-complete ground-truth answers produces targeted feedback, after which the solver tries again. We evaluate this pipeline across a diverse range of tasks, including math reasoning, knowledge reasoning, scientific reasoning, and general multi-domain evaluations with state-of-the-art language models including Claude 3.7 with extended thinking. Surprisingly, even under these near-ideal conditions, solver models consistently show resistance to feedback, a limitation that we term Feedback Friction. To mitigate this limitation, we experiment with sampling-based strategies like progressive temperature increases and explicit rejection of previously attempted incorrect answers, which yield improvements but still fail to help models achieve target performance. We analyze Feedback Friction and find that models'confidence on specific questions, measured by semantic entropy, predicts feedback resistance: high-confidence predictions remain resistant to external correction. We hope that highlighting this issue in LLMs will help future research in self-improvement.",
+      "citations": 4
+    },
+    {
+      "title": "The Judge Who Never Admits: Hidden Shortcuts in LLM-based Evaluation",
+      "year": 2026,
+      "authors": "Arash Mari Oriyad, Omid Ghahroodi, Ehsaneddin Asgari, M. H. Rohban, M. Baghshah",
+      "url": "https://api.semanticscholar.org/CorpusId:285452364",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are increasingly used as automatic judges to evaluate system outputs in tasks such as reasoning, question answering, and creative writing. A faithful judge should base its verdicts solely on content quality, remain invariant to irrelevant context, and transparently reflect the factors driving its decisions. We test this ideal via controlled cue perturbations-synthetic metadata labels injected into evaluation prompts-for six judge models: GPT-4o, Gemini-2.0-Flash, Gemma-3-27B, Qwen3-235B, Claude-3-Haiku, and Llama3-70B. Experiments span two complementary datasets with distinct evaluation regimes: ELI5 (factual QA) and LitBench (open-ended creative writing). We study six cue families: source, temporal, age, gender, ethnicity, and educational status. Beyond measuring verdict shift rates (VSR), we introduce cue acknowledgment rate (CAR) to quantify whether judges explicitly reference the injected cues in their natural-language rationales. Across cues with strong behavioral effects-e.g., provenance hierarchies (Expert>Human>LLM>Unknown), recency preferences (New>Old), and educational-status favoritism-CAR is typically at or near zero, indicating that shortcut reliance is largely unreported even when it drives decisions. Crucially, CAR is also dataset-dependent: explicit cue recognition is more likely to surface in the factual ELI5 setting for some models and cues, but often collapses in the open-ended LitBench regime, where large verdict shifts can persist despite zero acknowledgment. The combination of substantial verdict sensitivity and limited cue acknowledgment reveals an explanation gap in LLM-as-judge pipelines, raising concerns about reliability of model-based evaluation in both research and deployment.",
+      "citations": 0
+    },
+    {
+      "title": "Beyond Facts: Evaluating Intent Hallucination in Large Language Models",
+      "year": 2025,
+      "authors": "Yijie Hao, Haofei Yu, Jiaxuan You",
+      "url": "https://api.semanticscholar.org/CorpusId:279250227",
+      "relevance": 1,
+      "abstract": "When exposed to complex queries containing multiple conditions, today's large language models (LLMs) tend to produce responses that only partially satisfy the query while neglecting certain conditions. We therefore introduce the concept of Intent Hallucination. In this phenomenon, LLMs either omit (neglecting to address certain parts) or misinterpret (responding to invented query parts) elements of the given query, leading to intent hallucinated generation. To systematically evaluate intent hallucination, we introduce FAITHQA, a novel benchmark for intent hallucination that contains 20,068 problems, covering both query-only and retrieval-augmented generation (RAG) setups with varying topics and difficulty. FAITHQA is the first hallucination benchmark that goes beyond factual verification, tailored to identify the fundamental cause of intent hallucination. By evaluating various LLMs on FAITHQA, we find that (1) intent hallucination is a common issue even for state-of-the-art models, and (2) the phenomenon stems from omission or misinterpretation of LLMs. To facilitate future research, we introduce an automatic LLM generation evaluation metric, CONSTRAINT SCORE, for detecting intent hallucination. Human evaluation results demonstrate that CONSTRAINT SCORE is closer to human performance for intent hallucination compared to baselines.",
+      "citations": 5
+    },
+    {
+      "title": "LegalGuardian: A Privacy-Preserving Framework for Secure Integration of Large Language Models in Legal Practice",
+      "year": 2025,
+      "authors": "M. M. Demir, Hakan T. Otal, M. A. Canbaz",
+      "url": "https://api.semanticscholar.org/CorpusId:275758126",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) hold promise for advancing legal practice by automating complex tasks and improving access to justice. However, their adoption is limited by concerns over client confidentiality, especially when lawyers include sensitive Personally Identifiable Information (PII) in prompts, risking unauthorized data exposure. To mitigate this, we introduce LegalGuardian, a lightweight, privacy-preserving framework tailored for lawyers using LLM-based tools. LegalGuardian employs Named Entity Recognition (NER) techniques and local LLMs to mask and unmask confidential PII within prompts, safeguarding sensitive data before any external interaction. We detail its development and assess its effectiveness using a synthetic prompt library in immigration law scenarios. Comparing traditional NER models with one-shot prompted local LLM, we find that LegalGuardian achieves a F1-score of 93% with GLiNER and 97% with Qwen2.5-14B in PII detection. Semantic similarity analysis confirms that the framework maintains high fidelity in outputs, ensuring robust utility of LLM-based tools. Our findings indicate that legal professionals can harness advanced AI technologies without compromising client confidentiality or the quality of legal documents.",
+      "citations": 4
+    },
+    {
+      "title": "LLMs in Interpreting Legal Documents",
+      "year": 2025,
+      "authors": "S. Corbo",
+      "url": "https://api.semanticscholar.org/CorpusId:283722250",
+      "relevance": 1,
+      "abstract": "This chapter explores the application of Large Language Models in the legal domain, showcasing their potential to optimise and augment traditional legal tasks by analysing possible use cases, such as assisting in interpreting statutes, contracts, and case law, enhancing clarity in legal summarisation, contract negotiation, and information retrieval. There are several challenges that can arise from the application of such technologies, such as algorithmic monoculture, hallucinations, and compliance with existing regulations, including the EU's AI Act and recent U.S. initiatives, alongside the emerging approaches in China. Furthermore, two different benchmarks are presented.",
+      "citations": 0
+    },
+    {
+      "title": "Retrieval Augmented Generation-Based Large Language Models for Bridging Transportation Cybersecurity Legal Knowledge Gaps",
+      "year": 2025,
+      "authors": "Khandakar Ashrafi Akbar, Md Nahiyan Uddin, Latifur Khan, Trayce Hockstad, Mizanur Rahman, Mashrur Chowdhury, B. Thuraisingham",
+      "url": "https://www.semanticscholar.org/paper/8965bb80bfe2f78ec4ef167b42f5bad63157948d",
+      "relevance": 1,
+      "abstract": "With the advancement of connected and automated transportation systems, a growing need has emerged for regulatory authorities to update existing laws and statutes, as well as create new ones, to address future implications of connectivity and automation. Specifically, ensuring proper engagement with cybersecurity and data privacy challenges for connected and automated transportation systems will require a comprehensive legal framework at both the federal and state levels. To help policymakers achieve this, a retrieval augmented generation (RAG)-based large language model (LLM) framework, Transportation Cybersecurity and Resiliency (TraCR) AI, has been developed in this study, focusing on extracting pertinent information from existing legislation based on inquiries and crafting LLM-generated responses to highlight potential loopholes for further scrutiny. This study primarily aims to mitigate the hallucinations caused in the domain of LLMs by developing a curated knowledge base of legislative documents and an associated question\u2013answer dataset to improve the effectiveness of query results. This RAG-based framework extracts relevant information to improve the specificity of answers and aids the LLM in providing factually accurate responses with increased reliability. Our analyses reveal that the presented RAG-based framework can aid legislative analysis by generating queries for particular questions and responses. We also compare our RAG framework-generated responses with commercially available LLMs to demonstrate the effectiveness of our approach. TraCR AI outperforms leading commercial LLMs across four distinct metrics, that is, AlignScore, ParaScore, BERTScore, and ROUGE score. This highlights that integrating RAG allows LLMs to produce more factually accurate and up-to-date responses than standalone LLMs. This approach to domain-specific LLM development will improve the quality of legislative analysis that can be used to aid policymakers in meeting the challenge of updating legal codes in accordance with emerging technologies.",
+      "citations": 1
+    },
+    {
+      "title": "Judging LLM-as-a-judge with MT-Bench and Chatbot Arena",
+      "year": 2023,
+      "authors": "Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, E. Xing, Haotong Zhang, Joseph E. Gonzalez, Ion Stoica",
+      "url": "https://www.semanticscholar.org/paper/a0a79dad89857a96f8f71b14238e5237cbfc4787",
+      "relevance": 1,
+      "abstract": "Evaluating large language model (LLM) based chat assistants is challenging due to their broad capabilities and the inadequacy of existing benchmarks in measuring human preferences. To address this, we explore using strong LLMs as judges to evaluate these models on more open-ended questions. We examine the usage and limitations of LLM-as-a-judge, including position, verbosity, and self-enhancement biases, as well as limited reasoning ability, and propose solutions to mitigate some of them. We then verify the agreement between LLM judges and human preferences by introducing two benchmarks: MT-bench, a multi-turn question set; and Chatbot Arena, a crowdsourced battle platform. Our results reveal that strong LLM judges like GPT-4 can match both controlled and crowdsourced human preferences well, achieving over 80% agreement, the same level of agreement between humans. Hence, LLM-as-a-judge is a scalable and explainable way to approximate human preferences, which are otherwise very expensive to obtain. Additionally, we show our benchmark and traditional benchmarks complement each other by evaluating several variants of LLaMA and Vicuna. The MT-bench questions, 3K expert votes, and 30K conversations with human preferences are publicly available at https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge.",
+      "citations": 8428
+    },
+    {
+      "title": "A systematic review of large language model (LLM) evaluations in clinical medicine",
+      "year": 2025,
+      "authors": "Sina Shool, Sara Adimi, Reza Saboori Amleshi, E. Bitaraf, Reza Golpira, Mahmood Tara",
+      "url": "https://www.semanticscholar.org/paper/705a913fd7153069b99a66c03862657122d9f737",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs), advanced AI tools based on transformer architectures, demonstrate significant potential in clinical medicine by enhancing decision support, diagnostics, and medical education. However, their integration into clinical workflows requires rigorous evaluation to ensure reliability, safety, and ethical alignment. This systematic review examines the evaluation parameters and methodologies applied to LLMs in clinical medicine, highlighting their capabilities, limitations, and application trends. A comprehensive review of the literature was conducted across PubMed, Scopus, Web of Science, IEEE Xplore, and arXiv databases, encompassing both peer-reviewed and preprint studies. Studies were screened against predefined inclusion and exclusion criteria to identify original research evaluating LLM performance in medical contexts. The results reveal a growing interest in leveraging LLM tools in clinical settings, with 761 studies meeting the inclusion criteria. While general-domain LLMs, particularly ChatGPT and GPT-4, dominated evaluations (93.55%), medical-domain LLMs accounted for only 6.45%. Accuracy emerged as the most commonly assessed parameter (21.78%). Despite these advancements, the evidence base highlights certain limitations and biases across the included studies, emphasizing the need for careful interpretation and robust evaluation frameworks. The exponential growth in LLM research underscores their transformative potential in healthcare. However, addressing challenges such as ethical risks, evaluation variability, and underrepresentation of critical specialties will be essential. Future efforts should prioritize standardized frameworks to ensure safe, effective, and equitable LLM integration in clinical practice.",
+      "citations": 229
+    },
+    {
+      "title": "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation",
+      "year": 2024,
+      "authors": "Haoran Xu, Amr Sharaf, Yunmo Chen, Weiting Tan, Lingfeng Shen, Benjamin Van Durme, Kenton Murray, Young Jin Kim",
+      "url": "https://www.semanticscholar.org/paper/ebd1c04c61f73f46def3305ca11d038c46665b65",
+      "relevance": 1,
+      "abstract": "Moderate-sized large language models (LLMs) -- those with 7B or 13B parameters -- exhibit promising machine translation (MT) performance. However, even the top-performing 13B LLM-based translation models, like ALMA, does not match the performance of state-of-the-art conventional encoder-decoder translation models or larger-scale LLMs such as GPT-4. In this study, we bridge this performance gap. We first assess the shortcomings of supervised fine-tuning for LLMs in the MT task, emphasizing the quality issues present in the reference data, despite being human-generated. Then, in contrast to SFT which mimics reference translations, we introduce Contrastive Preference Optimization (CPO), a novel approach that trains models to avoid generating adequate but not perfect translations. Applying CPO to ALMA models with only 22K parallel sentences and 12M parameters yields significant improvements. The resulting model, called ALMA-R, can match or exceed the performance of the WMT competition winners and GPT-4 on WMT'21, WMT'22 and WMT'23 test datasets.",
+      "citations": 452
+    },
+    {
+      "title": "SVD-LLM: Truncation-aware Singular Value Decomposition for Large Language Model Compression",
+      "year": 2024,
+      "authors": "Xin Wang, Yu Zheng, Zhongwei Wan, Mi Zhang",
+      "url": "https://www.semanticscholar.org/paper/4706711dc4e1e16424db9f454a1f3b092b972785",
+      "relevance": 1,
+      "abstract": "The advancements in Large Language Models (LLMs) have been hindered by their substantial sizes, which necessitates LLM compression methods for practical deployment. Singular Value Decomposition (SVD) offers a promising solution for LLM compression. However, state-of-the-art SVD-based LLM compression methods have two key limitations: truncating smaller singular values may lead to higher compression loss, and the lack of update on the compressed weights after SVD truncation. In this work, we propose SVD-LLM, a SVD-based post-training LLM compression method that addresses the limitations of existing methods. SVD-LLM incorporates a truncation-aware data whitening technique to ensure a direct mapping between singular values and compression loss. Moreover, SVD-LLM adopts a parameter update with sequential low-rank approximation to compensate for the accuracy degradation after SVD compression. We evaluate SVD-LLM on 10 datasets and seven models from three different LLM families at three different scales. Our results demonstrate the superiority of SVD-LLM over state-of-the-arts, especially at high model compression ratios. Our code is available at https://github.com/AIoT-MLSys-Lab/SVD-LLM",
+      "citations": 215
+    },
+    {
+      "title": "Resolving Knowledge Conflicts in Large Language Models",
+      "year": 2023,
+      "authors": "Yike Wang, Shangbin Feng, Heng Wang, Weijia Shi, Vidhisha Balachandran, Tianxing He, Yulia Tsvetkov",
+      "url": "https://www.semanticscholar.org/paper/3f4ccf64ffe23b5dc095ae0401eecf9445deb024",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) often encounter knowledge conflicts, scenarios where discrepancy arises between the internal parametric knowledge of LLMs and non-parametric information provided in the prompt context. In this work we ask what are the desiderata for LLMs when a knowledge conflict arises and whether existing LLMs fulfill them. We posit that LLMs should 1) identify knowledge conflicts, 2) pinpoint conflicting information segments, and 3) provide distinct answers or viewpoints in conflicting scenarios. To this end, we introduce an evaluation framework for simulating contextual knowledge conflicts and quantitatively evaluating to what extent LLMs achieve these goals. It includes diverse and complex situations of knowledge conflict, knowledge from diverse entities and domains, two synthetic conflict creation methods, and settings with progressively increasing difficulty to reflect realistic knowledge conflicts. Extensive experiments with the framework reveal that while LLMs perform well in identifying the existence of knowledge conflicts, they struggle to determine the specific conflicting knowledge and produce a response with distinct answers amidst conflicting information. To address these challenges, we propose new instruction-based approaches that augment LLMs to better achieve the three goals. Further analysis shows that abilities to tackle knowledge conflicts are greatly impacted by factors such as knowledge domain, while generating robust responses to knowledge conflict scenarios remains an open research question.",
+      "citations": 44
+    },
+    {
+      "title": "Taxation Perspectives from Large Language Models: A Case Study on Additional Tax Penalties",
+      "year": 2025,
+      "authors": "Eunkyung Choi, Y. Suh, Hun-Pyeong Park, Wonseok Hwang",
+      "url": "https://api.semanticscholar.org/CorpusId:276782519",
+      "relevance": 1,
+      "abstract": "How capable are large language models (LLMs) in the domain of taxation? Although numerous studies have explored the legal domain, research dedicated to taxation remains scarce. Moreover, the datasets used in these studies are either simplified, failing to reflect the real-world complexities, or not released as open-source. To address this gap, we introduce PLAT, a new benchmark designed to assess the ability of LLMs to predict the legitimacy of additional tax penalties. PLAT comprises 300 examples: (1) 100 binary-choice questions, (2) 100 multiple-choice questions, and (3) 100 essay-type questions, all derived from 100 Korean court precedents. PLAT is constructed to evaluate not only LLMs'understanding of tax law but also their performance in legal cases that require complex reasoning beyond straightforward application of statutes. Our systematic experiments with multiple LLMs reveal that (1) their baseline capabilities are limited, especially in cases involving conflicting issues that require a comprehensive understanding (not only of the statutes but also of the taxpayer's circumstances), and (2) LLMs struggle particularly with the\"AC\"stages of\"IRAC\"even for advanced reasoning models like o3, which actively employ inference-time scaling. The dataset is publicly available at: https://huggingface.co/collections/sma1-rmarud/plat-predicting-the-legitimacy-of-punitive-additional-tax",
+      "citations": 2
+    },
+    {
+      "title": "LLM Agents for Education: Advances and Applications",
+      "year": 2025,
+      "authors": "Zhendong Chu, Shen Wang, Jian Xie, Tinghui Zhu, Yibo Yan, Jin Ye, Aoxiao Zhong, Xuming Hu, Jing Liang, Philip S. Yu, Qingsong Wen",
+      "url": "https://www.semanticscholar.org/paper/fba9bf936571deaa482bb6d09dd525aeb184b6df",
+      "relevance": 1,
+      "abstract": "Large Language Model (LLM) agents are transforming education by automating complex pedagogical tasks and enhancing both teaching and learning processes. In this survey, we present a systematic review of recent advances in applying LLM agents to address key challenges in educational settings, such as feedback comment generation, curriculum design, etc. We analyze the technologies enabling these agents, including representative datasets, benchmarks, and algorithmic frameworks. Additionally, we highlight key challenges in deploying LLM agents in educational settings, including ethical issues, hallucination and overreliance, and integration with existing educational ecosystems. Beyond the core technical focus, we include in Appendix A a comprehensive overview of domain-specific educational agents, covering areas such as science learning, language learning, and professional development.",
+      "citations": 88
+    },
+    {
+      "title": "Every FLOP Counts: Scaling a 300B Mixture-of-Experts LING LLM without Premium GPUs",
+      "year": 2025,
+      "authors": "Ling Team, Bin Zeng, Chao Huang, Chao Zhang, Changxin Tian, Cong Chen, Dingnan Jin, Fengchun Yu, Feng Zhu, Feng Yuan, Fakang Wang, Gangshan Wang, Guangyao Zhai, Haitao Zhang, Huizhong Li, Jun Zhou, Jia Liu, Junpeng Fang, Junjie Ou, Jun Hu, Ji Luo, Ji Zhang, Jian Liu, Jian Sha, Ji-Kui Qian, Jiewei Wu, Jun-Yu Zhao, Jianguo Li, Jubao Feng, Jing-Rui Di, Jun\u2010Fa Xu, Jing-Feng Yao, Kuan Xu, Ke Du, Longfei Li, Lei Liang, Lu Yu, Li Tang, Lin Ju, Peng Xu, Qing Cui, Song Liu, Shicheng Li, Shun Song, Song Yan, Tengwei Cai, Tianyi Chen, Ting Guo, Ting Huang, Tao Feng, Tao Wu, Wei Wu, Xiaolu Zhang, Xueming Yang, Xin Zhao, Xiaobo Hu, Xin Lin, Yaodong Zhao, Yilong Wang, Yong-Chang Guo, Yuanyuan Wang, Yue Yang, Yang Cao, Yu-Dong Fu, Yi Xiong, Yanzhe Li, Zhe Li, Zhiqiang Zhang, Ziqi Liu, Zhaoxin Huan, Zujie Wen, Zhenhang Sun, Zhuoxuan Du, Zhengyu He",
+      "url": "https://api.semanticscholar.org/CorpusId:276885331",
+      "relevance": 1,
+      "abstract": "In this technical report, we tackle the challenges of training large-scale Mixture of Experts (MoE) models, focusing on overcoming cost inefficiency and resource limitations prevalent in such systems. To address these issues, we present two differently sized MoE large language models (LLMs), namely Ling-Lite and Ling-Plus (referred to as\"Bailing\"in Chinese, spelled B\\v{a}il\\'ing in Pinyin). Ling-Lite contains 16.8 billion parameters with 2.75 billion activated parameters, while Ling-Plus boasts 290 billion parameters with 28.8 billion activated parameters. Both models exhibit comparable performance to leading industry benchmarks. This report offers actionable insights to improve the efficiency and accessibility of AI development in resource-constrained settings, promoting more scalable and sustainable technologies. Specifically, to reduce training costs for large-scale MoE models, we propose innovative methods for (1) optimization of model architecture and training processes, (2) refinement of training anomaly handling, and (3) enhancement of model evaluation efficiency. Additionally, leveraging high-quality data generated from knowledge graphs, our models demonstrate superior capabilities in tool use compared to other models. Ultimately, our experimental findings demonstrate that a 300B MoE LLM can be effectively trained on lower-performance devices while achieving comparable performance to models of a similar scale, including dense and MoE models. Compared to high-performance devices, utilizing a lower-specification hardware system during the pre-training phase demonstrates significant cost savings, reducing computing costs by approximately 20%. The models can be accessed at https://huggingface.co/inclusionAI.",
+      "citations": 19
+    },
+    {
+      "title": "Getting in the Door: Streamlining Intake in Civil Legal Services with Large Language Models",
+      "year": 2024,
+      "authors": "Quinten Steenhuis, H. Westermann",
+      "url": "https://api.semanticscholar.org/CorpusId:273186175",
+      "relevance": 1,
+      "abstract": "Legal intake, the process of finding out if an applicant is eligible for help from a free legal aid program, takes significant time and resources. In part this is because eligibility criteria are nuanced, open-textured, and require frequent revision as grants start and end. In this paper, we investigate the use of large language models (LLMs) to reduce this burden. We describe a digital intake platform that combines logical rules with LLMs to offer eligibility recommendations, and we evaluate the ability of 8 different LLMs to perform this task. We find promising results for this approach to help close the access to justice gap, with the best model reaching an F1 score of .82, while minimizing false negatives.",
+      "citations": 6
+    },
+    {
+      "title": "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms",
+      "year": 2025,
+      "authors": "Xiaotian Ye, Mengqi Zhang, Shu Wu",
+      "url": "https://api.semanticscholar.org/CorpusId:277634005",
+      "relevance": 1,
+      "abstract": "Knowledge is fundamental to the overall capabilities of Large Language Models (LLMs). The knowledge paradigm of a model, which dictates how it encodes and utilizes knowledge, significantly affects its performance. Despite the continuous development of LLMs under existing knowledge paradigms, issues within these frameworks continue to constrain model potential. This blog post highlight three critical open problems limiting model capabilities: (1) challenges in knowledge updating for LLMs, (2) the failure of reverse knowledge generalization (the reversal curse), and (3) conflicts in internal knowledge. We review recent progress made in addressing these issues and discuss potential general solutions. Based on observations in these areas, we propose a hypothetical paradigm based on Contextual Knowledge Scaling, and further outline implementation pathways that remain feasible within contemporary techniques. Evidence suggests this approach holds potential to address current shortcomings, serving as our vision for future model paradigms. This blog post aims to provide researchers with a brief overview of progress in LLM knowledge systems, while provide inspiration for the development of next-generation model architectures.",
+      "citations": 2
+    },
+    {
+      "title": "Enhancing LLM Evaluations: The Garbling Trick",
+      "year": 2024,
+      "authors": "W. F. Bradley",
+      "url": "https://api.semanticscholar.org/CorpusId:273812119",
+      "relevance": 1,
+      "abstract": "As large language models (LLMs) become increasingly powerful, traditional evaluation metrics tend to saturate, making it challenging to distinguish between models. We propose a general method to transform existing LLM evaluations into a series of progressively more difficult tasks. These enhanced evaluations emphasize reasoning capabilities and can reveal relative performance differences that are not apparent in the original assessments. To demonstrate the effectiveness of our approach, we create a new multiple-choice test corpus, extend it into a family of evaluations, and assess a collection of LLMs. Our results offer insights into the comparative abilities of these models, particularly highlighting the differences between base LLMs and more recent\"reasoning\"models.",
+      "citations": 2
+    },
+    {
+      "title": "Verification Limits Code LLM Training",
+      "year": 2025,
+      "authors": "Srishti Gureja, Elena Tommasone, Jingyi He, Sara Hooker, Matthias Gall'e, Marzieh Fadaee",
+      "url": "https://api.semanticscholar.org/CorpusId:281526198",
+      "relevance": 1,
+      "abstract": "Large language models for code generation increasingly rely on synthetic data, where both problem solutions and verification tests are generated by models. While this enables scalable data creation, it introduces a previously unexplored bottleneck: the verification ceiling, in which the quality and diversity of training data are fundamentally constrained by the capabilities of synthetic verifiers. In this work, we systematically study how verification design and strategies influence model performance. We investigate (i) what we verify by analyzing the impact of test complexity and quantity: richer test suites improve code generation capabilities (on average +3 pass@1), while quantity alone yields diminishing returns, (ii) how we verify by exploring relaxed pass thresholds: rigid 100% pass criteria can be overly restrictive. By allowing for relaxed thresholds or incorporating LLM-based soft verification, we can recover valuable training data, leading to a 2-4 point improvement in pass@1 performance. However, this benefit is contingent upon the strength and diversity of the test cases used, and (iii) why verification remains necessary through controlled comparisons of formally correct versus incorrect solutions and human evaluation: retaining diverse correct solutions per problem yields consistent generalization gains. Our results show that Verification as currently practiced is too rigid, filtering out valuable diversity. But it cannot be discarded, only recalibrated. By combining calibrated verification with diverse, challenging problem-solution pairs, we outline a path to break the verification ceiling and unlock stronger code generation models.",
+      "citations": 1
+    },
+    {
+      "title": "The Life Cycle of Large Language Models: A Review of Biases in Education",
+      "year": 2024,
+      "authors": "Jinsook Lee, Yann Hicke, Renzhe Yu, Christopher Brooks, Ren\u00e9 F. Kizilcec",
+      "url": "https://api.semanticscholar.org/CorpusId:271218499",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) are increasingly adopted in educational contexts to provide personalized support to students and teachers. The unprecedented capacity of LLM-based applications to understand and generate natural language can potentially improve instructional effectiveness and learning outcomes, but the integration of LLMs in education technology has renewed concerns over algorithmic bias which may exacerbate educational inequities. In this review, building on prior work on mapping the traditional machine learning life cycle, we provide a holistic map of the LLM life cycle from the initial development of LLMs to customizing pre-trained models for various applications in educational settings. We explain each step in the LLM life cycle and identify potential sources of bias that may arise in the context of education. We discuss why current measures of bias from traditional machine learning fail to transfer to LLM-generated content in education, such as tutoring conversations because the text is high-dimensional, there can be multiple correct responses, and tailoring responses may be pedagogically desirable rather than unfair. This review aims to clarify the complex nature of bias in LLM applications and provide practical guidance for their evaluation to promote educational equity.",
+      "citations": 4
+    },
+    {
+      "title": "LogicTree: Structured Proof Exploration for Coherent and Rigorous Logical Reasoning with Large Language Models",
+      "year": 2025,
+      "authors": "Kang He, Kaushik Roy",
+      "url": "https://api.semanticscholar.org/CorpusId:277954753",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) have achieved remarkable multi-step reasoning capabilities across various domains. However, LLMs still face distinct challenges in complex logical reasoning, as (1) proof-finding requires systematic exploration and the maintenance of logical coherence and (2) searching the right combination of premises at each reasoning step is inherently challenging in tasks with large premise space. To address this, we propose LogicTree, an inference-time modular framework employing algorithm-guided search to automate structured proof exploration and ensure logical coherence. Advancing beyond tree-of-thought (ToT), we incorporate caching mechanism into LogicTree to enable effective utilization of historical knowledge, preventing reasoning stagnation and minimizing redundancy. Furthermore, we address the combinatorial complexity of premise search by decomposing it into a linear process. The refined premise selection restricts subsequent inference to at most one derivation per step, enhancing reasoning granularity and enforcing strict step-by-step reasoning. Additionally, we introduce two LLM-free heuristics for premise prioritization, enabling strategic proof search. Experimental results on five datasets demonstrate that LogicTree optimally scales inference-time computation to achieve higher proof accuracy, surpassing chain-of-thought (CoT) and ToT with average gains of 23.6% and 12.5%, respectively, on GPT-4o. Moreover, within LogicTree, GPT-4o outperforms o3-mini by 7.6% on average.",
+      "citations": 0
+    }
+  ]
+}
+
+Results saved to: paper_search_results/LLM_loopholes_20260518_005210.jsonl

@@ -1,0 +1,683 @@
+{
+  "success": true,
+  "total": 75,
+  "papers": [
+    {
+      "title": "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models",
+      "year": 2023,
+      "authors": "Yue Zhang, Yafu Li, Leyang Cui, Deng Cai, Lemao Liu, Tingchen Fu, Xinting Huang, Enbo Zhao, Yu Zhang, Yulong Chen, Longyue Wang, A. Luu, Wei Bi, Freda Shi, Shuming Shi",
+      "url": "https://api.semanticscholar.org/CorpusId:261530162",
+      "relevance": 3,
+      "abstract": "\n While large language models (LLMs) have demonstrated remarkable capabilities across a range of downstream tasks, a significant concern revolves around their propensity to exhibit hallucinations: LLMs occasionally generate content that diverges from the user input, contradicts previously generated context, or misaligns with established world knowledge. This phenomenon poses a substantial challenge to the reliability of LLMs in real-world scenarios. In this paper, we survey recent efforts on the detection, explanation, and mitigation of hallucination, with an emphasis on the unique challenges posed by LLMs. We present taxonomies of the LLM hallucination phenomena and evaluation benchmarks, analyze existing approaches aiming at mitigating LLM hallucination, and discuss potential directions for future research.",
+      "citations": 990
+    },
+    {
+      "title": "The Internal State of an LLM Knows When its Lying",
+      "year": 2023,
+      "authors": "A. Azaria, Tom M. Mitchell",
+      "url": "https://www.semanticscholar.org/paper/f406aceba4f29cc7cfbe7edb2f52f01374486589",
+      "relevance": 3,
+      "abstract": "While Large Language Models (LLMs) have shown exceptional performance in various tasks, one of their most prominent drawbacks is generating inaccurate or false information with a confident tone. In this paper, we provide evidence that the LLM's internal state can be used to reveal the truthfulness of statements. This includes both statements provided to the LLM, and statements that the LLM itself generates. Our approach is to train a classifier that outputs the probability that a statement is truthful, based on the hidden layer activations of the LLM as it reads or generates the statement. Experiments demonstrate that given a set of test sentences, of which half are true and half false, our trained classifier achieves an average of 71\\% to 83\\% accuracy labeling which sentences are true versus false, depending on the LLM base model. Furthermore, we explore the relationship between our classifier's performance and approaches based on the probability assigned to the sentence by the LLM. We show that while LLM-assigned sentence probability is related to sentence truthfulness, this probability is also dependent on sentence length and the frequencies of words in the sentence, resulting in our trained classifier providing a more reliable approach to detecting truthfulness, highlighting its potential to enhance the reliability of LLM-generated content and its practical applicability in real-world scenarios.",
+      "citations": 638
+    },
+    {
+      "title": "LLMs Know More Than They Show: On the Intrinsic Representation of LLM Hallucinations",
+      "year": 2024,
+      "authors": "Hadas Orgad, Michael Toker, Zorik Gekhman, Roi Reichart, Idan Szpektor, Hadas Kotek, Yonatan Belinkov",
+      "url": "https://api.semanticscholar.org/CorpusId:273098472",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) often produce errors, including factual inaccuracies, biases, and reasoning failures, collectively referred to as\"hallucinations\". Recent studies have demonstrated that LLMs' internal states encode information regarding the truthfulness of their outputs, and that this information can be utilized to detect errors. In this work, we show that the internal representations of LLMs encode much more information about truthfulness than previously recognized. We first discover that the truthfulness information is concentrated in specific tokens, and leveraging this property significantly enhances error detection performance. Yet, we show that such error detectors fail to generalize across datasets, implying that -- contrary to prior claims -- truthfulness encoding is not universal but rather multifaceted. Next, we show that internal representations can also be used for predicting the types of errors the model is likely to make, facilitating the development of tailored mitigation strategies. Lastly, we reveal a discrepancy between LLMs' internal encoding and external behavior: they may encode the correct answer, yet consistently generate an incorrect one. Taken together, these insights deepen our understanding of LLM errors from the model's internal perspective, which can guide future research on enhancing error analysis and mitigation.",
+      "citations": 195
+    },
+    {
+      "title": "Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models",
+      "year": 2024,
+      "authors": "Matthew Dahl, Varun Magesh, Mirac Suzgun, Daniel E. Ho",
+      "url": "https://api.semanticscholar.org/CorpusId:266725450",
+      "relevance": 3,
+      "abstract": "\n Do large language models (LLMs) know the law? LLMs are increasingly being used to augment legal practice, education, and research, yet their revolutionary potential is threatened by the presence of \u201challucinations\u201d\u2014textual output that is not consistent with legal facts. We present the first systematic evidence of these hallucinations in public-facing LLMs, documenting trends across jurisdictions, courts, time periods, and cases. Using OpenAI\u2019s ChatGPT 4 and other public models, we show that LLMs hallucinate at least 58% of the time, struggle to predict their own hallucinations, and often uncritically accept users\u2019 incorrect legal assumptions. We conclude by cautioning against the rapid and unsupervised integration of popular LLMs into legal tasks, and we develop a typology of legal hallucinations to guide future research in this area.",
+      "citations": 224
+    },
+    {
+      "title": "Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation",
+      "year": 2024,
+      "authors": "Xiaoying Zhang, Baolin Peng, Ye Tian, Jingyan Zhou, Lifeng Jin, Linfeng Song, Haitao Mi, Helen M. Meng",
+      "url": "https://www.semanticscholar.org/paper/32c5b515cab893e5e4bf3f90c8b6c8262bd7ac09",
+      "relevance": 3,
+      "abstract": "Despite showing increasingly human-like abilities, large language models (LLMs) often struggle with factual inaccuracies, i.e.\"hallucinations\", even when they hold relevant knowledge. To address these hallucinations, current approaches typically necessitate high-quality human factuality annotations. In this work, we explore Self-Alignment for Factuality, where we leverage the self-evaluation capability of an LLM to provide training signals that steer the model towards factuality. Specifically, we incorporate Self-Eval, a self-evaluation component, to prompt an LLM to validate the factuality of its own generated responses solely based on its internal knowledge. Additionally, we design Self-Knowledge Tuning (SK-Tuning) to augment the LLM's self-evaluation ability by improving the model's confidence estimation and calibration. We then utilize these self-annotated responses to fine-tune the model via Direct Preference Optimization algorithm. We show that the proposed self-alignment approach substantially enhances factual accuracy over Llama family models across three key knowledge-intensive tasks on TruthfulQA and BioGEN.",
+      "citations": 107
+    },
+    {
+      "title": "Do LLMs Know about Hallucination? An Empirical Investigation of LLM's Hidden States",
+      "year": 2024,
+      "authors": "Hanyu Duan, Yi Yang, K. Tam",
+      "url": "https://api.semanticscholar.org/CorpusId:267682191",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) can make up answers that are not real, and this is known as hallucination. This research aims to see if, how, and to what extent LLMs are aware of hallucination. More specifically, we check whether and how an LLM reacts differently in its hidden states when it answers a question right versus when it hallucinates. To do this, we introduce an experimental framework which allows examining LLM's hidden states in different hallucination situations. Building upon this framework, we conduct a series of experiments with language models in the LLaMA family (Touvron et al., 2023). Our empirical findings suggest that LLMs react differently when processing a genuine response versus a fabricated one. We then apply various model interpretation techniques to help understand and explain the findings better. Moreover, informed by the empirical observations, we show great potential of using the guidance derived from LLM's hidden representation space to mitigate hallucination. We believe this work provides insights into how LLMs produce hallucinated answers and how to make them occur less often.",
+      "citations": 59
+    },
+    {
+      "title": "LLM Internal States Reveal Hallucination Risk Faced With a Query",
+      "year": 2024,
+      "authors": "Ziwei Ji, Delong Chen, Etsuko Ishii, Samuel Cahyawijaya, Yejin Bang, Bryan Wilie, Pascale Fung",
+      "url": "https://api.semanticscholar.org/CorpusId:270923744",
+      "relevance": 3,
+      "abstract": "The hallucination problem of Large Language Models (LLMs) significantly limits their reliability and trustworthiness. Humans have a self-awareness process that allows us to recognize what we don\u2019t know when faced with queries. Inspired by this, our paper investigates whether LLMs can estimate their own hallucination risk before response generation. We analyze the internal mechanisms of LLMs broadly both in terms of training data sources and across 15 diverse Natural Language Generation (NLG) tasks, spanning over 700 datasets. Our empirical analysis reveals two key insights: (1) LLM internal states indicate whether they have seen the query in training data or not; and (2) LLM internal states show they are likely to hallucinate or not regarding the query. Our study explores particular neurons, activation layers, and tokens that play a crucial role in the LLM perception of uncertainty and hallucination risk. By a probing estimator, we leverage LLM self-assessment, achieving an average hallucination estimation accuracy of 84.32% at run time.",
+      "citations": 85
+    },
+    {
+      "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+      "year": 2024,
+      "authors": "Jannik Kossen, Jiatong Han, Muhammed Razzak, L. Schut, Shreshth A. Malik, Y. Gal",
+      "url": "https://api.semanticscholar.org/CorpusId:270703114",
+      "relevance": 3,
+      "abstract": "We propose semantic entropy probes (SEPs), a cheap and reliable method for uncertainty quantification in Large Language Models (LLMs). Hallucinations, which are plausible-sounding but factually incorrect and arbitrary model generations, present a major challenge to the practical adoption of LLMs. Recent work by Farquhar et al. (2024) proposes semantic entropy (SE), which can detect hallucinations by estimating uncertainty in the space semantic meaning for a set of model generations. However, the 5-to-10-fold increase in computation cost associated with SE computation hinders practical adoption. To address this, we propose SEPs, which directly approximate SE from the hidden states of a single generation. SEPs are simple to train and do not require sampling multiple model generations at test time, reducing the overhead of semantic uncertainty quantification to almost zero. We show that SEPs retain high performance for hallucination detection and generalize better to out-of-distribution data than previous probing methods that directly predict model accuracy. Our results across models and tasks suggest that model hidden states capture SE, and our ablation studies give further insights into the token positions and model layers for which this is the case.",
+      "citations": 185
+    },
+    {
+      "title": "Can AI Assistants Know What They Don't Know?",
+      "year": 2024,
+      "authors": "Qinyuan Cheng, Tianxiang Sun, Xiangyang Liu, Wenwei Zhang, Zhangyue Yin, Shimin Li, Linyang Li, Kai Chen, Xipeng Qiu",
+      "url": "https://www.semanticscholar.org/paper/541958c384c3356c2da798344600b2a07482e035",
+      "relevance": 3,
+      "abstract": "Recently, AI assistants based on large language models (LLMs) show surprising performance in many tasks, such as dialogue, solving math problems, writing code, and using tools. Although LLMs possess intensive world knowledge, they still make factual errors when facing some knowledge intensive tasks, like open-domain question answering. These untruthful responses from the AI assistant may cause significant risks in practical applications. We believe that an AI assistant's refusal to answer questions it does not know is a crucial method for reducing hallucinations and making the assistant truthful. Therefore, in this paper, we ask the question\"Can AI assistants know what they don't know and express them through natural language?\"To answer this question, we construct a model-specific\"I don't know\"(Idk) dataset for an assistant, which contains its known and unknown questions, based on existing open-domain question answering datasets. Then we align the assistant with its corresponding Idk dataset and observe whether it can refuse to answer its unknown questions after alignment. Experimental results show that after alignment with Idk datasets, the assistant can refuse to answer most its unknown questions. For questions they attempt to answer, the accuracy is significantly higher than before the alignment.",
+      "citations": 48
+    },
+    {
+      "title": "Usable XAI: 10 Strategies Towards Exploiting Explainability in the LLM Era",
+      "year": 2024,
+      "authors": "Xuansheng Wu, Haiyan Zhao, Yaochen Zhu, Yucheng Shi, Fan Yang, Tianming Liu, Xiaoming Zhai, Wenlin Yao, Jundong Li, Mengnan Du, Ninghao Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:268384976",
+      "relevance": 3,
+      "abstract": "Explainable AI (XAI) refers to techniques that provide human-understandable insights into the workings of AI models. Recently, the focus of XAI is being extended toward explaining Large Language Models (LLMs). This extension calls for a significant transformation in the XAI methodologies for two reasons. First, many existing XAI methods cannot be directly applied to LLMs due to their complexity and advanced capabilities. Second, as LLMs are increasingly deployed in diverse applications, the role of XAI shifts from merely opening the ``black box'' to actively enhancing the productivity and applicability of LLMs in real-world settings. Meanwhile, the conversation and generation abilities of LLMs can reciprocally enhance XAI. Therefore, in this paper, we introduce Usable XAI in the context of LLMs by analyzing (1) how XAI can explain and improve LLM-based AI systems and (2) how XAI techniques can be improved by using LLMs. We introduce 10 strategies, introducing the key techniques for each and discussing their associated challenges. We also provide case studies to demonstrate how to obtain and leverage explanations. The code used in this paper can be found at: https://github.com/JacksonWuxs/UsableXAI_LLM.",
+      "citations": 86
+    },
+    {
+      "title": "Trust Me, I'm Wrong: LLMs Hallucinate with Certainty Despite Knowing the Answer",
+      "year": 2025,
+      "authors": "Adi Simhi, Itay Itzhak, Fazl Barez, Gabriel Stanovsky, Yonatan Belinkov",
+      "url": "https://api.semanticscholar.org/CorpusId:280711135",
+      "relevance": 3,
+      "abstract": "Prior work on large language model (LLM) hallucinations has associated them with model uncertainty or inaccurate knowledge. In this work, we define and investigate a distinct type of hallucination, where a model can consistently answer a question correctly, but a seemingly trivial perturbation, which can happen in real-world settings, causes it to produce a hallucinated response with high certainty. This phenomenon, which we dub CHOKE (Certain Hallucinations Overriding Known Evidence), is particularly concerning in high-stakes domains such as medicine or law, where model certainty is often used as a proxy for reliability. We show that CHOKE examples are consistent across prompts, occur in different models and datasets, and are fundamentally distinct from other hallucinations. This difference leads existing mitigation methods to perform worse on CHOKE examples than on general hallucinations. Finally, we introduce a probing-based mitigation that outperforms existing methods on CHOKE hallucinations. These findings reveal an overlooked aspect of hallucinations, emphasizing the need to understand their origins and improve mitigation strategies to enhance LLM safety. The code is available at https://github.com/technion-cs-nlp/Trust_me_Im_wrong .",
+      "citations": 11
+    },
+    {
+      "title": "Learn to Refuse: Making Large Language Models More Controllable and Reliable through Knowledge Scope Limitation and Refusal Mechanism",
+      "year": 2023,
+      "authors": "Lang Cao",
+      "url": "https://api.semanticscholar.org/CorpusId:264935057",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) have demonstrated impressive language understanding and generation capabilities, enabling them to answer a wide range of questions across various domains. However, these models are not flawless and often produce responses that contain errors or misinformation. These inaccuracies, commonly referred to as hallucinations, render LLMs unreliable and even unusable in many scenarios. In this paper, our focus is on mitigating the issue of hallucination in LLMs, particularly in the context of question-answering. Instead of attempting to answer all questions, we explore a refusal mechanism that instructs LLMs to refuse to answer challenging questions in order to avoid errors. We then propose a simple yet effective solution called Learn to Refuse (L2R), which incorporates the refusal mechanism to enable LLMs to recognize and refuse to answer questions that they find difficult to address. To achieve this, we utilize a structured knowledge base to represent all the LLM\u2019s understanding of the world, enabling it to provide traceable gold knowledge. This knowledge base is separate from the LLM and initially empty. It can be filled with validated knowledge and progressively expanded. When an LLM encounters questions outside its domain, the system recognizes its knowledge scope and determines whether it can answer the question independently. Additionally, we introduce a method for automatically and efficiently expanding the knowledge base of LLMs. Through qualitative and quantitative analysis, we demonstrate that our approach enhances the controllability and reliability of LLMs.",
+      "citations": 41
+    },
+    {
+      "title": "Mitigating Low-Level Visual Hallucinations Requires Self-Awareness: Database, Model, and Training Strategy",
+      "year": 2025,
+      "authors": "Yinan Sun, Xiongkuo Min, Zicheng Zhang, Yixuan Gao, Y. Cao, Guangtao Zhai",
+      "url": "https://api.semanticscholar.org/CorpusId:277322595",
+      "relevance": 3,
+      "abstract": "The rapid development of multimodal large language models has resulted in remarkable advancements in visual perception and understanding, consolidating several tasks into a single visual question-answering framework. However, these models are prone to hallucinations, which limit their reliability as artificial intelligence systems. While this issue is extensively researched in natural language processing and image captioning, there remains a lack of investigation of hallucinations in Low-level Visual Perception and Understanding (HLPU), especially in the context of image quality assessment tasks. We consider that these hallucinations arise from an absence of clear self-awareness within the models. To address this issue, we first introduce the HLPU instruction database, the first instruction database specifically focused on hallucinations in low-level vision tasks. This database contains approximately 200K question-answer pairs and comprises four subsets, each covering different types of instructions. Subsequently, we propose the Self-Awareness Failure Elimination (SAFEQA) model, which utilizes image features, salient region features and quality features to improve the perception and comprehension abilities of the model in low-level vision tasks. Furthermore, we propose the Enhancing Self-Awareness Preference Optimization (ESA-PO) framework to increase the model\u2019s awareness of knowledge boundaries, thereby mitigating the incidence of hallucination. Finally, we conduct comprehensive experiments on low-level vision tasks, with the results demonstrating that our proposed method significantly enhances self-awareness of the model in these tasks and reduces hallucinations. Notably, our proposed method improves both accuracy and self-awareness of the proposed model and outperforms close-source models in terms of various evaluation metrics. This research contributes to the advancement of self-awareness capabilities in multimodal large language models, particularly for low-level visual perception and understanding tasks.",
+      "citations": 3
+    },
+    {
+      "title": "Into the Unknown: Self-Learning Large Language Models",
+      "year": 2024,
+      "authors": "Teddy Ferdinan, Jan Kocon, Przemyslaw Kazienko",
+      "url": "https://api.semanticscholar.org/CorpusId:267658152",
+      "relevance": 3,
+      "abstract": "We address the main problem of self-learning LLM: the question of what to learn. We propose a self-learning LLM framework that enables an LLM to independently learn previously unknown knowledge through self-assessment of their own hallucinations. We introduce a concept called Point in the Unknown (PiU) to identify atomic knowledge unknown to a model, along with four methods for automatic PiUs identification, facilitating the creation of a self-learning loop that focuses exclusively on the absorption of currently unknown knowledge into the model. Additionally, we developed evaluation metrics to gauge an LLM's self-learning capability. Our experiments revealed that LLMs with at least 3B parameters that have undergone some instruction training would be able to perform self-learning well. We further proved the effectiveness of self-learning by comparing the performance of a model that has undergone self-learning to a model that has not. Our self-learning concept allows more efficient LLM updates and opens new perspectives for LLM knowledge exchange.",
+      "citations": 6
+    },
+    {
+      "title": "HACK: Hallucinations Along Certainty and Knowledge Axes",
+      "year": 2025,
+      "authors": "Adi Simhi, Jonathan Herzig, Itay Itzhak, Dana Arad, Zorik Gekhman, Roi Reichart, Fazl Barez, Gabriel Stanovsky, Idan Szpektor, Yonatan Belinkov",
+      "url": "https://api.semanticscholar.org/CorpusId:282401533",
+      "relevance": 3,
+      "abstract": "Hallucinations in LLMs present a critical barrier to their reliable usage. Existing research usually categorizes hallucination by their external properties rather than by the LLMs'underlying internal properties. This external focus overlooks that hallucinations may require tailored mitigation strategies based on their underlying mechanism. We propose a framework for categorizing hallucinations along two axes: knowledge and certainty. Since parametric knowledge and certainty may vary across models, our categorization method involves a model-specific dataset construction process that differentiates between those types of hallucinations. Along the knowledge axis, we distinguish between hallucinations caused by a lack of knowledge and those occurring despite the model having the knowledge of the correct response. To validate our framework along the knowledge axis, we apply steering mitigation, which relies on the existence of parametric knowledge to manipulate model activations. This addresses the lack of existing methods to validate knowledge categorization by showing a significant difference between the two hallucination types. We further analyze the distinct knowledge and hallucination patterns between models, showing that different hallucinations do occur despite shared parametric knowledge. Turning to the certainty axis, we identify a particularly concerning subset of hallucinations where models hallucinate with certainty despite having the correct knowledge internally. We introduce a new evaluation metric to measure the effectiveness of mitigation methods on this subset, revealing that while some methods perform well on average, they fail disproportionately on these critical cases. Our findings highlight the importance of considering both knowledge and certainty in hallucination analysis and call for targeted mitigation approaches that consider the hallucination underlying factors.",
+      "citations": 6
+    },
+    {
+      "title": "Teaching Large Language Models to Express Knowledge Boundary from Their Own Signals",
+      "year": 2024,
+      "authors": "Lida Chen, Zujie Liang, Xintao Wang, Jiaqing Liang, Yanghua Xiao, Feng Wei, Jinglei Chen, Zhenghong Hao, Bing Han, Wei Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:270559907",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) have achieved great success, but their occasional content fabrication, or hallucination, limits their practical application. Hallucination arises because LLMs struggle to admit ignorance due to inadequate training on knowledge boundaries. We call it a limitation of LLMs that they can not accurately express their knowledge boundary, answering questions they know while admitting ignorance to questions they do not know. In this paper, we aim to teach LLMs to recognize and express their knowledge boundary, so they can reduce hallucinations caused by fabricating when they do not know. We propose CoKE, which first probes LLMs' knowledge boundary via internal confidence given a set of questions, and then leverages the probing results to elicit the expression of the knowledge boundary. Extensive experiments show CoKE helps LLMs express knowledge boundaries, answering known questions while declining unknown ones, significantly improving in-domain and out-of-domain performance.",
+      "citations": 31
+    },
+    {
+      "title": "Refine Knowledge of Large Language Models via Adaptive Contrastive Learning",
+      "year": 2025,
+      "authors": "Yinghui Li, Haojing Huang, Jiayi Kuang, Yangning Li, Shu-Yu Guo, Chao Qu, Xiaoyu Tan, Hai-Tao Zheng, Ying Shen, Philip S. Yu",
+      "url": "https://api.semanticscholar.org/CorpusId:276259437",
+      "relevance": 3,
+      "abstract": "How to alleviate the hallucinations of Large Language Models (LLMs) has always been the fundamental goal pursued by the LLMs research community. Looking through numerous hallucination-related studies, a mainstream category of methods is to reduce hallucinations by optimizing the knowledge representation of LLMs to change their output. Considering that the core focus of these works is the knowledge acquired by models, and knowledge has long been a central theme in human societal progress, we believe that the process of models refining knowledge can greatly benefit from the way humans learn. In our work, by imitating the human learning process, we design an Adaptive Contrastive Learning strategy. Our method flexibly constructs different positive and negative samples for contrastive learning based on LLMs' actual mastery of knowledge. This strategy helps LLMs consolidate the correct knowledge they already possess, deepen their understanding of the correct knowledge they have encountered but not fully grasped, forget the incorrect knowledge they previously learned, and honestly acknowledge the knowledge they lack. Extensive experiments and detailed analyses on widely used datasets demonstrate the effectiveness of our method.",
+      "citations": 18
+    },
+    {
+      "title": "MM-SAP: A Comprehensive Benchmark for Assessing Self-Awareness of Multimodal Large Language Models in Perception",
+      "year": 2024,
+      "authors": "Yuhao Wang, Yusheng Liao, Heyang Liu, Hongcheng Liu, Yu Wang, Yanfeng Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:266999192",
+      "relevance": 3,
+      "abstract": "Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated exceptional capabilities in visual perception and understanding. However, these models also suffer from hallucinations, which limit their reliability as AI systems. We believe that these hallucinations are partially due to the models' struggle with understanding what they can and cannot perceive from images, a capability we refer to as self-awareness in perception. Despite its importance, this aspect of MLLMs has been overlooked in prior studies. In this paper, we aim to define and evaluate the self-awareness of MLLMs in perception. To do this, we first introduce the knowledge quadrant in perception, which helps define what MLLMs know and do not know about images. Using this framework, we propose a novel benchmark, the Self-Awareness in Perception for MLLMs (MM-SAP), specifically designed to assess this capability. We apply MM-SAP to a variety of popular MLLMs, offering a comprehensive analysis of their self-awareness and providing detailed insights. The experiment results reveal that current MLLMs possess limited self-awareness capabilities, pointing to a crucial area for future advancement in the development of trustworthy MLLMs. Code and data are available at https://github.com/YHWmz/MM-SAP.",
+      "citations": 20
+    },
+    {
+      "title": "A Survey on the Honesty of Large Language Models",
+      "year": 2024,
+      "authors": "Siheng Li, Cheng Yang, Taiqiang Wu, Chufan Shi, Yuji Zhang, Xinyu Zhu, Zesen Cheng, Deng Cai, Mo Yu, Lemao Liu, Jie Zhou, Yujiu Yang, Ngai Wong, Xixin Wu, Wai Lam",
+      "url": "https://api.semanticscholar.org/CorpusId:272969457",
+      "relevance": 3,
+      "abstract": "Honesty is a fundamental principle for aligning large language models (LLMs) with human values, requiring these models to recognize what they know and don't know and be able to faithfully express their knowledge. Despite promising, current LLMs still exhibit significant dishonest behaviors, such as confidently presenting wrong answers or failing to express what they know. In addition, research on the honesty of LLMs also faces challenges, including varying definitions of honesty, difficulties in distinguishing between known and unknown knowledge, and a lack of comprehensive understanding of related research. To address these issues, we provide a survey on the honesty of LLMs, covering its clarification, evaluation approaches, and strategies for improvement. Moreover, we offer insights for future research, aiming to inspire further exploration in this important area.",
+      "citations": 23
+    },
+    {
+      "title": "A Head to Predict and a Head to Question: Pre-trained Uncertainty Quantification Heads for Hallucination Detection in LLM Outputs",
+      "year": 2025,
+      "authors": "Artem Shelmanov, Ekaterina Fadeeva, A. Tsvigun, Ivan Tsvigun, Zhuohan Xie, Igor Kiselev, Nico Daheim, Caiqi Zhang, Artem Vazhentsev, Mrinmaya Sachan, Preslav Nakov, Timothy Baldwin",
+      "url": "https://api.semanticscholar.org/CorpusId:278535277",
+      "relevance": 3,
+      "abstract": "Large Language Models (LLMs) have the tendency to hallucinate, i.e., to sporadically generate false or fabricated information. This presents a major challenge, as hallucinations often appear highly convincing and users generally lack the tools to detect them. Uncertainty quantification (UQ) provides a framework for assessing the reliability of model outputs, aiding in the identification of potential hallucinations. In this work, we introduce pre-trained UQ heads: supervised auxiliary modules for LLMs that substantially enhance their ability to capture uncertainty compared to unsupervised UQ methods. Their strong performance stems from the powerful Transformer architecture in their design and informative features derived from LLM attention maps. Experimental evaluation shows that these heads are highly robust and achieve state-of-the-art performance in claim-level hallucination detection across both in-domain and out-of-domain prompts. Moreover, these modules demonstrate strong generalization to languages they were not explicitly trained on. We pre-train a collection of UQ heads for popular LLM series, including Mistral, Llama, and Gemma 2. We publicly release both the code and the pre-trained heads.",
+      "citations": 17
+    },
+    {
+      "title": "Parametric Knowledge is Not All You Need: Toward Honest Large Language Models via Retrieval of Pretraining Data",
+      "year": 2026,
+      "authors": "Christopher Adrian Kusuma, Muhammad Reza Qorib, Hwee Tou Ng",
+      "url": "https://api.semanticscholar.org/CorpusId:285140567",
+      "relevance": 3,
+      "abstract": "Large language models (LLMs) are highly capable of answering questions, but they are often unaware of their own knowledge boundary, i.e., knowing what they know and what they don't know. As a result, they can generate factually incorrect responses on topics they do not have enough knowledge of, commonly known as hallucination. Rather than hallucinating, a language model should be more honest and respond with\"I don't know\"when it does not have enough knowledge about a topic. Many methods have been proposed to improve LLM honesty, but their evaluations lack robustness, as they do not take into account the knowledge that the LLM has ingested during its pretraining. In this paper, we propose a more robust evaluation benchmark dataset for LLM honesty by utilizing Pythia, a truly open LLM with publicly available pretraining data. In addition, we also propose a novel method for harnessing the pretraining data to build a more honest LLM.",
+      "citations": 0
+    },
+    {
+      "title": "Theoretical Foundations and Mitigation of Hallucination in Large Language Models",
+      "year": 2025,
+      "authors": "Esmail Atta Gumaan",
+      "url": "https://api.semanticscholar.org/CorpusId:280401722",
+      "relevance": 3,
+      "abstract": "Hallucination in Large Language Models (LLMs) refers to the generation of content that is not faithful to the input or the real-world facts. This paper provides a rigorous treatment of hallucination in LLMs, including formal definitions and theoretical analyses. We distinguish between intrinsic and extrinsic hallucinations, and define a \\textit{hallucination risk} for models. We derive bounds on this risk using learning-theoretic frameworks (PAC-Bayes and Rademacher complexity). We then survey detection strategies for hallucinations, such as token-level uncertainty estimation, confidence calibration, and attention alignment checks. On the mitigation side, we discuss approaches including retrieval-augmented generation, hallucination-aware fine-tuning, logit calibration, and the incorporation of fact-verification modules. We propose a unified detection and mitigation workflow, illustrated with a diagram, to integrate these strategies. Finally, we outline evaluation protocols for hallucination, recommending datasets, metrics, and experimental setups to quantify and reduce hallucinations. Our work lays a theoretical foundation and practical guidelines for addressing the crucial challenge of hallucination in LLMs.",
+      "citations": 4
+    },
+    {
+      "title": "DRIFT: Detecting Representational Inconsistencies for Factual Truthfulness",
+      "year": 2026,
+      "authors": "Rohan Bhatnagar, Youran Sun, Chi Zhang, Yixin Wen, Haizhao Yang",
+      "url": "https://api.semanticscholar.org/CorpusId:284912335",
+      "relevance": 3,
+      "abstract": "LLMs often produce fluent but incorrect answers, yet detecting such hallucinations typically requires multiple sampling passes or post-hoc verification, adding significant latency and cost. We hypothesize that intermediate layers encode confidence signals that are lost in the final output layer, and propose a lightweight probe to read these signals directly from hidden states. The probe adds less than 0.1\\% computational overhead and can run fully in parallel with generation, enabling hallucination detection before the answer is produced. Building on this, we develop an LLM router that answers confident queries immediately while delegating uncertain ones to stronger models. Despite its simplicity, our method achieves SOTA AUROC on 10 out of 12 settings across four QA benchmarks and three LLM families, with gains of up to 13 points over prior methods, and generalizes across dataset shifts without retraining.",
+      "citations": 0
+    },
+    {
+      "title": "ConfRAG: Confidence-Guided Retrieval-Augmenting Generation",
+      "year": 2025,
+      "authors": "Yin Huang, Y. Xu, Kai Sun, Vera Yan, Alicia Sun, Haidar Khan, Jimmy Nguyen, Jingxiang Chen, Mohammad Kachuee, Zhaojiang Lin, Yue Liu, Aaron Colak, Anuj Kumar, Wen-tau Yih, Xin Dong",
+      "url": "https://api.semanticscholar.org/CorpusId:279251501",
+      "relevance": 3,
+      "abstract": "Can Large Language Models (LLMs) be trained to avoid hallucinating factual statements, and can Retrieval-Augmented Generation (RAG) be triggered only when necessary to reduce retrieval and computation costs? In this work, we address both challenges simultaneously. We introduce ConfQA, a fine-tuning strategy that reduces hallucination rates from 20-40% to below 5% across multiple factuality benchmarks. The approach is simple: when the model answers correctly, it is trained to output the answer; otherwise, it is trained to respond with\"I am unsure\". Two design choices make this training effective: (1) a dampening prompt (\"answer only if you are confident\") that explicitly discourages overconfident hallucinations, and (2) training data drawn from atomic factual statements (e.g., knowledge graph attribute values), which calibrates model confidence and yields robust generalization across domains and question types. Building on ConfQA, we propose ConfRAG, a triggering strategy that invokes RAG only when the model responses with unsure. This framework achieves accuracy above 95% in ideal case while reducing unnecessary external retrievals by over 30%.",
+      "citations": 1
+    },
+    {
+      "title": "Automatic Curriculum Expert Iteration for Reliable LLM Reasoning",
+      "year": 2024,
+      "authors": "Zirui Zhao, Hanze Dong, Amrita Saha, Caiming Xiong, Doyen Sahoo",
+      "url": "https://api.semanticscholar.org/CorpusId:273233951",
+      "relevance": 3,
+      "abstract": "Hallucinations (i.e., generating plausible but inaccurate content) and laziness (i.e. excessive refusals or defaulting to\"I don't know\") persist as major challenges in LLM reasoning. Current efforts to reduce hallucinations primarily focus on factual errors in knowledge-grounded tasks, often neglecting hallucinations related to faulty reasoning. Meanwhile, some approaches render LLMs overly conservative, limiting their problem-solving capabilities. To mitigate hallucination and laziness in reasoning tasks, we propose Automatic Curriculum Expert Iteration (Auto-CEI) to enhance LLM reasoning and align responses to the model's capabilities--assertively answering within its limits and declining when tasks exceed them. In our method, Expert Iteration explores the reasoning trajectories near the LLM policy, guiding incorrect paths back on track to reduce compounding errors and improve robustness; it also promotes appropriate\"I don't know\"responses after sufficient reasoning attempts. The curriculum automatically adjusts rewards, incentivizing extended reasoning before acknowledging incapability, thereby pushing the limits of LLM reasoning and aligning its behaviour with these limits. We compare Auto-CEI with various SOTA baselines across logical reasoning, mathematics, and planning tasks, where Auto-CEI achieves superior alignment by effectively balancing assertiveness and conservativeness. The code is available at https://github.com/SalesforceAIResearch/Auto-CEI .",
+      "citations": 13
+    },
+    {
+      "title": "A Survey on AgentOps: Categorization, Challenges, and Future Directions",
+      "year": 2025,
+      "authors": "Zexin Wang, Jingjing Li, Quan Zhou, Haotian Si, Yuanhao Liu, Jianhui Li, Gaogang Xie, Fei Sun, Dan Pei, Changhua Pei",
+      "url": "https://api.semanticscholar.org/CorpusId:280421141",
+      "relevance": 3,
+      "abstract": "As the reasoning capabilities of Large Language Models (LLMs) continue to advance, LLM-based agent systems offer advantages in flexibility and interpretability over traditional systems, garnering increasing attention. However, despite the widespread research interest and industrial application of agent systems, these systems, like their traditional counterparts, frequently encounter anomalies. These anomalies lead to instability and insecurity, hindering their further development. Therefore, a comprehensive and systematic approach to the operation and maintenance of agent systems is urgently needed. Unfortunately, current research on the operations of agent systems is sparse. To address this gap, we have undertaken a survey on agent system operations with the aim of establishing a clear framework for the field, defining the challenges, and facilitating further development. Specifically, this paper begins by systematically defining anomalies within agent systems, categorizing them into intra-agent anomalies and inter-agent anomalies. Next, we introduce a novel and comprehensive operational framework for agent systems, dubbed Agent System Operations (AgentOps). We provide detailed definitions and explanations of its four key stages: monitoring, anomaly detection, root cause analysis, and resolution.",
+      "citations": 0
+    },
+    {
+      "title": "Utilize the Flow before Stepping into the Same River Twice: Certainty Represented Knowledge Flow for Refusal-Aware Instruction Tuning",
+      "year": 2024,
+      "authors": "Runchuan Zhu, Zhipeng Ma, Jiang Wu, Junyuan Gao, Jiaqi Wang, Dahua Lin, Conghui He",
+      "url": "https://api.semanticscholar.org/CorpusId:273229524",
+      "relevance": 3,
+      "abstract": "Refusal-Aware Instruction Tuning (RAIT) enables Large Language Models (LLMs) to refuse to answer unknown questions. By modifying responses of unknown questions in the training data to refusal responses such as ''I don't know\", RAIT enhances the reliability of LLMs and reduces their hallucination. Generally, RAIT modifies training samples based on the correctness of the initial LLM's response. However, this crude approach can cause LLMs to excessively refuse answering questions they could have correctly answered, the problem we call over-refusal. In this paper, we explore two primary causes of over-refusal: Static conflict occurs when similar samples within the LLM\u2019s feature space receive differing supervision signals (original vs. modified ''I don't know\"). Dynamic conflict arises as the LLM's evolving knowledge during SFT enables it to answer previously unanswerable questions, but the now-answerable training samples still retain the original ''I don't know\" supervision signals from the initial LLM state, leading to inconsistencies. These conflicts cause the trained LLM to misclassify known questions as unknown, resulting in over-refusal. To address this issue, we introduce Certainty Represented Knowledge Flow for Refusal-Aware Instructions Tuning (CRaFT). CRaFT centers on two main contributions: First, we additionally incorporate response certainty to selectively filter and modify data, reducing static conflicts. Second, we implement preliminary rehearsal training to characterize changes in the LLM's knowledge state, which helps mitigate dynamic conflicts during the fine-tuning process. We conducted extensive experiments on open-ended question answering and multiple-choice question task. Experiment results show that CRaFT can improve LLM's overall performance during the RAIT process.",
+      "citations": 7
+    },
+    {
+      "title": "Spilled Energy in Large Language Models",
+      "year": 2026,
+      "authors": "Adrian Robert Minut, Hazem Dewidar, Iacopo Masi",
+      "url": "https://api.semanticscholar.org/CorpusId:285973229",
+      "relevance": 3,
+      "abstract": "We reinterpret the final Large Language Model (LLM) softmax classifier as an Energy-Based Model (EBM), decomposing the sequence-to-sequence probability chain into multiple interacting EBMs at inference. This principled approach allows us to track\"energy spills\"during decoding, which we empirically show correlate with factual errors, biases, and failures. Similar to Orgad et al. (2025), our method localizes the exact answer token and subsequently tests for hallucinations. Crucially, however, we achieve this without requiring trained probe classifiers or activation ablations. Instead, we introduce two completely training-free metrics derived directly from output logits: spilled energy, which captures the discrepancy between energy values across consecutive generation steps that should theoretically match, and marginalized energy, which is measurable at a single step. Evaluated on nine benchmarks across state-of-the-art LLMs (including LLaMA, Mistral, and Gemma) and on synthetic algebraic operations (Qwen3), our approach demonstrates robust, competitive hallucination detection and cross-task generalization. Notably, these results hold for both pretrained and instruction-tuned variants without introducing any training overhead. Code available at: github.com/OmnAI-Lab/spilled-energy",
+      "citations": 0
+    },
+    {
+      "title": "Do I Really Know? Learning Factual Self-Verification for Hallucination Reduction",
+      "year": 2026,
+      "authors": "Enes Altinisik, Masoomali Fatehkia, Fatih Deniz, Nadir Durrani, Majd Hawasly, Mohammad Raza, H. Sencar",
+      "url": "https://www.semanticscholar.org/paper/5c7f177c15f5d0c9d4da212b4c63b26550d928de",
+      "relevance": 3,
+      "abstract": "Factual hallucination remains a central challenge for large language models (LLMs). Existing mitigation approaches primarily rely on either external post-hoc verification or mapping uncertainty directly to abstention during fine-tuning, often resulting in overly conservative behavior. We propose VeriFY, a training-time framework that teaches LLMs to reason about factual uncertainty through consistency-based self-verification. VeriFY augments training with structured verification traces that guide the model to produce an initial answer, generate and answer a probing verification query, issue a consistency judgment, and then decide whether to answer or abstain. To address the risk of reinforcing hallucinated content when training on augmented traces, we introduce a stage-level loss masking approach that excludes hallucinated answer stages from the training objective while preserving supervision over verification behavior. Across multiple model families and scales, VeriFY reduces factual hallucination rates by 9.7 to 53.3 percent, with only modest reductions in recall (0.4 to 5.7 percent), and generalizes across datasets when trained on a single source. The source code, training data, and trained model checkpoints will be released upon acceptance.",
+      "citations": 0
+    },
+    {
+      "title": "Logprobs Know Uncertainty: Fighting LLM Hallucinations",
+      "year": 2025,
+      "authors": "Mengyao Xu, Qiaoyin Gan, Zhenyu Zhu, Hao Qin",
+      "url": "https://www.semanticscholar.org/paper/799a891a647d0e15a069b258dec91d0c3fdb54bc",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) excel in text generation but remain prone to hallucinations. Existing mitigation methods like Retrieval-Augmented Generation (RAG) and self-assessment face efficiency and bias limitations. We propose a novel logprob-based framework that proactively quantifies model uncertainty through two innovations: (1) integrating antonym candidates in token predictions, and (2) deriving uncertainty metrics from token-level logprobs. Experiments demonstrate our method effectively suppresses hallucinations while maintaining computational efficiency and transparency, offering a scalable solution for reliable LLM outputs.",
+      "citations": 2
+    },
+    {
+      "title": "ReDeEP: Detecting Hallucination in Retrieval-Augmented Generation via Mechanistic Interpretability",
+      "year": 2024,
+      "authors": "ZhongXiang Sun, Xiaoxue Zang, Kai Zheng, Yang Song, Jun Xu, Xiao Zhang, Weijie Yu, Han Li",
+      "url": "https://api.semanticscholar.org/CorpusId:273351469",
+      "relevance": 2,
+      "abstract": "Retrieval-Augmented Generation (RAG) models are designed to incorporate external knowledge, reducing hallucinations caused by insufficient parametric (internal) knowledge. However, even with accurate and relevant retrieved content, RAG models can still produce hallucinations by generating outputs that conflict with the retrieved information. Detecting such hallucinations requires disentangling how Large Language Models (LLMs) utilize external and parametric knowledge. Current detection methods often focus on one of these mechanisms or without decoupling their intertwined effects, making accurate detection difficult. In this paper, we investigate the internal mechanisms behind hallucinations in RAG scenarios. We discover hallucinations occur when the Knowledge FFNs in LLMs overemphasize parametric knowledge in the residual stream, while Copying Heads fail to effectively retain or integrate external knowledge from retrieved content. Based on these findings, we propose ReDeEP, a novel method that detects hallucinations by decoupling LLM's utilization of external context and parametric knowledge. Our experiments show that ReDeEP significantly improves RAG hallucination detection accuracy. Additionally, we introduce AARF, which mitigates hallucinations by modulating the contributions of Knowledge FFNs and Copying Heads.",
+      "citations": 88
+    },
+    {
+      "title": "On Early Detection of Hallucinations in Factual Question Answering",
+      "year": 2023,
+      "authors": "Ben Snyder, Marius Moisescu, Muhammad Bilal Zafar",
+      "url": "https://api.semanticscholar.org/CorpusId:266521062",
+      "relevance": 2,
+      "abstract": "While large language models (LLMs) have taken great strides towards helping humans with a plethora of tasks, hallucinations remain a major impediment towards gaining user trust. The fluency and coherence of model generations even when hallucinating makes detection a difficult task. In this work, we explore if the artifacts associated with the model generations can provide hints that the generation will contain hallucinations. Specifically, we probe LLMs at 1) the inputs via Integrated Gradients based token attribution, 2) the outputs via the Softmax probabilities, and 3) the internal state via self-attention and fully-connected layer activations for signs of hallucinations on open-ended question answering tasks. Our results show that the distributions of these artifacts tend to differ between hallucinated and non-hallucinated generations. Building on this insight, we train binary classifiers that use these artifacts as input features to classify model generations into hallucinations and non-hallucinations. These hallucination classifiers achieve up to 0.80 AUROC. We also show that tokens preceding a hallucination can already predict the subsequent hallucination even before it occurs.",
+      "citations": 69
+    },
+    {
+      "title": "Do LLMs Really Know What They Don't Know? Internal States Mainly Reflect Knowledge Recall Rather Than Truthfulness",
+      "year": 2025,
+      "authors": "Cheang Seng Chi, Hou Pong Chan, Wenxuan Zhang, Yang Deng",
+      "url": "https://api.semanticscholar.org/CorpusId:282056109",
+      "relevance": 2,
+      "abstract": "Recent work suggests that LLMs\"know what they don't know\", positing that hallucinated and factually correct outputs arise from distinct internal processes and can therefore be distinguished using internal signals. However, hallucinations have multifaceted causes: beyond simple knowledge gaps, they can emerge from training incentives that encourage models to exploit statistical shortcuts or spurious associations learned during pretraining. In this paper, we argue that when LLMs rely on such learned associations to produce hallucinations, their internal processes are mechanistically similar to those of factual recall, as both stem from strong statistical correlations encoded in the model's parameters. To verify this, we propose a novel taxonomy categorizing hallucinations into Unassociated Hallucinations (UHs), where outputs lack parametric grounding, and Associated Hallucinations (AHs), which are driven by spurious associations. Through mechanistic analysis, we compare their computational processes and hidden-state geometries with factually correct outputs. Our results show that hidden states primarily reflect whether the model is recalling parametric knowledge rather than the truthfulness of the output itself. Consequently, AHs exhibit hidden-state geometries that largely overlap with factual outputs, rendering standard detection methods ineffective. In contrast, UHs exhibit distinctive, clustered representations that facilitate reliable detection.",
+      "citations": 0
+    },
+    {
+      "title": "Why LLMs Hallucinate, and How to Get (Evidential) Closure: Perceptual, Intensional, and Extensional Learning for Faithful Natural Language Generation",
+      "year": 2023,
+      "authors": "Adam Bouyamourn",
+      "url": "https://api.semanticscholar.org/CorpusId:264439335",
+      "relevance": 2,
+      "abstract": "We show that LLMs hallucinate because their output is not constrained to be synonymous with claims for which they have evidence: a condition that we call evidential closure. Information about the truth or falsity of sentences is not statistically identified in the standard neural probabilistic language model setup, and so cannot be conditioned on to generate new strings. We then show how to constrain LLMs to produce output that does satisfy evidential closure. A multimodal LLM must learn about the external world (perceptual learning); it must learn a mapping from strings to states of the world (extensional learning); and, to achieve fluency when generalizing beyond a body of evidence, it must learn mappings from strings to their synonyms (intensional learning). The output of a unimodal LLM must be synonymous with strings in a validated evidence set. Finally, we present a heuristic procedure, Learn-Babble-Prune, that yields faithful output from an LLM by rejecting output that is not synonymous with claims for which the LLM has evidence.",
+      "citations": 23
+    },
+    {
+      "title": "Can LLMs Detect Their Own Hallucinations?",
+      "year": 2025,
+      "authors": "Sora Kadotani, Kosuke Nishida, Kyosuke Nishida",
+      "url": "https://api.semanticscholar.org/CorpusId:283055046",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) can generate fluent responses, but sometimes hallucinate facts. In this paper, we investigate whether LLMs can detect their own hallucinations. We formulate hallucination detection as a classification task of a sentence. We propose a framework for estimating LLMs'capability of hallucination detection and a classification method using Chain-of-Thought (CoT) to extract knowledge from their parameters. The experimental results indicated that GPT-$3.5$ Turbo with CoT detected $58.2\\%$ of its own hallucinations. We concluded that LLMs with CoT can detect hallucinations if sufficient knowledge is contained in their parameters.",
+      "citations": 0
+    },
+    {
+      "title": "Teaming LLMs to Detect and Mitigate Hallucinations",
+      "year": 2025,
+      "authors": "Demian Till, J. Smeaton, Peter Haubrick, Gouse Saheb, Florian Graef, David S. Berman",
+      "url": "https://api.semanticscholar.org/CorpusId:282272626",
+      "relevance": 2,
+      "abstract": "Recent work has demonstrated state-of-the-art results in large language model (LLM) hallucination detection and mitigation through consistency-based approaches which involve aggregating multiple responses sampled from a single LLM for a given prompt. These approaches help offset limitations stemming from the imperfect data on which LLMs are trained, which includes biases and under-representation of information required at deployment time among other limitations which can lead to hallucinations. We show that extending these single-model consistency methods to combine responses from multiple LLMs with different training data, training schemes and model architectures can result in substantial further improvements in hallucination detection and mitigation capabilities beyond their single-model consistency counterparts. We evaluate this\"consortium consistency\"approach across many model teams from a pool of 15 LLMs and explore under what conditions it is beneficial to team together different LLMs in this manner. Further, we show that these performance improvements often come with reduced inference costs, offsetting a significant drawback with single-model consistency methods.",
+      "citations": 0
+    },
+    {
+      "title": "Trustworthy AI for Medicine: Continuous Hallucination Detection and Elimination with CHECK",
+      "year": 2025,
+      "authors": "C. G. Fern\u00e1ndez, Luis Felipe, Monique Shotande, M. Zitu, A. Tripathi, Ghulam Rasool, I. E. Naqa, Vivek Rudrapatna, Gilmer Valdes",
+      "url": "https://api.semanticscholar.org/CorpusId:279391984",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) show promise in healthcare, but hallucinations remain a major barrier to clinical use. We present CHECK, a continuous-learning framework that integrates structured clinical databases with a classifier grounded in information theory to detect both factual and reasoning-based hallucinations. Evaluated on 1500 questions from 100 pivotal clinical trials, CHECK reduced LLama3.3-70B-Instruct hallucination rates from 31% to 0.3% - making an open source model state of the art. Its classifier generalized across medical benchmarks, achieving AUCs of 0.95-0.96, including on the MedQA (USMLE) benchmark and HealthBench realistic multi-turn medical questioning. By leveraging hallucination probabilities to guide GPT-4o's refinement and judiciously escalate compute, CHECK boosted its USMLE passing rate by 5 percentage points, achieving a state-of-the-art 92.1%. By suppressing hallucinations below accepted clinical error thresholds, CHECK offers a scalable foundation for safe LLM deployment in medicine and other high-stakes domains.",
+      "citations": 8
+    },
+    {
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "year": 2023,
+      "authors": "Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong, Zhangyin Feng, Haotian Wang, Qianglong Chen, Weihua Peng, Xiaocheng Feng, Bing Qin, Ting Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:265067168",
+      "relevance": 1,
+      "abstract": "The emergence of large language models (LLMs) has marked a significant breakthrough in natural language processing (NLP), fueling a paradigm shift in information acquisition. Nevertheless, LLMs are prone to hallucination, generating plausible yet nonfactual content. This phenomenon raises significant concerns over the reliability of LLMs in real-world information retrieval (IR) systems and has attracted intensive research to detect and mitigate such hallucinations. Given the open-ended general-purpose attributes inherent to LLMs, LLM hallucinations present distinct challenges that diverge from prior task-specific models. This divergence highlights the urgency for a nuanced understanding and comprehensive overview of recent advances in LLM hallucinations. In this survey, we begin with an innovative taxonomy of hallucination in the era of LLM and then delve into the factors contributing to hallucinations. Subsequently, we present a thorough overview of hallucination detection methods and benchmarks. Our discussion then transfers to representative methodologies for mitigating LLM hallucinations. Additionally, we delve into the current limitations faced by retrieval-augmented LLMs in combating hallucinations, offering insights for developing more robust IR systems. Finally, we highlight the promising research directions on LLM hallucinations, including hallucination in large vision-language models and understanding of knowledge boundaries in LLM hallucinations.",
+      "citations": 2776
+    },
+    {
+      "title": "Do Large Language Models Know What They Don't Know?",
+      "year": 2023,
+      "authors": "Zhangyue Yin, Qiushi Sun, Qipeng Guo, Jiawen Wu, Xipeng Qiu, Xuanjing Huang",
+      "url": "https://www.semanticscholar.org/paper/eb971944bccf9793ac463c3e2f4d4251d4e8e071",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) have a wealth of knowledge that allows them to excel in various Natural Language Processing (NLP) tasks. Current research focuses on enhancing their performance within their existing knowledge. Despite their vast knowledge, LLMs are still limited by the amount of information they can accommodate and comprehend. Therefore, the ability to understand their own limitations on the unknows, referred to as self-knowledge, is of paramount importance. This study aims to evaluate LLMs' self-knowledge by assessing their ability to identify unanswerable or unknowable questions. We introduce an automated methodology to detect uncertainty in the responses of these models, providing a novel measure of their self-knowledge. We further introduce a unique dataset, SelfAware, consisting of unanswerable questions from five diverse categories and their answerable counterparts. Our extensive analysis, involving 20 LLMs including GPT-3, InstructGPT, and LLaMA, discovering an intrinsic capacity for self-knowledge within these models. Moreover, we demonstrate that in-context learning and instruction tuning can further enhance this self-knowledge. Despite this promising insight, our findings also highlight a considerable gap between the capabilities of these models and human proficiency in recognizing the limits of their knowledge.",
+      "citations": 249
+    },
+    {
+      "title": "HalluLens: LLM Hallucination Benchmark",
+      "year": 2025,
+      "authors": "Yejin Bang, Ziwei Ji, A. Schelten, A. Hartshorn, T. Fowler, Cheng Zhang, Nicola Cancedda, Pascale Fung",
+      "url": "https://api.semanticscholar.org/CorpusId:278033255",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) often generate responses that deviate from user input or training data, a phenomenon known as\"hallucination.\"These hallucinations undermine user trust and hinder the adoption of generative AI systems. Addressing hallucinations is essential for the advancement of LLMs. This paper introduces a comprehensive hallucination benchmark, incorporating both new extrinsic and existing intrinsic evaluation tasks, built upon clear taxonomy of hallucination. A major challenge in benchmarking hallucinations is the lack of a unified framework due to inconsistent definitions and categorizations. We disentangle LLM hallucination from\"factuality,\"proposing a clear taxonomy that distinguishes between extrinsic and intrinsic hallucinations, to promote consistency and facilitate research. Extrinsic hallucinations, where the generated content is not consistent with the training data, are increasingly important as LLMs evolve. Our benchmark includes dynamic test set generation to mitigate data leakage and ensure robustness against such leakage. We also analyze existing benchmarks, highlighting their limitations and saturation. The work aims to: (1) establish a clear taxonomy of hallucinations, (2) introduce new extrinsic hallucination tasks, with data that can be dynamically regenerated to prevent saturation by leakage, (3) provide a comprehensive analysis of existing benchmarks, distinguishing them from factuality evaluations.",
+      "citations": 86
+    },
+    {
+      "title": "Hallucinations in LLMs: Understanding and Addressing Challenges",
+      "year": 2024,
+      "authors": "Gabrijela Perkovic, Antun Drobnjak, I. Boti\u010dki",
+      "url": "https://www.semanticscholar.org/paper/d9166a92922064fbbd4c99a948d6937739ead5dd",
+      "relevance": 1,
+      "abstract": "Large language models (LLM) are trained to understand and generate human-like language. While LLMs present a cutting-edge concept and their use is becoming widespread, hallucinations sometimes occur during their operation. Hallucinations refer to instances where the model generates inaccurate or fictitious information, deviating from factual knowledge and potentially providing responses that lack a basis in model\u2019s training data. In this paper, the ways in which LLMs generate text are examined to address the question of why hallucinations occur. The paper additional explores how existing LLM models can be leveraged to reduce the likelihood of hallucination. Alongside exploring hallucinations, this paper provides insights into the algorithms used for training LLMs, offering a clear picture of the text generation process and its effective utilization.",
+      "citations": 159
+    },
+    {
+      "title": "From Persona to Personalization: A Survey on Role-Playing Language Agents",
+      "year": 2024,
+      "authors": "Jiangjie Chen, Xintao Wang, Rui Xu, Siyu Yuan, Yikai Zhang, Wei Shi, Jian Xie, Shuang Li, Ruihan Yang, Tinghui Zhu, Aili Chen, Nianqi Li, Lida Chen, Caiyu Hu, Siye Wu, Scott Ren, Ziquan Fu, Yanghua Xiao",
+      "url": "https://api.semanticscholar.org/CorpusId:269448713",
+      "relevance": 1,
+      "abstract": "Recent advancements in large language models (LLMs) have significantly boosted the rise of Role-Playing Language Agents (RPLAs), i.e., specialized AI systems designed to simulate assigned personas. By harnessing multiple advanced abilities of LLMs, including in-context learning, instruction following, and social intelligence, RPLAs achieve a remarkable sense of human likeness and vivid role-playing performance. RPLAs can mimic a wide range of personas, ranging from historical figures and fictional characters to real-life individuals. Consequently, they have catalyzed numerous AI applications, such as emotional companions, interactive video games, personalized assistants and copilots, and digital clones. In this paper, we conduct a comprehensive survey of this field, illustrating the evolution and recent progress in RPLAs integrating with cutting-edge LLM technologies. We categorize personas into three types: 1) Demographic Persona, which leverages statistical stereotypes; 2) Character Persona, focused on well-established figures; and 3) Individualized Persona, customized through ongoing user interactions for personalized services. We begin by presenting a comprehensive overview of current methodologies for RPLAs, followed by the details for each persona type, covering corresponding data sourcing, agent construction, and evaluation. Afterward, we discuss the fundamental risks, existing limitations, and future prospects of RPLAs. Additionally, we provide a brief review of RPLAs in AI applications, which reflects practical user demands that shape and drive RPLA research. Through this work, we aim to establish a clear taxonomy of RPLA research and applications, and facilitate future research in this critical and ever-evolving field, and pave the way for a future where humans and RPLAs coexist in harmony.",
+      "citations": 228
+    },
+    {
+      "title": "Cognitive Mirage: A Review of Hallucinations in Large Language Models",
+      "year": 2023,
+      "authors": "Hongbin Ye, Tong Liu, Aijia Zhang, Wei Hua, Weiqiang Jia",
+      "url": "https://api.semanticscholar.org/CorpusId:261705916",
+      "relevance": 1,
+      "abstract": "As large language models continue to develop in the field of AI, text generation systems are susceptible to a worrisome phenomenon known as hallucination. In this study, we summarize recent compelling insights into hallucinations in LLMs. We present a novel taxonomy of hallucinations from various text generation tasks, thus provide theoretical insights, detection methods and improvement approaches. Based on this, future research directions are proposed. Our contribution are threefold: (1) We provide a detailed and complete taxonomy for hallucinations appearing in text generation tasks; (2) We provide theoretical analyses of hallucinations in LLMs and provide existing detection and improvement methods; (3) We propose several research directions that can be developed in the future. As hallucinations garner significant attention from the community, we will maintain updates on relevant research progress.",
+      "citations": 132
+    },
+    {
+      "title": "Quantifying the uncertainty of LLM hallucination spreading in complex adaptive social networks",
+      "year": 2024,
+      "authors": "Guozhi Hao, Jun Wu, Qianqian Pan, Rosario Morello",
+      "url": "https://api.semanticscholar.org/CorpusId:271241534",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are becoming a significant source of content generation in social networks, which is a typical complex adaptive system (CAS). However, due to their hallucinatory nature, LLMs produce false information that can spread through social networks, which will impact the stability of the whole society. The uncertainty of LLMs false information spread within social networks is attributable to the diversity of individual behaviors, intricate interconnectivity, and dynamic network structures. Quantifying the uncertainty of false information spread by LLMs in social networks is beneficial for preemptively devising strategies to defend against threats. To address these challenges, we propose an LLMs hallucination-aware dynamic modeling method via agent-based probability distributions, spread popularity and community affiliation, to quantify the uncertain spreading of LLMs hallucination in social networks. We set up the node attributes and behaviors in the model based on real-world data. For evaluation, we consider the spreaders, informed people, discerning and unwilling non-spreaders as indicators, and quantified the spreading under different LLMs task situations, such as QA, dialogue, and summarization, as well as LLMs versions. Furthermore, we conduct experiments using real-world LLM hallucination data combined with social network features to ensure the validity of the proposed quantifying scheme.",
+      "citations": 44
+    },
+    {
+      "title": "Constructing Benchmarks and Interventions for Combating Hallucinations in LLMs",
+      "year": 2024,
+      "authors": "Adi Simhi, Jonathan Herzig, Idan Szpektor, Yonatan Belinkov",
+      "url": "https://api.semanticscholar.org/CorpusId:269149201",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are prone to hallucinations, which sparked a widespread effort to detect and prevent them. Recent work attempts to mitigate hallucinations by intervening in the model's generation, typically computing representative vectors of hallucinations vs. grounded generations, for steering the model's hidden states away from a hallucinatory state. However, common studies employ different setups and do not properly separate different possible causes of hallucinations, making interventions misguided. In this work, we introduce a method for categorizing examples based on the model's prior knowledge, named WACK. We construct WACK benchmarks that support interventions in two settings: open-book and closed-book question answering. Using the benchmarks, we perform an extensive investigation of the effect of different choices for intervention, such as the intervened components, and how often and how strongly to intervene. We find that intervention success varies depending on the component, with the attention blocks performing well and the residual stream proving detrimental to language modeling capabilities. We also show that interventions can benefit from representative vectors collected before, rather than after, a hallucination occurs. Finally, we introduce a new dynamic intervention, which intervenes only if needed, and thus is more robust than standard static interventions. The code is available at https://github.com/technion-cs-nlp/hallucination-mitigation .",
+      "citations": 23
+    },
+    {
+      "title": "Drowzee: Metamorphic Testing for Fact-Conflicting Hallucination Detection in Large Language Models",
+      "year": 2024,
+      "authors": "Ningke Li, Yuekang Li, Yi Liu, Ling Shi, Kailong Wang, Haoyu Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:269484211",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) have revolutionized language processing, but face critical challenges with security, privacy, and generating hallucinations \u2014 coherent but factually inaccurate outputs. A major issue is fact-conflicting hallucination (FCH), where LLMs produce content contradicting ground truth facts. Addressing FCH is difficult due to two key challenges: 1) Automatically constructing and updating benchmark datasets is hard, as existing methods rely on manually curated static benchmarks that cannot cover the broad, evolving spectrum of FCH cases. 2) Validating the reasoning behind LLM outputs is inherently difficult, especially for complex logical relations. To tackle these challenges, we introduce a novel logic-programming-aided metamorphic testing technique for FCH detection. We develop an extensive and extensible framework that constructs a comprehensive factual knowledge base by crawling sources like Wikipedia, seamlessly integrated into Drowzee. Using logical reasoning rules, we transform and augment this knowledge into a large set of test cases with ground truth answers. We test LLMs on these cases through template-based prompts, requiring them to provide reasoned answers. To validate their reasoning, we propose two semantic-aware oracles that assess the similarity between the semantic structures of the LLM answers and ground truth. Our approach automatically generates useful test cases and identifies hallucinations across six LLMs within nine domains, with hallucination rates ranging from 24.7% to 59.8%. Key findings include LLMs struggling with temporal concepts, out-of-distribution knowledge, and lack of logical reasoning capabilities. The results show that logic-based test cases generated by Drowzee effectively trigger and detect hallucinations. To further mitigate the identified FCHs, we explored model editing techniques, which proved effective on a small scale (with edits to fewer than 1000 knowledge pieces). Our findings emphasize the need for continued community efforts to detect and mitigate model hallucinations.",
+      "citations": 25
+    },
+    {
+      "title": "Hallucination to truth: a review of fact-checking and factuality evaluation in large language models",
+      "year": 2025,
+      "authors": "Subhey Sadi Rahman, Md. Adnanul Islam, M. S. Alam, Musarrat Zeba, Md. Abdur Rahman, Sadia Sultana Chowa, Mohaimenul Azam Khan Raiaan, Sami Azam",
+      "url": "https://api.semanticscholar.org/CorpusId:280536253",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are trained on vast and diverse internet corpora that often include inaccurate or misleading content. Consequently, LLMs can generate misinformation, making robust fact-checking essential. This review systematically analyzes how LLM-generated content is evaluated for factual accuracy by exploring key challenges such as hallucinations, dataset limitations, and the reliability of evaluation metrics. The review emphasizes the need for strong fact-checking frameworks that integrate advanced prompting strategies, domain-specific fine-tuning, and retrieval-augmented generation (RAG) methods. It proposes five research questions that guide the analysis of the recent literature from 2020 to 2025, focusing on evaluation methods and mitigation techniques. Instruction tuning, multi-agent reasoning, and RAG frameworks for external knowledge access are also reviewed. The key findings demonstrate the limitations of current metrics, the importance of validated external evidence, and the improvement of factual consistency through domain-specific customization. The review underscores the importance of building more accurate, understandable, and context-aware fact-checking. These insights contribute to the advancement of research toward more trustworthy models.",
+      "citations": 22
+    },
+    {
+      "title": "Large Language Models Hallucination: A Comprehensive Survey",
+      "year": 2025,
+      "authors": "Aisha Alansari, H. Luqman",
+      "url": "https://api.semanticscholar.org/CorpusId:281891641",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) have transformed natural language processing, achieving remarkable performance across diverse tasks. However, their impressive fluency often comes at the cost of producing false or fabricated information, a phenomenon known as hallucination. Hallucination refers to the generation of content by an LLM that is fluent and syntactically correct but factually inaccurate or unsupported by external evidence. Hallucinations undermine the reliability and trustworthiness of LLMs, especially in domains requiring factual accuracy. This survey provides a comprehensive review of research on hallucination in LLMs, with a focus on causes, detection, and mitigation. We first present a taxonomy of hallucination types and analyze their root causes across the entire LLM development lifecycle, from data collection and architecture design to inference. We further examine how hallucinations emerge in key natural language generation tasks. Building on this foundation, we introduce a structured taxonomy of detection approaches and another taxonomy of mitigation strategies. We also analyze the strengths and limitations of current detection and mitigation approaches and review existing evaluation benchmarks and metrics used to quantify LLMs hallucinations. Finally, we outline key open challenges and promising directions for future research, providing a foundation for the development of more truthful and trustworthy LLMs.",
+      "citations": 31
+    },
+    {
+      "title": "FIT-RAG: Black-Box RAG with Factual Information and Token Reduction",
+      "year": 2024,
+      "authors": "Yuren Mao, Xuemei Dong, Wenyi Xu, Yunjun Gao, Bin Wei, Ying Zhang",
+      "url": "https://api.semanticscholar.org/CorpusId:268554288",
+      "relevance": 1,
+      "abstract": "Due to the extraordinarily large number of parameters, fine-tuning large language models (LLMs) to update long-tail or out-of-date knowledge is impractical in lots of applications. To avoid fine-tuning, we can alternatively treat a LLM as a black-box (i.e., freeze the parameters of the LLM) and augment it with a retrieval-augmented generation (RAG) system, namely black-box RAG. Recently, black-box RAG has achieved success in knowledge-intensive tasks and has gained much attention. Existing black-box RAG methods typically fine-tune the retriever to cater to LLMs\u2019 preferences and concatenate all the retrieved documents as the input, which suffers from two issues: (1) Ignorance of Factual Information. The LLM preferred documents may not contain the factual information for the given question, which can mislead the retriever and hurt the effectiveness of black-box RAG; (2) Waste of Tokens. Simply concatenating all the retrieved documents brings large amounts of unnecessary tokens for LLMs, which degenerates the efficiency of black-box RAG. To address these issues, this article proposes a novel black-box RAG framework which utilizes the factual information in the retrieval and reduces the number of tokens for augmentation, dubbed FIT-RAG. FIT-RAG utilizes the factual information by constructing a bi-label document scorer which takes the factual information and LLMs\u2019 preferences as labels respectively. Besides, it reduces the tokens by introducing a self-knowledge recognizer and a sub-document-level token reducer, which enables FIT-RAG to avoid unnecessary augmentation and reduce augmentation tokens as much as possible. FIT-RAG achieves both superior effectiveness and efficiency, which is validated by extensive experiments across three open-domain question-answering datasets: TriviaQA, NQ, and PopQA. FIT-RAG can improve the answering accuracy of Llama2-13B-Chat by 14.3% on TriviaQA, 19.9% on NQ and 27.5% on PopQA, respectively. Furthermore, it can save approximately half of the tokens on average across the three datasets.",
+      "citations": 27
+    },
+    {
+      "title": "Medico: Towards Hallucination Detection and Correction with Multi-source Evidence Fusion",
+      "year": 2024,
+      "authors": "Xinping Zhao, Jindi Yu, Zhenyu Liu, Jifang Wang, Dongfang Li, Yibin Chen, Baotian Hu, Min Zhang",
+      "url": "https://www.semanticscholar.org/paper/702127d1b273fe4f65cca3e943e695276f92501a",
+      "relevance": 1,
+      "abstract": "As we all know, hallucinations prevail in Large Language Models (LLMs), where the generated content is coherent but factually incorrect, which inflicts a heavy blow on the widespread application of LLMs. Previous studies have shown that LLMs could confidently state non-existent facts rather than answering \u201cI don\u2019t know\u201d. Therefore, it is necessary to resort to external knowledge to detect and correct the hallucinated content. Since manual detection and correction of factual errors is labor-intensive, developing an automatic end-to-end hallucination-checking approach is indeed a needful thing. To this end, we present Medico, a Multi-source evidence fusion enhanced hallucination detection and correction framework. It fuses diverse evidence from multiple sources, detects whether the generated content contains factual errors, provides the rationale behind the judgment, and iteratively revises the hallucinated content. Experimental results on evidence retrieval (0.964 HR@5, 0.908 MRR@5), hallucination detection (0.927-0.951 F1), and hallucination correction (0.973-0.979 approval rate) manifest the great potential of Medico. A video demo of Medico can be found at https://youtu.be/RtsO6CSesBI.",
+      "citations": 4
+    },
+    {
+      "title": "MALM: A Multi-Information Adapter for Large Language Models to Mitigate Hallucination",
+      "year": 2025,
+      "authors": "Ao Jia, Haiming Wu, Guohui Yao, Dawei Song, Songkun Ji, Yazhou Zhang",
+      "url": "https://api.semanticscholar.org/CorpusId:279402002",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are prone to three types of hallucination: Input-Conflicting, Context-Conflicting and Fact-Conflicting hallucinations. The purpose of this study is to mitigate the different types of hallucination by exploiting the interdependence between them. For this purpose, we propose a Multi-Information Adapter for Large Language Models (MALM). This framework employs a tailored multi-graph learning approach designed to elucidate the interconnections between original inputs, contextual information, and external factual knowledge, thereby alleviating the three categories of hallucination within a cohesive framework. Experiments were carried out on four benchmarking datasets: HaluEval, TruthfulQA, Natural Questions, and TriviaQA. We evaluated the proposed framework in two aspects: (1) adaptability to different base LLMs on HaluEval and TruthfulQA, to confirm if MALM is effective when applied on 7 typical LLMs. MALM showed significant improvements over LLaMA-2; (2) generalizability to retrieval-augmented generation (RAG) by combining MALM with three representative retrievers (BM25, Spider and DPR) separately. Furthermore, automated and human evaluations were conducted to substantiate the correctness of experimental results, where GPT-4 and 3 human volunteers judged which response was better between LLaMA-2 and MALM. The results showed that both GPT-4 and human preferred MALM in 79.4% and 65.6% of cases respectively. The results validate that incorporating the complex interactions between the three types of hallucination through a multilayered graph attention network into the LLM generation process is effective to mitigate the them. The adapter design of the proposed approach is also proven flexible and robust across different base LLMs.",
+      "citations": 1
+    },
+    {
+      "title": "Brave new world: Artificial Intelligence in teaching and learning",
+      "year": 2023,
+      "authors": "Adrian Groza, A. Marginean",
+      "url": "https://api.semanticscholar.org/CorpusId:265996730",
+      "relevance": 1,
+      "abstract": "We exemplify how Large Language Models are used in both teaching and learning. We also discuss the AI incidents that have already occurred in the education domain, and we argue for the urgent need to introduce AI policies in universities and for the ongoing strategies to regulate AI. Regarding policy for AI, our view is that each institution should have a policy for AI in teaching and learning. This is important from at least twofolds: (i) to raise awareness on the numerous educational tools that can both positively and negatively affect education; (ii) to minimise the risk of AI incidents in education.",
+      "citations": 4
+    },
+    {
+      "title": "HaluEval-Wild: Evaluating Hallucinations of Language Models in the Wild",
+      "year": 2024,
+      "authors": "Zhiyi Zhu, Zhiqing Sun, Yiming Yang",
+      "url": "https://api.semanticscholar.org/CorpusId:268264670",
+      "relevance": 1,
+      "abstract": "Hallucinations pose a significant challenge to the reliability of large language models (LLMs) in critical domains. Recent benchmarks designed to assess LLM hallucinations within conventional NLP tasks, such as knowledge-intensive question answering (QA) and summarization, are insufficient for capturing the complexities of user-LLM interactions in dynamic, real-world settings. To address this gap, we introduce HaluEval-Wild, the first benchmark specifically designed to evaluate LLM hallucinations in the wild. We meticulously collect challenging (adversarially filtered by Alpaca) user queries from ShareGPT, an existing real-world user-LLM interaction datasets, to evaluate the hallucination rates of various LLMs. Upon analyzing the collected queries, we categorize them into five distinct types, which enables a fine-grained analysis of the types of hallucinations LLMs exhibit, and synthesize the reference answers with the powerful GPT-4 model and retrieval-augmented generation (RAG). Our benchmark offers a novel approach towards enhancing our comprehension of and improving LLM reliability in scenarios reflective of real-world interactions. Our benchmark is available at https://github.com/HaluEval-Wild/HaluEval-Wild.",
+      "citations": 32
+    },
+    {
+      "title": "HalluSafe at SemEval-2024 Task 6: An NLI-based Approach to Make LLMs Safer by Better Detecting Hallucinations and Overgeneration Mistakes",
+      "year": 2024,
+      "authors": "Zahra Rahimi, Hamidreza Amirzadeh, Alireza Sohrabi, Zeinab Taghavi, Hossein Sameti",
+      "url": "https://api.semanticscholar.org/CorpusId:270765499",
+      "relevance": 1,
+      "abstract": "The advancement of large language models (LLMs), their ability to produce eloquent and fluent content, and their vast knowledge have resulted in their usage in various tasks and applications. Despite generating fluent content, this content can contain fabricated or false information. This problem is known as hallucination and has reduced the confidence in the output of LLMs. In this work, we have used Natural Language Inference to train classifiers for hallucination detection to tackle SemEval-2024 Task 6-SHROOM (Mickus et al., 2024) which is defined in three sub-tasks: Paraphrase Generation, Machine Translation, and Definition Modeling. We have also conducted experiments on LLMs to evaluate their ability to detect hallucinated outputs. We have achieved 75.93% and 78.33% accuracy for the modelaware and model-agnostic tracks, respectively. The shared links of our models and the codes are available on GitHub.",
+      "citations": 5
+    },
+    {
+      "title": "Rethinking Hallucinations: Correctness, Consistency, and Prompt Multiplicity",
+      "year": 2026,
+      "authors": "P. Ganesh, Reza Shokri, G. Farnadi",
+      "url": "https://api.semanticscholar.org/CorpusId:278340529",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are known to\"hallucinate\"by generating false or misleading outputs. Hallucinations pose various harms, from erosion of trust to widespread misinformation. Existing hallucination evaluation, however, focuses only on correctness and often overlooks consistency, necessary to distinguish and address these harms. To bridge this gap, we introduce prompt multiplicity, a framework for quantifying consistency in LLM evaluations. Our analysis reveals significant multiplicity (over 50% inconsistency in benchmarks like Med-HALT), suggesting that hallucination-related harms have been severely misunderstood. Furthermore, we study the role of consistency in hallucination detection and mitigation. We find that: (a) detection techniques detect consistency, not correctness, and (b) mitigation techniques like RAG, while beneficial, can introduce additional inconsistencies. By integrating prompt multiplicity into hallucination evaluation, we provide an improved framework of potential harms and uncover critical limitations in current detection and mitigation strategies.",
+      "citations": 3
+    },
+    {
+      "title": "The epistemological consequences of large language models: rethinking collective intelligence and institutional knowledge",
+      "year": 2025,
+      "authors": "Angjelin Hila",
+      "url": "https://api.semanticscholar.org/CorpusId:279626376",
+      "relevance": 1,
+      "abstract": "In this paper, we interrogate the epistemological implications of human\u2013LLM interaction with a specific focus on epistemological threats. We develop a theory of epistemic justification that synthesizes internalist and externalist conceptions of epistemic warrant termed collective epistemology. Collective epistemology considers the way epistemological warrant is distributed across human collectives. In pursuing this line of thinking, we take bounded rationality and dual-process theory as background assumptions in our analysis of collective epistemology as a mechanism of collective rationality. Following this approach, we distinguish between internalist justification as a robust standard of rationality and externalist justification as a reliable knowledge transmission mechanism. We argue that while these standards jointly constitute necessary and sufficient conditions for collective rationality, only internalist justification produces knowledge. We posit that reflective knowledge entails three necessary and sufficient conditions: a) rational agents reflectively understand the basis on which a proposition is evaluated as true b) in absence of a reflective evaluative basis for a proposition, rational agents consistently evaluate the reliability of truth sources, and c) rational agents have an epistemic duty to apply a) and b) as rational standards in their domains of competence. Since distributed rationality is socially scaffolded, we pursue the consequences of unchecked human\u2013LLM interaction on social epistemic chains of dependence. We argue that LLMs approximate a type of externalist justification termed reliabilism but do not instantiate internalist standards of justification. Specifically, we argue that LLMs do not possess reflective justification for the information they produce but rather reliably transmit information whose reflective basis has been established in advance. Since LLMs cannot produce knowledge with reflective justifiedness but only reliabilist justifiedness, we argue that human outsourcing of reflective knowledge to reliable LLM information threatens to erode reflective standards of justification at scale. As a result, LLM information reliability disincentivizes comprehension and understanding in human agents. Human agents that forfeit comprehension and understanding for reliably correct results reduce the net justifiedness of their own beliefs and, consequently, reduce their ability to perform their epistemic duties professionally and civically. The scaled outsourcing of reflective knowledge to LLMs across collectives threatens the impoverishment of the production of reflective knowledge. To mitigate these potential threats, we propose developing epistemic norms across three tiers of social organization: a) normative epistemic model for individual human\u2013LLM interaction, b) norm setting through institutional and organizational frameworks and c) the imposition of deontic constraints at organizational and/or legislative levels to instill LLM discursive norms that reduce epistemic vices.",
+      "citations": 7
+    },
+    {
+      "title": "A Survey of Hallucination Problems Based on Large Language Models",
+      "year": 2024,
+      "authors": "Xinxin Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:274330702",
+      "relevance": 1,
+      "abstract": "Abstract. Large language models (LLM) have made significant achievements in the field of natural language processing, but the generated text often contains content that is inconsistent with the real world or user input, known as hallucinations. This article investigates the current situation of hallucinations in LLM, including the definition, types, causes, and solutions of hallucinations. Illusions are divided into different types such as factual and faithful, mainly caused by factors such as training data defects, low utilization of facts, and randomness in the decoding process. The phenomenon of hallucinations poses a threat to the reliability of LLM, especially in fields such as healthcare, finance, and law, which may lead to serious consequences. To address this issue, this article investigates methods such as managing training datasets, knowledge editing, and enhancing retrieval generation. Future research should classify and evaluate illusions more finely, explore multimodal strategies, enhance model stability, and integrate human intelligence and artificial intelligence to jointly address challenges, promoting the continuous progress of LLM.",
+      "citations": 23
+    },
+    {
+      "title": "AI Hallucination from Students' Perspective: A Thematic Analysis",
+      "year": 2026,
+      "authors": "Abdulhadi Shoufan, A. Esmaeil",
+      "url": "https://api.semanticscholar.org/CorpusId:285872513",
+      "relevance": 1,
+      "abstract": "As students increasingly rely on large language models, hallucinations pose a growing threat to learning. To mitigate this, AI literacy must expand beyond prompt engineering to address how students should detect and respond to LLM hallucinations. To support this, we need to understand how students experience hallucinations, how they detect them, and why they believe they occur. To investigate these questions, we asked university students three open-ended questions about their experiences with AI hallucinations, their detection strategies, and their mental models of why hallucinations occur. Sixty-three students responded to the survey. Thematic analysis of their responses revealed that reported hallucination issues primarily relate to incorrect or fabricated citations, false information, overconfident but misleading responses, poor adherence to prompts, persistence in incorrect answers, and sycophancy. To detect hallucinations, students rely either on intuitive judgment or on active verification strategies, such as cross-checking with external sources or re-prompting the model. Students'explanations for why hallucinations occur reflected several mental models, including notable misconceptions. Many described AI as a research engine that fabricates information when it cannot locate an answer in its\"database.\"Others attributed hallucinations to issues with training data, inadequate prompting, or the model's inability to understand or verify information. These findings illuminate vulnerabilities in AI-supported learning and highlight the need for explicit instruction in verification protocols, accurate mental models of generative AI, and awareness of behaviors such as sycophancy and confident delivery that obscure inaccuracy. The study contributes empirical evidence for integrating hallucination awareness and mitigation into AI literacy curricula.",
+      "citations": 0
+    },
+    {
+      "title": "Aligning Large Language Models to Follow Instructions and Hallucinate Less via Effective Data Filtering",
+      "year": 2025,
+      "authors": "Shuzheng Si, Haozhe Zhao, Gang Chen, Cheng Gao, Yuzhuo Bai, Zhitong Wang, Kaikai An, Kangyang Luo, Chen Qian, Fanchao Qi, Baobao Chang, Maosong Sun",
+      "url": "https://api.semanticscholar.org/CorpusId:276259082",
+      "relevance": 1,
+      "abstract": "Training LLMs on data containing unfamiliar knowledge during the instruction tuning stage can encourage hallucinations. To address this challenge, we introduce NOVA, a novel framework designed to identify high-quality data that aligns well with the LLM's learned knowledge to reduce hallucinations. NOVA includes Internal Consistency Probing (ICP) and Semantic Equivalence Identification (SEI) to measure how familiar the LLM is with instruction data. Specifically, ICP evaluates the LLM's understanding of the given instruction by calculating the tailored consistency among multiple self-generated responses. SEI further assesses the familiarity of the LLM with the target response by comparing it to the generated responses, using the proposed semantic clustering and well-designed voting strategy. Finally, to ensure the quality of selected samples, we introduce an expert-aligned reward model, considering characteristics beyond just familiarity. By considering data quality and avoiding unfamiliar data, we can utilize the selected data to effectively align LLMs to follow instructions and hallucinate less.",
+      "citations": 12
+    },
+    {
+      "title": "Calibrated Trust in Dealing with LLM Hallucinations: A Qualitative Study",
+      "year": 2025,
+      "authors": "A. Ryser, Florian Allwein, Tim Schlippe",
+      "url": "https://api.semanticscholar.org/CorpusId:283722101",
+      "relevance": 1,
+      "abstract": "Hallucinations are outputs by Large Language Models (LLMs) that are factually incorrect yet appear plausible [1]. This paper investigates how such hallucinations influence users\u2019 trust in LLMs and users\u2019 interaction with LLMs. To explore this in everyday use, we conducted a qualitative study with 192 participants. Our findings show that hallucinations do not result in blanket mistrust but instead lead to context-sensitive trust calibration. Building on the calibrated trust model by Lee & See [2] and Afroogh et al.\u2019s trust-related factors [3], we confirm expectancy [3], [4], prior experience [3], [4], [5], and user expertise & domain knowledge [3], [4] as user-related (human) trust factors, and identify intuition as an additional factor relevant for hallucination detection. Additionally, we found that trust dynamics are further influenced by contextual factors, particularly perceived risk [3] and decision stakes [6]. Consequently, we validate the recursive trust calibration process proposed by Bl\u00f6baum [7] and extend it by including intuition as a user-related trust factor. Based on these insights, we propose practical recommendations for responsible and reflective LLM use.",
+      "citations": 2
+    },
+    {
+      "title": "Place Matters: Comparing LLM Hallucination Rates for Place-Based Legal Queries",
+      "year": 2025,
+      "authors": "Damian Curran, Vanessa Sporne, Lea Frermann, J. Paterson",
+      "url": "https://api.semanticscholar.org/CorpusId:282913340",
+      "relevance": 1,
+      "abstract": "How do we make a meaningful comparison of a large language model's knowledge of the law in one place compared to another? Quantifying these differences is critical to understanding if the quality of the legal information obtained by users of LLM-based chatbots varies depending on their location. However, obtaining meaningful comparative metrics is challenging because legal institutions in different places are not themselves easily comparable. In this work we propose a methodology to obtain place-to-place metrics based on the comparative law concept of functionalism. We construct a dataset of factual scenarios drawn from Reddit posts by users seeking legal advice for family, housing, employment, crime and traffic issues. We use these to elicit a summary of a law from the LLM relevant to each scenario in Los Angeles, London and Sydney. These summaries, typically of a legislative provision, are manually evaluated for hallucinations. We show that the rate of hallucination of legal information by leading closed-source LLMs is significantly associated with place. This suggests that the quality of legal solutions provided by these models is not evenly distributed across geography. Additionally, we show a strong negative correlation between hallucination rate and the frequency of the majority response when the LLM is sampled multiple times, suggesting a measure of uncertainty of model predictions of legal facts.",
+      "citations": 2
+    },
+    {
+      "title": "The Prompt Engineering Report Distilled: Quick Start Guide for Life Sciences",
+      "year": 2025,
+      "authors": "Valentin Romanov, S. Niederer",
+      "url": "https://api.semanticscholar.org/CorpusId:281315554",
+      "relevance": 1,
+      "abstract": "Developing effective prompts demands significant cognitive investment to generate reliable, high-quality responses from Large Language Models (LLMs). By deploying case-specific prompt engineering techniques that streamline frequently performed life sciences workflows, researchers could achieve substantial efficiency gains that far exceed the initial time investment required to master these techniques. The Prompt Report published in 2025 outlined 58 different text-based prompt engineering techniques, highlighting the numerous ways prompts could be constructed. To provide actionable guidelines and reduce the friction of navigating these various approaches, we distil this report to focus on 6 core techniques: zero-shot, few-shot approaches, thought generation, ensembling, self-criticism, and decomposition. We breakdown the significance of each approach and ground it in use cases relevant to life sciences, from literature summarization and data extraction to editorial tasks. We provide detailed recommendations for how prompts should and shouldn't be structured, addressing common pitfalls including multi-turn conversation degradation, hallucinations, and distinctions between reasoning and non-reasoning models. We examine context window limitations, agentic tools like Claude Code, while analyzing the effectiveness of Deep Research tools across OpenAI, Google, Anthropic and Perplexity platforms, discussing current limitations. We demonstrate how prompt engineering can augment rather than replace existing established individual practices around data processing and document editing. Our aim is to provide actionable guidance on core prompt engineering principles, and to facilitate the transition from opportunistic prompting to an effective, low-friction systematic practice that contributes to higher quality research.",
+      "citations": 0
+    },
+    {
+      "title": "Beyond Hallucinations: The Illusion of Understanding in Large Language Models",
+      "year": 2025,
+      "authors": "Rikard Rosenbacke, Carl Rosenbacke, Victor Rosenbacke, M. McKee",
+      "url": "https://api.semanticscholar.org/CorpusId:282138798",
+      "relevance": 1,
+      "abstract": "",
+      "citations": 1
+    },
+    {
+      "title": "Hallucination is Inevitable for LLMs with the Open World Assumption",
+      "year": 2025,
+      "authors": "Bowen Xu",
+      "url": "https://api.semanticscholar.org/CorpusId:281886476",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) exhibit impressive linguistic competence but also produce inaccurate or fabricated outputs, often called ``hallucinations''. Engineering approaches usually regard hallucination as a defect to be minimized, while formal analyses have argued for its theoretical inevitability. Yet both perspectives remain incomplete when considering the conditions required for artificial general intelligence (AGI). This paper reframes ``hallucination''as a manifestation of the generalization problem. Under the Closed World assumption, where training and test distributions are consistent, hallucinations may be mitigated. Under the Open World assumption, however, where the environment is unbounded, hallucinations become inevitable. This paper further develops a classification of hallucination, distinguishing cases that may be corrected from those that appear unavoidable under open-world conditions. On this basis, it suggests that ``hallucination''should be approached not merely as an engineering defect but as a structural feature to be tolerated and made compatible with human intelligence.",
+      "citations": 2
+    },
+    {
+      "title": "Understanding and Evaluating Trust in Generative AI and Large Language Models for Spreadsheets",
+      "year": 2024,
+      "authors": "Simon Thorne",
+      "url": "https://api.semanticscholar.org/CorpusId:273527656",
+      "relevance": 1,
+      "abstract": "Generative AI and Large Language Models (LLMs) hold promise for automating spreadsheet formula creation. However, due to hallucinations, bias and variable user skill, outputs obtained from generative AI cannot be assumed to be accurate or trustworthy. To address these challenges, a trustworthiness framework is proposed based on evaluating the transparency and dependability of the formula. The transparency of the formula is explored through explainability (understanding the formula's reasoning) and visibility (inspecting the underlying algorithms). The dependability of the generated formula is evaluated in terms of reliability (consistency and accuracy) and ethical considerations (bias and fairness). The paper also examines the drivers to these metrics in the form of hallucinations, training data bias and poorly constructed prompts. Finally, examples of mistrust in technology are considered and the consequences explored.",
+      "citations": 2
+    },
+    {
+      "title": "ResNetVLLM-2: Addressing ResNetVLLM's Multi-Modal Hallucinations",
+      "year": 2025,
+      "authors": "Ahmad Khalil, Mahmoud Khalil, A. Ngom",
+      "url": "https://api.semanticscholar.org/CorpusId:277955054",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) have transformed natural language processing (NLP) tasks, but they suffer from hallucination, generating plausible yet factually incorrect content. This issue extends to Video-Language Models (VideoLLMs), where textual descriptions may inaccurately represent visual content, resulting in multi-modal hallucinations. In this paper, we address hallucination in ResNetVLLM, a video-language model combining ResNet visual encoders with LLMs. We introduce a two-step protocol: (1) a faithfulness detection strategy that uses a modified Lynx model to assess semantic alignment between generated captions and ground-truth video references, and (2) a hallucination mitigation strategy using Retrieval-Augmented Generation (RAG) with an ad-hoc knowledge base dynamically constructed during inference. Our enhanced model, ResNetVLLM-2, reduces multi-modal hallucinations by cross-verifying generated content against external knowledge, improving factual consistency. Evaluation on the ActivityNet-QA benchmark demonstrates a substantial accuracy increase from 54.8% to 65.3%, highlighting the effectiveness of our hallucination detection and mitigation strategies in enhancing video-language model reliability.",
+      "citations": 1
+    },
+    {
+      "title": "LLMs Know What They Need: Leveraging a Missing Information Guided Framework to Empower Retrieval-Augmented Generation",
+      "year": 2024,
+      "authors": "Keheng Wang, Feiyu Duan, Peiguang Li, Sirui Wang, Xunliang Cai",
+      "url": "https://www.semanticscholar.org/paper/bd370edcfe7020663a05649e6f37d1c963dcdf80",
+      "relevance": 1,
+      "abstract": "Retrieval-Augmented Generation (RAG) demonstrates great value in alleviating outdated knowledge or hallucination by supplying LLMs with updated and relevant knowledge. However, there are still several difficulties for RAG in understanding complex multi-hop query and retrieving relevant documents, which require LLMs to perform reasoning and retrieve step by step. Inspired by human's reasoning process in which they gradually search for the required information, it is natural to ask whether the LLMs could notice the missing information in each reasoning step. In this work, we first experimentally verified the ability of LLMs to extract information as well as to know the missing. Based on the above discovery, we propose a Missing Information Guided Retrieve-Extraction-Solving paradigm (MIGRES), where we leverage the identification of missing information to generate a targeted query that steers the subsequent knowledge retrieval. Besides, we design a sentence-level re-ranking filtering approach to filter the irrelevant content out from document, along with the information extraction capability of LLMs to extract useful information from cleaned-up documents, which in turn to bolster the overall efficacy of RAG. Extensive experiments conducted on multiple public datasets reveal the superiority of the proposed MIGRES method, and analytical experiments demonstrate the effectiveness of our proposed modules.",
+      "citations": 13
+    },
+    {
+      "title": "Do LLMs Know What They Know? Measuring Metacognitive Efficiency with Signal Detection Theory",
+      "year": 2026,
+      "authors": "Jon-Paul Cacioli",
+      "url": "https://www.semanticscholar.org/paper/19ad9a4295308ccd3b8ed225374a0b727d597459",
+      "relevance": 1,
+      "abstract": "Standard evaluation of LLM confidence relies on calibration metrics (ECE, Brier score) that conflate two distinct capacities: how much a model knows (Type-1 sensitivity) and how well it knows what it knows (Type-2 metacognitive sensitivity). We introduce an evaluation framework based on Type-2 Signal Detection Theory that decomposes these capacities using meta-d'and the metacognitive efficiency ratio M-ratio. Applied to four LLMs (Llama-3-8B-Instruct, Mistral-7B-Instruct-v0.3, Llama-3-8B-Base, Gemma-2-9B-Instruct) across 224,000 factual QA trials, we find: (1) metacognitive efficiency varies substantially across models even when Type-1 sensitivity is similar -- Mistral achieves the highest d'but the lowest M-ratio; (2) metacognitive efficiency is domain-specific, with different models showing different weakest domains, invisible to aggregate metrics; (3) temperature manipulation shifts Type-2 criterion while meta-d'remains stable for two of four models, dissociating confidence policy from metacognitive capacity; (4) AUROC_2 and M-ratio produce fully inverted model rankings, demonstrating these metrics answer fundamentally different evaluation questions. The meta-d'framework reveals which models\"know what they don't know\"versus which merely appear well-calibrated due to criterion placement -- a distinction with direct implications for model selection, deployment, and human-AI collaboration. Pre-registered analysis; code and data publicly available.",
+      "citations": 5
+    },
+    {
+      "title": "Do LVLMs Know What They Know? A Systematic Study of Knowledge Boundary Perception in LVLMs",
+      "year": 2025,
+      "authors": "Zhikai Ding, Shiyu Ni, Keping Bi",
+      "url": "https://www.semanticscholar.org/paper/8f003ec266c46c554d22d485a53ec3c02a747964",
+      "relevance": 1,
+      "abstract": "Large vision-language models (LVLMs) demonstrate strong visual question answering (VQA) capabilities but are shown to hallucinate. A reliable model should perceive its knowledge boundaries-knowing what it knows and what it does not. This paper investigates LVLMs'perception of their knowledge boundaries by evaluating three types of confidence signals: probabilistic confidence, answer consistency-based confidence, and verbalized confidence. Experiments on three LVLMs across three VQA datasets show that, although LVLMs possess a reasonable perception level, there is substantial room for improvement. Among the three confidences, probabilistic and consistency-based signals are more reliable indicators, while verbalized confidence often leads to overconfidence. To enhance LVLMs'perception, we adapt several established confidence calibration methods from Large Language Models (LLMs) and propose three effective methods. Additionally, we compare LVLMs with their LLM counterparts, finding that jointly processing visual and textual inputs decreases question-answering performance but reduces confidence, resulting in an improved perception level compared to LLMs.",
+      "citations": 3
+    },
+    {
+      "title": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "year": 2024,
+      "authors": "Tianyu Cui, Yanling Wang, Chuanpu Fu, Yong Xiao, Sijia Li, Xinhao Deng, Yunpeng Liu, QingLin Zhang, Ziyi Qiu, Peiyang Li, Zhixing Tan, Junwu Xiong, Xinyu Kong, Zujie Wen, Ke Xu, Qi Li",
+      "url": "https://api.semanticscholar.org/CorpusId:266933337",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) have strong capabilities in solving diverse natural language processing tasks. However, the safety and security issues of LLM systems have become the major obstacle to their widespread application. Many studies have extensively investigated risks in LLM systems and developed the corresponding mitigation strategies. Leading-edge enterprises such as OpenAI, Google, Meta, and Anthropic have also made lots of efforts on responsible LLMs. Therefore, there is a growing need to organize the existing studies and establish comprehensive taxonomies for the community. In this paper, we delve into four essential modules of an LLM system, including an input module for receiving prompts, a language model trained on extensive corpora, a toolchain module for development and deployment, and an output module for exporting LLM-generated content. Based on this, we propose a comprehensive taxonomy, which systematically analyzes potential risks associated with each module of an LLM system and discusses the corresponding mitigation strategies. Furthermore, we review prevalent benchmarks, aiming to facilitate the risk assessment of LLM systems. We hope that this paper can help LLM participants embrace a systematic perspective to build their responsible LLM systems.",
+      "citations": 111
+    },
+    {
+      "title": "LLM Lies: Hallucinations are not Bugs, but Features as Adversarial Examples",
+      "year": 2023,
+      "authors": "Jia-Yu Yao, Kun-Peng Ning, Zhen-Hui Liu, Munan Ning, Li Yuan",
+      "url": "https://api.semanticscholar.org/CorpusId:263608740",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs), including GPT-3.5, LLaMA, and PaLM, seem to be knowledgeable and able to adapt to many tasks. However, we still cannot completely trust their answers, since LLMs suffer from \\textbf{hallucination}\\textemdash fabricating non-existent facts, deceiving users with or without their awareness. However, the reasons for their existence and pervasiveness remain unclear. In this paper, we demonstrate that nonsensical prompts composed of random tokens can also elicit the LLMs to respond with hallucinations. Moreover, we provide both theoretical and experimental evidence that transformers can be manipulated to produce specific pre-define tokens by perturbing its input sequence. This phenomenon forces us to revisit that \\emph{hallucination may be another view of adversarial examples}, and it shares similar characteristics with conventional adversarial examples as a basic property of LLMs. Therefore, we formalize an automatic hallucination triggering method as the \\textit{hallucination attack} in an adversarial way. Finally, we explore the basic properties of attacked adversarial prompts and propose a simple yet effective defense strategy. Our code is released on GitHub\\footnote{https://github.com/PKU-YuanGroup/Hallucination-Attack}.",
+      "citations": 302
+    },
+    {
+      "title": "SoK: Memorization in General-Purpose Large Language Models",
+      "year": 2023,
+      "authors": "Valentin Hartmann, Anshuman Suri, Vincent Bindschaedler, David Evans, Shruti Tople, Robert West",
+      "url": "https://api.semanticscholar.org/CorpusId:264590727",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) are advancing at a remarkable pace, with myriad applications under development. Unlike most earlier machine learning models, they are no longer built for one specific application but are designed to excel in a wide range of tasks. A major part of this success is due to their huge training datasets and the unprecedented number of model parameters, which allow them to memorize large amounts of information contained in the training data. This memorization goes beyond mere language, and encompasses information only present in a few documents. This is often desirable since it is necessary for performing tasks such as question answering, and therefore an important part of learning, but also brings a whole array of issues, from privacy and security to copyright and beyond. LLMs can memorize short secrets in the training data, but can also memorize concepts like facts or writing styles that can be expressed in text in many different ways. We propose a taxonomy for memorization in LLMs that covers verbatim text, facts, ideas and algorithms, writing styles, distributional properties, and alignment goals. We describe the implications of each type of memorization - both positive and negative - for model performance, privacy, security and confidentiality, copyright, and auditing, and ways to detect and prevent memorization. We further highlight the challenges that arise from the predominant way of defining memorization with respect to model behavior instead of model weights, due to LLM-specific phenomena such as reasoning capabilities or differences between decoding algorithms. Throughout the paper, we describe potential risks and opportunities arising from memorization in LLMs that we hope will motivate new research directions.",
+      "citations": 42
+    },
+    {
+      "title": "A Concise Review of Hallucinations in LLMs and their Mitigation",
+      "year": 2025,
+      "authors": "Parth Pulkundwar, Vivek Dhanawade, Rohit Yadav, Minal Sonkar, Medha Asurlekar, Sarita G. Rathod",
+      "url": "https://api.semanticscholar.org/CorpusId:283458640",
+      "relevance": 1,
+      "abstract": "Traditional language models face a challenge from hallucinations. Their very presence casts a large, dangerous shadow over the promising realm of natural language processing. It becomes crucial to understand the various kinds of hallucinations that occur nowadays, their origins, and ways of reducing them. This document provides a concise and straightforward summary of that. It serves as a one-stop resource for a general understanding of hallucinations and how to mitigate them.",
+      "citations": 0
+    },
+    {
+      "title": "Understanding New-Knowledge-Induced Factual Hallucinations in LLMs: Analysis and Interpretation",
+      "year": 2025,
+      "authors": "R. Dang, Peng Hu, Zhejian Lai, Changjiang Gao, Min Zhang, Shujian Huang",
+      "url": "https://api.semanticscholar.org/CorpusId:284532694",
+      "relevance": 1,
+      "abstract": "Prior works have shown that fine-tuning on new knowledge can induce factual hallucinations in large language models (LLMs), leading to incorrect outputs when evaluated on previously known information. However, the specific manifestations of such hallucination and its underlying mechanisms remain insufficiently understood. Our work addresses this gap by designing a controlled dataset \\textit{Biography-Reasoning}, and conducting a fine-grained analysis across multiple knowledge types and two task types, including knowledge question answering (QA) and knowledge reasoning tasks. We find that hallucinations not only severely affect tasks involving newly introduced knowledge, but also propagate to other evaluation tasks. Moreover, when fine-tuning on a dataset in which a specific knowledge type consists entirely of new knowledge, LLMs exhibit elevated hallucination tendencies. This suggests that the degree of unfamiliarity within a particular knowledge type, rather than the overall proportion of new knowledge, is a stronger driver of hallucinations. Through interpretability analysis, we show that learning new knowledge weakens the model's attention to key entities in the input question, leading to an over-reliance on surrounding context and a higher risk of hallucination. Conversely, reintroducing a small amount of known knowledge during the later stages of training restores attention to key entities and substantially mitigates hallucination behavior. Finally, we demonstrate that disrupted attention patterns can propagate across lexically similar contexts, facilitating the spread of hallucinations beyond the original task.",
+      "citations": 0
+    },
+    {
+      "title": "SKICSE: Sentence Knowable Information Prompted by LLMs Improves Contrastive Sentence Embeddings",
+      "year": 2024,
+      "authors": "Fangwei Ou, Jinan Xu",
+      "url": "https://api.semanticscholar.org/CorpusId:270514391",
+      "relevance": 1,
+      "abstract": "Contrastive learning, which utilizes positive pairs and in-batch negatives to optimize the loss objective, has been proven to be an effective method for learning sentence embeddings. However, we argue that the previous methods of constructing positive pairs only through dropout perturbation or entailment relation are limited. Since there is more sentence knowable information (SKI) to be mined, such as sentence external knowledge, semantic analysis, and grammatical description. In this work, we first hand-craft a simple and effective prompt template that is able to obtain the knowable information of input sentences from LLMs (e.g., LLaMA). Then we combine the original sentence and its knowable information to form a positive pair for contrastive learning. We evaluate our method on standard semantic textual similarity (STS) tasks. Experimental results show that our unsupervised and supervised models using \\text{BERT}_\\text{base} achieve an average of 78.65% and 82.45% Spearman\u2019s correlation respectively, a 2.40% and 0.88% improvement compared to SimCSE. Our model outperforms the previous state-of-the-art model PromptBERT in both unsupervised and supervised settings and specifically yields a new state-of-the-art performance in supervised setting.",
+      "citations": 4
+    }
+  ]
+}
+
+Results saved to: paper_search_results/LLM_hallucination_know_what_they_know_20260518_005523.jsonl

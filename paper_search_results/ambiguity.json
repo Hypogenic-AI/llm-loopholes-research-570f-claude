@@ -1,0 +1,674 @@
+{
+  "success": true,
+  "total": 74,
+  "papers": [
+    {
+      "title": "Language Models Identify Ambiguities and Exploit Loopholes",
+      "year": 2025,
+      "authors": "Jio Choi, Mohit Bansal, Elias Stengel-Eskin",
+      "url": "https://api.semanticscholar.org/CorpusId:280918575",
+      "relevance": 3,
+      "abstract": "Studying the responses of large language models (LLMs) to loopholes presents a two-fold opportunity. First, it affords us a lens through which to examine ambiguity and pragmatics in LLMs, since exploiting a loophole requires identifying ambiguity and performing sophisticated pragmatic reasoning. Second, loopholes pose an interesting and novel alignment problem where the model is presented with conflicting goals and can exploit ambiguities to its own advantage. To address these questions, we design scenarios where LLMs are given a goal and an ambiguous user instruction in conflict with the goal, with scenarios covering scalar implicature, structural ambiguities, and power dynamics. We then measure different models'abilities to exploit loopholes to satisfy their given goals as opposed to the goals of the user. We find that both closed-source and stronger open-source models can identify ambiguities and exploit their resulting loopholes, presenting a potential AI safety risk. Our analysis indicates that models which exploit loopholes explicitly identify and reason about both ambiguity and conflicting goals.",
+      "citations": 2
+    },
+    {
+      "title": "A Survey of LLM Alignment: Instruction Understanding, Intention Reasoning, and Reliable Generation",
+      "year": 2025,
+      "authors": "Zongyu Chang, Feihong Lu, Ziqin Zhu, Qian Li, Cheng Ji, Zhuo Chen, Yang Liu, Ruifeng Xu, Yangqiu Song, Shangguang Wang, Jianxin Li",
+      "url": "https://api.semanticscholar.org/CorpusId:276317836",
+      "relevance": 3,
+      "abstract": "Large language models have demonstrated exceptional capabilities in understanding and generation. However, in real-world scenarios, users'natural language expressions are often inherently fuzzy, ambiguous, and uncertain, leading to challenges such as vagueness, polysemy, and contextual ambiguity. This paper focuses on three challenges in LLM-based text generation tasks: instruction understanding, intention reasoning, and reliable dialog generation. Regarding human complex instruction, LLMs have deficiencies in understanding long contexts and instructions in multi-round conversations. For intention reasoning, LLMs may have inconsistent command reasoning, difficulty reasoning about commands containing incorrect information, difficulty understanding user ambiguous language commands, and a weak understanding of user intention in commands. Besides, In terms of Reliable Dialog Generation, LLMs may have unstable generated content and unethical generation. To this end, we classify and analyze the performance of LLMs in challenging scenarios and conduct a comprehensive evaluation of existing solutions. Furthermore, we introduce benchmarks and categorize them based on the aforementioned three core challenges. Finally, we explore potential directions for future research to enhance the reliability and adaptability of LLMs in real-world applications.",
+      "citations": 2
+    },
+    {
+      "title": "Pragmatic Reasoning improves LLM Code Generation",
+      "year": 2025,
+      "authors": "Zhuchen Cao, S. Apel, A. Singla, Vera Demberg",
+      "url": "https://www.semanticscholar.org/paper/b312e94871b28c9dc67647bb993c57a1ce129977",
+      "relevance": 3,
+      "abstract": "Pragmatic reasoning is pervasive in human-human communication - it allows us to leverage shared knowledge and counterfactual reasoning in order to infer the intention of a conversational partner given their ambiguous or underspecified message. In human-computer communication, underspecified messages often represent a major challenge: for instance, translating natural language instructions into code is difficult when user instructions contain inherent ambiguities. In the present paper, we aim to scale up the pragmatic\"Rational Speech Act\"framework to naturalistic language-to-code problems, and propose a way of dealing with multiple meaning-equivalent instruction alternatives, an issue that does not arise in previous toy-scale problems. We evaluate our method, CodeRSA, with two recent LLMs (Llama-3-8B-Instruct and Qwen-2.5-7B-Instruct) on two widely used code generation benchmarks (HumanEval and MBPP). Our experimental results show that CodeRSA consistently outperforms common baselines, surpasses the state-of-the-art approach in most cases, and demonstrates robust overall performance. Qualitative analyses demonstrate that it exhibits the desired behavior for the right reasons. These findings underscore the effectiveness of integrating pragmatic reasoning into a naturalistic complex communication task, language-to-code generation, offering a promising direction for enhancing code generation quality in LLMs and emphasizing the importance of pragmatic reasoning in complex communication settings.",
+      "citations": 6
+    },
+    {
+      "title": "Pragmatic Instruction Following and Goal Assistance via Cooperative Language-Guided Inverse Planning",
+      "year": 2024,
+      "authors": "Tan Zhi-Xuan, Lance Ying, Vikash K. Mansinghka, Joshua B. Tenenbaum",
+      "url": "https://www.semanticscholar.org/paper/5c05b129216e187bcf3499834759b9f23e0ad89a",
+      "relevance": 3,
+      "abstract": "People often give instructions whose meaning is ambiguous without further context, expecting that their actions or goals will disambiguate their intentions. How can we build assistive agents that follow such instructions in a flexible, context-sensitive manner? This paper introduces cooperative language-guided inverse plan search (CLIPS), a Bayesian agent architecture for pragmatic instruction following and goal assistance. Our agent assists a human by modeling them as a cooperative planner who communicates joint plans to the assistant, then performs multimodal Bayesian inference over the human's goal from actions and language, using large language models (LLMs) to evaluate the likelihood of an instruction given a hypothesized plan. Given this posterior, our assistant acts to minimize expected goal achievement cost, enabling it to pragmatically follow ambiguous instructions and provide effective assistance even when uncertain about the goal. We evaluate these capabilities in two cooperative planning domains (Doors, Keys & Gems and VirtualHome), finding that CLIPS significantly outperforms GPT-4V, LLM-based literal instruction following and unimodal inverse planning in both accuracy and helpfulness, while closely matching the inferences and assistive judgments provided by human raters.",
+      "citations": 40
+    },
+    {
+      "title": "When Contextual Inference Fails: Cancelability in Interactive Instruction Following",
+      "year": 2026,
+      "authors": "Natalia Bila, Kata Nasz'adi, Alexandra Mayn, C. Monz",
+      "url": "https://www.semanticscholar.org/paper/cb5e394621b592fdaccbc4ed32bb15393d6ebd9e",
+      "relevance": 3,
+      "abstract": "We investigate the separation of literal interpretation from contextual inference in a collaborative block-building task where a builder must resolve underspecified instructions using contextual inferences. Building on an existing two-speaker psycholinguistic paradigm -- which contrasts a pragmatically cooperative speaker with one who is only literally reliable -- we introduce Build What I Mean (BWIM), an interactive benchmark for contextual meaning construction. In BWIM, models must resolve ambiguity by either performing a contextual inference or requesting clarification at a small communication cost. Evaluating several state-of-the-art LLMs, we find a dissociation between judgment and action: while models detect speaker unreliability in explicit confidence ratings, they fail to exploit this information to guide efficient clarification behavior. Instead, we observe suboptimal strategies, such as partner-blind over-clarification and question-averse guessing under uncertainty.",
+      "citations": 0
+    },
+    {
+      "title": "Hint recognition in Chinese and Russian diplomatic discourse using large language models",
+      "year": 2026,
+      "authors": "Y. Guo, Xu Wang",
+      "url": "https://www.semanticscholar.org/paper/c18be03db606ad059948c83d6f495ff4e5a8d717",
+      "relevance": 3,
+      "abstract": "This study develops and evaluates a Large Language Model (LLM) system for hint recognition in Chinese and Russian diplomatic discourse by integrating a semantic\u2013cognitive\u2013pragmatic theoretical framework with Retrieval-Augmented Generation (RAG) and Chain-of-Thought (CoT) reasoning. Grounded in linguistic\u2013pragmatic theory and employing discourse analysis, we systematically annotated real press-conference transcripts from the Chinese and Russian Ministries of Foreign Affairs, constructed a vectorized external knowledge base covering textual and logical hints, embedded CoT reasoning instructions into the prompts, and provided bilingual few-shot exemplars to guide LLM recognition. Experimental results demonstrate stable overall performance with consistently high recall across both corpora, with the Russian dataset achieving higher precision and F1 scores than the Chinese dataset. Error analysis reveals three major types of systematic bias in LLM hint recognition: semantic over\u2013interpretation, hint-type misclassification, and literal-meaning misclassification. To address these problems, we propose several targeted improvements, including expanding negative samples with standardized \u201cno-hint\u201d diplomatic expressions, strengthening context anchoring to ensure pragmatic interpretations are grounded in discourse, introducing a repeated matching mechanism, calibrating sensitive trigger words, and introducing a pre-filtering and self-evaluation mechanism to better distinguish explicit statements from implicit meanings. This study provides a feasible pathway and practical guidance for improving the accuracy and stability of LLMs in multilingual, high-context implicit information recognition.",
+      "citations": 0
+    },
+    {
+      "title": "Theory of Mind in Action: The Instruction Inference Task",
+      "year": 2025,
+      "authors": "Fardin Saad, Pradeep K. Murukannaiah, Munindar P Singh",
+      "url": "https://www.semanticscholar.org/paper/6f597502c06eb01f1d599cf750deba889aea158d",
+      "relevance": 3,
+      "abstract": "Successful human-agent teaming relies on an agent being able to understand instructions given by a (human) principal. In many cases, an instruction may be incomplete or ambiguous. In such cases, the agent must infer the unspoken intentions from their shared context, that is, it must exercise the principal's Theory of Mind (ToM) and infer the mental states of its principal. We consider the prospects of effective human-agent collaboration using large language models (LLMs). To assess ToM in a dynamic, goal-oriented, and collaborative environment, we introduce a novel task, Instruction Inference, in which an agent assists a principal in reaching a goal by interpreting incomplete or ambiguous instructions. We present Tomcat, an LLM-based agent, designed to exhibit ToM reasoning in interpreting and responding to the principal's instructions. We implemented two variants of Tomcat. One, dubbed Fs-CoT (Fs for few-shot, CoT for chain-of-thought), is based on a small number of examples demonstrating the requisite structured reasoning. One, dubbed CP (commonsense prompt), relies on commonsense knowledge and information about the problem. We realized both variants of Tomcat on three leading LLMs, namely, GPT-4o, DeepSeek-R1, and Gemma-3-27B. To evaluate the effectiveness of Tomcat, we conducted a study with 52 human participants in which we provided participants with the same information as the CP variant. We computed intent accuracy, action optimality, and planning optimality to measure the ToM capabilities of Tomcat and our study participants. We found that Tomcat with Fs-CoT, particularly with GPT-4o and DeepSeek-R1, achieves performance comparable to the human participants, underscoring its ToM potential for human-agent collaboration.",
+      "citations": 0
+    },
+    {
+      "title": "Pragmatics in the Era of Large Language Models: A Survey on Datasets, Evaluation, Opportunities and Challenges",
+      "year": 2025,
+      "authors": "Bolei Ma, Yuting Li, Wei Zhou, Ziwei Gong, Yang Janet Liu, Katja Jasinskaja, Annemarie Friedrich, Julia Hirschberg, Frauke Kreuter, Barbara Plank",
+      "url": "https://api.semanticscholar.org/CorpusId:276422217",
+      "relevance": 2,
+      "abstract": "Understanding pragmatics-the use of language in context-is crucial for developing NLP systems capable of interpreting nuanced language use. Despite recent advances in language technologies, including large language models, evaluating their ability to handle pragmatic phenomena such as implicatures and references remains challenging. To advance pragmatic abilities in models, it is essential to understand current evaluation trends and identify existing limitations. In this survey, we provide a comprehensive review of resources designed for evaluating pragmatic capabilities in NLP, categorizing datasets by the pragmatic phenomena they address. We analyze task designs, data collection methods, evaluation approaches, and their relevance to real-world applications. By examining these resources in the context of modern language models, we highlight emerging trends, challenges, and gaps in existing benchmarks. Our survey aims to clarify the landscape of pragmatic evaluation and guide the development of more comprehensive and targeted benchmarks, ultimately contributing to more nuanced and context-aware NLP models.",
+      "citations": 28
+    },
+    {
+      "title": "Pragmatics in Language Grounding: Phenomena, Tasks, and Modeling Approaches",
+      "year": 2022,
+      "authors": "Daniel Fried, Nicholas Tomlin, Jennifer Hu, Roma Patel, Aida Nematzadeh",
+      "url": "https://api.semanticscholar.org/CorpusId:258832267",
+      "relevance": 2,
+      "abstract": "People rely heavily on context to enrich meaning beyond what is literally said, enabling concise but effective communication. To interact successfully and naturally with people, user-facing artificial intelligence systems will require similar skills in pragmatics: relying on various types of context -- from shared linguistic goals and conventions, to the visual and embodied world -- to use language effectively. We survey existing grounded settings and pragmatic modeling approaches and analyze how the task goals, environmental contexts, and communicative affordances in each work enrich linguistic meaning. We present recommendations for future grounded task design to naturally elicit pragmatic phenomena, and suggest directions that focus on a broader range of communicative contexts and affordances.",
+      "citations": 15
+    },
+    {
+      "title": "ClarifyMT-Bench: Benchmarking and Improving Multi-Turn Clarification for Conversational Large Language Models",
+      "year": 2025,
+      "authors": "Sichun Luo, Huang Yi, Mukai Li, Shichang Meng, Fengyuan Liu, Zefa Hu, Junlan Feng, Qi Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:284153624",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) are increasingly deployed as conversational assistants in open-domain, multi-turn settings, where users often provide incomplete or ambiguous information. However, existing LLM-focused clarification benchmarks primarily assume single-turn interactions or cooperative users, limiting their ability to evaluate clarification behavior in realistic settings. We introduce \\textbf{ClarifyMT-Bench}, a benchmark for multi-turn clarification grounded in a five-dimensional ambiguity taxonomy and a set of six behaviorally diverse simulated user personas. Through a hybrid LLM-human pipeline, we construct 6,120 multi-turn dialogues capturing diverse ambiguity sources and interaction patterns. Evaluating ten representative LLMs uncovers a consistent under-clarification bias: LLMs tend to answer prematurely, and performance degrades as dialogue depth increases. To mitigate this, we propose \\textbf{ClarifyAgent}, an agentic approach that decomposes clarification into perception, forecasting, tracking, and planning, substantially improving robustness across ambiguity conditions. ClarifyMT-Bench establishes a reproducible foundation for studying when LLMs should ask, when they should answer, and how to navigate ambiguity in real-world human-LLM interactions.",
+      "citations": 4
+    },
+    {
+      "title": "The Goldilocks of Pragmatic Understanding: Fine-Tuning Strategy Matters for Implicature Resolution by LLMs",
+      "year": 2022,
+      "authors": "L. Ruis, Akbir Khan, Stella Biderman, Sara Hooker, Tim Rocktaschel, Edward Grefenstette",
+      "url": "https://www.semanticscholar.org/paper/2ed471dbf2eac410b344de1b00e0ad9671bc1967",
+      "relevance": 2,
+      "abstract": "Despite widespread use of LLMs as conversational agents, evaluations of performance fail to capture a crucial aspect of communication: interpreting language in context -- incorporating its pragmatics. Humans interpret language using beliefs and prior knowledge about the world. For example, we intuitively understand the response\"I wore gloves\"to the question\"Did you leave fingerprints?\"as meaning\"No\". To investigate whether LLMs have the ability to make this type of inference, known as an implicature, we design a simple task and evaluate four categories of widely used state-of-the-art models. We find that, despite only evaluating on utterances that require a binary inference (yes or no), models in three of these categories perform close to random. However, LLMs instruction-tuned at the example-level perform significantly better. These results suggest that certain fine-tuning strategies are far better at inducing pragmatic understanding in models. We present our findings as the starting point for further research into evaluating how LLMs interpret language in context and to drive the development of more pragmatic and useful models of human discourse.",
+      "citations": 68
+    },
+    {
+      "title": "PUB: A Pragmatics Understanding Benchmark for Assessing LLMs\u2019 Pragmatics Capabilities",
+      "year": 2024,
+      "authors": "S. Sravanthi, Meet Doshi, Tankala Pavan Kalyan, Rudra Murthy, Pushpak Bhattacharyya, Raj Dabre",
+      "url": "https://www.semanticscholar.org/paper/1d8b0deda0658301959ff01dd4a10a926454e761",
+      "relevance": 2,
+      "abstract": "LLMs have demonstrated remarkable capability for understanding semantics, but they often struggle with understanding pragmatics. To demonstrate this fact, we release a Pragmatics Understanding Benchmark (PUB) dataset consisting of fourteen tasks in four pragmatics phenomena, namely, Implicature, Presupposition, Reference, and Deixis. We curated high-quality test sets for each task, consisting of Multiple Choice Question Answers (MCQA). PUB includes a total of 28k data points, 6.1k of which have been created by us, and the rest are adapted from existing datasets. We evaluated nine models varying in the number of parameters and type of training. Our study indicates that fine-tuning for instruction-following and chat significantly enhances the pragmatics capabilities of smaller language models. However, for larger models, the base versions perform comparably with their chat-adapted counterparts. Additionally, there is a noticeable performance gap between human capabilities and model capabilities. Furthermore, unlike the consistent performance of humans across various tasks, the models demonstrate variability in their proficiency, with performance levels fluctuating due to different hints and the complexities of tasks within the same dataset. Overall, the benchmark aims to provide a comprehensive evaluation of LLM's ability to handle real-world language tasks that require pragmatic reasoning.",
+      "citations": 63
+    },
+    {
+      "title": "Serving Long-Context LLMs at the Mobile Edge: Test-Time Reinforcement Learning-based Model Caching and Inference Offloading",
+      "year": 2025,
+      "authors": "Minrui Xu, D. Niyato, Christopher G. Brinton",
+      "url": "https://api.semanticscholar.org/CorpusId:275906957",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) can process data to perform zero-shot learning on unseen tasks and few-shot learning on complex reasoning tasks for devices. However, resource-limited mobile edge networks struggle to support long-context LLM serving for deploying and executing LLM agents during multi-round interactions with users. Unlike stateless computation offloading and static service offloading in edge computing, optimizing LLM serving at edge servers is challenging because LLMs continuously learn from context, which makes their accuracy, latency, and resource consumption dynamics. In this paper, we propose a joint model caching and inference offloading framework that utilizes test-time deep reinforcement learning (T2DRL) to optimize deployment and execution strategies for long-context LLM serving. In this framework, we analyze the performance convergence and design an optimization problem considering the utilization of context windows in LLMs. Furthermore, the T2DRL algorithm can learn not only in the training phase but also in the testing phase to proactively manage cached models and service requests and adapt to context changes and usage patterns during execution. Finally, experimental results demonstrate that the T2DRL algorithm can reduce system costs by at least 30% compared to baselines while guaranteeing the performance of LLM agents in real-world perception and reasoning tasks.",
+      "citations": 12
+    },
+    {
+      "title": "Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement Learning",
+      "year": 2025,
+      "authors": "Ram Ramrakhya, Matthew Chang, Xavi Puig, Ruta Desai, Z. Kira, Roozbeh Mottaghi",
+      "url": "https://api.semanticscholar.org/CorpusId:277467256",
+      "relevance": 2,
+      "abstract": "Embodied agents operating in household environments must interpret ambiguous and under-specified human instructions. A capable household robot should recognize ambiguity and ask relevant clarification questions to infer the user intent accurately, leading to more effective task execution. To study this problem, we introduce the Ask-to-Act task, where an embodied agent is tasked with a single or multi-object rearrangement task using an under-specified instruction in a home environment. The agent must strategically ask minimal, yet relevant, clarification questions to resolve ambiguity while navigating under partial observability. To address this challenge, we propose a novel approach that fine-tunes multi-modal large language models (MLLMs) as vision-language-action (VLA) policies using online reinforcement learning (RL) with LLM-generated rewards. Our method eliminates the need for large-scale human demonstrations or manually engineered rewards for training such agents. We benchmark against strong zero-shot baselines including GPT-4o as well as supervised fine-tuned MLLMs on our task. Our results show that our RL-finetuned MLLM outperforms all baselines by a significant margin (10.4-16.5%), generalizing well to novel scenes and tasks. To the best of our knowledge, this is the first demonstration of adapting MLLMs as VLA agents that can act and ask for help using LLM-generated rewards with online RL.",
+      "citations": 17
+    },
+    {
+      "title": "CEI: A Benchmark for Evaluating Pragmatic Reasoning in Language Models",
+      "year": 2026,
+      "authors": "Jon Chun, H. Sussman, Adrian Mangine, Murathan Kocaman, Kirill Sidorko, Abhigya Koirala, Andre McCloud, Gwen Eisenbeis, Wisdom Akanwe, Moustapha Gassama, Eliezer Gonzalez Chirinos, Anne-Duncan Enright, Peter Dunson, Tiffanie Ng, Anna von Rosenstiel, Godwin Idowu",
+      "url": "https://www.semanticscholar.org/paper/af0e378543ef02815e97eee3e958e06c116bf91d",
+      "relevance": 2,
+      "abstract": "Pragmatic reasoning, inferring intended meaning beyond literal semantics, underpins everyday communication yet remains difficult for large language models. We present the Contextual Emotional Inference (CEI) Benchmark: 300 human-validated scenarios for evaluating how well LLMs disambiguate pragmatically complex utterances. Each scenario pairs a situational context and speaker-listener roles (with explicit power relations) against an ambiguous utterance. The dataset covers five pragmatic subtypes (sarcasm/irony, mixed signals, strategic politeness, passive aggression, deflection/misdirection) drawn from workplace, family, social, and service settings, with three power configurations (peer, higher-to-lower, lower-to-higher). Three trained annotators independently labeled every scenario. Inter-annotator agreement (Fleiss'kappa = 0.06-0.25 by subtype) is low but expected: pragmatic inference admits multiple valid readings, and the disagreement itself is informative. We describe our annotation methodology, including a 4-level quality control pipeline that combines automated statistical checks with expert adjudication. CEI is released under CC-BY-4.0.",
+      "citations": 0
+    },
+    {
+      "title": "Referential ambiguity and clarification requests: comparing human and LLM behaviour",
+      "year": 2025,
+      "authors": "Chris Madge, Matthew Purver, Massimo Poesio",
+      "url": "https://api.semanticscholar.org/CorpusId:280276495",
+      "relevance": 2,
+      "abstract": "In this work we examine LLMs'ability to ask clarification questions in task-oriented dialogues that follow the asynchronous instruction-giver/instruction-follower format. We present a new corpus that combines two existing annotations of the Minecraft Dialogue Corpus -- one for reference and ambiguity in reference, and one for SDRT including clarifications -- into a single common format providing the necessary information to experiment with clarifications and their relation to ambiguity. With this corpus we compare LLM actions with original human-generated clarification questions, examining how both humans and LLMs act in the case of ambiguity. We find that there is only a weak link between ambiguity and humans producing clarification questions in these dialogues, and low correlation between humans and LLMs. Humans hardly ever produce clarification questions for referential ambiguity, but often do so for task-based uncertainty. Conversely, LLMs produce more clarification questions for referential ambiguity, but less so for task uncertainty. We question if LLMs'ability to ask clarification questions is predicated on their recent ability to simulate reasoning, and test this with different reasoning approaches, finding that reasoning does appear to increase question frequency and relevancy.",
+      "citations": 5
+    },
+    {
+      "title": "The Pragmatic Mind of Machines: Tracing the Emergence of Pragmatic Competence in Large Language Models",
+      "year": 2025,
+      "authors": "Kefan Yu, Qingcheng Zeng, Weihao Xuan, Wanxin Li, Jingyi Wu, Rob Voigt",
+      "url": "https://api.semanticscholar.org/CorpusId:278904634",
+      "relevance": 2,
+      "abstract": "Current large language models (LLMs) have demonstrated emerging capabilities in social intelligence tasks, including implicature resolution and theory-of-mind reasoning, both of which require substantial pragmatic understanding. However, how LLMs acquire this pragmatic competence throughout the training process remains poorly understood. In this work, we introduce ALTPRAG, a dataset grounded in the pragmatic concept of alternatives, to evaluate whether LLMs at different training stages can accurately infer nuanced speaker intentions. Each instance pairs two equally plausible yet pragmatically divergent continuations and requires the model to (i) infer the speaker's intended meaning and (ii) explain when and why a speaker would choose one utterance over its alternative, thus directly probing pragmatic competence through contrastive reasoning. We systematically evaluate 22 LLMs across 3 key training stages: after pre-training, supervised fine-tuning (SFT), and preference optimization, to examine the development of pragmatic competence. Our results show that even base models exhibit notable sensitivity to pragmatic cues, which improves consistently with increases in model and data scale. Additionally, SFT and RLHF contribute further gains, particularly in cognitive-pragmatic scenarios. These findings highlight pragmatic competence as an emergent and compositional property of LLM training and offer new insights for aligning models with human communicative norms.",
+      "citations": 0
+    },
+    {
+      "title": "Pragmatic Inference Chain (PIC) Improving LLMs' Reasoning of Authentic Implicit Toxic Language",
+      "year": 2025,
+      "authors": "Xi Chen, Shuo Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:276769287",
+      "relevance": 2,
+      "abstract": "The rapid development of large language models (LLMs) gives rise to ethical concerns about their performance, while opening new avenues for developing toxic language detection techniques. However, LLMs'unethical output and their capability of detecting toxicity have primarily been tested on language data that do not demand complex meaning inference, such as the biased associations of'he'with programmer and'she'with household. Nowadays toxic language adopts a much more creative range of implicit forms, thanks to advanced censorship. In this study, we collect authentic toxic interactions that evade online censorship and that are verified by human annotators as inference-intensive. To evaluate and improve LLMs'reasoning of the authentic implicit toxic language, we propose a new prompting method, Pragmatic Inference Chain (PIC), drawn on interdisciplinary findings from cognitive science and linguistics. The PIC prompting significantly improves the success rate of GPT-4o, Llama-3.1-70B-Instruct, DeepSeek-v2.5, and DeepSeek-v3 in identifying implicit toxic language, compared to five baseline prompts, such as CoT and rule-based baselines. In addition, it also facilitates the models to produce more explicit and coherent reasoning processes, hence can potentially be generalized to other inference-intensive tasks, e.g., understanding humour and metaphors.",
+      "citations": 7
+    },
+    {
+      "title": "Rethinking Pragmatics in Large Language Models: Towards Open-Ended Evaluation and Preference Tuning",
+      "year": 2024,
+      "authors": "Shengguang Wu, Shusheng Yang, Zhenglun Chen, Qi Su",
+      "url": "https://www.semanticscholar.org/paper/ea052da88d817ea2c7b13b6706b2124965936769",
+      "relevance": 2,
+      "abstract": "This study addresses the challenges of assessing and enhancing social-pragmatic inference in large language models (LLMs). We first highlight the inadequacy of current accuracy-based multiple choice question answering (MCQA) formats in assessing social-pragmatic reasoning, and propose the direct evaluation of models\u2019 free-form responses as measure, which correlates better with human judgment. Furthermore, we explore methods to improve pragmatic abilities in LLMs, advocating for preference optimization (PO) over supervised finetuning (SFT), given the absence of a definitive \u201cgold\u201d answer in social contexts. Our results show that preferential tuning consistently outperforms SFT across pragmatic phenomena and offers a near-free launch in pragmatic abilities without compromising general capabilities. Lastly, we examine the internal structure of LLMs, revealing that the significant boost in pragmatic reasoning is tied to deeper layer representations, analogous to human high-level thinking. Our experiments span a variety of pragmatic and social reasoning datasets, as well as an image referential game requiring a multimodal theory of mind (ToM). With our refined paradigms for evaluating and enhancing pragmatic inference, this paper offers key insights into building more socially aware language models.",
+      "citations": 14
+    },
+    {
+      "title": "Clarifying Ambiguities: on the Role of Ambiguity Types in Prompting Methods for Clarification Generation",
+      "year": 2025,
+      "authors": "Anfu Tang, Laure Soulier, Vincent Guigue",
+      "url": "https://api.semanticscholar.org/CorpusId:277824041",
+      "relevance": 2,
+      "abstract": "In information retrieval (IR), providing appropriate clarifications to better understand users' information needs is crucial for building a proactive search-oriented dialogue system. Due to the strong in-context learning ability of large language models (LLMs), recent studies investigate prompting methods to generate clarifications using few-shot or Chain of Thought (CoT) prompts. However, vanilla CoT prompting does not distinguish the characteristics of different information needs, making it difficult to understand how LLMs resolve ambiguities in user queries. In this work, we focus on the concept of ambiguity for clarification, seeking to model and integrate ambiguities in the clarification process. Following the reasoning and acting paradigm, we propose a new prompting scheme Ambiguity Type-Chain of Thought (AT-CoT), which enhances the reasoning abilities of LLMs by limiting CoT to first predict ambiguity types that can be interpreted as actions, then generate clarifications correspondingly. Experiments are conducted on various datasets containing human-annotated clarifying questions to compare AT-CoT with multiple baselines. We also perform user simulation to implicitly measure the quality of generated clarifications under various IR scenarios. Our codes are available at: https://github.com/anfutang/ClarifyingAmbiguities/.",
+      "citations": 14
+    },
+    {
+      "title": "Pragmatic Theories Enhance Understanding of Implied Meanings in LLMs",
+      "year": 2025,
+      "authors": "Takuma Sato, Seiya Kawano, Koichiro Yoshino",
+      "url": "https://api.semanticscholar.org/CorpusId:282592139",
+      "relevance": 2,
+      "abstract": "The ability to accurately interpret implied meanings plays a crucial role in human communication and language use, and language models are also expected to possess this capability. This study demonstrates that providing language models with pragmatic theories as prompts is an effective in-context learning approach for tasks to understand implied meanings. Specifically, we propose an approach in which an overview of pragmatic theories, such as Gricean pragmatics and Relevance Theory, is presented as a prompt to the language model, guiding it through a step-by-step reasoning process to derive a final interpretation. Experimental results showed that, compared to the baseline, which prompts intermediate reasoning without presenting pragmatic theories (0-shot Chain-of-Thought), our methods enabled language models to achieve up to 9.6\\% higher scores on pragmatic reasoning tasks. Furthermore, we show that even without explaining the details of pragmatic theories, merely mentioning their names in the prompt leads to a certain performance improvement (around 1-3%) in larger models compared to the baseline.",
+      "citations": 2
+    },
+    {
+      "title": "Beyond Single Models: Enhancing LLM Detection of Ambiguity in Requests Through Debate",
+      "year": 2025,
+      "authors": "Ana Davila, Jacinto Colan, Yasuhisa Hasegawa",
+      "url": "https://api.semanticscholar.org/CorpusId:280297068",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) have demonstrated significant capabilities in understanding and generating human language, contributing to more natural interactions with complex systems. However, they face challenges such as ambiguity in user requests processed by LLMs. To address these challenges, this paper introduces and evaluates a multi-agent debate framework designed to enhance detection and resolution capabilities beyond single models. The framework consists of three LLM architectures (Llama3-8B, Gemma2-9B, and Mistral-7B variants) and a dataset with diverse ambiguities. The debate framework markedly enhanced the performance of Llama3-8B and Mistral-7B variants over their individual baselines, with Mistral-7B-led debates achieving a notable 76.7 % success rate and proving particularly effective for complex ambiguities and efficient consensus. While acknowledging varying model responses to collaborative strategies, these findings underscore the debate framework's value as a targeted method for augmenting LLM capabilities. This work offers important insights for developing more robust and adaptive language understanding systems by showing how structured debates can lead to improved clarity in interactive systems.",
+      "citations": 2
+    },
+    {
+      "title": "Visual-O1: Understanding Ambiguous Instructions via Multi-modal Multi-turn Chain-of-thoughts Reasoning",
+      "year": 2024,
+      "authors": "Minheng Ni, Yutao Fan, Lei Zhang, W. Zuo",
+      "url": "https://api.semanticscholar.org/CorpusId:273162905",
+      "relevance": 2,
+      "abstract": "As large-scale models evolve, language instructions are increasingly utilized in multi-modal tasks. Due to human language habits, these instructions often contain ambiguities in real-world scenarios, necessitating the integration of visual context or common sense for accurate interpretation. However, even highly intelligent large models exhibit significant performance limitations on ambiguous instructions, where weak reasoning abilities of disambiguation can lead to catastrophic errors. To address this issue, this paper proposes Visual-O1, a multi-modal multi-turn chain-of-thought reasoning framework. It simulates human multi-modal multi-turn reasoning, providing instantial experience for highly intelligent models or empirical experience for generally intelligent models to understand ambiguous instructions. Unlike traditional methods that require models to possess high intelligence to understand long texts or perform lengthy complex reasoning, our framework does not significantly increase computational overhead and is more general and effective, even for generally intelligent models. Experiments show that our method not only significantly enhances the performance of models of different intelligence levels on ambiguous instructions but also improves their performance on general datasets. Our work highlights the potential of artificial intelligence to work like humans in real-world scenarios with uncertainty and ambiguity. We will release our data and code.",
+      "citations": 22
+    },
+    {
+      "title": "Too Polite to be Human: Evaluating LLM Empathy in Korean Conversations via a DCT-Based Framework",
+      "year": 2025,
+      "authors": "Seoyoon Park, Jaehee Kim, Hansaem Kim",
+      "url": "https://www.semanticscholar.org/paper/66366c794cfe4080da92ad9f1c37998a8ee6bc70",
+      "relevance": 2,
+      "abstract": "As LLMs are increasingly used in global conversational settings, concerns remain about their ability to handle complex sociocultural contexts. This study evaluates LLMs' empathetic understanding in Korean\u2014a high-context language\u2014using a pragmatics-based Discourse Completion Task (DCT) focused on interpretive judgment rather than generation. Our dataset systematically varies in relational hierarchy, intimacy, and emotional valence, enabling fine-grained comparisons between proprietary/open-source LLMs and native Korean speakers. Most LLMs showed over-empathizing tendencies and struggled with ambiguous relational cues. Neither model size nor Korean fine-tuning significantly improved performance. Additionally, humans exhibit a nuanced understanding of social context and relational nuances, whereas LLMs rely on surface-level heuristics. These findings highlight the limitations of LLMs in sociopragmatic reasoning and introduce a scalable, culturally flexible framework for evaluating socially aware AI.",
+      "citations": 0
+    },
+    {
+      "title": "EMODIS: A Benchmark for Context-Dependent Emoji Disambiguation in Large Language Models",
+      "year": 2025,
+      "authors": "Jiacheng Huang, Ning Yu, Xiaoyin Yi",
+      "url": "https://www.semanticscholar.org/paper/e42c841783e0a8d83d7c43fa61fa4556b639e763",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) are increasingly deployed in real-world communication settings, yet their ability to resolve context-dependent ambiguity remains underexplored. In this work, we present EMODIS, a new benchmark for evaluating LLMs' capacity to interpret ambiguous emoji expressions under minimal but contrastive textual contexts. Each instance in EMODIS comprises an ambiguous sentence containing an emoji, two distinct disambiguating contexts that lead to divergent interpretations, and a specific question that requires contextual reasoning. We evaluate both open-source and API-based LLMs, and find that even the strongest models frequently fail to distinguish meanings when only subtle contextual cues are present. Further analysis reveals systematic biases toward dominant interpretations and limited sensitivity to pragmatic contrast. EMODIS provides a rigorous testbed for assessing contextual disambiguation, and highlights the gap in semantic reasoning between humans and LLMs.",
+      "citations": 0
+    },
+    {
+      "title": "DeCAP: Context-Adaptive Prompt Generation for Debiasing Zero-shot Question Answering in Large Language Models",
+      "year": 2025,
+      "authors": "Suyoung Bae, YunSeok Choi, Jee-Hyong Lee",
+      "url": "https://api.semanticscholar.org/CorpusId:277313738",
+      "relevance": 2,
+      "abstract": "While Large Language Models (LLMs) excel in zero-shot Question Answering (QA), they tend to expose biases in their internal knowledge when faced with socially sensitive questions, leading to a degradation in performance. Existing zero-shot methods are efficient but fail to consider context and prevent bias propagation in the answers. To address this, we propose DeCAP, a method for debiasing LLMs using Context-Adaptive Prompt Generation. DeCAP leverages a Question Ambiguity Detection to take appropriate debiasing actions based on the context and a Neutral Answer Guidance Generation to suppress the LLMs make objective judgments about the context, minimizing the propagation of bias from their internal knowledge. Our various experiments across eight LLMs show that DeCAP achieves state-of-the-art zero-shot debiased QA performance. This demonstrates DeCAP's efficacy in enhancing the fairness and accuracy of LLMs in diverse QA settings.",
+      "citations": 0
+    },
+    {
+      "title": "\"Is the Pope Catholic?\" Applying Chain-of-Thought Reasoning to Understanding Conversational Implicatures",
+      "year": 2023,
+      "authors": "Zae Myung Kim, David E. Taylor, Dongyeop Kang",
+      "url": "https://api.semanticscholar.org/CorpusId:258840893",
+      "relevance": 2,
+      "abstract": "Conversational implicatures are pragmatic inferences that require listeners to deduce the intended meaning conveyed by a speaker from their explicit utterances. Although such inferential reasoning is fundamental to human communication, recent research indicates that large language models struggle to comprehend these implicatures as effectively as the average human. This paper demonstrates that by incorporating Grice's Four Maxims into the model through chain-of-thought prompting, we can significantly enhance its performance, surpassing even the average human performance on this task.",
+      "citations": 7
+    },
+    {
+      "title": "AmbigNLG: Addressing Task Ambiguity in Instruction for NLG",
+      "year": 2024,
+      "authors": "Ayana Niwa, Hayate Iso",
+      "url": "https://api.semanticscholar.org/CorpusId:268032250",
+      "relevance": 2,
+      "abstract": "We introduce AmbigNLG, a novel task designed to tackle the challenge of task ambiguity in instructions for Natural Language Generation (NLG). Ambiguous instructions often impede the performance of Large Language Models (LLMs), especially in complex NLG tasks. To tackle this issue, we propose an ambiguity taxonomy that categorizes different types of instruction ambiguities and refines initial instructions with clearer specifications. Accompanying this task, we present AmbigSNI-NLG, a dataset comprising 2,500 instances annotated to facilitate research in AmbigNLG. Through comprehensive experiments with state-of-the-art LLMs, we demonstrate that our method significantly enhances the alignment of generated text with user expectations, achieving up to a 15.02-point increase in ROUGE scores. Our findings highlight the critical importance of addressing task ambiguity to fully harness the capabilities of LLMs in NLG tasks. Furthermore, we confirm the effectiveness of our method in practical settings involving interactive ambiguity mitigation with users, underscoring the benefits of leveraging LLMs for interactive clarification.",
+      "citations": 14
+    },
+    {
+      "title": "ClarifyGPT: Empowering LLM-based Code Generation with Intention Clarification",
+      "year": 2023,
+      "authors": "Fangwen Mu, Lin Shi, Song Wang, Zhuohao Yu, Binquan Zhang, ChenXue Wang, Shichao Liu, Qing Wang",
+      "url": "https://api.semanticscholar.org/CorpusId:264172807",
+      "relevance": 2,
+      "abstract": "We introduce a novel framework named ClarifyGPT, which aims to enhance code generation by empowering LLMs with the ability to identify ambiguous requirements and ask targeted clarifying questions. In particular, ClarifyGPT first detects whether a given requirement is ambiguous by performing a code consistency check. If it is ambiguous, ClarifyGPT prompts an LLM to generate targeted clarifying questions. After receiving question responses, ClarifyGPT refines the ambiguous requirement and inputs it into the same LLM to generate a final code solution. To evaluate our ClarifyGPT, we first conduct a human evaluation involving ten participants who use ClarifyGPT for code generation on two publicly available benchmarks: MBPP-sanitized and MBPP-ET. The results show that ClarifyGPT elevates the performance (Pass@1) of GPT-4 from 70.96% to 80.80% on MBPP-sanitized. Furthermore, to perform large-scale automated evaluations of ClarifyGPT across different LLMs and benchmarks without requiring user participation, we introduce a high-fidelity simulation method to simulate user responses. The automated evaluation results also demonstrate that ClarifyGPT can significantly enhance code generation performance compared to the baselines. In particular, ClarifyGPT improves the average performance of GPT-4 and ChatGPT across four benchmarks from 68.02% to 75.75% and from 58.55% to 67.22%, respectively. We believe that ClarifyGPT can effectively facilitate the practical application of LLMs in real-world development environments.",
+      "citations": 69
+    },
+    {
+      "title": "Reasoning About Intent for Ambiguous Requests",
+      "year": 2025,
+      "authors": "Irina Saparina, Mirella Lapata",
+      "url": "https://api.semanticscholar.org/CorpusId:282992170",
+      "relevance": 2,
+      "abstract": "Large language models often respond to ambiguous requests by implicitly committing to one interpretation, frustrating users and creating safety risks when that interpretation is wrong. We propose generating a single structured response that enumerates the different ways an ambiguous request can be interpreted, each coupled with a corresponding answer. Our models are trained with reinforcement learning using a dual reward objective: recall on ambiguous inputs to maximise coverage of valid interpretations, and precision on unambiguous ones to suppress spurious alternatives. Training requires only multiple valid answers per input as supervision, no clarification questions or explicit interpretations are needed. Experiments on conversational question answering and semantic parsing demonstrate that our method achieves higher coverage of valid answers than baseline approaches. Human evaluation confirms that predicted interpretations are meaningful and explain their corresponding answers. Our approach promotes transparency with explicit interpretations, achieves efficiency by requiring only one generation step, and supports downstream applications through its structured output format.",
+      "citations": 1
+    },
+    {
+      "title": "Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training",
+      "year": 2024,
+      "authors": "Maximillian Chen, Ruoxi Sun, Sercan \u00d6. Arik, Tomas Pfister",
+      "url": "https://api.semanticscholar.org/CorpusId:270220485",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs), optimized through human feedback, have rapidly emerged as a leading paradigm for developing intelligent conversational assistants. However, despite their strong performance across many benchmarks, LLM-based agents might still lack conversational skills such as disambiguation -- when they are faced with ambiguity, they often overhedge or implicitly guess users'true intents rather than asking clarification questions. Under task-specific settings, high-quality conversation samples are often limited, constituting a bottleneck for LLMs'ability to learn optimal dialogue action policies. We propose Action-Based Contrastive Self-Training (ACT), a quasi-online preference optimization algorithm based on Direct Preference Optimization (DPO), that enables data-efficient dialogue policy learning in multi-turn conversation modeling. We demonstrate ACT's efficacy under in data-efficient tuning scenarios, even when there is no action label available, using multiple real-world conversational tasks: tabular-grounded question-answering, machine reading comprehension, and AmbigSQL, a novel task for disambiguating information-seeking requests for complex SQL generation towards data analysis agents. Additionally, we propose evaluating LLMs'ability to function as conversational agents by examining whether they can implicitly recognize and reason about ambiguity in conversation. ACT demonstrates substantial conversation modeling improvements over standard tuning approaches like supervised fine-tuning and DPO.",
+      "citations": 51
+    },
+    {
+      "title": "Does GPT-4 surpass human performance in linguistic pragmatics?",
+      "year": 2023,
+      "authors": "Ljubi\u0161a Boji\u0107, P. Kova\u010devi\u0107, Milan \u010cabarkapa",
+      "url": "https://api.semanticscholar.org/CorpusId:266335273",
+      "relevance": 2,
+      "abstract": "As Large Language Models (LLMs) become increasingly integrated into everyday life as general-purpose multimodal AI systems, their capabilities to simulate human understanding are under examination. This study investigates LLMs\u2019 ability to interpret linguistic pragmatics, which involves context and implied meanings. Using Grice\u2019s communication principles, we evaluated both LLMs (GPT-2, GPT-3, GPT-3.5, GPT-4, and Bard) and human subjects (N\u2009=\u2009147) on dialogue-based tasks. Human participants included 71 primarily Serbian students and 76 native English speakers from the United States. Findings revealed that LLMs, particularly GPT-4, outperformed humans. GPT-4 achieved the highest score of 4.80, surpassing the best human score of 4.55. Other LLMs performed well: GPT-3.5 scored 4.10, Bard 3.75, and GPT-3 3.25; GPT-2 had the lowest score of 1.05. The average LLM score was 3.39, exceeding the human cohorts\u2019 averages of 2.80 (Serbian students) and 2.34 (U.S. participants). In the ranking of all 155 subjects (including LLMs and humans), GPT-4 secured the top position, while the best human ranked second. These results highlight significant progress in LLMs\u2019 ability to simulate understanding of linguistic pragmatics. Future studies should confirm these findings with more dialogue-based tasks and diverse participants. This research has important implications for advancing general-purpose AI models in various communication-centered tasks, including potential application in humanoid robots in the future.",
+      "citations": 26
+    },
+    {
+      "title": "Identifying & Interactively Refining Ambiguous User Goals for Data Visualization Code Generation",
+      "year": 2025,
+      "authors": "Mert Inan, Anthony B. Sicilia, Alex Xie, Saujas Vaduguru, Daniel Fried, Malihe Alikhani",
+      "url": "https://api.semanticscholar.org/CorpusId:282055558",
+      "relevance": 2,
+      "abstract": "Establishing shared goals is a fundamental step in human-AI communication. However, ambiguities can lead to outputs that seem correct but fail to reflect the speaker's intent. In this paper, we explore this issue with a focus on the data visualization domain, where ambiguities in natural language impact the generation of code that visualizes data. The availability of multiple views on the contextual (e.g., the intended plot and the code rendering the plot) allows for a unique and comprehensive analysis of diverse ambiguity types. We develop a taxonomy of types of ambiguity that arise in this task and propose metrics to quantify them. Using Matplotlib problems from the DS-1000 dataset, we demonstrate that our ambiguity metrics better correlate with human annotations than uncertainty baselines. Our work also explores how multi-turn dialogue can reduce ambiguity, therefore, improve code accuracy by better matching user goals. We evaluate three pragmatic models to inform our dialogue strategies: Gricean Cooperativity, Discourse Representation Theory, and Questions under Discussion. A simulated user study reveals how pragmatic dialogues reduce ambiguity and enhance code accuracy, highlighting the value of multi-turn exchanges in code generation.",
+      "citations": 1
+    },
+    {
+      "title": "A Data Synthesis Method Driven by Large Language Models for Proactive Mining of Implicit User Intentions in Tourism",
+      "year": 2025,
+      "authors": "Jinqiang Wang, Huansheng Ning, Tao Zhu, Jianguo Ding",
+      "url": "https://api.semanticscholar.org/CorpusId:278740229",
+      "relevance": 2,
+      "abstract": "In the tourism domain, Large Language Models (LLMs) often struggle to mine implicit user intentions from tourists' ambiguous inquiries and lack the capacity to proactively guide users toward clarifying their needs. A critical bottleneck is the scarcity of high-quality training datasets that facilitate proactive questioning and implicit intention mining. While recent advances leverage LLM-driven data synthesis to generate such datasets and transfer specialized knowledge to downstream models, existing approaches suffer from several shortcomings: (1) lack of adaptation to the tourism domain, (2) skewed distributions of detail levels in initial inquiries, (3) contextual redundancy in the implicit intention mining module, and (4) lack of explicit thinking about tourists' emotions and intention values. Therefore, we propose SynPT (A Data Synthesis Method Driven by LLMs for Proactive Mining of Implicit User Intentions in the Tourism), which constructs an LLM-driven user agent and assistant agent to simulate dialogues based on seed data collected from Chinese tourism websites. This approach addresses the aforementioned limitations and generates SynPT-Dialog, a training dataset containing explicit reasoning. The dataset is utilized to fine-tune a general LLM, enabling it to proactively mine implicit user intentions. Experimental evaluations, conducted from both human and LLM perspectives, demonstrate the superiority of SynPT compared to existing methods. Furthermore, we analyze key hyperparameters and present case studies to illustrate the practical applicability of our method, including discussions on its adaptability to English-language scenarios. All code and data are publicly available.",
+      "citations": 1
+    },
+    {
+      "title": "Prompting and Evaluating Large Language Models for Proactive Dialogues: Clarification, Target-guided, and Non-collaboration",
+      "year": 2023,
+      "authors": "Yang Deng, Wenqiang Lei, Hongru Wang, Tat-seng Chua",
+      "url": "https://www.semanticscholar.org/paper/13c85adfa950651ffcd91ef3018fa30801b74472",
+      "relevance": 2,
+      "abstract": "Conversational systems based on Large Language Models (LLMs), such as ChatGPT, show exceptional proficiency in context understanding and response generation. However, despite their impressive capabilities, they still possess limitations, such as providing randomly-guessed answers to ambiguous queries or failing to refuse users' requests, both of which are considered aspects of a conversational agent's proactivity. This raises the question of whether LLM-based conversational systems are equipped to handle proactive dialogue problems. In this work, we conduct a comprehensive analysis of LLM-based conversational systems, specifically focusing on three aspects of proactive dialogue systems: clarification, target-guided, and non-collaborative dialogues. To trigger the proactivity of LLMs, we propose the Proactive Chain-of-Thought prompting scheme, which augments LLMs with the goal planning capability over descriptive reasoning chains. Empirical findings are discussed to promote future studies on LLM-based proactive dialogue systems.",
+      "citations": 155
+    },
+    {
+      "title": "Garbage In, Reasoning Out? Why Benchmark Scores are Unreliable and What to Do About It",
+      "year": 2025,
+      "authors": "Seyed Mahed Mousavi, Edoardo Cecchinato, Lucia Hornikova, Giuseppe Riccardi",
+      "url": "https://www.semanticscholar.org/paper/dca8f2e5eeb94bded6a4a9155f389e6f6f82e050",
+      "relevance": 2,
+      "abstract": "We conduct a systematic audit of three widely used reasoning benchmarks, SocialIQa, FauxPas-EAI, and ToMi, and uncover pervasive flaws in both benchmark items and evaluation methodology. Using five LLMs (GPT-{3, 3.5, 4, o1}, and LLaMA 3.1) as diagnostic tools, we identify structural, semantic, and pragmatic issues in benchmark design (e.g., duplicated items, ambiguous wording, and implausible answers), as well as scoring procedures that prioritize output form over reasoning process. Through systematic human annotation and re-evaluation on cleaned benchmark subsets, we find that model scores often improve not due to due to erratic surface wording variations and not to improved reasoning. Infact, further analyses show that model performance is highly sensitive to minor input variations such as context availability and phrasing, revealing that high scores may reflect alignment with format-specific cues rather than consistent inference based on the input. These findings challenge the validity of current benchmark-based claims about reasoning in LLMs, and highlight the need for evaluation protocols that assess reasoning as a process of drawing inference from available information, rather than as static output selection. We release audited data and evaluation tools to support more interpretable and diagnostic assessments of model reasoning.",
+      "citations": 3
+    },
+    {
+      "title": "3D Instruction Ambiguity Detection",
+      "year": 2026,
+      "authors": "Jiayu Ding, Haoran Tang, Hongbo Jin, Wei Gao, Ge Li",
+      "url": "https://api.semanticscholar.org/CorpusId:284597138",
+      "relevance": 2,
+      "abstract": "In safety-critical domains, linguistic ambiguity can have severe consequences; a vague command like\"Pass me the vial\"in a surgical setting could lead to catastrophic errors. Yet, most embodied AI research overlooks this, assuming instructions are clear and focusing on execution rather than confirmation. To address this critical safety gap, we are the first to define 3D Instruction Ambiguity Detection, a fundamental new task where a model must determine if a command has a single, unambiguous meaning within a given 3D scene. To support this research, we build Ambi3D, the large-scale benchmark for this task, featuring over 700 diverse 3D scenes and around 22k instructions. Our analysis reveals a surprising limitation: state-of-the-art 3D Large Language Models (LLMs) struggle to reliably determine if an instruction is ambiguous. To address this challenge, we propose AmbiVer, a two-stage framework that collects explicit visual evidence from multiple views and uses it to guide an vision-language model (VLM) in judging instruction ambiguity. Extensive experiments demonstrate the challenge of our task and the effectiveness of AmbiVer, paving the way for safer and more trustworthy embodied AI. Code and dataset available at https://jiayuding031020.github.io/ambi3d/.",
+      "citations": 0
+    },
+    {
+      "title": "Non-literal Understanding of Number Words by Language Models",
+      "year": 2025,
+      "authors": "Polina Tsvilodub, Kanishk Gandhi, Haoran Zhao, Jan-Philipp Fr\u00e4nken, Michael Franke, Noah D. Goodman",
+      "url": "https://api.semanticscholar.org/CorpusId:276250502",
+      "relevance": 2,
+      "abstract": "Humans naturally interpret numbers non-literally, effortlessly combining context, world knowledge, and speaker intent. We investigate whether large language models (LLMs) interpret numbers similarly, focusing on hyperbole and pragmatic halo effects. Through systematic comparison with human data and computational models of pragmatic reasoning, we find that LLMs diverge from human interpretation in striking ways. By decomposing pragmatic reasoning into testable components, grounded in the Rational Speech Act framework, we pinpoint where LLM processing diverges from human cognition -- not in prior knowledge, but in reasoning with it. This insight leads us to develop a targeted solution -- chain-of-thought prompting inspired by an RSA model makes LLMs' interpretations more human-like. Our work demonstrates how computational cognitive models can both diagnose AI-human differences and guide development of more human-like language understanding capabilities.",
+      "citations": 6
+    },
+    {
+      "title": "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
+      "year": 2024,
+      "authors": "Aryan Keluskar, Amrita Bhattacharjee, Huan Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:274141359",
+      "relevance": 2,
+      "abstract": "Ambiguity in natural language poses significant challenges to Large Language Models (LLMs) used for open-domain question answering. LLMs often struggle with the inherent uncertainties of human communication, leading to misinterpretations, miscommunications, hallucinations, and biased responses. This significantly weakens their ability to be used for tasks like fact-checking, question answering, feature extraction, and sentiment analysis. Using open-domain question answering as a test case, we compare off-the-shelf and few-shot LLM performance, focusing on measuring the impact of explicit disambiguation strategies. We demonstrate how simple, training-free, token-level disambiguation methods may be effectively used to improve LLM performance for ambiguous question answering tasks. We empirically show our findings and discuss best practices and broader impacts regarding ambiguity in LLMs.",
+      "citations": 24
+    },
+    {
+      "title": "Small Language Model Helps Resolve Semantic Ambiguity of LLM Prompt",
+      "year": 2026,
+      "authors": "Zhen Huang, Chao Zhang, Fachrina Dewi Puspitasari, Jiaquan Zhang, Yitian Zhou, Shuxu Chen, Yang Yang",
+      "url": "https://www.semanticscholar.org/paper/4896629df9376f60d22e84b3a871061b126854c1",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) are increasingly utilized in various complex reasoning tasks due to their excellent instruction following capability. However, the model's performance is highly dependent on the open-ended characteristics of the users'input prompt. Natural prompts often do not follow proper syntactic rules, which creates ambiguous queries that yield multiple interpretations. Such ambiguous prompts confuse the model in choosing the correct reasoning paths to answer questions. Prior works address this challenge by applying query editing during the LLM inference process without explicitly solving the root cause of the ambiguity. To address this limitation, we propose a pre-inference prompt optimization mechanism via explicit prompt disambiguation. Particularly, we identify semantic risks in the prompt, check their multi-perspective consistency, and resolve any semantic conflicts that arise. Finally, we organize the resolved ambiguities in a logically structured manner as a clean input to the LLM. By explicitly resolving semantic ambiguity, our method can produce a more focused attention distribution to the semantically essential tokens. We also leverage small language models (SLMs) as the main executor of prompt disambiguation to benefit from their efficient computation. Through comprehensive experiments on multiple benchmarks, we demonstrate that our method improves reasoning performance by 2.5 points at a cost of only \\$0.02. Our study promotes explicit prompt disambiguation as an effective prompt optimization method without disturbing the internal mechanism of LLM inference.",
+      "citations": 0
+    },
+    {
+      "title": "Dual Instruction Tuning with Large Language Models for Mathematical Reasoning",
+      "year": 2024,
+      "authors": "Yongwei Zhou, Tiejun Zhao",
+      "url": "https://api.semanticscholar.org/CorpusId:268724239",
+      "relevance": 2,
+      "abstract": "Recent advancements highlight the success of instruction tuning with large language models (LLMs) utilizing Chain-of-Thought (CoT) data for mathematical reasoning tasks. Despite the fine-tuned LLMs, challenges persist, such as incorrect, missing, and redundant steps in CoT generation leading to inaccuracies in answer predictions. To alleviate this problem, we propose a dual instruction tuning strategy to meticulously model mathematical reasoning from both forward and reverse directions. This involves introducing the Intermediate Reasoning State Prediction task (forward reasoning) and the Instruction Reconstruction task (reverse reasoning) to enhance the LLMs' understanding and execution of instructions. Training instances for these tasks are constructed based on existing mathematical instruction tuning datasets. Subsequently, LLMs undergo multi-task fine-tuning using both existing mathematical instructions and the newly created data. Comprehensive experiments validate the effectiveness and domain generalization of the dual instruction tuning strategy across various mathematical reasoning tasks.",
+      "citations": 13
+    },
+    {
+      "title": "Can LLMs Detect Ambiguous Plural Reference? An Analysis of Split-Antecedent and Mereological Reference",
+      "year": 2025,
+      "authors": "D. Anh, R. Nouwen, Massimo Poesio",
+      "url": "https://api.semanticscholar.org/CorpusId:281843119",
+      "relevance": 2,
+      "abstract": "Our goal is to study how LLMs represent and interpret plural reference in ambiguous and unambiguous contexts. We ask the following research questions: (1) Do LLMs exhibit human-like preferences in representing plural reference? (2) Are LLMs able to detect ambiguity in plural anaphoric expressions and identify possible referents? To address these questions, we design a set of experiments, examining pronoun production using next-token prediction tasks, pronoun interpretation, and ambiguity detection using different prompting strategies. We then assess how comparable LLMs are to humans in formulating and interpreting plural reference. We find that LLMs are sometimes aware of possible referents of ambiguous pronouns. However, they do not always follow human reference when choosing between interpretations, especially when the possible interpretation is not explicitly mentioned. In addition, they struggle to identify ambiguity without direct instruction. Our findings also reveal inconsistencies in the results across different types of experiments.",
+      "citations": 0
+    },
+    {
+      "title": "A Fuzzy Logic Prompting Framework for Large Language Models in Adaptive and Uncertain Tasks",
+      "year": 2025,
+      "authors": "Vanessa Figueiredo",
+      "url": "https://api.semanticscholar.org/CorpusId:280566825",
+      "relevance": 2,
+      "abstract": "We introduce a modular prompting framework that supports safer and more adaptive use of large language models (LLMs) across dynamic, user-centered tasks. Grounded in human learning theory, particularly the Zone of Proximal Development (ZPD), our method combines a natural language boundary prompt with a control schema encoded with fuzzy scaffolding logic and adaptation rules. This architecture enables LLMs to modulate behavior in response to user state without requiring fine-tuning or external orchestration. In a simulated intelligent tutoring setting, the framework improves scaffolding quality, adaptivity, and instructional alignment across multiple models, outperforming standard prompting baselines. Evaluation is conducted using rubric-based LLM graders at scale. While initially developed for education, the framework has shown promise in other interaction-heavy domains, such as procedural content generation for games. Designed for safe deployment, it provides a reusable methodology for structuring interpretable, goal-aligned LLM behavior in uncertain or evolving contexts.",
+      "citations": 3
+    },
+    {
+      "title": "SG-CoT: An Ambiguity-Aware Robotic Planning Framework using Scene Graph Representations",
+      "year": 2026,
+      "authors": "Akshat Rana, Peeyush Agarwal, Krishan Rana, A. Malhotra",
+      "url": "https://www.semanticscholar.org/paper/610f64794e79375f88f68a990d4bb37ff4e00801",
+      "relevance": 2,
+      "abstract": "Ambiguity poses a major challenge to large language models (LLMs) used as robotic planners. In this letter, we present Scene Graph-Chain-of-Thought (SG-CoT), a two-stage framework where LLMs iteratively query a scene graph representation of the environment to detect and clarify ambiguities. First, a structured scene graph representation of the environment is constructed from input observations, capturing objects, their attributes, and relationships with other objects. Second, the LLM is equipped with retrieval functions to query portions of the scene graph that are relevant to the provided instruction. This grounds the reasoning process of the LLM in the observation, increasing the reliability of robotic planners under ambiguous situations. SG-CoT also allows the LLM to identify the source of ambiguity and pose a relevant disambiguation question to the user or another robot. Extensive experimentation demonstrates that SG-CoT consistently outperforms prior methods, with a minimum of 10% improvement in question accuracy and a minimum success rate increase of 4% in single-agent and 15% in multi-agent environments, validating its effectiveness for more generalizable robot planning.",
+      "citations": 0
+    },
+    {
+      "title": "Introspective Planning: Aligning Robots' Uncertainty with Inherent Task Ambiguity",
+      "year": 2024,
+      "authors": "Kaiqu Liang, Zixu Zhang, J. F. Fisac",
+      "url": "https://www.semanticscholar.org/paper/4382b564fe5fda196d9cc4df6ab6253d3166b51a",
+      "relevance": 2,
+      "abstract": "Large language models (LLMs) exhibit advanced reasoning skills, enabling robots to comprehend natural language instructions and strategically plan high-level actions through proper grounding. However, LLM hallucination may result in robots confidently executing plans that are misaligned with user goals or even unsafe in critical scenarios. Additionally, inherent ambiguity in natural language instructions can introduce uncertainty into the LLM's reasoning and planning processes.We propose introspective planning, a systematic approach that align LLM's uncertainty with the inherent ambiguity of the task. Our approach constructs a knowledge base containing introspective reasoning examples as post-hoc rationalizations of human-selected safe and compliant plans, which are retrieved during deployment. Evaluations on three tasks, including a newly introduced safe mobile manipulation benchmark, demonstrate that introspection substantially improves both compliance and safety over state-of-the-art LLM-based planning methods. Furthermore, we empirically show that introspective planning, in combination with conformal prediction, achieves tighter confidence bounds, maintaining statistical success guarantees while minimizing unnecessary user clarification requests. The webpage and code are accessible at https://introplan.github.io.",
+      "citations": 28
+    },
+    {
+      "title": "A Theory Guided Scaffolding Instruction Framework for LLM-Enabled Metaphor Reasoning",
+      "year": 2024,
+      "authors": "Yuan Tian, Nan Xu, Wenji Mao",
+      "url": "https://api.semanticscholar.org/CorpusId:270514407",
+      "relevance": 2,
+      "abstract": "Metaphor detection is a challenging task in figurative language processing, which aims to distinguish between metaphorical and literal expressions in text. Existing methods tackle metaphor detection via training or fine-tuning discriminative models on labeled data. However, these approaches struggle to explain the underlying reasoning process behind the metaphorical/literal judgment. Recently, large language models (LLMs) have shown promise in language reasoning tasks. Although promising, LLM-based methods for metaphor detection and reasoning are still faced with the challenging issue of bringing the explainable concepts for metaphor reasoning and their linguistic manifestation. To fill this gap, we propose a novel Theory guided Scaffolding Instruction (TSI) framework that instructs an LLM to infer the underlying reasoning process of metaphor detection guided by metaphor theories for the first time. Our work is inspired by a pedagogical strategy called scaffolding instruction, which encourages educators to provide questioning and support as scaffolding so as to assist learners in constructing the understanding of pedagogical goals step by step. We first construct a metaphor knowledge graph grounded in metaphor theory which serves as the instructional structure to obtain a series of scaffolding questions, directing the LLM to incrementally generate the reasoning process for metaphor understanding through dialogue interactions. During this theory guided instruction process, we explore the LLM\u2019s mastery boundary and provide the relevant knowledge as scaffolding support when the question is beyond the LLM\u2019s capability. Experimental results verify that our method significantly outperforms both the LLM-based reasoning methods and the SOTA methods in metaphor detection, indicating the facilitation of metaphor and instruction theories in guiding LLM-based reasoning process.",
+      "citations": 31
+    },
+    {
+      "title": "It Depends: Resolving Referential Ambiguity in Minimal Contexts with Commonsense Knowledge",
+      "year": 2025,
+      "authors": "Lukas Ellinger, Georg Groh",
+      "url": "https://api.semanticscholar.org/CorpusId:281411223",
+      "relevance": 2,
+      "abstract": "Ambiguous words or underspecified references require interlocutors to resolve them, often by relying on shared context and commonsense knowledge. Therefore, we systematically investigate whether Large Language Models (LLMs) can leverage commonsense to resolve referential ambiguity in multi-turn conversations and analyze their behavior when ambiguity persists. Further, we study how requests for simplified language affect this capacity. Using a novel multilingual evaluation dataset, we test DeepSeek v3, GPT-4o, Qwen3-32B, GPT-4o-mini, and Llama-3.1-8B via LLM-as-Judge and human annotations. Our findings indicate that current LLMs struggle to resolve ambiguity effectively: they tend to commit to a single interpretation or cover all possible references, rather than hedging or seeking clarification. This limitation becomes more pronounced under simplification prompts, which drastically reduce the use of commonsense reasoning and diverse response strategies. Fine-tuning Llama-3.1-8B with Direct Preference Optimization substantially improves ambiguity resolution across all request types. These results underscore the need for advanced fine-tuning to improve LLMs'handling of ambiguity and to ensure robust performance across diverse communication styles.",
+      "citations": 1
+    },
+    {
+      "title": "SC-RAG-CoT: An Optimization Method for Robotic Instruction Generation",
+      "year": 2025,
+      "authors": "Chen Ding, Cheng Li, Guiling Wu, Liang Qian, Ruifeng Liu, Xinhao Cai",
+      "url": "https://www.semanticscholar.org/paper/944cf7a86bf0e69a7a2f51613f2d7bfc887083a0",
+      "relevance": 2,
+      "abstract": "Large Language Models (LLMs) based robotic instruction generation and control methods provide flexible and efficient solutions for autonomous robot decision-making with natural language interaction and task generalization. However, traditional LLMs struggle to adapt to the dynamic physical environments and address the ambiguity of natural language instructions. Therefore, a mechanism that integrates physical environment information and guides users to clarify specific needs through human-computer interaction is required. To this end, we propose the SC-RAG-CoT framework, which combines spatially constrained retrieval augmented generation (SC-RAG) and Chain of Thought (CoT) interaction for robotic instruction generation. SC-RAG-CoT employs SC-RAG to retrieve contextual information from spatial knowledge bases (e.g., spatial data, object attributes) to mitigate hallucinations caused by environmental dynamics. Additionally, CoT decomposes ambiguous instructions into multi-step reasoning chains. The reliability of instruction generation is improved through explicit verification of intermediate logic, and users are guided to gradually clarify their needs through interactive mechanisms. Simulation and ablation experiments demonstrate that the proposed SC-RAG-CoT strategy reduces average communication rounds by 2.6 and failure rates by $25.3 \\%$ compared to traditional LLM-based methods in standardized test scenarios.",
+      "citations": 0
+    },
+    {
+      "title": "MSME: A Multi-Stage Multi-Expert Framework for Zero-Shot Stance Detection",
+      "year": 2025,
+      "authors": "Yuanshuo Zhang, Aohua Li, Bo Chen, Jing Sun, Xiaobing Zhao",
+      "url": "https://api.semanticscholar.org/CorpusId:283557210",
+      "relevance": 2,
+      "abstract": "LLM-based approaches have recently achieved impressive results in zero-shot stance detection. However, they still struggle in complex real-world scenarios, where stance understanding requires dynamic background knowledge, target definitions involve compound entities or events that must be explicitly linked to stance labels, and rhetorical devices such as irony often obscure the author\u2019s actual intent. To address these challenges, we propose MSME, a Multi-Stage, Multi-Expert framework for zero-shot stance detection. MSME consists of three stages: (1) Knowledge Preparation, where relevant background knowledge is retrieved and stance labels are clarified; (2) Expert Reasoning, involving three specialized modules\u2014Knowledge Expert distills salient facts and reasons from a knowledge perspective, Label Expert refines stance labels and reasons accordingly, and Pragmatic Expert detects rhetorical cues such as irony to infer intent from a pragmatic angle; (3) Decision Aggregation, where a Meta-Judge integrates all expert analyses to produce the final stance prediction. Experiments on three public datasets show that MSME achieves state-of-the-art performance across the board.",
+      "citations": 2
+    },
+    {
+      "title": "Enhancing and Assessing Instruction-Following with Fine-Grained Instruction Variants",
+      "year": 2024,
+      "authors": "Jiuding Yang, Hui Liu, Weidong Guo, Yu Xu, Di Niu",
+      "url": "https://api.semanticscholar.org/CorpusId:270560599",
+      "relevance": 2,
+      "abstract": "Aligning Large Language Models (LLMs) with nuanced user instructions is critical for their effective deployment in real-world applications. While prior methods focus on enhancing data diversity and complexity, they often overlook models' sensitivity to fine-grained variations in semantically similar instructions. To address this, we introduce DeMoRecon, a data augmentation framework that decomposes complex instructions into sub-components, modifies individual elements, and reconstructs them into instruction variants. This method preserves contextual integrity while injecting targeted variability essential for fine-grained instruction-following. Based on DeMoRecon, we construct the FGIV dataset, comprising over 1,700 seed instructions and thousands of nuanced variants designed for both supervised fine-tuning and preference-based alignment. Experimental results show that LLMs trained with FGIV achieve up to +10.2% improvement on our fine-grained FGIV-Eval benchmark and up to +8.8% on existing benchmarks such as FollowBench and InfoBench. These findings highlight the value of FGIV in advancing instruction sensitivity and robustness in LLMs.",
+      "citations": 2
+    },
+    {
+      "title": "MARCH: Evaluating the Intersection of Ambiguity Interpretation and Multi-hop Inference",
+      "year": 2025,
+      "authors": "J. Park, Ingeol Baek, S. Yoon, Haeun Jang, Aparna Garimella, Akriti Jain, N. Lipka, Hwanhee Lee",
+      "url": "https://api.semanticscholar.org/CorpusId:281675239",
+      "relevance": 2,
+      "abstract": "Real-world multi-hop QA is naturally linked with ambiguity, where a single query can trigger multiple reasoning paths that require independent resolution. Since ambiguity can occur at any stage, models must navigate layered uncertainty throughout the entire reasoning chain. Despite its prevalence in real-world user queries, previous benchmarks have primarily focused on single-hop ambiguity, leaving the complex interaction between multi-step inference and layered ambiguity underexplored. In this paper, we introduce MARCH, a benchmark for their intersection, with 2,209 multi-hop ambiguous questions curated via multi-LLM verification and validated by human annotation with strong agreement. Our experiments reveal that even state-of-the-art models struggle with MARCH, confirming that combining ambiguity resolution with multi-step reasoning is a significant challenge. To address this, we propose CLARION, a two-stage agentic framework that explicitly decouples ambiguity planning from evidence-driven reasoning, significantly outperforms existing approaches, and paves the way for robust reasoning systems.",
+      "citations": 0
+    },
+    {
+      "title": "Masked IRL: LLM-Guided Reward Disambiguation from Demonstrations and Language",
+      "year": 2025,
+      "authors": "Minyoung Hwang, Alexandra Forsey-Smerek, Nathaniel Dennler, Andreea Bobu",
+      "url": "https://www.semanticscholar.org/paper/c5a4422bae212914331aa729188cc3f4e42f82d3",
+      "relevance": 2,
+      "abstract": "Robots can adapt to user preferences by learning reward functions from demonstrations, but with limited data, reward models often overfit to spurious correlations and fail to generalize. This happens because demonstrations show robots how to do a task but not what matters for that task, causing the model to focus on irrelevant state details. Natural language can more directly specify what the robot should focus on, and, in principle, disambiguate between many reward functions consistent with the demonstrations. However, existing language-conditioned reward learning methods typically treat instructions as simple conditioning signals, without fully exploiting their potential to resolve ambiguity. Moreover, real instructions are often ambiguous themselves, so naive conditioning is unreliable. Our key insight is that these two input types carry complementary information: demonstrations show how to act, while language specifies what is important. We propose Masked Inverse Reinforcement Learning (Masked IRL), a framework that uses large language models (LLMs) to combine the strengths of both input types. Masked IRL infers state-relevance masks from language instructions and enforces invariance to irrelevant state components. When instructions are ambiguous, it uses LLM reasoning to clarify them in the context of the demonstrations. In simulation and on a real robot, Masked IRL outperforms prior language-conditioned IRL methods by up to 15% while using up to 4.7 times less data, demonstrating improved sample-efficiency, generalization, and robustness to ambiguous language. Project page: https://MIT-CLEAR-Lab.github.io/Masked-IRL and Code: https://github.com/MIT-CLEAR-Lab/Masked-IRL",
+      "citations": 1
+    },
+    {
+      "title": "EdgePrompt: Engineering Guardrail Techniques for Offline LLMs in K-12 Educational Settings",
+      "year": 2025,
+      "authors": "R. Syah, Christoforus Yoga Haryanto, Emily Lomempow, Krishna Malik, Irvan Putra",
+      "url": "https://www.semanticscholar.org/paper/c17ac91637a6548b6fa81c21af575d9b2e410bd7",
+      "relevance": 2,
+      "abstract": "EdgePrompt is a prompt engineering framework that implements pragmatic guardrails for Large Language Models (LLMs) in the K-12 educational settings through structured prompting inspired by neural-symbolic principles. The system addresses educational disparities in Indonesia's Frontier, Outermost, Underdeveloped (3T) regions by enabling offline-capable content safety controls. It combines: (1) content generation with structured constraint templates, (2) assessment processing with layered validation, and (3) lightweight storage for content and result management. The framework implements a multi-stage verification workflow that maintains safety boundaries while preserving model capabilities in connectivity-constrained environments. Initial deployment targets Grade 5 language instruction, demonstrating effective guardrails through structured prompt engineering without formal symbolic reasoning components.",
+      "citations": 1
+    },
+    {
+      "title": "SOCIALITE-LLAMA: An Instruction-Tuned Model for Social Scientific Tasks",
+      "year": 2024,
+      "authors": "Gourab Dey, Adithya V Ganesan, Yash Kumar Lal, M. Shah, Shreyashee Sinha, Matthew Matero, Salvatore Giorgi, Vivek Kulkarni, H. A. Schwartz",
+      "url": "https://www.semanticscholar.org/paper/318fd09cb1bfe74eb78c9274de0ade6af5951928",
+      "relevance": 2,
+      "abstract": "Social science NLP tasks, such as emotion or humor detection, are required to capture the semantics along with the implicit pragmatics from text, often with limited amounts of training data. Instruction tuning has been shown to improve the many capabilities of large language models (LLMs) such as commonsense reasoning, reading comprehension, and computer programming. However, little is known about the effectiveness of instruction tuning on the social domain where implicit pragmatic cues are often needed to be captured. We explore the use of instruction tuning for social science NLP tasks and introduce Socialite-Llama \u2014 an open-source, instruction-tuned Llama. On a suite of 20 social science tasks, Socialite-Llama improves upon the performance of Llama as well as matches or improves upon the performance of a state-of-the-art, multi-task finetuned model on a majority of them. Further, Socialite-Llama also leads to improvement on 5 out of 6 related social tasks as compared to Llama, suggesting instruction tuning can lead to generalized social understanding. All resources including our code, model and dataset can be found through [bit.ly/socialitellama](https://bit.ly/socialitellama/).",
+      "citations": 11
+    },
+    {
+      "title": "Unified Pragmatic Models for Generating and Following Instructions",
+      "year": 2017,
+      "authors": "Daniel Fried, Jacob Andreas, D. Klein",
+      "url": "https://api.semanticscholar.org/CorpusId:21015570",
+      "relevance": 1,
+      "abstract": "We show that explicit pragmatic inference aids in correctly generating and following natural language instructions for complex, sequential tasks. Our pragmatics-enabled models reason about why speakers produce certain instructions, and about how listeners will react upon hearing them. Like previous pragmatic models, we use learned base listener and speaker models to build a pragmatic speaker that uses the base listener to simulate the interpretation of candidate descriptions, and a pragmatic listener that reasons counterfactually about alternative descriptions. We extend these models to tasks with sequential structure. Evaluation of language generation and interpretation shows that pragmatic inference improves state-of-the-art listener models (at correctly interpreting human instructions) and speaker models (at producing instructions correctly interpreted by humans) in diverse settings.",
+      "citations": 125
+    },
+    {
+      "title": "Understand the Implication: Learning to Think for Pragmatic Understanding",
+      "year": 2025,
+      "authors": "S. Sravanthi, Kishan Maharaj, Sravani Gunnu, Abhijit Mishra, Pushpak Bhattacharyya",
+      "url": "https://api.semanticscholar.org/CorpusId:279403150",
+      "relevance": 1,
+      "abstract": "Pragmatics, the ability to infer meaning beyond literal interpretation, is crucial for social cognition and communication. While LLMs have been benchmarked for their pragmatic understanding, improving their performance remains underexplored. Existing methods rely on annotated labels but overlook the reasoning process humans naturally use to interpret implicit meaning. To bridge this gap, we introduce a novel pragmatic dataset, ImpliedMeaningPreference, that includes explicit reasoning (thoughts) for both correct and incorrect interpretations. Through preference-tuning and supervised fine-tuning, we demonstrate that thought-based learning significantly enhances LLMs' pragmatic understanding, improving accuracy by 11.12% across model families. We further discuss a transfer-learning study where we evaluate the performance of thought-based training for the other tasks of pragmatics (presupposition, deixis) that are not seen during the training time and observe an improvement of 16.10% compared to label-trained models.",
+      "citations": 2
+    },
+    {
+      "title": "Are LLMs good pragmatic speakers?",
+      "year": 2024,
+      "authors": "Mingyue Jian, Siddharth Narayanaswamy",
+      "url": "https://api.semanticscholar.org/CorpusId:273812399",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are trained on data assumed to include natural language pragmatics, but do they actually behave like pragmatic speakers? We attempt to answer this question using the Rational Speech Act (RSA) framework, which models pragmatic reasoning in human communication. Using the paradigm of a reference game constructed from the TUNA corpus, we score candidate referential utterances in both a state-of-the-art LLM (Llama3-8B-Instruct) and in the RSA model, comparing and contrasting these scores. Given that RSA requires defining alternative utterances and a truth-conditional meaning function, we explore such comparison for different choices of each of these requirements. We find that while scores from the LLM have some positive correlation with those from RSA, there isn't sufficient evidence to claim that it behaves like a pragmatic speaker. This initial study paves way for further targeted efforts exploring different models and settings, including human-subject evaluation, to see if LLMs truly can, or be made to, behave like pragmatic speakers.",
+      "citations": 6
+    },
+    {
+      "title": "Reasoning about Ambiguous Definite Descriptions",
+      "year": 2023,
+      "authors": "Stefan F. Schouten, Peter Bloem, Ilia Markov, Piek Vossen",
+      "url": "https://api.semanticscholar.org/CorpusId:264426432",
+      "relevance": 1,
+      "abstract": "Natural language reasoning plays an increasingly important role in improving language models' ability to solve complex language understanding tasks. An interesting use case for reasoning is the resolution of context-dependent ambiguity. But no resources exist to evaluate how well Large Language Models can use explicit reasoning to resolve ambiguity in language. We propose to use ambiguous definite descriptions for this purpose and create and publish the first benchmark dataset consisting of such phrases. Our method includes all information required to resolve the ambiguity in the prompt, which means a model does not require anything but reasoning to do well. We find this to be a challenging task for recent LLMs. Code and data available at: https://github.com/sfschouten/exploiting-ambiguity",
+      "citations": 0
+    },
+    {
+      "title": "Pragmatic Competence Evaluation of Large Language Models for the Korean Language",
+      "year": 2024,
+      "authors": "Dojun Park, Jiwoo Lee, Hyeyun Jeong, Seohyun Park, Sungeun Lee",
+      "url": "https://api.semanticscholar.org/CorpusId:273403921",
+      "relevance": 1,
+      "abstract": "Benchmarks play a significant role in the current evaluation of Large Language Models (LLMs), yet they often overlook the models' abilities to capture the nuances of human language, primarily focusing on evaluating embedded knowledge and technical skills. To address this gap, our study evaluates how well LLMs understand context-dependent expressions from a pragmatic standpoint, specifically in Korean. We use both Multiple-Choice Questions (MCQs) for automatic evaluation and Open-Ended Questions (OEQs) assessed by human experts. Our results show that GPT-4 leads with scores of 81.11 in MCQs and 85.69 in OEQs, closely followed by HyperCLOVA X. Additionally, while few-shot learning generally improves performance, Chain-of-Thought (CoT) prompting tends to encourage literal interpretations, which may limit effective pragmatic inference. Our findings highlight the need for LLMs to better understand and generate language that reflects human communicative norms.",
+      "citations": 8
+    },
+    {
+      "title": "From Passive to Active Reasoning: Can Large Language Models Ask the Right Questions under Incomplete Information?",
+      "year": 2025,
+      "authors": "Zhanke Zhou, Xiao Feng, Zhaocheng Zhu, Jiangchao Yao, Oluwasanmi Koyejo, Bo Han",
+      "url": "https://api.semanticscholar.org/CorpusId:279260512",
+      "relevance": 1,
+      "abstract": "While existing benchmarks probe the reasoning abilities of large language models (LLMs) across diverse domains, they predominantly assess passive reasoning, providing models with all the information needed to reach a solution. By contrast, active reasoning-where an LLM must interact with external systems to acquire missing evidence or data-has received little systematic attention. To address this shortfall, we present AR-Bench, a novel benchmark designed explicitly to evaluate an LLM's active reasoning skills. AR-Bench comprises three task families-detective cases, situation puzzles, and guessing numbers-that together simulate real-world, agentic scenarios and measure performance across commonsense, logical, and symbolic reasoning challenges. Empirical evaluation on AR-Bench demonstrates that contemporary LLMs exhibit pronounced difficulties with active reasoning: they frequently fail to acquire or leverage the information needed to solve tasks. This gap highlights a stark divergence between their passive and active reasoning abilities. Moreover, ablation studies indicate that even advanced strategies, such as tree-based searching or post-training approaches, yield only modest gains and fall short of the levels required for real-world deployment. Collectively, these findings highlight the critical need to advance methodology for active reasoning, e.g., incorporating interactive learning, real-time feedback loops, and environment-aware objectives for training. The benchmark is publicly available at: https://github.com/tmlr-group/AR-Bench.",
+      "citations": 14
+    },
+    {
+      "title": "Pragmatic Inference for Moral Reasoning Acquisition: Generalization via Metapragmatic Links",
+      "year": 2025,
+      "authors": "G. Liu, Xi Chen, Bocheng Chen, Xitong Zhang, K. Johnson",
+      "url": "https://api.semanticscholar.org/CorpusId:285615636",
+      "relevance": 1,
+      "abstract": "While moral reasoning has emerged as a promising research direction for large language models (LLMs), achieving robust generalization remains a critical challenge. This challenge arises from the gap between what is said and what is morally implied. In this paper, we build on metapragmatic links and the moral foundations theory to close the gap. Specifically, we develop a pragmatic-inference approach that facilitates LLMs, for a given moral situation, to acquire the metapragmantic links between moral reasoning objectives and the social variables that affect them. This approach is adapted to three different moral reasoning tasks to demonstrate its adaptability and generalizability. Experimental results demonstrate that our approach significantly enhances LLMs'generalization in moral reasoning, paving the road for future research to utilize pragmatic inference in various moral reasoning tasks.",
+      "citations": 0
+    },
+    {
+      "title": "Re-evaluating Theory of Mind evaluation in large language models",
+      "year": 2025,
+      "authors": "Jennifer Hu, Felix A. Sosa, Tomer D. Ullman",
+      "url": "https://api.semanticscholar.org/CorpusId:276725378",
+      "relevance": 1,
+      "abstract": "The question of whether large language models (LLMs) possess Theory of Mind (ToM)-often defined as the ability to reason about others' mental states-has sparked significant scientific and public interest. However, the evidence as to whether LLMs possess ToM is mixed, and the recent growth in evaluations has not resulted in a convergence. Here, we take inspiration from cognitive science to re-evaluate the state of ToM evaluation in LLMs. We argue that a major reason for the disagreement on whether LLMs have ToM is a lack of clarity on whether models should be expected to match human behaviours, or the computations underlying those behaviours. We also highlight ways in which current evaluations may be deviating from 'pure' measurements of ToM abilities, which also contributes to the confusion. We conclude by discussing several directions for future research, including the relationship between ToM and pragmatic communication, which could advance our understanding of artificial systems as well as human cognition.This article is part of the theme issue 'At the heart of human communication: new views on the complex relationship between pragmatics and Theory of Mind'.",
+      "citations": 19
+    },
+    {
+      "title": "Can Vision-Language Models Infer Speaker\u2019s Ignorance? The Role of Visual and Linguistic Cues",
+      "year": 2025,
+      "authors": "Yejin Cho, Yunho Maeng",
+      "url": "https://api.semanticscholar.org/CorpusId:276317908",
+      "relevance": 1,
+      "abstract": "This study investigates whether vision-language models (VLMs) can perform pragmatic inference, focusing on ignorance implicatures, utterances that imply the speaker's lack of precise knowledge. To test this, we systematically manipulated contextual cues: the visually depicted situation (visual cue) and QUD-based linguistic prompts (linguistic cue). When only visual cues were provided, three state-of-the-art VLMs (GPT-4o, Gemini 1.5 Pro, and Claude 3.5 sonnet) produced interpretations largely based on the lexical meaning of the modified numerals. When linguistic cues were added to enhance contextual informativeness, Claude exhibited more human-like inference by integrating both types of contextual cues. In contrast, GPT and Gemini favored precise, literal interpretations. Although the influence of contextual cues increased, they treated each contextual cue independently and aligned them with semantic features rather than engaging in context-driven reasoning. These findings suggest that although the models differ in how they handle contextual cues, Claude's ability to combine multiple cues may signal emerging pragmatic competence in multimodal models.",
+      "citations": 1
+    },
+    {
+      "title": "Are BabyLMs Deaf to Gricean Maxims? A Pragmatic Evaluation of Sample-efficient Language Models",
+      "year": 2025,
+      "authors": "Raha Askari, Sina Zarrie\u00df, \u00d6zge Ala\u00e7am, Judith Sieker",
+      "url": "https://api.semanticscholar.org/CorpusId:281843000",
+      "relevance": 1,
+      "abstract": "Implicit meanings are integral to human communication, making it essential for language models to be capable of identifying and interpreting them. Grice (1975) proposed a set of conversational maxims that guide cooperative dialogue, noting that speakers may deliberately violate these principles to express meanings beyond literal words, and that listeners, in turn, recognize such violations to draw pragmatic inferences. Building on Surian et al. (1996)'s study of children's sensitivity to violations of Gricean maxims, we introduce a novel benchmark to test whether language models pretrained on less than 10M and less than 100M tokens can distinguish maxim-adhering from maxim-violating utterances. We compare these BabyLMs across five maxims and situate their performance relative to children and a Large Language Model (LLM) pretrained on 3T tokens. We find that overall, models trained on less than 100M tokens outperform those trained on less than 10M, yet fall short of child-level and LLM competence. Our results suggest that modest data increases improve some aspects of pragmatic behavior, leading to finer-grained differentiation between pragmatic dimensions.",
+      "citations": 3
+    },
+    {
+      "title": "Disagreement as Data: Reasoning Trace Analytics in Multi-Agent Systems",
+      "year": 2026,
+      "authors": "Elham Tajik, Conrad Borchers, Bahar Shahrokhian, Sebastian Simon, Ali Keramati, Sonika Pal, Sreecharan Sankaranarayanan",
+      "url": "https://www.semanticscholar.org/paper/6a76ee0e1768328ff0f4a7b49e00ef3f163db3ab",
+      "relevance": 1,
+      "abstract": "Learning analytics researchers often analyze qualitative student data such as coded annotations or interview transcripts to understand learning processes. With the rise of generative AI, fully automated and human\u2013AI workflows have emerged as promising methods for analysis. However, methodological standards to guide such workflows remain limited. In this study, we propose that reasoning traces generated by large language model (LLM) agents, especially within multi-agent systems, constitute a novel and rich form of process data to enhance interpretive practices in qualitative coding. We apply cosine similarity to LLM reasoning traces to systematically detect, quantify, and interpret disagreements among agents, reframing disagreement as a meaningful analytic signal. Analyzing nearly 10,000 instances of agent pairs coding human tutoring dialog segments, we show that LLM agents\u2019 semantic reasoning similarity robustly differentiates consensus from disagreement and correlates with human coding reliability. Qualitative analysis guided by this metric reveals nuanced instructional sub-functions within codes and opportunities for conceptual codebook refinement. By integrating quantitative similarity metrics with qualitative review, our method bears potential to improve and accelerate the process of establishing inter-rater reliability during coding by surfacing interpretive ambiguity, especially when LLMs collaborate with humans. We discuss how reasoning-trace disagreements represent a valuable new class of analytic signals advancing methodological rigor and interpretive depth in educational research.",
+      "citations": 3
+    },
+    {
+      "title": "Prompting Large Vision-Language Models for Compositional Reasoning",
+      "year": 2024,
+      "authors": "Timothy Ossowski, Ming Jiang, Junjie Hu",
+      "url": "https://api.semanticscholar.org/CorpusId:267068514",
+      "relevance": 1,
+      "abstract": "Vision-language models such as CLIP have shown impressive capabilities in encoding texts and images into aligned embeddings, enabling the retrieval of multimodal data in a shared embedding space. However, these embedding-based models still face challenges in effectively matching images and texts with similar visio-linguistic compositionality, as evidenced by their performance on the recent Winoground dataset. In this paper, we argue that this limitation stems from two factors: the use of single vector representations for complex multimodal data, and the absence of step-by-step reasoning in these embedding-based methods. To address this issue, we make an exploratory step using a novel generative method that prompts large vision-language models (e.g., GPT-4) to depict images and perform compositional reasoning. Our method outperforms other embedding-based methods on the Winoground dataset, and obtains further improvement of up to 10% accuracy when enhanced with the optimal description.",
+      "citations": 8
+    },
+    {
+      "title": "ImplicaTR: A Granular Dataset for Natural Language Inference and Pragmatic Reasoning in Turkish",
+      "year": 2024,
+      "authors": "Mustafa Halat, \u00dcmit Atlamaz",
+      "url": "https://api.semanticscholar.org/CorpusId:271769469",
+      "relevance": 1,
+      "abstract": "We introduce ImplicaTR, a linguistically informed diagnostic dataset designed to evaluate semantic and pragmatic reasoning capabilities of Natural Language Inference (NLI) models in Turkish. Existing Turkish NLI datasets treat NLI as determining whether a sentence pair represents \\textit{entailment}, \\textit{contradiction}, or a \\textit{neutral} relation. Such datasets do not distinguish between \\textit{semantic entailment} and \\textit{pragmatic implicature}, which linguists have long recognized as separate inferences types. ImplicaTR addresses this by testing NLI models\u2019 ability to differentiate between \\textit{entailment} and \\textit{implicature}, thus assessing their pragmatic reasoning skills. The dataset consists of 19,350 semi-automatically generated sentence pairs covering \\textit{implicature, entailment, contradiction,} and \\textit{neutral} relations. We evaluated various models (BERT, Gemma, Llama-2, and Mistral) on ImplicaTR and found out that these models can reach up to 98% accuracy on semantic and pragmatic reasoning. We also fine tuned various models on subsets of ImplicaTR to test the abilities of NLI models to generalize across unseen implicature contexts. Our results indicate that model performance is highly dependent on the diversity of linguistic expressions within each subset, highlighting a weakness in the abstract generalization capabilities of large language models regarding pragmatic reasoning. We share all the code, models, and the dataset.",
+      "citations": 5
+    },
+    {
+      "title": "Generating Pragmatic Examples to Train Neural Program Synthesizers",
+      "year": 2023,
+      "authors": "Saujas Vaduguru, Daniel Fried, Yewen Pu",
+      "url": "https://www.semanticscholar.org/paper/ab2cd01090bebd7c52193c432e0a0fce4226982e",
+      "relevance": 1,
+      "abstract": "Programming-by-example is the task of synthesizing a program that is consistent with a set of user-provided input-output examples. As examples are often an under-specification of one's intent, a good synthesizer must choose the intended program from the many that are consistent with the given set of examples. Prior work frames program synthesis as a cooperative game between a listener (that synthesizes programs) and a speaker (a user choosing examples), and shows that models of computational pragmatic inference are effective in choosing the user intended programs. However, these models require counterfactual reasoning over a large set of programs and examples, which is infeasible in realistic program spaces. In this paper, we propose PraX, a novel way to amortize this search with neural networks. We sample pairs of programs and examples via self-play between listener and speaker models, and use pragmatic inference to choose informative training examples from this sample. We then use the informative dataset to train models to improve the synthesizer's ability to disambiguate user-provided examples without human supervision. We validate PraX on the challenging task of synthesizing regular expressions from example strings, and find that our method (1) outperforms models trained without choosing pragmatic examples by 23% (a 51% relative increase) (2) matches the performance of supervised learning on a dataset of pragmatic examples provided by humans, despite using no human data in training.",
+      "citations": 7
+    },
+    {
+      "title": "Diagnosing Moral Reasoning Acquisition in Language Models: Pragmatics and Generalization",
+      "year": 2025,
+      "authors": "G. Liu, Zimo Qi, Xitong Zhang, Lei Jiang, K. Johnson",
+      "url": "https://api.semanticscholar.org/CorpusId:276574896",
+      "relevance": 1,
+      "abstract": "Ensuring that Large Language Models (LLMs) return just responses which adhere to societal values is crucial for their broader application. Prior research has shown that LLMs often fail to perform satisfactorily on tasks requiring moral cognizance, such as ethics-based judgments. While current approaches have focused on fine-tuning LLMs with curated datasets to improve their capabilities on such tasks, choosing the optimal learning paradigm to enhance the ethical responses of LLMs remains an open research debate. In this work, we aim to address this fundamental question: can current learning paradigms enable LLMs to acquire sufficient moral reasoning capabilities? Drawing from distributional semantics theory and the pragmatic nature of moral discourse, our analysis indicates that performance improvements follow a mechanism similar to that of semantic-level tasks, and therefore remain affected by the pragmatic nature of morals latent in discourse, a phenomenon we name the pragmatic dilemma. We conclude that this pragmatic dilemma imposes significant limitations on the generalization ability of current learning paradigms, making it the primary bottleneck for moral reasoning acquisition in LLMs.",
+      "citations": 9
+    },
+    {
+      "title": "Ambiguity in LLMs is a concept missing problem",
+      "year": 2025,
+      "authors": "Zhibo Hu, Chen Wang, Yanfeng Shu, Hye-Young Paik, Liming Zhu",
+      "url": "https://api.semanticscholar.org/CorpusId:278739465",
+      "relevance": 1,
+      "abstract": "Ambiguity in natural language is a significant obstacle for achieving accurate text to structured data mapping through large language models (LLMs), which affects the performance of tasks such as mapping text to agentic tool calling and text-to-SQL queries. Existing methods to ambiguity handling either rely on the ReACT framework to obtain correct mappings through trial and error, or on supervised fine-tuning to bias models toward specific tasks. In this paper, we adopt a different approach that characterizes representation differences of ambiguous text in the latent space and leverages these differences to identify ambiguity before mapping them to structured data. To detect sentence-level ambiguity, we focus on the relationship between ambiguous questions and their interpretations. Unlike distances calculated by dense embeddings, we introduce a new distance measure based on a path kernel over concepts. With this measurement, we identify patterns to distinguish ambiguous from unambiguous questions. Furthermore, we propose a method for improving LLM performance on ambiguous agentic tool calling through missing concept prediction. Both achieve state-of-the-art results.",
+      "citations": 1
+    },
+    {
+      "title": "Towards an Analysis of Discourse and Interactional Pragmatic Reasoning Capabilities of Large Language Models",
+      "year": 2024,
+      "authors": "A. Robrecht, Judith Sieker, Clara Lachenmaier, Sina Zariess, Stefan Kopp",
+      "url": "https://api.semanticscholar.org/CorpusId:271719875",
+      "relevance": 1,
+      "abstract": "In this work, we want to give an overview on which pragmatic abilities have been tested in LLMs so far and how these tests have been carried out. To do this, we first discuss the scope of the field of pragmatics and suggest a subdivision into discourse pragmatics and interactional pragmatics. We give a non-exhaustive overview of the phenomena of those two subdomains and the methods traditionally used to analyze them. We subsequently consider the resulting heterogeneous set of phenomena and methods as a starting point for our survey of work on discourse pragmatics and interactional pragmatics in the context of LLMs.",
+      "citations": 1
+    },
+    {
+      "title": "Evaluating statistical language models as pragmatic reasoners",
+      "year": 2023,
+      "authors": "Benjamin Lipkin, L. Wong, Gabriel Grand, J. Tenenbaum",
+      "url": "https://api.semanticscholar.org/CorpusId:258437124",
+      "relevance": 1,
+      "abstract": "The relationship between communicated language and intended meaning is often probabilistic and sensitive to context. Numerous strategies attempt to estimate such a mapping, often leveraging recursive Bayesian models of communication. In parallel, large language models (LLMs) have been increasingly applied to semantic parsing applications, tasked with inferring logical representations from natural language. While existing LLM explorations have been largely restricted to literal language use, in this work, we evaluate the capacity of LLMs to infer the meanings of pragmatic utterances. Specifically, we explore the case of threshold estimation on the gradable adjective ``strong'', contextually conditioned on a strength prior, then extended to composition with qualification, negation, polarity inversion, and class comparison. We find that LLMs can derive context-grounded, human-like distributions over the interpretations of several complex pragmatic utterances, yet struggle composing with negation. These results inform the inferential capacity of statistical language models, and their use in pragmatic and semantic parsing applications. All corresponding code is made publicly available (https://github.com/benlipkin/probsem/tree/CogSci2023).",
+      "citations": 19
+    },
+    {
+      "title": "MultiPragEval: Multilingual Pragmatic Evaluation of Large Language Models",
+      "year": 2024,
+      "authors": "Dojun Park, Jiwoo Lee, Seohyun Park, Hyeyun Jeong, Youngeun Koo, Soo-hyeun Hwang, S. Park, Sungeun Lee",
+      "url": "https://api.semanticscholar.org/CorpusId:270392017",
+      "relevance": 1,
+      "abstract": "As the capabilities of Large Language Models (LLMs) expand, it becomes increasingly important to evaluate them beyond basic knowledge assessment, focusing on higher-level language understanding. This study introduces MultiPragEval, the first multilingual pragmatic evaluation of LLMs, designed for English, German, Korean, and Chinese. Comprising 1200 question units categorized according to Grice\u2019s Cooperative Principle and its four conversational maxims, MultiPragEval enables an in-depth assessment of LLMs\u2019 contextual awareness and their ability to infer implied meanings. Our findings demonstrate that Claude3-Opus significantly outperforms other models in all tested languages, establishing a state-of-the-art in the field. Among open-source models, Solar-10.7B and Qwen1.5-14B emerge as strong competitors. By analyzing pragmatic inference, we provide valuable insights into the capabilities essential for advanced language comprehension in AI systems.",
+      "citations": 8
+    },
+    {
+      "title": "Plausibility as Commonsense Reasoning: Humans Succeed, Large Language Models Do not",
+      "year": 2026,
+      "authors": "Sercan Karakacs",
+      "url": "https://www.semanticscholar.org/paper/5c94be54256367cbf0781b5474cb21abdf2f3521",
+      "relevance": 1,
+      "abstract": "Large language models achieve strong performance on many language tasks, yet it remains unclear whether they integrate world knowledge with syntactic structure in a human-like, structure-sensitive way during ambiguity resolution. We test this question in Turkish prenominal relative-clause attachment ambiguities, where the same surface string permits high attachment (HA) or low attachment (LA). We construct ambiguous items that keep the syntactic configuration fixed and ensure both parses remain pragmatically possible, while graded event plausibility selectively favors High Attachment vs.\\ Low Attachment. The contrasts are validated with independent norming ratings. In a speeded forced-choice comprehension experiment, humans show a large, correctly directed plausibility effect. We then evaluate Turkish and multilingual LLMs in a parallel preference-based setup that compares matched HA/LA continuations via mean per-token log-probability. Across models, plausibility-driven shifts are weak, unstable, or reversed. The results suggest that, in the tested models, plausibility information does not guide attachment preferences as reliably as it does in human judgments, and they highlight Turkish RC attachment as a useful cross-linguistic diagnostic beyond broad benchmarks.",
+      "citations": 1
+    }
+  ]
+}
+
+Results saved to: paper_search_results/LLM_ambiguity_pragmatic_reasoning_instruction_20260518_005653.jsonl

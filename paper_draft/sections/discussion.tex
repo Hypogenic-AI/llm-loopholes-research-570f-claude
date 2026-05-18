@@ -1,0 +1,50 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{A two-mode taxonomy of knowledge-driven loopholes}
+\label{sec:discussion-taxonomy}
+
+The original hypothesis predicts a single behavior: \emph{when an LLM does not know but feels pressed to respond, it takes a loophole}. Our data confirm the prediction in spirit---every \kcl model has a positive within-pair \unsat shift, and the population GLM gives an odds ratio of $3.24$ for knowability ($p = 0.020$)---but they also show that the \emph{mechanism shifts with the question type}:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item {\bf Knowledge-bounded, well-defined questions} (\kcl): the dominant unsatisfactory mode is \emph{confident hallucination}. The loophole is the output channel itself---the model picks a plausible value and asserts it without flagging uncertainty. Verbalized dodging is rare ($\le 5\%$).
+    \item {\bf Genuinely unanswerable or subjective questions} (\selfaware unanswerable): the dominant mode is \emph{verbal dodge}. The model produces a generic essay-style response that lists related considerations without committing. Refusal is rare ($\le 10\%$).
+\end{itemize}
+
+Both modes share the substrate the hypothesis identifies---the model wants to say something, and does, even when refusal would be more honest. They differ in how the loophole presents: on factual questions there is no surface dodge to verbalize because there is no incentive structure to verbalize \emph{against}; the model simply picks an answer. On underspecified questions the dodge has discursive room to live, so it appears as a non-committal essay.
+
+\subsection{Why dodge is not the dominant mode on \kcl}
+
+\citet{choi2025loopholes}'s loophole prompts have an explicit competing-incentive structure: the system prompt instructs the agent to ``keep as many apples as possible'' while the user asks for ``some.'' The model can verbally reason \emph{``I'll interpret \textquoteleft some\textquoteright\ as 1 to satisfy the user without giving up much,''} and that verbalization is what made loopholes visible. \kcl has no such competing incentive---the model just does not know. The loophole therefore becomes \emph{implicit}: the model picks a plausible answer and presents it without flagging uncertainty. There is no verbalized rationale because there is no incentive trade-off to verbalize. This is consistent with the CHOKE finding of \citet{simhi2025choke}: LLMs fabricate confidently even when the same answer is available in another phrasing, indicating a decision-stage rather than a knowledge-stage failure.
+
+\subsection{Capability scaling: knowledge-conflict loopholes are capability-\emph{suppressed}}
+\label{sec:discussion-scaling}
+
+For goal-conflict loopholes \citet{choi2025loopholes} report \emph{positive} scaling: stronger models exploit more. We find the opposite for knowledge-conflict loopholes. The small-open \llamasmall has the highest \unsat rate ($0.433$); frontier models are intermediate ($0.27$--$0.37$); the reasoning model \rseventy is lowest ($0.27$, GLM OR vs.\ small-open = $0.50$, $p = 0.012$). One reading: goal-conflict loopholes \emph{require} a capable verbalizer to compute and articulate the strategic reinterpretation, so capability and rate co-vary positively. Knowledge-conflict loopholes do not---they are the path of least resistance for any model that can produce text. Calibration-aware training and explicit reasoning steps suppress them, but never to zero in our sample.
+
+\subsection{Strategic exploitation, despite no verbalization}
+\label{sec:discussion-strategic}
+
+The intent-MC accuracy at $\ge 0.98$ across all five models---paired with behavioral \unsat rates of $0.27$--$0.43$---is the same strategic-exploitation signature \citet{choi2025loopholes} and \citet{murthy2023loopholes} use to argue that loophole exploitation in goal-conflict settings is not a parsing failure. It applies in our regime too. The model can identify the intended interpretation in a multiple-choice probe but does not produce the corresponding behavior. This is mechanistically consistent with the internal-state probe literature \citep{azaria2023internal, orgad2024llmsknow, kossen2024semantic, duan2024hidden}, which finds that LLM hidden states encode ``this output is wrong'' even when the surface output is confident. In other words, the model's internal representation of ``I do not know this'' is available, and the decision to assert anyway is not a parameter failure but a generation-policy choice.
+
+\subsection{Implications}
+\label{sec:discussion-implications}
+
+\para{For evaluation.} Refusal-vs-answer scoring (the dominant honesty metric) systematically misses the loophole regime. On \kcl the gap between behavioral \unsat and refusal would be invisible to TruthfulQA-style metrics: $\refusal$ rates are near zero in both knowable and unknowable conditions for every model, so a refusal-only scoring would mark all models as honest. Our four-category rubric with the explicit \dodge anchor surfaces the missing middle. We recommend that knowledge-boundary benchmarks adopt either the four-category scheme or, at minimum, an \dodge anchor alongside refusal.
+
+\para{For mitigation.} The reasoning-tier OR of $0.50$ is encouraging: long-chain-of-thought roughly halves the unsatisfactory rate on \kcl. Two complementary directions stand out. First, an explicit refusal-encouraging instruction (``if you do not know with high confidence, say \emph{I do not know}'') is a one-line nudge that mirrors \citet{choi2025loopholes}'s \texttt{scalar\_max} and is cheap to evaluate. Second, the internal-state probes of \citet{orgad2024llmsknow} and \citet{kossen2024semantic} suggest a decoder-side intervention: if the hidden state encodes ``I do not know'' while the surface output asserts a number, a calibrated abstention head can reroute the output to a refusal or a hedged form. We outline these as next steps in \secref{sec:conclusion}.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\para{Sample size.} \kcl has 20 templates $\times$ 2 instances $\times$ 3 seeds = 120 generations per model. The per-model statistical power is bounded by the number of (template, seed) discordant pairs, which is why two of the five per-model McNemar tests do not pass the Bonferroni threshold despite consistent direction. We chose to mitigate this with the pre-registered within-pair design and the GLM aggregate rather than by inflating $n$ with paraphrase variants, which would confound the test.
+
+\para{Judge bias.} \gptmini is both a subject and the judge. We did not run a second judge model in this round for budget reasons. The qualitative samples we hand-checked are consistent with the judge's labels, but a formal two-judge Cohen's $\kappa$ remains as future work. Concretely, the \dodge anchor is the category most exposed to judge bias because it has the loosest linguistic surface; we would expect a second judge to agree at $\kappa \ge 0.7$ on \directans and \refusal but lower on \dodge / \hedged.
+
+\para{Knowability is graded.} Some \emph{unknowable} items turn out to be known by larger models (notably \llamabig on a Nobel Chemistry 2012 query and an Olympic host 1928 query). The paired McNemar design is robust to this because it compares within (template, seed)---when both members of a pair are known the pair simply does not contribute discordant counts---but the absolute \unsat numbers in \tabref{tab:mcnemar} are conservative because they include these knowable-by-\llamabig items.
+
+\para{CoT faithfulness.} For \rseventy, we treat the visible reasoning trace as the response when the \texttt{content} field is empty (a common pattern when the reasoning budget is exhausted). Because the reasoning trace is what the judge scores in those cases, the apparent correctness rate may be inflated by faithfulness slippage \citep{turpin2023cot, barez2025cot}. The direction of the bias should make the reasoning-tier OR an upper bound on the true effect (i.e., the true OR may be even smaller than $0.50$, which would only strengthen our conclusion).
+
+\para{Single-language, single-turn.} \kcl is English-only and single-turn, matching \citet{choi2025loopholes} but inheriting its scope limits. Multi-turn dynamics---does a follow-up ``are you sure?'' flip the model from confident-wrong to refusal?---are untested.
+
+\para{Single-model \choi replication.} We replicate the \citet{choi2025loopholes} scalar finding on \gptmini only. This is sufficient for the methodological-anchor purpose (verifying our harness sits on the published scale) but does not re-test the cross-model scaling claim. We discuss this trade-off in \secref{sec:methodology}.

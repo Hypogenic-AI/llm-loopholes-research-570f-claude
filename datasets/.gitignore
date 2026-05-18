@@ -1,0 +1,9 @@
+# Exclude all data files (can be large)
+*
+
+# But keep small reference files + docs + downloader scripts
+!.gitignore
+!README.md
+!**/README.md
+!loophole_scenarios/choi2025_power_scenarios.json
+!download.py

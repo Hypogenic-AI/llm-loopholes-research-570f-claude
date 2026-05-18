@@ -1,0 +1,407 @@
+[
+  {
+    "key": "loopholes",
+    "title": "Language Models Identify Ambiguities and Exploit Loopholes",
+    "matched_title": "Language Models Identify Ambiguities and Exploit Loopholes",
+    "year": 2025,
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "citations": 2,
+    "arxiv_id": "2508.19546",
+    "doi": "10.48550/arXiv.2508.19546",
+    "pdf_url": "",
+    "authors": [
+      "Jio Choi",
+      "Mohit Bansal",
+      "Elias Stengel-Eskin"
+    ],
+    "abstract": "Studying the responses of large language models (LLMs) to loopholes presents a two-fold opportunity. First, it affords us a lens through which to examine ambiguity and pragmatics in LLMs, since exploiting a loophole requires identifying ambiguity and performing sophisticated pragmatic reasoning. Second, loopholes pose an interesting and novel alignment problem where the model is presented with conflicting goals and can exploit ambiguities to its own advantage. To address these questions, we design scenarios where LLMs are given a goal and an ambiguous user instruction in conflict with the goal, with scenarios covering scalar implicature, structural ambiguities, and power dynamics. We then measure different models'abilities to exploit loopholes to satisfy their given goals as opposed to the goals of the user. We find that both closed-source and stronger open-source models can identify ambiguities and exploit their resulting loopholes, presenting a potential AI safety risk. Our analysis indicates that models which exploit loopholes explicitly identify and reason about both ambiguity and conflicting goals."
+  },
+  {
+    "key": "loopholes_humans",
+    "title": "Comparing the Evaluation and Production of Loophole Behavior in Humans and Large Language Models",
+    "matched_title": "Comparing the Evaluation and Production of Loophole Behavior in Humans and Large Language Models",
+    "year": 2023,
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "citations": 1,
+    "arxiv_id": null,
+    "doi": "10.18653/v1/2023.findings-emnlp.264",
+    "pdf_url": "https://aclanthology.org/2023.findings-emnlp.264.pdf",
+    "authors": [
+      "Sonia K. Murthy",
+      "Kiera Parece",
+      "Sophie Bridgers",
+      "Peng Qian",
+      "T. Ullman"
+    ],
+    "abstract": ","
+  },
+  {
+    "key": "subterfuge",
+    "title": "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models",
+    "matched_title": "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models",
+    "year": 2024,
+    "venue": "arXiv.org",
+    "citations": 116,
+    "arxiv_id": "2406.10162",
+    "doi": "10.48550/arXiv.2406.10162",
+    "pdf_url": "",
+    "authors": [
+      "Carson E. Denison",
+      "M. MacDiarmid",
+      "Fazl Barez",
+      "D. Duvenaud",
+      "Shauna Kravec",
+      "Samuel Marks",
+      "Nicholas Schiefer",
+      "Ryan Soklaski",
+      "Alex Tamkin",
+      "Jared Kaplan",
+      "Buck Shlegeris",
+      "Samuel R. Bowman",
+      "Ethan Perez",
+      "Evan Hubinger"
+    ],
+    "abstract": "In reinforcement learning, specification gaming occurs when AI systems learn undesired behaviors that are highly rewarded due to misspecified training goals. Specification gaming can range from simple behaviors like sycophancy to sophisticated and pernicious behaviors like reward-tampering, where a model directly modifies its own reward mechanism. However, these more pernicious behaviors may be too complex to be discovered via exploration. In this paper, we study whether Large Language Model (LLM) assistants which find easily discovered forms of specification gaming will generalize to perform rarer and more blatant forms, up to and including reward-tampering. We construct a curriculum of increasingly sophisticated gameable environments and find that training on early-curriculum environments leads to more specification gaming on remaining environments. Strikingly, a small but non-negligible proportion of the time, LLM assistants trained on the full curriculum generalize zero-shot to directly rewriting their own reward function. Retraining an LLM not to game early-curriculum environments mitigates, but does not eliminate, reward-tampering in later environments. Moreover, adding harmlessness training to our gameable environments does not prevent reward-tampering. These results demonstrate that LLMs can generalize from common forms of specification gaming to more pernicious reward tampering and that such behavior may be nontrivial to remove."
+  },
+  {
+    "key": "trace",
+    "title": "Is It Thinking or Cheating? Detecting Implicit Reward Hacking by Measuring Reasoning Effort",
+    "matched_title": "Is It Thinking or Cheating? Detecting Implicit Reward Hacking by Measuring Reasoning Effort",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "citations": 9,
+    "arxiv_id": "2510.01367",
+    "doi": "10.48550/arXiv.2510.01367",
+    "pdf_url": "",
+    "authors": [
+      "Xinpeng Wang",
+      "Nitish Joshi",
+      "Barbara Plank",
+      "Rico Angell",
+      "He He"
+    ],
+    "abstract": "Reward hacking, where a reasoning model exploits loopholes in a reward function to achieve high rewards without solving the intended task, poses a significant threat. This behavior may be explicit, i.e. verbalized in the model's chain-of-thought (CoT), or implicit, where the CoT appears benign thus bypasses CoT monitors. To detect implicit reward hacking, we propose TRACE (Truncated Reasoning AUC Evaluation). Our key observation is that hacking occurs when exploiting the loophole is easier than solving the actual task. This means that the model is using less'effort'than required to achieve high reward. TRACE quantifies effort by measuring how early a model's reasoning becomes sufficient to obtain the reward. We progressively truncate a model's CoT at various lengths, force the model to answer, and estimate the expected reward at each cutoff. A hacking model, which takes a shortcut, will achieve a high expected reward with only a small fraction of its CoT, yielding a large area under the accuracy-vs-length curve. TRACE achieves over 65% gains over our strongest 72B CoT monitor in math reasoning, and over 30% gains over a 32B monitor in coding. We further show that TRACE can discover unknown loopholes during training. Overall, TRACE offers a scalable unsupervised approach for oversight where current monitoring methods prove ineffective."
+  },
+  {
+    "key": "dont_know",
+    "title": "Can AI Assistants Know What They Don't Know?",
+    "matched_title": "Can AI Assistants Know What They Don't Know?",
+    "year": 2024,
+    "venue": "International Conference on Machine Learning",
+    "citations": 48,
+    "arxiv_id": "2401.13275",
+    "doi": "10.48550/arXiv.2401.13275",
+    "pdf_url": "",
+    "authors": [
+      "Qinyuan Cheng",
+      "Tianxiang Sun",
+      "Xiangyang Liu",
+      "Wenwei Zhang",
+      "Zhangyue Yin",
+      "Shimin Li",
+      "Linyang Li",
+      "Kai Chen",
+      "Xipeng Qiu"
+    ],
+    "abstract": "Recently, AI assistants based on large language models (LLMs) show surprising performance in many tasks, such as dialogue, solving math problems, writing code, and using tools. Although LLMs possess intensive world knowledge, they still make factual errors when facing some knowledge intensive tasks, like open-domain question answering. These untruthful responses from the AI assistant may cause significant risks in practical applications. We believe that an AI assistant's refusal to answer questions it does not know is a crucial method for reducing hallucinations and making the assistant truthful. Therefore, in this paper, we ask the question\"Can AI assistants know what they don't know and express them through natural language?\"To answer this question, we construct a model-specific\"I don't know\"(Idk) dataset for an assistant, which contains its known and unknown questions, based on existing open-domain question answering datasets. Then we align the assistant with its corresponding Idk dataset and observe whether it can refuse to answer its unknown questions after alignment. Experimental results show that after alignment with Idk datasets, the assistant can refuse to answer most its unknown questions. For questions they attempt to answer, the accuracy is significantly higher than before the alignment."
+  },
+  {
+    "key": "trust_me_wrong",
+    "title": "Trust Me, I'm Wrong: LLMs Hallucinate with Certainty Despite Knowing the Answer",
+    "matched_title": "Trust Me, I'm Wrong: LLMs Hallucinate with Certainty Despite Knowing the Answer",
+    "year": 2025,
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "citations": 11,
+    "arxiv_id": "2502.12964",
+    "doi": "10.18653/v1/2025.findings-emnlp.792",
+    "pdf_url": "",
+    "authors": [
+      "Adi Simhi",
+      "Itay Itzhak",
+      "Fazl Barez",
+      "Gabriel Stanovsky",
+      "Yonatan Belinkov"
+    ],
+    "abstract": "Prior work on large language model (LLM) hallucinations has associated them with model uncertainty or inaccurate knowledge. In this work, we define and investigate a distinct type of hallucination, where a model can consistently answer a question correctly, but a seemingly trivial perturbation, which can happen in real-world settings, causes it to produce a hallucinated response with high certainty. This phenomenon, which we dub CHOKE (Certain Hallucinations Overriding Known Evidence), is particularly concerning in high-stakes domains such as medicine or law, where model certainty is often used as a proxy for reliability. We show that CHOKE examples are consistent across prompts, occur in different models and datasets, and are fundamentally distinct from other hallucinations. This difference leads existing mitigation methods to perform worse on CHOKE examples than on general hallucinations. Finally, we introduce a probing-based mitigation that outperforms existing methods on CHOKE hallucinations. These findings reveal an overlooked aspect of hallucinations, emphasizing the need to understand their origins and improve mitigation strategies to enhance LLM safety. The code is available at https://github.com/technion-cs-nlp/Trust_me_Im_wrong ."
+  },
+  {
+    "key": "past_tense",
+    "title": "Does Refusal Training in LLMs Generalize to the Past Tense?",
+    "matched_title": "Does Refusal Training in LLMs Generalize to the Past Tense?",
+    "year": 2024,
+    "venue": "International Conference on Learning Representations",
+    "citations": 74,
+    "arxiv_id": "2407.11969",
+    "doi": "10.48550/arXiv.2407.11969",
+    "pdf_url": "",
+    "authors": [
+      "Maksym Andriushchenko",
+      "Nicolas Flammarion"
+    ],
+    "abstract": "Refusal training is widely used to prevent LLMs from generating harmful, undesirable, or illegal outputs. We reveal a curious generalization gap in the current refusal training approaches: simply reformulating a harmful request in the past tense (e.g.,\"How to make a Molotov cocktail?\"to\"How did people make a Molotov cocktail?\") is often sufficient to jailbreak many state-of-the-art LLMs. We systematically evaluate this method on Llama-3 8B, Claude-3.5 Sonnet, GPT-3.5 Turbo, Gemma-2 9B, Phi-3-Mini, GPT-4o mini, GPT-4o, o1-mini, o1-preview, and R2D2 models using GPT-3.5 Turbo as a reformulation model. For example, the success rate of this simple attack on GPT-4o increases from 1% using direct requests to 88% using 20 past tense reformulation attempts on harmful requests from JailbreakBench with GPT-4 as a jailbreak judge. Interestingly, we also find that reformulations in the future tense are less effective, suggesting that refusal guardrails tend to consider past historical questions more benign than hypothetical future questions. Moreover, our experiments on fine-tuning GPT-3.5 Turbo show that defending against past reformulations is feasible when past tense examples are explicitly included in the fine-tuning data. Overall, our findings highlight that the widely used alignment techniques -- such as SFT, RLHF, and adversarial training -- employed to align the studied models can be brittle and do not always generalize as intended. We provide code and jailbreak artifacts at https://github.com/tml-epfl/llm-past-tense."
+  },
+  {
+    "key": "jailbroken",
+    "title": "Jailbroken: How Does LLM Safety Training Fail?",
+    "matched_title": "Jailbroken: How Does LLM Safety Training Fail?",
+    "year": 2023,
+    "venue": "Neural Information Processing Systems",
+    "citations": 1786,
+    "arxiv_id": "2307.02483",
+    "doi": "10.48550/arXiv.2307.02483",
+    "pdf_url": "https://arxiv.org/pdf/2307.02483",
+    "authors": [
+      "Alexander Wei",
+      "Nika Haghtalab",
+      "J. Steinhardt"
+    ],
+    "abstract": "Large language models trained for safety and harmlessness remain susceptible to adversarial misuse, as evidenced by the prevalence of\"jailbreak\"attacks on early releases of ChatGPT that elicit undesired behavior. Going beyond recognition of the issue, we investigate why such attacks succeed and how they can be created. We hypothesize two failure modes of safety training: competing objectives and mismatched generalization. Competing objectives arise when a model's capabilities and safety goals conflict, while mismatched generalization occurs when safety training fails to generalize to a domain for which capabilities exist. We use these failure modes to guide jailbreak design and then evaluate state-of-the-art models, including OpenAI's GPT-4 and Anthropic's Claude v1.3, against both existing and newly designed attacks. We find that vulnerabilities persist despite the extensive red-teaming and safety-training efforts behind these models. Notably, new attacks utilizing our failure modes succeed on every prompt in a collection of unsafe requests from the models' red-teaming evaluation sets and outperform existing ad hoc jailbreaks. Our analysis emphasizes the need for safety-capability parity -- that safety mechanisms should be as sophisticated as the underlying model -- and argues against the idea that scaling alone can resolve these safety failure modes."
+  },
+  {
+    "key": "sirens_song",
+    "title": "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models",
+    "matched_title": "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models",
+    "year": 2023,
+    "venue": "Computational Linguistics",
+    "citations": 990,
+    "arxiv_id": "2309.01219",
+    "doi": "10.1162/coli.a.16",
+    "pdf_url": "",
+    "authors": [
+      "Yue Zhang",
+      "Yafu Li",
+      "Leyang Cui",
+      "Deng Cai",
+      "Lemao Liu",
+      "Tingchen Fu",
+      "Xinting Huang",
+      "Enbo Zhao",
+      "Yu Zhang",
+      "Yulong Chen",
+      "Longyue Wang",
+      "A. Luu",
+      "Wei Bi",
+      "Freda Shi",
+      "Shuming Shi"
+    ],
+    "abstract": "\n While large language models (LLMs) have demonstrated remarkable capabilities across a range of downstream tasks, a significant concern revolves around their propensity to exhibit hallucinations: LLMs occasionally generate content that diverges from the user input, contradicts previously generated context, or misaligns with established world knowledge. This phenomenon poses a substantial challenge to the reliability of LLMs in real-world scenarios. In this paper, we survey recent efforts on the detection, explanation, and mitigation of hallucination, with an emphasis on the unique challenges posed by LLMs. We present taxonomies of the LLM hallucination phenomena and evaluation benchmarks, analyze existing approaches aiming at mitigating LLM hallucination, and discuss potential directions for future research."
+  },
+  {
+    "key": "honesty_survey",
+    "title": "A Survey on the Honesty of Large Language Models",
+    "matched_title": "A Survey on the Honesty of Large Language Models",
+    "year": 2024,
+    "venue": "Trans. Mach. Learn. Res.",
+    "citations": 23,
+    "arxiv_id": "2409.18786",
+    "doi": "10.48550/arXiv.2409.18786",
+    "pdf_url": "",
+    "authors": [
+      "Siheng Li",
+      "Cheng Yang",
+      "Taiqiang Wu",
+      "Chufan Shi",
+      "Yuji Zhang",
+      "Xinyu Zhu",
+      "Zesen Cheng",
+      "Deng Cai",
+      "Mo Yu",
+      "Lemao Liu",
+      "Jie Zhou",
+      "Yujiu Yang",
+      "Ngai Wong",
+      "Xixin Wu",
+      "Wai Lam"
+    ],
+    "abstract": "Honesty is a fundamental principle for aligning large language models (LLMs) with human values, requiring these models to recognize what they know and don't know and be able to faithfully express their knowledge. Despite promising, current LLMs still exhibit significant dishonest behaviors, such as confidently presenting wrong answers or failing to express what they know. In addition, research on the honesty of LLMs also faces challenges, including varying definitions of honesty, difficulties in distinguishing between known and unknown knowledge, and a lack of comprehensive understanding of related research. To address these issues, we provide a survey on the honesty of LLMs, covering its clarification, evaluation approaches, and strategies for improvement. Moreover, we offer insights for future research, aiming to inspire further exploration in this important area."
+  },
+  {
+    "key": "kn_boundary",
+    "title": "Teaching Large Language Models to Express Knowledge Boundary from Their Own Signals",
+    "matched_title": "Teaching Large Language Models to Express Knowledge Boundary from Their Own Signals",
+    "year": 2024,
+    "venue": "Proceedings of the 3rd Workshop on Towards Knowledgeable Foundation Models (KnowFM)",
+    "citations": 31,
+    "arxiv_id": "2406.10881",
+    "doi": "10.48550/arXiv.2406.10881",
+    "pdf_url": "",
+    "authors": [
+      "Lida Chen",
+      "Zujie Liang",
+      "Xintao Wang",
+      "Jiaqing Liang",
+      "Yanghua Xiao",
+      "Feng Wei",
+      "Jinglei Chen",
+      "Zhenghong Hao",
+      "Bing Han",
+      "Wei Wang"
+    ],
+    "abstract": "Large language models (LLMs) have achieved great success, but their occasional content fabrication, or hallucination, limits their practical application. Hallucination arises because LLMs struggle to admit ignorance due to inadequate training on knowledge boundaries. We call it a limitation of LLMs that they can not accurately express their knowledge boundary, answering questions they know while admitting ignorance to questions they do not know. In this paper, we aim to teach LLMs to recognize and express their knowledge boundary, so they can reduce hallucinations caused by fabricating when they do not know. We propose CoKE, which first probes LLMs' knowledge boundary via internal confidence given a set of questions, and then leverages the probing results to elicit the expression of the knowledge boundary. Extensive experiments show CoKE helps LLMs express knowledge boundaries, answering known questions while declining unknown ones, significantly improving in-domain and out-of-domain performance."
+  },
+  {
+    "key": "llms_know_more",
+    "title": "LLMs Know More Than They Show: On the Intrinsic Representation of LLM Hallucinations",
+    "matched_title": "LLMs Know More Than They Show: On the Intrinsic Representation of LLM Hallucinations",
+    "year": 2024,
+    "venue": "International Conference on Learning Representations",
+    "citations": 195,
+    "arxiv_id": "2410.02707",
+    "doi": "10.48550/arXiv.2410.02707",
+    "pdf_url": "",
+    "authors": [
+      "Hadas Orgad",
+      "Michael Toker",
+      "Zorik Gekhman",
+      "Roi Reichart",
+      "Idan Szpektor",
+      "Hadas Kotek",
+      "Yonatan Belinkov"
+    ],
+    "abstract": "Large language models (LLMs) often produce errors, including factual inaccuracies, biases, and reasoning failures, collectively referred to as\"hallucinations\". Recent studies have demonstrated that LLMs' internal states encode information regarding the truthfulness of their outputs, and that this information can be utilized to detect errors. In this work, we show that the internal representations of LLMs encode much more information about truthfulness than previously recognized. We first discover that the truthfulness information is concentrated in specific tokens, and leveraging this property significantly enhances error detection performance. Yet, we show that such error detectors fail to generalize across datasets, implying that -- contrary to prior claims -- truthfulness encoding is not universal but rather multifaceted. Next, we show that internal representations can also be used for predicting the types of errors the model is likely to make, facilitating the development of tailored mitigation strategies. Lastly, we reveal a discrepancy between LLMs' internal encoding and external behavior: they may encode the correct answer, yet consistently generate an incorrect one. Taken together, these insights deepen our understanding of LLM errors from the model's internal perspective, which can guide future research on enhancing error analysis and mitigation."
+  },
+  {
+    "key": "pragmatic",
+    "title": "Pragmatic Instruction Following and Goal Assistance via Cooperative Language-Guided Inverse Planning",
+    "matched_title": "Pragmatic Instruction Following and Goal Assistance via Cooperative Language-Guided Inverse Planning",
+    "year": 2024,
+    "venue": "Adaptive Agents and Multi-Agent Systems",
+    "citations": 40,
+    "arxiv_id": "2402.17930",
+    "doi": "10.48550/arXiv.2402.17930",
+    "pdf_url": "",
+    "authors": [
+      "Tan Zhi-Xuan",
+      "Lance Ying",
+      "Vikash K. Mansinghka",
+      "Joshua B. Tenenbaum"
+    ],
+    "abstract": "People often give instructions whose meaning is ambiguous without further context, expecting that their actions or goals will disambiguate their intentions. How can we build assistive agents that follow such instructions in a flexible, context-sensitive manner? This paper introduces cooperative language-guided inverse plan search (CLIPS), a Bayesian agent architecture for pragmatic instruction following and goal assistance. Our agent assists a human by modeling them as a cooperative planner who communicates joint plans to the assistant, then performs multimodal Bayesian inference over the human's goal from actions and language, using large language models (LLMs) to evaluate the likelihood of an instruction given a hypothesized plan. Given this posterior, our assistant acts to minimize expected goal achievement cost, enabling it to pragmatically follow ambiguous instructions and provide effective assistance even when uncertain about the goal. We evaluate these capabilities in two cooperative planning domains (Doors, Keys & Gems and VirtualHome), finding that CLIPS significantly outperforms GPT-4V, LLM-based literal instruction following and unimodal inverse planning in both accuracy and helpfulness, while closely matching the inferences and assistive judgments provided by human raters."
+  },
+  {
+    "key": "curriculum",
+    "title": "Automatic Curriculum Expert Iteration for Reliable LLM Reasoning",
+    "matched_title": "Automatic Curriculum Expert Iteration for Reliable LLM Reasoning",
+    "year": 2024,
+    "venue": "International Conference on Learning Representations",
+    "citations": 13,
+    "arxiv_id": "2410.07627",
+    "doi": "10.48550/arXiv.2410.07627",
+    "pdf_url": "",
+    "authors": [
+      "Zirui Zhao",
+      "Hanze Dong",
+      "Amrita Saha",
+      "Caiming Xiong",
+      "Doyen Sahoo"
+    ],
+    "abstract": "Hallucinations (i.e., generating plausible but inaccurate content) and laziness (i.e. excessive refusals or defaulting to\"I don't know\") persist as major challenges in LLM reasoning. Current efforts to reduce hallucinations primarily focus on factual errors in knowledge-grounded tasks, often neglecting hallucinations related to faulty reasoning. Meanwhile, some approaches render LLMs overly conservative, limiting their problem-solving capabilities. To mitigate hallucination and laziness in reasoning tasks, we propose Automatic Curriculum Expert Iteration (Auto-CEI) to enhance LLM reasoning and align responses to the model's capabilities--assertively answering within its limits and declining when tasks exceed them. In our method, Expert Iteration explores the reasoning trajectories near the LLM policy, guiding incorrect paths back on track to reduce compounding errors and improve robustness; it also promotes appropriate\"I don't know\"responses after sufficient reasoning attempts. The curriculum automatically adjusts rewards, incentivizing extended reasoning before acknowledging incapability, thereby pushing the limits of LLM reasoning and aligning its behaviour with these limits. We compare Auto-CEI with various SOTA baselines across logical reasoning, mathematics, and planning tasks, where Auto-CEI achieves superior alignment by effectively balancing assertiveness and conservativeness. The code is available at https://github.com/SalesforceAIResearch/Auto-CEI ."
+  },
+  {
+    "key": "learn_refuse",
+    "title": "Learn to Refuse: Making LLMs Reliable via Knowledge Scope Limitation",
+    "matched_title": "Learn to Refuse: Making Large Language Models More Controllable and Reliable through Knowledge Scope Limitation and Refusal Mechanism",
+    "year": 2023,
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "citations": 41,
+    "arxiv_id": "2311.01041",
+    "doi": "10.48550/arXiv.2311.01041",
+    "pdf_url": "",
+    "authors": [
+      "Lang Cao"
+    ],
+    "abstract": "Large language models (LLMs) have demonstrated impressive language understanding and generation capabilities, enabling them to answer a wide range of questions across various domains. However, these models are not flawless and often produce responses that contain errors or misinformation. These inaccuracies, commonly referred to as hallucinations, render LLMs unreliable and even unusable in many scenarios. In this paper, our focus is on mitigating the issue of hallucination in LLMs, particularly in the context of question-answering. Instead of attempting to answer all questions, we explore a refusal mechanism that instructs LLMs to refuse to answer challenging questions in order to avoid errors. We then propose a simple yet effective solution called Learn to Refuse (L2R), which incorporates the refusal mechanism to enable LLMs to recognize and refuse to answer questions that they find difficult to address. To achieve this, we utilize a structured knowledge base to represent all the LLM\u2019s understanding of the world, enabling it to provide traceable gold knowledge. This knowledge base is separate from the LLM and initially empty. It can be filled with validated knowledge and progressively expanded. When an LLM encounters questions outside its domain, the system recognizes its knowledge scope and determines whether it can answer the question independently. Additionally, we introduce a method for automatically and efficiently expanding the knowledge base of LLMs. Through qualitative and quantitative analysis, we demonstrate that our approach enhances the controllability and reliability of LLMs."
+  },
+  {
+    "key": "internal_lying",
+    "title": "The Internal State of an LLM Knows When its Lying",
+    "matched_title": "The Internal State of an LLM Knows When its Lying",
+    "year": 2023,
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "citations": 638,
+    "arxiv_id": "2304.13734",
+    "doi": "10.18653/v1/2023.findings-emnlp.68",
+    "pdf_url": "https://aclanthology.org/2023.findings-emnlp.68.pdf",
+    "authors": [
+      "A. Azaria",
+      "Tom M. Mitchell"
+    ],
+    "abstract": "While Large Language Models (LLMs) have shown exceptional performance in various tasks, one of their most prominent drawbacks is generating inaccurate or false information with a confident tone. In this paper, we provide evidence that the LLM's internal state can be used to reveal the truthfulness of statements. This includes both statements provided to the LLM, and statements that the LLM itself generates. Our approach is to train a classifier that outputs the probability that a statement is truthful, based on the hidden layer activations of the LLM as it reads or generates the statement. Experiments demonstrate that given a set of test sentences, of which half are true and half false, our trained classifier achieves an average of 71\\% to 83\\% accuracy labeling which sentences are true versus false, depending on the LLM base model. Furthermore, we explore the relationship between our classifier's performance and approaches based on the probability assigned to the sentence by the LLM. We show that while LLM-assigned sentence probability is related to sentence truthfulness, this probability is also dependent on sentence length and the frequencies of words in the sentence, resulting in our trained classifier providing a more reliable approach to detecting truthfulness, highlighting its potential to enhance the reliability of LLM-generated content and its practical applicability in real-world scenarios."
+  },
+  {
+    "key": "hidden_hallucination",
+    "title": "Do LLMs Know about Hallucination? An Empirical Investigation of LLM's Hidden States",
+    "matched_title": "Do LLMs Know about Hallucination? An Empirical Investigation of LLM's Hidden States",
+    "year": 2024,
+    "venue": "arXiv.org",
+    "citations": 59,
+    "arxiv_id": "2402.09733",
+    "doi": "10.48550/arXiv.2402.09733",
+    "pdf_url": "",
+    "authors": [
+      "Hanyu Duan",
+      "Yi Yang",
+      "K. Tam"
+    ],
+    "abstract": "Large Language Models (LLMs) can make up answers that are not real, and this is known as hallucination. This research aims to see if, how, and to what extent LLMs are aware of hallucination. More specifically, we check whether and how an LLM reacts differently in its hidden states when it answers a question right versus when it hallucinates. To do this, we introduce an experimental framework which allows examining LLM's hidden states in different hallucination situations. Building upon this framework, we conduct a series of experiments with language models in the LLaMA family (Touvron et al., 2023). Our empirical findings suggest that LLMs react differently when processing a genuine response versus a fabricated one. We then apply various model interpretation techniques to help understand and explain the findings better. Moreover, informed by the empirical observations, we show great potential of using the guidance derived from LLM's hidden representation space to mitigate hallucination. We believe this work provides insights into how LLMs produce hallucinated answers and how to make them occur less often."
+  },
+  {
+    "key": "proxy_gaming",
+    "title": "Detecting Proxy Gaming in RL and LLM Alignment via Evaluator Stress Tests",
+    "matched_title": "Detecting Proxy Gaming in RL and LLM Alignment via Evaluator Stress Tests",
+    "year": 2025,
+    "venue": "",
+    "citations": 10,
+    "arxiv_id": "2507.05619",
+    "doi": null,
+    "pdf_url": "",
+    "authors": [
+      "Ibne Farabi Shihab",
+      "Sanjeda Akter",
+      "Anuj Sharma"
+    ],
+    "abstract": "Proxy optimization, where AI systems exploit evaluator weaknesses rather than improve intended objectives, threatens both reinforcement learning (reward hacking) and LLM alignment (evaluator gaming). We introduce the Evaluator Stress Test (EST), an invariance-based framework that detects proxy gaming by separating exploitable sensitivity (e.g., formatting artifacts, physics bugs) from content-driven improvements using controlled perturbations with semantic validity audits. We validate EST across both domains. In RL, across 15 environments and 5 algorithms (2,156 expert-annotated episodes), EST achieves 78.4% precision and 81.7% recall. In LLM alignment, across 4 tasks, 2 model scales, 2 training methods, and 2 judges (1,200 human-annotated instances), EST achieves 74.2% precision and 78.6% recall, with early warning signals that precede quality decline. Cross-domain analysis shows that proxy-true correlation tracking transfers directly between domains, while perturbation design requires domain adaptation. Closed-loop mitigation improves human win-rate by 8.3 points (LLM) and reduces hacking by 54.6% (RL). We release benchmarks for both domains: 2,156 RL episodes and 1,200 LLM instances."
+  },
+  {
+    "key": "sem_entropy",
+    "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+    "matched_title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+    "year": 2024,
+    "venue": "arXiv.org",
+    "citations": 185,
+    "arxiv_id": "2406.15927",
+    "doi": "10.48550/arXiv.2406.15927",
+    "pdf_url": "",
+    "authors": [
+      "Jannik Kossen",
+      "Jiatong Han",
+      "Muhammed Razzak",
+      "L. Schut",
+      "Shreshth A. Malik",
+      "Y. Gal"
+    ],
+    "abstract": "We propose semantic entropy probes (SEPs), a cheap and reliable method for uncertainty quantification in Large Language Models (LLMs). Hallucinations, which are plausible-sounding but factually incorrect and arbitrary model generations, present a major challenge to the practical adoption of LLMs. Recent work by Farquhar et al. (2024) proposes semantic entropy (SE), which can detect hallucinations by estimating uncertainty in the space semantic meaning for a set of model generations. However, the 5-to-10-fold increase in computation cost associated with SE computation hinders practical adoption. To address this, we propose SEPs, which directly approximate SE from the hidden states of a single generation. SEPs are simple to train and do not require sampling multiple model generations at test time, reducing the overhead of semantic uncertainty quantification to almost zero. We show that SEPs retain high performance for hallucination detection and generalize better to out-of-distribution data than previous probing methods that directly predict model accuracy. Our results across models and tasks suggest that model hidden states capture SE, and our ablation studies give further insights into the token positions and model layers for which this is the case."
+  },
+  {
+    "key": "self_factuality",
+    "title": "Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation",
+    "matched_title": "Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation",
+    "year": 2024,
+    "venue": "Annual Meeting of the Association for Computational Linguistics",
+    "citations": 107,
+    "arxiv_id": "2402.09267",
+    "doi": "10.48550/arXiv.2402.09267",
+    "pdf_url": "",
+    "authors": [
+      "Xiaoying Zhang",
+      "Baolin Peng",
+      "Ye Tian",
+      "Jingyan Zhou",
+      "Lifeng Jin",
+      "Linfeng Song",
+      "Haitao Mi",
+      "Helen M. Meng"
+    ],
+    "abstract": "Despite showing increasingly human-like abilities, large language models (LLMs) often struggle with factual inaccuracies, i.e.\"hallucinations\", even when they hold relevant knowledge. To address these hallucinations, current approaches typically necessitate high-quality human factuality annotations. In this work, we explore Self-Alignment for Factuality, where we leverage the self-evaluation capability of an LLM to provide training signals that steer the model towards factuality. Specifically, we incorporate Self-Eval, a self-evaluation component, to prompt an LLM to validate the factuality of its own generated responses solely based on its internal knowledge. Additionally, we design Self-Knowledge Tuning (SK-Tuning) to augment the LLM's self-evaluation ability by improving the model's confidence estimation and calibration. We then utilize these self-annotated responses to fine-tune the model via Direct Preference Optimization algorithm. We show that the proposed self-alignment approach substantially enhances factual accuracy over Llama family models across three key knowledge-intensive tasks on TruthfulQA and BioGEN."
+  }
+]

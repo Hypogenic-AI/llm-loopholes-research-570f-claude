@@ -1,0 +1,5 @@
+model_short,job,compliance,loophole,unparseable
+claude-3.5-haiku,scalar,74,22,0
+claude-3.5-haiku,scalar_max,2,0,0
+gpt-4o-mini,scalar,26,56,14
+gpt-4o-mini,scalar_max,64,30,2

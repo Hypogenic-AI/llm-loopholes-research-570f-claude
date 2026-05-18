@@ -1,0 +1,6 @@
+model,tier,outcome,n,a_both_pos,b_only_unknowable_pos,c_only_knowable_pos,d_both_neg,rate_knowable,rate_unknowable,diff,mcnemar_stat,p_value,p_bonferroni
+claude-3.5-haiku,frontier,dodge,60,0,1,1,58,0.016666666666666666,0.016666666666666666,0.0,1.0,1.0,1.0
+deepseek-r1-70b,reasoning,dodge,60,0,1,1,58,0.016666666666666666,0.016666666666666666,0.0,1.0,1.0,1.0
+gpt-4o-mini,frontier,dodge,60,0,1,0,59,0.0,0.016666666666666666,0.016666666666666666,0.0,1.0,1.0
+llama-3.1-70b,large_open,dodge,60,0,2,0,58,0.0,0.03333333333333333,0.03333333333333333,0.0,0.5,1.0
+llama-3.1-8b,small_open,dodge,60,0,3,1,56,0.016666666666666666,0.05,0.03333333333333333,1.0,0.625,1.0

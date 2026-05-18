@@ -1,0 +1,30 @@
+=== KCL-Pairs analysis summary ===
+Items: 600; models: 5; seeds: 3
+
+Selective interpretation index (SII):
+  gpt-4o-mini        (frontier  ) dodge: kn 0.00 → un 0.02  (Δ=+0.017) | unsat: kn 0.08 → un 0.37 (Δ=+0.283)
+  llama-3.1-8b       (small_open) dodge: kn 0.02 → un 0.05  (Δ=+0.033) | unsat: kn 0.17 → un 0.43 (Δ=+0.267)
+  deepseek-r1-70b    (reasoning ) dodge: kn 0.02 → un 0.02  (Δ=+0.000) | unsat: kn 0.10 → un 0.27 (Δ=+0.167)
+  claude-3.5-haiku   (frontier  ) dodge: kn 0.02 → un 0.02  (Δ=+0.000) | unsat: kn 0.13 → un 0.27 (Δ=+0.133)
+  llama-3.1-70b      (large_open) dodge: kn 0.00 → un 0.03  (Δ=+0.033) | unsat: kn 0.18 → un 0.32 (Δ=+0.133)
+
+McNemar paired test [unsatisfactory] (knowable vs unknowable):
+  claude-3.5-haiku   (frontier  ) rate_kn=0.13 rate_un=0.27 diff=+0.133 p=0.1153 (Bonf=0.5766)
+  deepseek-r1-70b    (reasoning ) rate_kn=0.10 rate_un=0.27 diff=+0.167 p=0.03088 (Bonf=0.1544)
+  gpt-4o-mini        (frontier  ) rate_kn=0.08 rate_un=0.37 diff=+0.283 p=1.526e-05 (Bonf=7.629e-05)
+  llama-3.1-70b      (large_open) rate_kn=0.18 rate_un=0.32 diff=+0.133 p=0.1686 (Bonf=0.8432)
+  llama-3.1-8b       (small_open) rate_kn=0.17 rate_un=0.43 diff=+0.267 p=0.002494 (Bonf=0.01247)
+
+McNemar paired test [dodge_only]:
+  claude-3.5-haiku   (frontier  ) rate_kn=0.02 rate_un=0.02 diff=+0.000 p=1 (Bonf=1)
+  deepseek-r1-70b    (reasoning ) rate_kn=0.02 rate_un=0.02 diff=+0.000 p=1 (Bonf=1)
+  gpt-4o-mini        (frontier  ) rate_kn=0.00 rate_un=0.02 diff=+0.017 p=1 (Bonf=1)
+  llama-3.1-70b      (large_open) rate_kn=0.00 rate_un=0.03 diff=+0.033 p=0.5 (Bonf=1)
+  llama-3.1-8b       (small_open) rate_kn=0.02 rate_un=0.05 diff=+0.033 p=0.625 (Bonf=1)
+
+Intent-MC accuracy on unknowable items (H4 — does the model SAY the right interpretation even while dodging?):
+  claude-3.5-haiku   intent_acc=1.000 dodge=0.017
+  deepseek-r1-70b    intent_acc=1.000 dodge=0.017
+  gpt-4o-mini        intent_acc=1.000 dodge=0.017
+  llama-3.1-70b      intent_acc=1.000 dodge=0.033
+  llama-3.1-8b       intent_acc=0.983 dodge=0.050

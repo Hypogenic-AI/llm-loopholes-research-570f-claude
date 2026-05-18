@@ -1,0 +1,15 @@
+Resource finding phase completed successfully.
+Timestamp: 2026-05-18T01:18:22+00:00
+Papers downloaded: 20
+Datasets downloaded: 5 (TruthfulQA, SelfAware, Anthropic sycophancy x3 files, Choi2025 power scenarios)
+Repositories cloned: 1 (esteng/ambiguous-loophole-exploitation)
+
+Key deliverables:
+- literature_review.md         — 9-section synthesis of 20 papers
+- resources.md                 — catalog with file paths and reproduction notes
+- notes_primary_papers.md      — deep-read notes on Choi 2025, Murthy 2023, Denison 2024
+- papers/README.md, datasets/README.md, code/README.md
+- datasets/download.py         — reproducible dataset fetch script
+- pyproject.toml + .venv       — isolated environment (pypdf, requests, arxiv, httpx, datasets)
+
+The Choi 2025 repo (code/ambiguous-loophole-exploitation/) is the primary experimental harness; its scenario_prompts.json (108 power scenarios) is copied into datasets/loophole_scenarios/. Suggested extension: a new --job knowledge_loophole following the ambiguity.py template pattern to test the hypothesis's knowledge-bounded loophole prediction.

@@ -1,0 +1,5 @@
+model_short,job,loophole_rate,n,tier
+claude-3.5-haiku,scalar,0.22916666666666666,96,frontier
+claude-3.5-haiku,scalar_max,0.0,2,frontier
+gpt-4o-mini,scalar,0.5833333333333334,96,frontier
+gpt-4o-mini,scalar_max,0.3125,96,frontier
